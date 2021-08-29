@@ -1,0 +1,10 @@
+$owerriTop: $alaojiGsTop + $alaojiGsHeight;
+$owerriLeft: map-get($col4, 'left') + getLength(1);
+$owerriWidth: map-get(stationDimention(3,2), 'width');
+$owerriHeight: map-get(stationDimention(3,2), 'height');
+#owerri{
+  @include station(3,2);
+  top: $owerriTop;
+  left: $owerriLeft;
+
+}

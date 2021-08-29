@@ -1,0 +1,10 @@
+$eketTop: $ituTop + $ituHeight + getHeight(1);
+$eketLeft: $ituLeft;
+$eketWidth: map-get(stationDimention(2,2), 'width');
+$eketHeight: map-get(stationDimention(2,2), 'height');
+#eket{
+  @include station(2,2);
+  top: $eketTop;
+  left: $eketLeft;
+
+}

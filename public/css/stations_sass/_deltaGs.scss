@@ -1,0 +1,22 @@
+$deltaGsTop: $beninTop + $beninHeight + getHeight(2);
+$deltaGsLeft: $beninLeft + getLength(1);
+$deltaGsWidth: map-get(stationDimention(2,1), 'width');
+$deltaGsHeight: map-get(stationDimention(2,1), 'height');
+#deltaGs{
+  @include station(2,1);
+  top: $deltaGsTop;
+  left: $deltaGsLeft;
+
+  #deltaGs-g3b{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #deltaGs-s4g{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+
+    #s4g-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+}

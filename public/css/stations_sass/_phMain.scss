@@ -1,0 +1,10 @@
+$phMainTop: $transamadiGsTop;
+$phMainLeft: $transamadiGsLeft + $transamadiGsWidth + getLength(1);
+$phMainWidth: map-get(stationDimention(2,3), 'width');
+$phMainHeight: map-get(stationDimention(2,3), 'height');
+#phMain{
+  @include station(2,3);
+  top: $phMainTop;
+  left: $phMainLeft;
+
+}

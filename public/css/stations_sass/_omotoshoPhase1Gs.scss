@@ -1,0 +1,22 @@
+$omotoshoPhase1GsTop: $omotoshoNippGsTop + $omotoshoNippGsHeight;
+$omotoshoPhase1GsLeft: $omotoshoNippGsLeft;
+$omotoshoPhase1GsWidth: map-get(stationDimention(2,1), 'width');
+$omotoshoPhase1GsHeight: map-get(stationDimention(2,1), 'height');
+#omotoshoPhase1Gs{
+  @include station(2,1);
+  top: $omotoshoPhase1GsTop;
+  left: $omotoshoPhase1GsLeft;
+
+  #omotoshoPhase1Gs-b5m{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+
+    #b5m-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+  #omotoshoPhase1Gs-m5w{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+  }
+}

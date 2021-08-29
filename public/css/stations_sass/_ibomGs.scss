@@ -1,0 +1,10 @@
+$ibomGsTop: $eketTop + $eketHeight + getHeight(1);
+$ibomGsLeft: $eketLeft;
+$ibomGsWidth: map-get(stationDimention(3,2), 'width');
+$ibomGsHeight: map-get(stationDimention(3,2), 'height');
+#ibomGs{
+  @include station(3,2);
+  top: $ibomGsTop;
+  left: $ibomGsLeft;
+
+}

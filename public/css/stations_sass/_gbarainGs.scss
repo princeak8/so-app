@@ -1,0 +1,10 @@
+$gbarainGsTop: $ahaodaTop + getHeight(1);
+$gbarainGsLeft: $ahaodaLeft + $ahaodaWidth + getLength(1);
+$gbarainGsWidth: map-get(stationDimention(2,2), 'width');
+$gbarainGsHeight: map-get(stationDimention(2,2), 'height');
+#gbarainGs{
+  @include station(2,2);
+  top: $gbarainGsTop;
+  left: $gbarainGsLeft;
+
+}

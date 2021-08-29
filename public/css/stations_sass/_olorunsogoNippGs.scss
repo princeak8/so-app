@@ -1,0 +1,9 @@
+$olorunsogoNippGsTop: map-get($row4, 'top') + getHeight(1);
+$olorunsogoNippGsLeft: map-get($col1, 'left') + getLength(1);
+$olorunsogoNippGsWidth: map-get(stationDimention(1,1), 'width');
+$olorunsogoNippGsHeight: map-get(stationDimention(1,1), 'height');
+#olorunsogoNippGs{
+  @include station(1,1);
+  top: $olorunsogoNippGsTop;
+  left: $olorunsogoNippGsLeft;
+}

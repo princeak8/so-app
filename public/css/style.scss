@@ -1,0 +1,226 @@
+$cell: (width: 68px, height: 26px);
+$halfCell: (width: map-get($cell, 'width')/2, height: map-get($cell, 'height')/2);
+$lineTextHeight: 8px;
+$lineParameterSize: (map-get($cell, 'width') - 2)/2; //This is the size of the parameters i.e mw, mx, kv, A, inside the linebox
+@import "./functions";
+
+$row1: (top: 0px, height: getHeight(3)); 
+$row2: (top: (map-get($row1, 'top') + map-get($row1, 'height')), height: getHeight(4));
+$row3: (top: (map-get($row2, 'top') + map-get($row2, 'height')), height: getHeight(10));
+$row4: (top: (map-get($row3, 'top') + map-get($row3, 'height')), height: getHeight(9));
+$row5: (top: (map-get($row4, 'top') + map-get($row4, 'height')), height: getHeight(21));
+
+$col1: (left: 0px, width: getLength(7));
+$col2: (left: (map-get($col1, 'left') + map-get($col1, 'width')), width: getLength(5));
+$col3: (left: (map-get($col2, 'left') + map-get($col2, 'width')), width: getLength(7));
+$col4: (left: (map-get($col3, 'left') + map-get($col3, 'width')), width: getLength(7));
+$col5: (left: (map-get($col4, 'left') + map-get($col4, 'width')), width: getLength(7));
+$col6: (left: (map-get($col5, 'left') + map-get($col5, 'width')), width: getLength(6));
+$col7: (left: (map-get($col6, 'left') + map-get($col6, 'width')), width: getLength(7));
+
+@import "./mixins";
+
+#row1 {
+  top: map-get($row1, 'top');
+}
+#row2 {
+  top: map-get($row2, 'top');
+}
+#row3 {
+  top: map-get($row3, 'top');
+}
+#row4 {
+  top: map-get($row4, 'top');
+}
+#row5 {
+  top: map-get($row5, 'top');
+}
+#col1 {
+  left: map-get($col1, 'left');
+}
+#col2 {
+  left: map-get($col2, 'left');
+}
+#col3 {
+  left: map-get($col3, 'left');
+}
+#col4 {
+  left: map-get($col4, 'left');
+}
+#col5 {
+  left: map-get($col5, 'left');
+}
+
+.line{
+  @include line;
+    .line-name{
+      width: 100%;
+      height: $lineTextHeight;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+    .data-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax($lineParameterSize, 1fr));
+      justify-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    .line-data{
+      width: $lineParameterSize;
+      height: $lineTextHeight;
+      margin: 0;
+      padding: 0;
+    }
+}
+
+@import "./stations_sass/fakun";
+
+@import "./stations_sass/kebbi";
+
+@import "./stations_sass/kainji";
+
+@import "./stations_sass/jebbaGs";
+
+
+@import "./stations_sass/jebba";
+
+@import "./stations_sass/ayadeGs";
+
+@import "./stations_sass/oshogbo";
+
+@import "./stations_sass/olorunsogoNippGs";
+
+@import "./stations_sass/olorunsogoPhase1Gs";
+
+@import "./stations_sass/sakete";
+
+@import "./stations_sass/ikejaWest";
+
+@import "./stations_sass/okearo";
+
+@import "./stations_sass/ajah";
+
+@import "./stations_sass/alagbon";
+
+@import "./stations_sass/lekki";
+
+@import "./stations_sass/egbinGs";
+
+@import "./stations_sass/ikorodu";
+
+@import "./stations_sass/sagamu";
+
+@import "./stations_sass/parasEnergyGs";
+
+@import "./stations_sass/kainjiGs";
+
+@import "./stations_sass/shiroroGs";
+
+@import "./stations_sass/ganmo";
+
+@import "./stations_sass/katampe";
+
+@import "./stations_sass/ihovborNippGs";
+
+@import "./stations_sass/azuraIppGs";
+
+@import "./stations_sass/omotoshoNippGs";
+
+@import "./stations_sass/omotoshoPhase1Gs";
+
+@import "./stations_sass//akangba";
+
+@import "./stations_sass/kaduna";
+
+@import "./stations_sass//kano";
+
+@import "./stations_sass/dadinKowaGs";
+
+@import "./stations_sass/jos";
+
+@import "./stations_sass/gombe";
+
+@import "./stations_sass/markudi";
+
+@import "./stations_sass/gwagwalada";
+
+@import "./stations_sass/lokoja";
+
+@import "./stations_sass/benin";
+
+@import "./stations_sass/deltaGs";
+
+@import "./stations_sass/sapeleGs";
+
+@import "./stations_sass/aladja";
+
+@import "./stations_sass/sapeleNippGs";
+
+@import "./stations_sass/biu";
+
+@import "./stations_sass/damaturu";
+
+@import "./stations_sass/molai";
+
+@import "./stations_sass/yola";
+
+@import "./stations_sass/ajaokuta";
+
+@import "./stations_sass/gereguGs";
+
+@import "./stations_sass/gereguNipp";
+
+@import "./stations_sass/asaba";
+
+@import "./stations_sass/alaojiGs";
+
+@import "./stations_sass/owerri";
+
+@import "./stations_sass/ahaoda";
+
+@import "./stations_sass/transamadiGs";
+
+@import "./stations_sass/phMain";
+
+@import "./stations_sass/omokuGs";
+
+@import "./stations_sass/gbarainGs";
+
+@import "./stations_sass/riversIppGs";
+
+@import "./stations_sass/ugwuaji";
+
+@import "./stations_sass/newHaven";
+
+@import "./stations_sass/onitsha";
+
+@import "./stations_sass/okpaiGs";
+
+@import "./stations_sass/alaoji";
+
+@import "./stations_sass/aba";
+
+@import "./stations_sass/yenegoa";
+
+@import "./stations_sass/afamIv_vGs";
+
+@import "./stations_sass/afamViGs";
+
+@import "./stations_sass/itu";
+
+@import "./stations_sass/adiabor";
+
+@import "./stations_sass/eket";
+
+@import "./stations_sass/ibomGs";
+
+@import "./stations_sass/ikotAbasi";
+
+@import "./stations_sass/ikotEkpene";
+
+@import "./stations_sass/odukpaniGs";
+
+

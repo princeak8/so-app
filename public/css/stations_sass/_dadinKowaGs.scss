@@ -1,0 +1,10 @@
+$dadinKowaGsTop: map-get($row1, 'top');//Starts from the top of row1
+$dadinKowaGsLeft: map-get($col3, 'left') + getLength(4);//starts four cells from the start of col3
+$dadinKowaGsWidth: map-get(stationDimention(1,2), 'width');
+$dadinKowaGsHeight: map-get(stationDimention(1,2), 'height');
+#dadinKowaGs{
+  @include station(1,2);
+  top: $dadinKowaGsTop;
+  left: $dadinKowaGsLeft;
+
+}

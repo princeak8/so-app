@@ -1,0 +1,18 @@
+$afamViGsTop: $afamIv_vGsTop;
+$afamViGsLeft: $afamIv_vGsLeft + $afamIv_vGsWidth;
+$afamViGsWidth: map-get(stationDimention(2,3), 'width');
+$afamViGsHeight: map-get(stationDimention(2,3), 'height');
+#afamViGs{
+  @include station(2,3);
+  top: $afamViGsTop;
+  left: $afamViGsLeft;
+
+  #afamViGs-f1a{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+  #afamViGs-f2a{
+    left: map-get(lineBoxPosition(1,2), 'left');
+    top: map-get(lineBoxPosition(1,2), 'top');
+  }
+}

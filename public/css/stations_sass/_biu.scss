@@ -1,0 +1,9 @@
+$biuTop: map-get($row1, 'top');
+$biuLeft: map-get($col4, 'left');
+$biuWidth: map-get(stationDimention(1,1), 'width');
+$biuHeight: map-get(stationDimention(1,1), 'height');
+#biu{
+  @include station(1,1);
+  top: $biuTop;
+  left: $biuLeft;
+}

@@ -1,0 +1,14 @@
+$yolaTop: $gombeTop + getHeight(1);
+$yolaLeft: $molaiLeft + $molaiWidth + getLength(1);
+$yolaWidth: map-get(stationDimention(1,1), 'width');
+$yolaHeight: map-get(stationDimention(1,1), 'height');
+#yola{
+  @include station(1,1);
+  top: $yolaTop;
+  left: $yolaLeft;
+
+  #yola-e1y{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+}

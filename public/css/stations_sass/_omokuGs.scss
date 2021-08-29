@@ -1,0 +1,10 @@
+$omokuGsTop: $ahaodaTop + $ahaodaHeight + getHeight(1);
+$omokuGsLeft: $phMainLeft + getLength(1);
+$omokuGsWidth: map-get(stationDimention(1,1), 'width');
+$omokuGsHeight: map-get(stationDimention(1,1), 'height');
+#omokuGs{
+  @include station(1,1);
+  top: $omokuGsTop;
+  left: $omokuGsLeft;
+
+}

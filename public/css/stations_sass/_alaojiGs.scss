@@ -1,0 +1,26 @@
+$alaojiGsWidth: map-get(stationDimention(2,1), 'width');
+$alaojiGsHeight: map-get(stationDimention(2,1), 'height');
+$alaojiGsTop: map-get($row5, 'top');
+$alaojiGsLeft:  map-get($col5, 'left') - (getLength(1) + $alaojiGsWidth); //positioned one cell from the start of col5
+#alaojiGs{
+  @include station(2,1);
+  top: $alaojiGsTop;
+  left: $alaojiGsLeft;
+
+  #alaojiGs-l7a{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+
+    #l7a-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+  #alaojiGs-l8a{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+
+    #l8a-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+}

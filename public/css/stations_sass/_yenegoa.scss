@@ -1,0 +1,9 @@
+$yenegoaTop: $gbarainGsTop;
+$yenegoaLeft: map-get($col5, 'left');
+$yenegoaWidth: map-get(stationDimention(1,1), 'width');
+$yenegoaHeight: map-get(stationDimention(1,1), 'height');
+#yenegoa{
+  @include station(1,1);
+  top: $yenegoaTop;
+  left: $yenegoaLeft;
+}

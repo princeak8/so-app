@@ -1,0 +1,10 @@
+$ikotAbasiTop: $ibomGsTop + getHeight(1);
+$ikotAbasiLeft: $ibomGsLeft + $ibomGsWidth + getLength(1);
+$ikotAbasiWidth: map-get(stationDimention(2,2), 'width');
+$ikotAbasiHeight: map-get(stationDimention(2,2), 'height');
+#ikotAbasi{
+  @include station(2,2);
+  top: $ikotAbasiTop;
+  left: $ikotAbasiLeft;
+  
+}

@@ -1,0 +1,18 @@
+$lekkiTop: $ajahTop + $ajahHeight + getHeight(1);
+$lekkiLeft: $alagbonLeft + $alagbonWidth + getLength(1);
+$lekkiWidth: map-get(stationDimention(2,1), 'width');
+$lekkiHeight: map-get(stationDimention(2,1), 'height');
+#lekki{
+  @include station(2,1);
+  top: $lekkiTop;
+  left: $lekkiLeft;
+
+  #lekki-j1e{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+  #lekki-b1e{
+    left: map-get(lineBoxPosition(2,1), 'left');
+    top: map-get(lineBoxPosition(2,1), 'top');
+  }
+}

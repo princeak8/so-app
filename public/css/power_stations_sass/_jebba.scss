@@ -1,0 +1,18 @@
+
+#jebbaPs{
+  height: 800px;
+  display: grid;
+
+  border: none;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px #0000001F;
+    height: 100%;
+    margin: 1em;
+
+    grid-template-columns: repeat(auto-fit, minmax(66px, 1fr));
+    justify-items: start;
+    margin: 0;
+    padding: 0;
+  
+ 
+}

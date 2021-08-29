@@ -1,0 +1,126 @@
+@mixin station($hLines, $vLines) {
+    position: absolute;
+    border: medium solid #000;
+    width:  map-get(stationDimention($hLines, $vLines), 'width');
+    height: map-get(stationDimention($hLines, $vLines), 'height');
+    border: solid 2px gray;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px #0000001F;
+}
+@mixin line {
+    position: absolute;
+    border: thin solid #000;
+    width: map-get($cell, 'width');
+    height: map-get($cell, 'height');
+    font-size: 6px;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    border: solid 1px black;
+}
+
+@mixin units{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(66px, 1fr));
+    justify-items: start;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin unit {
+    width: 172px;
+    height: 52px;
+}
+
+@mixin unit-name{
+    width: 100%;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding: 0;
+}
+@mixin info-group {
+display: flex;
+align-items: center;
+flex-direction: column;
+font-size: 12px;
+margin: 0;
+padding: 0;
+}
+
+@mixin unit-data{
+margin: 0;
+padding: 0;
+}
+
+
+
+@mixin hConnection($width) {
+    width: $width;
+    top: map-get($halfCell, 'height');
+    left: map-get($cell, 'width');
+}
+@mixin vConnection($height) {
+    top: map-get($cell, 'height');
+    left: map-get($halfCell, 'width');
+    height: $height;
+}
+@mixin vConnection2($height) {
+    bottom: map-get($cell, 'height');
+    left: map-get($halfCell, 'width');
+    height: $height;
+}
+@mixin lineBoxPosition($row, $col) {
+    top: lineBoxTop($row, $col);
+    left: lineBoxLeft($row, $col);
+}
+@mixin hLine($top, $left, $height) {
+    top: $top + ($height/2);
+    left: $left + $lineBoxWidth;
+}
+@mixin vDownLine($top, $left, $height) {
+    bottom: $top - $vLineBoxSpacing - 3 - $lineBoxLabelHeight;
+    left: $left + ($lineBoxWidth/2);
+}
+@mixin vDownLine2($height, $left) {
+    bottom: $height - $vLineBoxSpacing - $lineBoxLabelHeight;
+    left: $left + ($lineBoxWidth/2);
+}
+@mixin vLine($top, $left, $height) {
+    top: $top + $height + 3;
+    left: $left + ($lineBoxWidth/2);
+}
+@mixin hr {
+    position: absolute;
+}
+@mixin vSpan {
+    position: absolute;
+    border-left: thin solid grey;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+@mixin vArrow($height) {
+    position: absolute;
+    top: $height/3;
+    left: -5px;
+}
+
+@mixin vDArrow($height) {
+    position: absolute;
+    top: $height/3 * 2;
+    left: -5px;
+}
+
+@mixin hArrow($width) {
+    position: absolute;
+    left: $lineBoxWidth + $width/3;
+}
+
+@mixin hDArrow($width) {
+    position: absolute;
+    left: $lineBoxWidth + ($width/3 * 2);
+}

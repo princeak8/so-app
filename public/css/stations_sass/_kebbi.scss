@@ -1,0 +1,22 @@
+$kebbiTop: map-get($row2, 'top');
+$kebbiLeft: map-get($col1, 'left');
+$kebbiWidth: map-get(stationDimention(1,1), 'width');
+$kebbiHeight: map-get(stationDimention(1,1), 'height');
+$kebbiPosition: (top: $kebbiTop, left: $kebbiLeft);
+#kebbi{
+  @include station(1,1);
+  top: $kebbiTop;
+  left: 0px;
+  
+  #kebbi-k3r{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+
+    $k3r-h-0Width: getLength(2);
+    #k3r-h-0 {
+      width: $k3r-h-0Width;
+      top: map-get($halfCell, 'height');
+      left: map-get($cell, 'width');
+    }
+  }
+}

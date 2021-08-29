@@ -1,0 +1,9 @@
+$afamIv_vGsTop: $phMainTop;
+$afamIv_vGsLeft: map-get($col5, 'left');
+$afamIv_vGsWidth: map-get(stationDimention(2,1), 'width');
+$afamIv_vGsHeight: map-get(stationDimention(2,1), 'height');
+#afamIv_vGs{
+  @include station(2,1);
+  top: $afamIv_vGsTop;
+  left: $afamIv_vGsLeft;
+}

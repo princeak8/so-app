@@ -1,0 +1,64 @@
+$kadunaTop: map-get($row1, 'top');//Starts from the top of row1
+$kadunaLeft: map-get($col2, 'left') + getLength(2);//starts two cells from the left of col2
+$kadunaWidth: map-get(stationDimention(2,3), 'width');
+$kadunaHeight: map-get(stationDimention(2,3), 'height');
+#kaduna{
+  @include station(2,3);
+  top: $kadunaTop;
+  left: $kadunaLeft;
+
+  #kaduna-r1m{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+
+    #r1m-v-0 {
+      @include vConnection(getHeight(5));
+    }
+  }
+
+
+  #kaduna-r2m{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+
+    #r2m-v-0 {
+      @include vConnection(getHeight(5));
+    }
+  }
+
+
+  #kaduna-m6n{
+    left: map-get(lineBoxPosition(1, 3), 'left');
+    top: map-get(lineBoxPosition(1, 3), 'top');
+
+    #m6n-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+
+
+  #kaduna-m2s{
+    left: map-get(lineBoxPosition(2, 3), 'left');
+    top: map-get(lineBoxPosition(2, 3), 'top');
+
+    // 1st Line
+    $m2s-v-0Height: getHeight(1) + map-get($halfCell, 'height');
+    $m2s-v-0Top: getHeight(1);
+    $m2s-v-0Left: map-get($halfCell, 'width');
+    #m2s-v-0{
+      top: $m2s-v-0Top;
+      left: $m2s-v-0Left;
+      height: $m2s-v-0Height;
+    }
+
+    //2nd Line
+    $m2s-h-1Width: map-get($halfCell, 'width');
+    $m2s-h-1Top: $m2s-v-0Top + $m2s-v-0Height;
+    $m2s-h-1Left: $m2s-v-0Left;
+    #m2s-h-1 {
+      width: $m2s-h-1Width;
+      top: $m2s-h-1Top;
+      left: $m2s-h-1Left;
+    }
+  }
+}

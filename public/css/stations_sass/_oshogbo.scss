@@ -1,0 +1,78 @@
+//Oshogbo TS is tied to Ayade GS top and Jebba TS Left
+$oshogboTop: $ayadeGsTop - map-get($cell, 'height');
+$oshogboLeft: $jebbaTsLeft;
+$oshogboWidth: map-get(stationDimention(2,3), 'width');
+$oshogboHeight: map-get(stationDimention(2,3), 'height');
+#oshogbo{
+  @include station(2,3);
+  top: $oshogboTop;
+  left: $oshogboLeft;
+
+  #oshogbo-j1h{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #oshogbo-j2h{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+  }
+  #oshogbo-h3g{
+    left: map-get(lineBoxPosition(1, 3), 'left');
+    top: map-get(lineBoxPosition(1, 3), 'top');
+
+      //1st Line
+      $h3g-h-0Width: map-get($halfCell, 'width');
+      $h3g-h-0Top: map-get($halfCell, 'height');
+      $h3g-h-0Left: map-get($cell, 'width');
+      #h3g-h-0 {
+        width: $h3g-h-0Width;
+        top: $h3g-h-0Top;
+        left: $h3g-h-0Left;
+      }
+      // 2nd Line
+      $h3g-v-1Height: getHeight(2);
+      $h3g-v-1Bottom: $h3g-h-0Top - 1;
+      $h3g-v-1Left: $h3g-h-0Left + $h3g-h-0Width;
+      #h3g-v-1{
+        bottom: $h3g-v-1Bottom;
+        left: $h3g-v-1Left;
+        height: $h3g-v-1Height;
+      }
+      //3rd Line
+      $h3g-h-2Width: map-get($halfCell, 'width');
+      $h3g-h-2Top: -(getHeight(1) + map-get($halfCell, 'height'));
+      $h3g-h-2Left: $h3g-h-0Left + $h3g-h-0Width;
+      #h3g-h-2 {
+        width: $h3g-h-2Width;
+        top: $h3g-h-2Top;
+        left: $h3g-h-2Left;
+      }
+  }
+  #oshogbo-h2a{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+  }
+  #oshogbo-h1w{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+
+    $h1w-v-0Height: getHeight(5);
+    #h1w-v-0 {
+      top: map-get($cell, 'height');
+      left: map-get($halfCell, 'width');
+      height: $h1w-v-0Height;
+    }
+  }
+  
+  #oshogbo-h7v{
+    left: map-get(lineBoxPosition(2, 3), 'left');
+    top: map-get(lineBoxPosition(2, 3), 'top');
+
+    $h7v-h-0Width: getLength(2);
+    #h7v-h-0 {
+      width: $h7v-h-0Width;
+      top: map-get($halfCell, 'height');
+      left: map-get($cell, 'width');
+    }
+  }
+}

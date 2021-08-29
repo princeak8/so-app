@@ -1,0 +1,18 @@
+$okpaiGsWidth: map-get(stationDimention(2,1), 'width');
+$okpaiGsHeight: map-get(stationDimention(2,1), 'height');
+$okpaiGsTop: $onitshaTop + getHeight(1);
+$okpaiGsLeft:  $onitshaLeft + $onitshaWidth + getLength(1); //positioned one cell from the end of Onitsha TS
+#okpaiGs{
+  @include station(2,1);
+  top: $okpaiGsTop;
+  left: $okpaiGsLeft;
+
+  #okpaiGs-k1t{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #okpaiGs-k2t{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+  }
+}

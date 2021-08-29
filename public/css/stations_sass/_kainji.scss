@@ -1,0 +1,43 @@
+//Kainji Top is tied to kebbi TS top and its left is 1 cell before the start of fakun TS
+$kainjiTsTop: $kebbiTop;
+$kainjiTsLeft: $fakunLeft - getLength(1);
+$kainjiTsWidth: map-get(stationDimention(2,3), 'width');
+$kainjiTsHeight: map-get(stationDimention(2,3), 'height');
+#kainjiTs{
+  @include station(2,3);
+  top: $kainjiTsTop;
+  left: $kainjiTsLeft;
+
+  #kainjiTs-k3r{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #kainjiTs-k1f{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+  }
+  
+  #kainjiTs-k1j{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+
+    $k1j-v-0Height: getHeight(2);
+    #k1j-v-0 {
+      top: map-get($cell, 'height');
+      left: map-get($halfCell, 'width');
+      height: $k1j-v-0Height;
+    }
+  }
+
+  #kainjiTs-k2j{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+  }
+
+  $k2j-v-0Height: getHeight(2);
+    #k2j-v-0 {
+      top: map-get($cell, 'height');
+      left: map-get($halfCell, 'width');
+      height: $k2j-v-0Height;
+    }
+}

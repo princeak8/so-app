@@ -1,0 +1,45 @@
+//returns the dimensions i.e height and width of a station
+//hLines= number of the longest horizontal row of line boxes in the station box
+//vLines= number of the longest vertical column of line boxes in the station box
+@function stationDimention($hLines, $vLines) {
+    $cellWidth: map-get($cell, 'width');
+    $cellHeight: map-get($cell, 'height');
+
+    $width: $vLines * $cellWidth;
+    $height: ($hLines + 1) * $cellHeight;
+
+    @return (width: $width, height: $height);
+}
+@function lineBoxPosition($row, $col) {
+    $top: $row * map-get($cell, 'height') - 1;
+    $left: (($col - 1) * map-get($cell, 'width')) - 1;
+    
+    @return (left: $left, top: $top);
+}
+//Get the height or the vertical distance from the number of vertical rows
+@function getHeight($rows) {
+    @return $rows * map-get($cell, 'height');
+}
+//Get the length or the horizontal distance from the number of horizontal rows
+@function getLength($cols) {
+    @return $cols * map-get($cell, 'width');
+}
+@function stationWidth($lines) {
+    @return ($lines * $lineBoxWidth) + ($lines+1)*$hLineBoxSpacing;
+}
+
+@function stationHeight($lines) {
+    @return $lineBoxLabelHeight + ($lines * $lineBoxHeight) + ($lines+1)*$vLineBoxSpacing;
+}
+@function lineBoxTop($row, $col) {
+    @return $lineBoxLabelHeight + ($row - 1) + ($vLineBoxSpacing * $row) + ($row - 1)*$lineBoxHeight;
+}
+@function lineBoxLeft($row, $col) {
+    @return ($col - 1) + ($hLineBoxSpacing * $col) + ($col - 1)*$lineBoxWidth;
+}
+@function vLineHeight($lines) {
+    @return $lineBoxLabelHeight + ($vLineBoxSpacing * ($lines + 1)) + $vStationBoxSpacing + (($lines - 1)*$lineBoxHeight) + ($lineBoxHeight/2) + (1 + ($lines * 2));
+}
+@function hLineWidth($lines) {
+    @return ($hLineBoxSpacing * ($lines + 1)) + $hStationBoxSpacing + (($lines - 1)*$lineBoxWidth) + ($lineBoxWidth/2);
+}

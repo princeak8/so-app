@@ -1,0 +1,38 @@
+$cell: (width: 68px, height: 26px);
+$halfCell: (width: map-get($cell, 'width')/2, height: map-get($cell, 'height')/2);
+$lineTextHeight: 8px;
+$lineParameterSize: (map-get($cell, 'width') - 2)/2; //This is the size of the parameters i.e mw, mx, kv, A, inside the linebox
+@import "./functions";
+
+@import "./mixins";
+
+
+
+.unit{
+  @include unit;
+    .unit-name{
+      width: 100%;
+      height: $lineTextHeight;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+    .data-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax($lineParameterSize, 1fr));
+      justify-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    .unit-data{
+      width: $lineParameterSize;
+      height: $lineTextHeight;
+      margin: 0;
+      padding: 0;
+    }
+}
+
+@import "./power_stations_sass/jebba";
+
+

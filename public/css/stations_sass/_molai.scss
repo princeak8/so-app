@@ -1,0 +1,14 @@
+$molaiTop: map-get($row2, 'top');
+$molaiLeft: $damaturuLeft + $damaturuWidth + getLength(1);
+$molaiWidth: map-get(stationDimention(1,1), 'width');
+$molaiHeight: map-get(stationDimention(1,1), 'height');
+#molai{
+  @include station(1,1);
+  top: $molaiTop;
+  left: $molaiLeft;
+
+  #molai-d1l{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+}

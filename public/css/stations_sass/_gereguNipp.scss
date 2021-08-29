@@ -1,0 +1,9 @@
+$gereguNippTop: $gereguGsTop;
+$gereguNippLeft: $gereguGsLeft + $gereguGsWidth;
+$gereguNippWidth: map-get(stationDimention(2,1), 'width');
+$gereguNippHeight: map-get(stationDimention(2,1), 'height');
+#gereguNipp{
+  @include station(2,1);
+  top: $gereguNippTop;
+  left: $gereguNippLeft;
+}

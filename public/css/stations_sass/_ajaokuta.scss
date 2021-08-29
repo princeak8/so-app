@@ -1,0 +1,42 @@
+$ajaokutaTop: map-get($row4, 'top');
+$ajaokutaLeft: map-get($col4, 'left') + getLength(1);
+$ajaokutaWidth: map-get(stationDimention(4,2), 'width');
+$ajaokutaHeight: map-get(stationDimention(4,2), 'height');
+#ajaokuta{
+  @include station(4,2);
+  top: $ajaokutaTop;
+  left: $ajaokutaLeft;
+
+  #ajaokuta-j1l{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #ajaokuta-j2l{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+  }
+  #ajaokuta-b11j{
+    left: map-get(lineBoxPosition(3, 1), 'left');
+    top: map-get(lineBoxPosition(3, 1), 'top');
+  }
+  #ajaokuta-b12j{
+    left: map-get(lineBoxPosition(4, 1), 'left');
+    top: map-get(lineBoxPosition(4, 1), 'top');
+  }
+  #ajaokuta-r1j{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+
+    #r1j-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+  #ajaokuta-r2j{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+
+    #r2j-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+}

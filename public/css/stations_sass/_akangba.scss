@@ -1,0 +1,18 @@
+$akangbaTop: $ikejaWestTop + getHeight(2);//two cells from the top of ikeja west
+$akangbaLeft: map-get($col2, 'left') + getLength(1); //one cell from the start of col2
+$akangbaWidth: map-get(stationDimention(2,1), 'width');
+$akangbaHeight: map-get(stationDimention(2,1), 'height');
+#akangba{
+  @include station(2,1);
+  top: $akangbaTop;
+  left: $akangbaLeft;
+
+  #akangba-w3l{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+  #akangba-w4l{
+    left: map-get(lineBoxPosition(2,1), 'left');
+    top: map-get(lineBoxPosition(2,1), 'top');
+  }
+}

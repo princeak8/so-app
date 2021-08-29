@@ -1,0 +1,75 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+.station-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.green {
+  background: #17d617;
+}
+
+.red {
+  background: #dd0505;
+}
+
+.unit {
+  /* width: 200px; */
+  height: 150px; 
+  padding: 0;
+  /* margin-right: 1%;
+  margin-left: 1%; */
+  border-radius: 3px;
+  border: solid 1px #d8d3d3;
+}
+
+.unit .unit-name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.unit .info-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.unit .info-group .unit-data {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+/*# sourceMappingURL=screen.css.map */

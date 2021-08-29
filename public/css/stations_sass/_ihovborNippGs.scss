@@ -1,0 +1,14 @@
+$ihovborNippGsTop: $oshogboTop + getHeight(1);
+$ihovborNippGsLeft: map-get($col2, 'left');
+$ihovborNippGsWidth: map-get(stationDimention(1,1), 'width');
+$ihovborNippGsHeight: map-get(stationDimention(1,1), 'height');
+#ihovborNippGs{
+  @include station(1,1);
+  top: $ihovborNippGsTop;
+  left: $ihovborNippGsLeft;
+
+  #ihovborNippGs-h7v{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+}

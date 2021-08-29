@@ -1,0 +1,22 @@
+$asabaTop: $beninTop + getHeight(4);
+$asabaLeft: map-get($col4, 'left') + getLength(4);
+$asabaWidth: map-get(stationDimention(1,2), 'width');
+$asabaHeight: map-get(stationDimention(1,2), 'height');
+#asaba{
+  @include station(1,2);
+  top: $asabaTop;
+  left: $asabaLeft;
+
+  #asaba-b3d{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+  #asaba-d3t{
+    left: map-get(lineBoxPosition(1,2), 'left');
+    top: map-get(lineBoxPosition(1,2), 'top');
+
+    #d3t-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+}

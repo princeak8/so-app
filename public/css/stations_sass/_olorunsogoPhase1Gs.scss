@@ -1,0 +1,25 @@
+$olorunsogoPhase1GsTop: map-get($row4, 'top') + getHeight(1);
+$olorunsogoPhase1GsLeft: $olorunsogoNippGsLeft + $olorunsogoNippGsWidth;
+$olorunsogoPhase1GsWidth: map-get(stationDimention(1,2), 'width');
+$olorunsogoPhase1GsHeight: map-get(stationDimention(1,2), 'height');
+#olorunsogoPhase1Gs{
+  @include station(1,2);
+  top: $olorunsogoPhase1GsTop;
+  left: $olorunsogoPhase1GsLeft;
+
+  #olorunsogoPhase1Gs-r2a{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #olorunsogoPhase1Gs-r1w{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+
+    $r1w-v-0Height: getHeight(2);
+    #r1w-v-0 {
+      top: map-get($cell, 'height');
+      left: map-get($halfCell, 'width');
+      height: $r1w-v-0Height;
+    }
+  }
+}

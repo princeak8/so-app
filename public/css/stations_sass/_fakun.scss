@@ -1,0 +1,21 @@
+$fakunTop: map-get($row1, 'top');
+$fakunLeft: map-get($col1, 'left') + getLength(4);
+$fakunWidth: map-get(stationDimention(1,1), 'width');
+$fakunHeight: map-get(stationDimention(1,1), 'height');
+#fakun{
+  @include station(1,1);
+  top: $fakunTop;
+  left: $fakunLeft;
+  
+  #fakun-k1f{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+
+    $k1f-v-0Height: getHeight(2);
+    #k1f-v-0 {
+      height: $k1f-v-0Height;
+      top: map-get($cell, 'height');
+      left: map-get($halfCell, 'width');
+    }
+  }
+}

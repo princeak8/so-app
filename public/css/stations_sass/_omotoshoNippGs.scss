@@ -1,0 +1,9 @@
+$omotoshoNippGsTop: map-get($row4, 'top') + getHeight(1);
+$omotoshoNippGsLeft: map-get($col2, 'left') + getLength(3);
+$omotoshoNippGsWidth: map-get(stationDimention(1,1), 'width');
+$omotoshoNippGsHeight: map-get(stationDimention(1,1), 'height');
+#omotoshoNippGs{
+  @include station(1,1);
+  top: $omotoshoNippGsTop;
+  left: $omotoshoNippGsLeft;
+}

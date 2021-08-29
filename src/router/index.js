@@ -1,27 +1,43 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import { STORAGE_KEY } from "@/constants";
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
+export const RouteEnum = Object.freeze({
+  LOGIN: { path: "/login", name: "Login" },
+  HOME: { path: "/", name: "Home" },
+});
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    ...RouteEnum.HOME,
+    component: Home,
+    beforeEnter(to, from, next) {
+      const accessToken = localStorage.getItem(STORAGE_KEY);
+
+      if (accessToken && accessToken !== "undefined") {
+        next();
+      } else {
+        next(RouteEnum.LOGIN);
+      }
+    },
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    ...RouteEnum.LOGIN,
+    component: Login,
+  },
+];
 
 const router = new VueRouter({
-  routes
-})
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes,
+});
 
-export default router
+export default router;

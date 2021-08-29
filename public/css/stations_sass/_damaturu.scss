@@ -1,0 +1,22 @@
+$damaturuTop: map-get($row2, 'top');
+$damaturuLeft: map-get($col4, 'left');
+$damaturuWidth: map-get(stationDimention(1,2), 'width');
+$damaturuHeight: map-get(stationDimention(1,2), 'height');
+#damaturu{
+  @include station(1,2);
+  top: $damaturuTop;
+  left: $damaturuLeft;
+
+  #damaturu-e1d{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #damaturu-d1l{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+
+    #d1l-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+}

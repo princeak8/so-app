@@ -1,0 +1,10 @@
+$ahaodaTop: $owerriTop + $owerriHeight + getHeight(1);
+$ahaodaLeft: $owerriLeft;
+$ahaodaWidth: map-get(stationDimention(3,2), 'width');
+$ahaodaHeight: map-get(stationDimention(3,2), 'height');
+#ahaoda{
+  @include station(3,2);
+  top: $ahaodaTop;
+  left: $ahaodaLeft;
+
+}

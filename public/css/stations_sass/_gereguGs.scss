@@ -1,0 +1,18 @@
+$gereguGsTop: map-get($row4, 'top');
+$gereguGsLeft: $ajaokutaLeft + $ajaokutaWidth + getLength(1);
+$gereguGsWidth: map-get(stationDimention(2,1), 'width');
+$gereguGsHeight: map-get(stationDimention(2,1), 'height');
+#gereguGs{
+  @include station(2,1);
+  top: $gereguGsTop;
+  left: $gereguGsLeft;
+
+  #gereguGs-r1j{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #gereguGs-r2j{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+  }
+}

@@ -1,0 +1,9 @@
+$abaTop: $alaojiTop + $alaojiHeight + getHeight(2);
+$abaLeft: $alaojiLeft + getLength(3);
+$abaWidth: map-get(stationDimention(1,3), 'width');
+$abaHeight: map-get(stationDimention(1,3), 'height');
+#aba{
+  @include station(1,3);
+  top: $abaTop;
+  left: $abaLeft;
+}

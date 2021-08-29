@@ -1,0 +1,30 @@
+$gombeTop: $dadinKowaGsTop + $dadinKowaGsHeight + getHeight(1);//Starts one cell from the end of dadin kowa TS
+$gombeLeft: $josLeft + $josWidth + getLength(1);//starts one cells from the end of Jos Ts
+$gombeWidth: map-get(stationDimention(2,3), 'width');
+$gombeHeight: map-get(stationDimention(2,3), 'height');
+#gombe{
+  @include station(2,3);
+  top: $gombeTop;
+  left: $gombeLeft;
+
+  #gombe-s1e{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #gombe-e1d{
+    left: map-get(lineBoxPosition(1, 3), 'left');
+    top: map-get(lineBoxPosition(1, 3), 'top');
+
+    #e1d-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+  #gombe-e1y{
+    left: map-get(lineBoxPosition(2, 3), 'left');
+    top: map-get(lineBoxPosition(2, 3), 'top');
+
+    #e1y-h-0 {
+      @include hConnection(getLength(6));
+    }
+  }
+}

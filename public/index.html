@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+
+    <link rel="stylesheet" href="css/font-awesome/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/font-awesome/solid.min.css" />
+    <link rel="stylesheet" href="css/font-awesome/brands.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/powerStyles.css" /> -->
+    <link rel="stylesheet" href="css/general.css" />
+
+    <style type="text/css">
+      [v-cloak] {
+        display: none;
+      }
+      #loading_container{
+        position: absolute;
+        top: 150px;
+        left: 45%;
+      }
+      .modal .show { display: block; }
+      .modal-open { display: block; }
+    </style>
   </head>
   <body>
     <noscript>
@@ -13,5 +34,10 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <!--main js--> 
+    <script src="js/jquery-1.12.4.min.js"></script> 
+    <!--bootstrap js--> 
+    <script src="js/bootstrap.min.js"></script> 
   </body>
 </html>

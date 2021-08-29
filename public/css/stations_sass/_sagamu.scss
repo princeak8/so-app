@@ -1,0 +1,10 @@
+$sagamuTop: $ikoroduTop; //The same Top with Ikorodu
+$sagamuLeft: $ikoroduLeft + $ikoroduWidth + map-get($cell, 'width'); //Comes one cell after the end of ikorodu
+$sagamuWidth: map-get(stationDimention(1,1), 'width');
+$sagamuHeight: map-get(stationDimention(1,1), 'height');
+#sagamu{
+  @include station(1,1);
+  top: $sagamuTop;
+  left: $sagamuLeft;
+
+}

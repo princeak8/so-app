@@ -1,0 +1,14 @@
+$sapeleNippGsTop: $sapeleGsTop + $sapeleGsHeight;
+$sapeleNippGsLeft: $deltaGsLeft + $deltaGsWidth + getLength(1);
+$sapeleNippGsWidth: map-get(stationDimention(1,3), 'width');
+$sapeleNippGsHeight: map-get(stationDimention(1,3), 'height');
+#sapeleNippGs{
+  @include station(1,3);
+  top: $sapeleNippGsTop;
+  left: $sapeleNippGsLeft;
+
+  #sapeleNippGs-s4g{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+}

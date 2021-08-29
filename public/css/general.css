@@ -1,0 +1,84 @@
+.grey {
+    background: #ececec;
+  }
+.grey1 {
+  background: grey;
+}
+  
+  .green {
+    background: #17d617;
+  }
+  
+.red {
+    background: #dd0505;
+}
+.black {
+  background-color: black;
+}
+.blue {
+  background: blue;
+}
+
+.blackColor {
+  color: black;
+}
+.blueColor {
+  color: blue;
+}
+.greyColor {
+    color: #ececec;
+}
+.grey1Color {
+  color: grey;
+}
+  
+.greenColor {
+    color: #17d617;
+}
+  
+.redColor {
+    color: #dd0505;
+}
+  .station-name {
+    height: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
+    overflow: hidden; 
+    z-index: 10;   
+}
+.width {
+  width: 1.5px;
+}
+.height {
+  height: 1.5px;
+}
+
+.connection {
+  position: absolute;
+}
+.v-connection {
+  top: 26px; left: 34px;
+}
+.arrow {
+  position: absolute;
+}
+.hArrowStart {
+  left: 1px;
+  top: -2px;
+}
+.hArrowEnd {
+  right: 1px;
+  top: -2px;
+}
+.vArrowStart {
+  top: 1px;
+  right: -2px;
+}
+.vArrowEnd {
+  bottom: 1px;
+  right: -2px;
+}

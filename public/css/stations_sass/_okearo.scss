@@ -1,0 +1,43 @@
+//Oke-Aro TS is tied to Ikeja-West TS by the left and one cell after the end of Ikeja-west
+$okearoTop: $ikejaWestTop + $ikejaWestHeight + getHeight(1);
+$okearoLeft: $ikejaWestLeft;
+$okearoWidth: map-get(stationDimention(2,2), 'width');
+$okearoHeight: map-get(stationDimention(2,2), 'height');
+#okearo{
+  @include station(2,2);
+  top: $okearoTop;
+  left: $okearoLeft;
+
+  #okearo-k7w{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #okearo-k8w{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+  }
+  
+  #okearo-n7k{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+
+    $n7k-v-0Height: getHeight(2);
+    #n7k-v-0 {
+      top: map-get($cell, 'height');
+      left: map-get($halfCell, 'width');
+      height: $n7k-v-0Height;
+    }
+  }
+
+  #okearo-n8k{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+
+    $n8k-v-0Height: getHeight(2);
+    #n8k-v-0 {
+      top: map-get($cell, 'height');
+      left: map-get($halfCell, 'width');
+      height: $n8k-v-0Height;
+    }
+  }
+}

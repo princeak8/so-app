@@ -1,0 +1,10 @@
+$ikoroduTop: $egbinGsTop + $egbinGsHeight + getHeight(1);//Comes below egbin with one cell spacing
+$ikoroduLeft: $egbinGsLeft + map-get($cell, 'width'); //comes one cell after the left position of egbin
+$ikoroduWidth: map-get(stationDimention(1,3), 'width');
+$ikoroduHeight: map-get(stationDimention(1,3), 'height');
+#ikorodu{
+  @include station(1,3);
+  top: $ikoroduTop;
+  left: $ikoroduLeft;
+
+}

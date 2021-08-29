@@ -1,0 +1,9 @@
+$kainjiGsTop: $kainjiTsTop;
+$kainjiGsLeft: map-get($col2, 'left');
+$kainjiGsWidth: map-get(stationDimention(2,1), 'width');
+$kainjiGsHeight: map-get(stationDimention(2,1), 'height');
+#kainjiGs{
+  @include station(2,1);
+  top: $kainjiGsTop;
+  left: $kainjiGsLeft;
+}

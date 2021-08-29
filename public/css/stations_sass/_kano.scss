@@ -1,0 +1,14 @@
+$kanoTop: map-get($row1, 'top');//Starts from the top of row1
+$kanoLeft: map-get($col3, 'left') + getLength(1);//starts one cells from the left of col3
+$kanoWidth: map-get(stationDimention(1,1), 'width');
+$kanoHeight: map-get(stationDimention(1,1), 'height');
+#kano{
+  @include station(1,1);
+  top: $kanoTop;
+  left: $kanoLeft;
+
+  #kano-m6n{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+}

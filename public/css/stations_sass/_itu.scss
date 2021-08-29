@@ -1,0 +1,10 @@
+$ituTop: $abaTop;
+$ituLeft: map-get($col6, 'left');
+$ituWidth: map-get(stationDimention(2,2), 'width');
+$ituHeight: map-get(stationDimention(2,2), 'height');
+#itu{
+  @include station(2,2);
+  top: $ituTop;
+  left: $ituLeft;
+
+}

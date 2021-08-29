@@ -1,0 +1,68 @@
+$ajahTop: map-get($row5, 'top') + getHeight(6);
+$ajahLeft: map-get($col1, 'left');
+$ajahWidth: map-get(stationDimention(3,2), 'width');
+$ajahHeight: map-get(stationDimention(3,2), 'height');
+#ajah{
+  @include station(3,2);
+  top: $ajahTop;
+  left: $ajahLeft;
+
+  #ajah-n3j{
+    left: map-get(lineBoxPosition(1,2), 'left');
+    top: map-get(lineBoxPosition(1,2), 'top');
+
+    $n3j-h-0Width: getLength(1);
+    #n3j-h-0 {
+      width: $n3j-h-0Width;
+      top: map-get($halfCell, 'height');
+      left: map-get($cell, 'width');
+    }
+  }
+
+  #ajah-n4j{
+    left: map-get(lineBoxPosition(2,2), 'left');
+    top: map-get(lineBoxPosition(2,2), 'top');
+
+    $n4j-h-0Width: getLength(1);
+    #n4j-h-0 {
+      width: $n4j-h-0Width;
+      top: map-get($halfCell, 'height');
+      left: map-get($cell, 'width');
+    }
+  }
+
+  #ajah-j1e{
+    left: map-get(lineBoxPosition(3,2), 'left');
+    top: map-get(lineBoxPosition(3,2), 'top');
+
+    $j1e-h-0Width: map-get($halfCell, 'width');
+    $j1e-h-0Top: map-get($halfCell, 'height');
+    $j1e-h-0Left: map-get($cell, 'width');
+    #j1e-h-0 {
+      width: $j1e-h-0Width;
+      top: $j1e-h-0Top;
+      left: $j1e-h-0Left;
+    }
+
+    $j1e-v-1Top: $j1e-h-0Top;
+    $j1e-v-1Height: map-get($halfCell, 'height') + getHeight(2);
+    $j1e-v-1Left: $j1e-h-0Left + $j1e-h-0Width;
+    #j1e-v-1 {
+      top: $j1e-v-1Top;
+      left: $j1e-v-1Left;
+      height: $j1e-v-1Height;
+    }
+  }
+
+  #ajah-j1b{
+    left: map-get(lineBoxPosition(3,1), 'left');
+    top: map-get(lineBoxPosition(3,1), 'top');
+
+    $jib-v-0Height: getHeight(2);
+    #jib-v-0 {
+      top: map-get($cell, 'height');
+      left: map-get($halfCell, 'width');
+      height: $jib-v-0Height;
+    }
+  }
+}

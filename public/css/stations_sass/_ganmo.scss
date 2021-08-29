@@ -1,0 +1,20 @@
+//The top starts one cell after the end of Shiroro GS and left from the start of col2
+$ganmoTop: $shiroroGsTop + $shiroroGsHeight + getHeight(1);
+$ganmoLeft: map-get($col2, 'left');
+$ganmoWidth: map-get(stationDimention(2,1), 'width');
+$ganmoHeight: map-get(stationDimention(2,1), 'height');
+#ganmo{
+  @include station(2,1);
+  top: $ganmoTop;
+  left: $ganmoLeft;
+
+  $ganmo-j3gLeft: $ganmoLeft + map-get(lineBoxPosition(1,1), 'left');
+  #ganmo-j3g {
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+  #ganmo-h3g {
+    left: map-get(lineBoxPosition(2,1), 'left');
+    top: map-get(lineBoxPosition(2,1), 'top');
+  }
+}

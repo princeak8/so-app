@@ -1,0 +1,10 @@
+$riversIppGsTop: $gbarainGsTop + $gbarainGsHeight + getHeight(1);
+$riversIppGsLeft: $phMainLeft + $phMainWidth;
+$riversIppGsWidth: map-get(stationDimention(1,2), 'width');
+$riversIppGsHeight: map-get(stationDimention(1,2), 'height');
+#riversIppGs{
+  @include station(1,2);
+  top: $riversIppGsTop;
+  left: $riversIppGsLeft;
+
+}

@@ -1,0 +1,34 @@
+$gwagwaladaTop: $markudiTop + $markudiHeight;//Starts from the end of Jos TS
+$gwagwaladaLeft: $markudiLeft + $markudiWidth;//starts from the start of col3
+$gwagwaladaWidth: map-get(stationDimention(2,2), 'width');
+$gwagwaladaHeight: map-get(stationDimention(2,2), 'height');
+#gwagwalada{
+  @include station(2,2);
+  top: $gwagwaladaTop;
+  left: $gwagwaladaLeft;
+
+  #gwagwalada-r5g{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top:  map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #gwagwalada-g5b{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top:  map-get(lineBoxPosition(2, 1), 'top');
+  }
+  #gwagwalada-l6g{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top:  map-get(lineBoxPosition(1, 2), 'top');
+
+    #l6g-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+  #gwagwalada-l7g{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top:  map-get(lineBoxPosition(2, 2), 'top');
+
+    #l7g-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+}

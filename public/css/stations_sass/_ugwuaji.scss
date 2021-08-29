@@ -1,0 +1,137 @@
+$ugwuajiTop: map-get($row3, 'top') + getHeight(1);
+$ugwuajiLeft: map-get($col5, 'left');
+$ugwuajiWidth: map-get(stationDimention(4,3), 'width');
+$ugwuajiHeight: map-get(stationDimention(4,3), 'height');
+#ugwuaji{
+  @include station(4,3);
+  top: $ugwuajiTop;
+  left: $ugwuajiLeft;
+  
+  #ugwuaji-u1a{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+  #ugwuaji-u2a{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+  }
+
+  #ugwuaji-h1u{
+    left: map-get(lineBoxPosition(4, 1), 'left');
+    top: map-get(lineBoxPosition(4, 1), 'top');
+
+    #h1u-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+
+
+  #ugwuaji-h2u{
+    left: map-get(lineBoxPosition(4, 2), 'left');
+    top: map-get(lineBoxPosition(4, 2), 'top');
+
+    #h2u-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+
+
+  #ugwuaji-k1u{
+    left: map-get(lineBoxPosition(1, 3), 'left');
+    top: map-get(lineBoxPosition(1, 3), 'top');
+
+    //1st Line
+    $k1u-h-0Width: getLength(15) + map-get($halfCell, 'width');
+    $k1u-h-0Top: map-get($halfCell, 'height');
+    $k1u-h-0Left: map-get($cell, 'width');
+    #k1u-h-0 {
+      width: $k1u-h-0Width;
+      top: $k1u-h-0Top;
+      left: $k1u-h-0Left;
+    }
+    // 2nd Line
+    $k1u-v-1Height: getHeight(17) + map-get($halfCell, 'height');
+    $k1u-v-1Top: $k1u-h-0Top;
+    $k1u-v-1Left: $k1u-h-0Left + $k1u-h-0Width;
+    #k1u-v-1{
+      top: $k1u-v-1Top;
+      left: $k1u-v-1Left;
+      height: $k1u-v-1Height;
+    }
+  }
+
+
+  #ugwuaji-k2u{
+    left: map-get(lineBoxPosition(2, 3), 'left');
+    top: map-get(lineBoxPosition(2, 3), 'top');
+
+    //1st Line
+    $k2u-h-0Width: getLength(14) + map-get($halfCell, 'width');
+    $k2u-h-0Top: map-get($halfCell, 'height');
+    $k2u-h-0Left: map-get($cell, 'width');
+    #k2u-h-0 {
+      width: $k2u-h-0Width;
+      top: $k2u-h-0Top;
+      left: $k2u-h-0Left;
+    }
+    // 2nd Line
+    $k2u-v-1Height: getHeight(16) + map-get($halfCell, 'height');
+    $k2u-v-1Top: $k2u-h-0Top;
+    $k2u-v-1Left: $k2u-h-0Left + $k2u-h-0Width;
+    #k2u-v-1{
+      top: $k2u-v-1Top;
+      left: $k2u-v-1Left;
+      height: $k2u-v-1Height;
+    }
+  }
+
+
+  #ugwuaji-k3u{
+    left: map-get(lineBoxPosition(3, 3), 'left');
+    top: map-get(lineBoxPosition(3, 3), 'top');
+
+    //1st Line
+    $k3u-h-0Width: getLength(13) + map-get($halfCell, 'width');
+    $k3u-h-0Top: map-get($halfCell, 'height');
+    $k3u-h-0Left: map-get($cell, 'width');
+    #k3u-h-0 {
+      width: $k3u-h-0Width;
+      top: $k3u-h-0Top;
+      left: $k3u-h-0Left;
+    }
+    // 2nd Line
+    $k3u-v-1Height: getHeight(15) + map-get($halfCell, 'height');
+    $k3u-v-1Top: $k3u-h-0Top;
+    $k3u-v-1Left: $k3u-h-0Left + $k3u-h-0Width;
+    #k3u-v-1{
+      top: $k3u-v-1Top;
+      left: $k3u-v-1Left;
+      height: $k3u-v-1Height;
+    }
+  }
+
+
+  #ugwuaji-k4u{
+    left: map-get(lineBoxPosition(4, 3), 'left');
+    top: map-get(lineBoxPosition(4, 3), 'top');
+
+    //1st Line
+    $k4u-h-0Width: getLength(12) + map-get($halfCell, 'width');
+    $k4u-h-0Top: map-get($halfCell, 'height');
+    $k4u-h-0Left: map-get($cell, 'width');
+    #k4u-h-0 {
+      width: $k4u-h-0Width;
+      top: $k4u-h-0Top;
+      left: $k4u-h-0Left;
+    }
+    // 2nd Line
+    $k4u-v-1Height: getHeight(14) + map-get($halfCell, 'height');
+    $k4u-v-1Top: $k4u-h-0Top;
+    $k4u-v-1Left: $k4u-h-0Left + $k4u-h-0Width;
+    #k4u-v-1{
+      top: $k4u-v-1Top;
+      left: $k4u-v-1Left;
+      height: $k4u-v-1Height;
+    }
+  }
+}
