@@ -6,6 +6,7 @@ export var ugwuaji = {
     lines: [
         {
             name: "h1u",
+            id: "h1u",
             connectionRoot: true,
             connections: [
                 {
@@ -22,6 +23,7 @@ export var ugwuaji = {
         },
         {
             name: "h2u",
+            id: "h2u",
             connectionRoot: true,
             connections: [
                 {
@@ -38,16 +40,19 @@ export var ugwuaji = {
         },
         {
             name: "u1a",
+            id: "u1a",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "u2a",
+            id: "u2a",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "k1u",
+            id: "k1u",
             connectionRoot: true,
             connections: [
                 {
@@ -73,6 +78,7 @@ export var ugwuaji = {
         },
         {
             name: "k2u",
+            id: "k2u",
             connectionRoot: true,
             connections: [
                 {
@@ -98,6 +104,7 @@ export var ugwuaji = {
         },
         {
             name: "k3u",
+            id: "k3u",
             connectionRoot: true,
             connections: [
                 {
@@ -123,6 +130,7 @@ export var ugwuaji = {
         },
         {
             name: "k4u",
+            id: "k4u",
             connectionRoot: true,
             connections: [
                 {

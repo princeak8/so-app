@@ -2,7 +2,7 @@
     <div>
         
         <StationBox v-for="(station, i) in updatedStations" :name="station.name" :id="station.id" :lines="station.lines" :station="station"  />
-        <button type="button" class="btn btn-primary" @click="openModal()">click</button>
+        <!-- <button type="button" class="btn btn-primary" @click="openModal()">click</button> -->
         
           <PowerStationBox v-for="(pStation, i) in powerStations" :name="pStation.name" :ids="pStation.id" :units="pStation.units" />
 
@@ -245,18 +245,23 @@ export default {
         this.$router.push(RouteEnum.LOGIN);
       },
       async connect() {
-        const token = "53c297c89cc189222a23195411ec5431";
-        const data = await this.get_token();
-        console.log('token', data.token);
-        const ADDR = `ws://localhost:3001/token=${data.token}`;
+        const data = {token: '1234'};
+        //const token = "53c297c89cc189222a23195411ec5431";
+        //const data = await this.get_token();
+        //console.log('token', data.token);
+        // const ADDR = `ws://localhost:3001/token=${data.token}`;
+        //const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
+        const ADDR = `ws://193.148.63.148:3002/token=${data.token}`;
         this.ws = new WebSocket(ADDR);
         this.ws.onmessage = (msg) => {
           const res = JSON.parse(msg.data);
+          //this.newData = res;
           console.log(res);
         };
       },
       get_token: async () => {
-      let url = "http://localhost/so_app/public/api/v1/get_connection_token";
+      // let url = "http://localhost/so_app/public/api/v1/get_connection_token";
+      let url = "http://102.89.11.82/so_app/api/v1/get_connection_token";
       var self = this;
       let formData =  {
           name : 'test',
@@ -276,7 +281,7 @@ export default {
   mounted() {
     console.log('p stations:',powerStations);
       //console.log(newData);
-    //this.connect();
+    this.connect();
   },
 };
 </script>

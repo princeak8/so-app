@@ -1,11 +1,12 @@
 import transmissionData from '../TransmissionData';
 
 export var adiabor = {
-    name: "ADIABOR GS",
+    name: "ADIABOR TS",
     id: "adiabor",
     lines: [
         {
             name: "d1b",
+            id: "d1b",
             connectionRoot: true,
             connections: [
                 {
@@ -22,6 +23,7 @@ export var adiabor = {
         },
         {
             name: "d2b",
+            id: "d2b",
             connectionRoot: true,
             connections: [
                 {
@@ -35,6 +37,44 @@ export var adiabor = {
                 },
             ],
             transmissionData
-        }
+        },
+
+        //Added by me
+        {
+            name: "a1b",
+            id: "a1b",
+            connectionRoot: true,
+            is132: true,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'a1b-v-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
+            transmissionData
+        },
+        {
+            name: "a2b",
+            id: "a2b",
+            connectionRoot: true,
+            is132: true,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'a2b-v-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
+            transmissionData
+        },
     ]
 };

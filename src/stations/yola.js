@@ -6,6 +6,7 @@ export var yola = {
     lines: [
         {
             name: "e1y",
+            id: "e1y",
             connectionRoot: false,
             transmissionData
         }

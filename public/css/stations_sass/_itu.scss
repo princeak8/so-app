@@ -7,4 +7,27 @@ $ituHeight: map-get(stationDimention(2,2), 'height');
   top: $ituTop;
   left: $ituLeft;
 
+  #itu-b1i{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+
+  #itu-i1b{
+    left: map-get(lineBoxPosition(1,2), 'left');
+    top: map-get(lineBoxPosition(1,2), 'top');
+
+    #i1b-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+
+  #itu-i1e{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+
+    #i1e-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+
 }

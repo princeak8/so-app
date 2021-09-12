@@ -6,16 +6,19 @@ export var oshogbo = {
     lines: [
         {
             name: "j1h",
+            id: "j1h",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "j2h",
+            id: "j2h",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "h3g",
+            id: "h3g",
             connectionRoot: true,
             connections: [
                 {
@@ -49,11 +52,13 @@ export var oshogbo = {
         },
         {
             name: "h2a",
+            id: "h2a",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "h1w",
+            id: "h1w",
             connectionRoot: true,
             connections: [
                 {
@@ -70,6 +75,7 @@ export var oshogbo = {
         },
         {
             name: "h7v",
+            id: "h7v",
             connectionRoot: true,
             connections: [
                 {

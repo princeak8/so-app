@@ -6,6 +6,7 @@ export var kaduna = {
     lines: [
         {
             name: "r1m",
+            id: "r1m",
             connectionRoot: true,
             connections: [
                 {
@@ -22,6 +23,7 @@ export var kaduna = {
         },
         {
             name: "r2m",
+            id: "r2m",
             connectionRoot: true,
             connections: [
                 {
@@ -38,6 +40,7 @@ export var kaduna = {
         },
         {
             name: "m6n",
+            id: "m6n",
             connectionRoot: true,
             connections: [
                 {
@@ -54,6 +57,7 @@ export var kaduna = {
         },
         {
             name: "m2s",
+            id: "m2s",
             connectionRoot: true,
             connections: [
                 {

@@ -6,16 +6,19 @@ export var newHaven = {
     lines: [
         {
             name: "h1u",
+            id: "h1u",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "h2u",
+            id: "h2u",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "t3h",
+            id: "t3h",
             connectionRoot: true,
             connections: [
                 {

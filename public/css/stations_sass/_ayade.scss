@@ -1,13 +1,13 @@
-$ayadeGsTop: map-get($row3, 'top') + getHeight(8);
-$ayadeGsLeft: map-get($col1, 'left');
-$ayadeGsWidth: map-get(stationDimention(1,2), 'width');
-$ayadeGsHeight: map-get(stationDimention(1,2), 'height');
-#ayadeGs{
+$ayadeTop: map-get($row3, 'top') + getHeight(8);
+$ayadeLeft: map-get($col1, 'left');
+$ayadeWidth: map-get(stationDimention(1,2), 'width');
+$ayadeHeight: map-get(stationDimention(1,2), 'height');
+#ayade{
   @include station(1,2);
-  top: $ayadeGsTop;
-  left: $ayadeGsLeft;
+  top: $ayadeTop;
+  left: $ayadeLeft;
 
-  #ayadeGs-r2a{
+  #ayade-r2a{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top: map-get(lineBoxPosition(1, 1), 'top');
 
@@ -40,7 +40,7 @@ $ayadeGsHeight: map-get(stationDimention(1,2), 'height');
     }
   }
 
-  #ayadeGs-h2a{
+  #ayade-h2a{
     left: map-get(lineBoxPosition(1, 2), 'left');
     top: map-get(lineBoxPosition(1, 2), 'top');
 

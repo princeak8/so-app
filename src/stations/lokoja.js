@@ -6,16 +6,19 @@ export var lokoja = {
     lines: [
         {
             name: "l6g",
+            id: "l6g",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "l7g",
+            id: "l7g",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "j1l",
+            id: "j1l",
             connectionRoot: true,
             connections: [
                 {
@@ -41,6 +44,7 @@ export var lokoja = {
         },
         {
             name: "j2l",
+            id: "j2l",
             connectionRoot: true,
             connections: [
                 {

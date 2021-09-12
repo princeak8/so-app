@@ -6,11 +6,13 @@ export var akangba = {
     lines: [
         {
             name: "w3l",
+            id: "w3l",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "w4l",
+            id: "w4l",
             connectionRoot: false,
             transmissionData
         }

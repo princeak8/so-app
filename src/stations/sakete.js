@@ -6,6 +6,7 @@ export var sakete = {
     lines: [
         {
             name: "nw1bs",
+            id: "nw1bs",
             connectionRoot: true,
             connections: [
                 {

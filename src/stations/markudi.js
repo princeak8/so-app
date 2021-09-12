@@ -6,16 +6,19 @@ export var markudi = {
     lines: [
         {
             name: "a1s",
+            id: "a1s",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "a2s",
+            id: "a2s",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "u1a",
+            id: "u1a",
             connectionRoot: true,
             connections: [
                 {
@@ -32,6 +35,7 @@ export var markudi = {
         },
         {
             name: "u2a",
+            id: "u2a",
             connectionRoot: true,
             connections: [
                 {

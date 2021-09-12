@@ -6,11 +6,13 @@ export var damaturu = {
     lines: [
         {
             name: "e1d",
+            id: "e1d",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "d1l",
+            id: "d1l",
             connectionRoot: true,
             connections: [
                 {

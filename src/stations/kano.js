@@ -6,6 +6,7 @@ export var kano = {
     lines: [
         {
             name: "m6n",
+            id: "m6n",
             transmissionData
         }
     ]

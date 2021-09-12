@@ -6,6 +6,7 @@ export var molai = {
     lines: [
         {
             name: "d1l",
+            id: "d1l",
             connectionRoot: false,
             transmissionData
         }

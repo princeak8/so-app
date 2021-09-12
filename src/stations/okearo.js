@@ -6,16 +6,19 @@ export var okearo = {
     lines: [
         {
             name: "k7w",
+            id: "k7w",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "k8w",
+            id: "k8w",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "n7k",
+            id: "n7k",
             connectionRoot: true,
             connections: [
                 {
@@ -32,6 +35,7 @@ export var okearo = {
         },
         {
             name: "n8k",
+            id: "n8k",
             connectionRoot: true,
             connections: [
                 {

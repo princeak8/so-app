@@ -296,7 +296,7 @@
   left: 68px;
 }
 
-#ayadeGs {
+#ayade {
   position: absolute;
   border: medium solid #000;
   width: 136px;
@@ -309,35 +309,35 @@
   left: 0px;
 }
 
-#ayadeGs #ayadeGs-r2a {
+#ayade #ayade-r2a {
   left: -1px;
   top: 25px;
 }
 
-#ayadeGs #ayadeGs-r2a #r2a-v-0 {
+#ayade #ayade-r2a #r2a-v-0 {
   top: 26px;
   left: 34px;
   height: 91px;
 }
 
-#ayadeGs #ayadeGs-r2a #r2a-h-1 {
+#ayade #ayade-r2a #r2a-h-1 {
   top: 117px;
   left: 34px;
   width: 136px;
 }
 
-#ayadeGs #ayadeGs-r2a #r2a-v-2 {
+#ayade #ayade-r2a #r2a-v-2 {
   bottom: -91px;
   left: 170px;
   height: 13px;
 }
 
-#ayadeGs #ayadeGs-h2a {
+#ayade #ayade-h2a {
   left: 67px;
   top: 25px;
 }
 
-#ayadeGs #ayadeGs-h2a #h2a-h-0 {
+#ayade #ayade-h2a #h2a-h-0 {
   width: 136px;
   top: 13px;
   left: 68px;
@@ -1880,6 +1880,74 @@
   left: 1360px;
 }
 
+#owerri #owerri-a1o {
+  left: 67px;
+  top: 25px;
+}
+
+#owerri #owerri-a1o #a1o-h-0 {
+  width: 102px;
+  top: 13px;
+  left: 68px;
+}
+
+#owerri #owerri-a1o #a1o-v-1 {
+  bottom: 12px;
+  left: 170px;
+  height: 26px;
+}
+
+#owerri #owerri-a1o #a1o-h-2 {
+  width: 170px;
+  top: -13px;
+  left: 170px;
+}
+
+#owerri #owerri-a2o {
+  left: 67px;
+  top: 51px;
+}
+
+#owerri #owerri-a2o #a2o-h-0 {
+  width: 136px;
+  top: 13px;
+  left: 68px;
+}
+
+#owerri #owerri-a2o #a2o-v-1 {
+  bottom: 12px;
+  left: 204px;
+  height: 26px;
+}
+
+#owerri #owerri-a2o #a2o-h-2 {
+  width: 136px;
+  top: -13px;
+  left: 204px;
+}
+
+#owerri #owerri-h1o {
+  left: -1px;
+  top: 77px;
+}
+
+#owerri #owerri-h1o #h1o-v-0 {
+  top: 26px;
+  left: 34px;
+  height: 52px;
+}
+
+#owerri #owerri-h2o {
+  left: 67px;
+  top: 77px;
+}
+
+#owerri #owerri-h2o #h2o-v-0 {
+  top: 26px;
+  left: 34px;
+  height: 52px;
+}
+
 #ahaoda {
   position: absolute;
   border: medium solid #000;
@@ -1891,6 +1959,16 @@
           box-shadow: 0px 8px 16px #0000001F;
   top: 884px;
   left: 1360px;
+}
+
+#ahaoda #ahaoda-h1o {
+  left: -1px;
+  top: 25px;
+}
+
+#ahaoda #ahaoda-h2o {
+  left: 67px;
+  top: 25px;
 }
 
 #transamadiGs {
@@ -2266,6 +2344,38 @@
   left: 68px;
 }
 
+#alaoji #alaoji-a1b {
+  left: 203px;
+  top: 103px;
+}
+
+#alaoji #alaoji-a1b #a1b-v-0 {
+  top: 26px;
+  left: 34px;
+  height: 78px;
+}
+
+#alaoji #alaoji-a2b {
+  left: 271px;
+  top: 103px;
+}
+
+#alaoji #alaoji-a2b #a2b-v-0 {
+  top: 26px;
+  left: 34px;
+  height: 78px;
+}
+
+#alaoji #alaoji-a1o {
+  left: -1px;
+  top: 77px;
+}
+
+#alaoji #alaoji-a2o {
+  left: -1px;
+  top: 103px;
+}
+
 #aba {
   position: absolute;
   border: medium solid #000;
@@ -2277,6 +2387,27 @@
           box-shadow: 0px 8px 16px #0000001F;
   top: 858px;
   left: 1972px;
+}
+
+#aba #aba-a1b {
+  left: -1px;
+  top: 25px;
+}
+
+#aba #aba-a2b {
+  left: 67px;
+  top: 25px;
+}
+
+#aba #aba-b1i {
+  left: 135px;
+  top: 25px;
+}
+
+#aba #aba-b1i #b1i-h-0 {
+  width: 68px;
+  top: 13px;
+  left: 68px;
 }
 
 #yenegoa {
@@ -2341,6 +2472,33 @@
   left: 2244px;
 }
 
+#itu #itu-b1i {
+  left: -1px;
+  top: 25px;
+}
+
+#itu #itu-i1b {
+  left: 67px;
+  top: 25px;
+}
+
+#itu #itu-i1b #i1b-h-0 {
+  width: 68px;
+  top: 13px;
+  left: 68px;
+}
+
+#itu #itu-i1e {
+  left: 67px;
+  top: 51px;
+}
+
+#itu #itu-i1e #i1e-v-0 {
+  top: 26px;
+  left: 34px;
+  height: 52px;
+}
+
 #adiabor {
   position: absolute;
   border: medium solid #000;
@@ -2389,6 +2547,33 @@
   left: 2244px;
 }
 
+#eket #eket-i1e {
+  left: 67px;
+  top: 25px;
+}
+
+#eket #eket-e1m {
+  left: -1px;
+  top: 51px;
+}
+
+#eket #eket-e1m #e1m-v-0 {
+  top: 26px;
+  left: 34px;
+  height: 52px;
+}
+
+#eket #eket-e2m {
+  left: 67px;
+  top: 51px;
+}
+
+#eket #eket-e2m #e2m-v-0 {
+  top: 26px;
+  left: 34px;
+  height: 52px;
+}
+
 #ibomGs {
   position: absolute;
   border: medium solid #000;
@@ -2402,6 +2587,38 @@
   left: 2244px;
 }
 
+#ibomGs #ibomGs-e1m {
+  left: -1px;
+  top: 25px;
+}
+
+#ibomGs #ibomGs-e2m {
+  left: 67px;
+  top: 25px;
+}
+
+#ibomGs #ibomGs-m1o {
+  left: 67px;
+  top: 51px;
+}
+
+#ibomGs #ibomGs-m1o #m1o-h-0 {
+  width: 68px;
+  top: 13px;
+  left: 68px;
+}
+
+#ibomGs #ibomGs-m2o {
+  left: 67px;
+  top: 77px;
+}
+
+#ibomGs #ibomGs-m2o #m2o-h-0 {
+  width: 68px;
+  top: 13px;
+  left: 68px;
+}
+
 #ikotAbasi {
   position: absolute;
   border: medium solid #000;
@@ -2413,6 +2630,16 @@
           box-shadow: 0px 8px 16px #0000001F;
   top: 1092px;
   left: 2448px;
+}
+
+#ikotAbasi #ikotAbasi-m1o {
+  left: -1px;
+  top: 25px;
+}
+
+#ikotAbasi #ikotAbasi-m2o {
+  left: -1px;
+  top: 51px;
 }
 
 #ikotEkpene {
