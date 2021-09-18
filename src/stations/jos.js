@@ -6,11 +6,13 @@ export var jos = {
     lines: [
         {
             name: "m2s",
+            id: "m2s",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "s1e",
+            id: "s1e",
             connectionRoot: true,
             connections: [
                 {
@@ -27,6 +29,7 @@ export var jos = {
         },
         {
             name: "a1s",
+            id: "a1s",
             connectionRoot: true,
             connections: [
                 {
@@ -43,6 +46,7 @@ export var jos = {
         },
         {
             name: "a2s",
+            id: "a2s",
             connectionRoot: true,
             connections: [
                 {

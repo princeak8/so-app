@@ -6,11 +6,19 @@ export var gombe = {
     lines: [
         {
             name: "s1e",
+            id: "s1e",
+            connectionRoot: false,
+            transmissionData
+        },
+        {
+            name: "w23e",
+            id: "w23e",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "e1y",
+            id: "e1y",
             connectionRoot: true,
             connections: [
                 {
@@ -27,6 +35,7 @@ export var gombe = {
         },
         {
             name: "e1d",
+            id: "e1d",
             connectionRoot: true,
             connections: [
                 {

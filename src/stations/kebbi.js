@@ -7,6 +7,7 @@ export var kebbi = {
     lines: [
         {
             name: "k3r",
+            id: "k3r",
             connectionRoot: true,
             connections: [
                 {

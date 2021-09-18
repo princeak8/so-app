@@ -7,4 +7,86 @@ $owerriHeight: map-get(stationDimention(3,2), 'height');
   top: $owerriTop;
   left: $owerriLeft;
 
+  #owerri-a23w{
+      left: map-get(lineBoxPosition(1, 2), 'left');
+      top: map-get(lineBoxPosition(1, 2), 'top');
+
+      $a23w-h-0Width: getLength(1) + map-get($halfCell, 'width');
+      $a23w-h-0Top: map-get($halfCell, 'height');
+      $a23w-h-0Left: map-get($cell, 'width');
+      #a23w-h-0 {
+        width: $a23w-h-0Width;
+        top: $a23w-h-0Top;
+        left: $a23w-h-0Left;
+      }
+      // 2nd Line
+      $a23w-v-1Height: getHeight(1);
+      $a23w-v-1Bottom: $a23w-h-0Top - 1;
+      $a23w-v-1Left: $a23w-h-0Left + $a23w-h-0Width;
+      #a23w-v-1{
+        bottom: $a23w-v-1Bottom;
+        left: $a23w-v-1Left;
+        height: $a23w-v-1Height;
+      }
+      //3rd Line
+      $a23w-h-2Width: getLength(2) + map-get($halfCell, 'width');
+      $a23w-h-2Top: -($a23w-v-1Height - $a23w-h-0Top);//(getHeight(1) + map-get($halfCell, 'height'));
+      $a23w-h-2Left: $a23w-v-1Left;
+      #a23w-h-2 {
+        width: $a23w-h-2Width;
+        top: $a23w-h-2Top;
+        left: $a23w-h-2Left;
+      }
+  }
+
+  #owerri-a24w{
+      left: map-get(lineBoxPosition(2, 2), 'left');
+      top: map-get(lineBoxPosition(2, 2), 'top');
+
+      $a24w-h-0Width: getLength(2);
+      $a24w-h-0Top: map-get($halfCell, 'height');
+      $a24w-h-0Left: map-get($cell, 'width');
+      #a24w-h-0 {
+        width: $a24w-h-0Width;
+        top: $a24w-h-0Top;
+        left: $a24w-h-0Left;
+      }
+      // 2nd Line
+      $a24w-v-1Height: getHeight(1);
+      $a24w-v-1Bottom: $a24w-h-0Top - 1;
+      $a24w-v-1Left: $a24w-h-0Left + $a24w-h-0Width;
+      #a24w-v-1{
+        bottom: $a24w-v-1Bottom;
+        left: $a24w-v-1Left;
+        height: $a24w-v-1Height;
+      }
+      //3rd Line
+      $a24w-h-2Width: getLength(2);
+      $a24w-h-2Top: -($a24w-v-1Height - $a24w-h-0Top);
+      $a24w-h-2Left: $a24w-v-1Left;
+      #a24w-h-2 {
+        width: $a24w-h-2Width;
+        top: $a24w-h-2Top;
+        left: $a24w-h-2Left;
+      }
+  }
+
+  #owerri-w21h{
+    left: map-get(lineBoxPosition(3, 1), 'left');
+    top: map-get(lineBoxPosition(3, 1), 'top');
+
+    #w21h-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+
+  #owerri-w22h{
+    left: map-get(lineBoxPosition(3, 2), 'left');
+    top: map-get(lineBoxPosition(3, 2), 'top');
+
+    #w22h-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+
 }

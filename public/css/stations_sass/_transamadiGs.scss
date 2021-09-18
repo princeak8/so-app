@@ -7,4 +7,22 @@ $transamadiGsHeight: map-get(stationDimention(2,1), 'height');
   top: $transamadiGsTop;
   left: $transamadiGsLeft;
 
+  #transamadiGs-m21p{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+
+    #m21p-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+
+  #transamadiGs-m22p{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+
+    #m22p-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+
 }

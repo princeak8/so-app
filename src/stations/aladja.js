@@ -6,6 +6,7 @@ export var aladja = {
     lines: [
         {
             name: "g1w",
+            id: "g1w",
             connectionRoot: true,
             connections: [
                 {

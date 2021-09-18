@@ -1,5 +1,5 @@
 import transmissionData from './TransmissionData';
-import {kebbi, jebbaGs, ayadeGs, olorunsogoNippGs, olorunsogoPhase1Gs, ajah, alagbon, egbinGs, fakun, ganmo, ikejaWest, ikorodu, 
+import {kebbi, jebbaGs, ayade, olorunsogoNippGs, olorunsogoPhase1Gs, ajah, alagbon, egbinGs, fakun, ganmo, ikejaWest, ikorodu, odogunyan,
         jebba, kainji, kainjiGs, okearo, oshogbo, parasEnergyGs, sagamu, sakete, shiroroGs, lekki, katampe, ihovborNippGs, azuraIppGs,
         omotoshoNippGs, omotoshoPhase1Gs, akangba, kaduna, kano, dadinKowaGs, gombe, jos, markudi, gwagwalada, lokoja, benin, deltaGs,
         sapeleGs, aladja, sapeleNippGs, biu, damaturu, molai, ajaokuta, gereguGs, yola, gereguNipp, asaba, alaojiGs, owerri, ahaoda,
@@ -10,7 +10,7 @@ import {kebbi, jebbaGs, ayadeGs, olorunsogoNippGs, olorunsogoPhase1Gs, ajah, ala
 export var stations = [
     kebbi,
     jebbaGs,
-    ayadeGs,
+    ayade,
     olorunsogoNippGs,
     olorunsogoPhase1Gs,
     sakete,
@@ -21,6 +21,7 @@ export var stations = [
     lekki,
     egbinGs,
     ikorodu,
+    odogunyan,
     sagamu,
     parasEnergyGs,
     fakun,

@@ -3,24 +3,31 @@ import transmissionData from '../TransmissionData';
 export var shiroroGs = {
     name: "SHIRORO GS",
     id: "shiroroGs",
+    gs: true,
+    gsId: 'shiroroPs',
+    has132: false,
     lines: [
         {
             name: "j3r",
+            id: "j3r",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "j7r",
+            id: "j7r",
             connectionRoot: false,
             transmissionData
         },
         {
+            name: "r1m",
             name: "r1m",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "r4b",
+            id: "r4b",
             connectionRoot: true,
             connections: [
                 {
@@ -37,11 +44,13 @@ export var shiroroGs = {
         },
         {
             name: "r2m",
+            id: "r2m",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "r5g",
+            id: "r5g",
             connectionRoot: true,
             connections: [
                 {

@@ -9,6 +9,7 @@ export var jebbaGs = {
     lines: [
         {
             name: "b8j",
+            id: "b8j",
             connectionRoot: true,
             connections: [
                 {
@@ -25,6 +26,7 @@ export var jebbaGs = {
         },
         {
             name: "b9j",
+            id: "b9j",
             connectionRoot: true,
             connections: [
                 {

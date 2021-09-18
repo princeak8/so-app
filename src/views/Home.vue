@@ -239,7 +239,8 @@ export default {
       };
     },
     get_token: async () => {
-      let url = "http://localhost/so_app/public/api/v1/get_connection_token";
+      // let url = "http://localhost/so_app/public/api/v1/get_connection_token";
+      let url = "http://102.89.11.82/so_app/api/v1/get_connection_toke";
       var self = this;
       let formData = {
         name: "test",

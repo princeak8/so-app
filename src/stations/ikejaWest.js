@@ -6,16 +6,19 @@ export var ikejaWest = {
     lines: [
         {
             name: "r1w",
+            id: "r1w",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "h1w",
+            id: "h1w",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "m5w",
+            id: "m5w",
             connectionRoot: true,
             connections: [
                 {
@@ -32,11 +35,13 @@ export var ikejaWest = {
         },
         {
             name: "nw1bs",
+            id: "nw1bs",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "w3l",
+            id: "w3l",
             connectionRoot: true,
             connections: [
                 {
@@ -53,6 +58,7 @@ export var ikejaWest = {
         },
         {
             name: "k7w",
+            id: "k7w",
             connectionRoot: true,
             connections: [
                 {
@@ -69,6 +75,7 @@ export var ikejaWest = {
         },
         {
             name: "k8w",
+            id: "k8w",
             connectionRoot: true,
             connections: [
                 {
@@ -85,6 +92,7 @@ export var ikejaWest = {
         },
         {
             name: "n6w",
+            id: "n6w",
             connectionRoot: true,
             connections: [
                 {
@@ -101,6 +109,7 @@ export var ikejaWest = {
         },
         {
             name: "w4l",
+            id: "w4l",
             connectionRoot: true,
             connections: [
                 {

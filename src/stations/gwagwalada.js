@@ -6,16 +6,19 @@ export var gwagwalada = {
     lines: [
         {
             name: "r5g",
+            id: "r5g",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "g5b",
+            id: "g5b",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "l6g",
+            id: "l6g",
             connectionRoot: true,
             connections: [
                 {
@@ -32,6 +35,7 @@ export var gwagwalada = {
         },
         {
             name: "l7g",
+            id: "l7g",
             connectionRoot: true,
             connections: [
                 {

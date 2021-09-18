@@ -1,10 +1,20 @@
 $parasEnergyGsTop: $ikoroduTop + $ikoroduHeight + map-get($cell, 'height'); //comes one cell after the bottom of Ikorodu
-$parasEnergyGsLeft: $ikoroduLeft + $ikoroduWidth; //Comes immediately after the end of ikorodu
-$parasEnergyGsWidth: map-get(stationDimention(1,1), 'width');
-$parasEnergyGsHeight: map-get(stationDimention(1,1), 'height');
+$parasEnergyGsLeft: $ikoroduLeft; //The same left position with ikorodu
+$parasEnergyGsWidth: map-get(stationDimention(1,2), 'width');
+$parasEnergyGsHeight: map-get(stationDimention(1,2), 'height');
 #parasEnergyGs{
-  @include station(1,1);
+  @include station(1,2);
   top: $parasEnergyGsTop;
   left: $parasEnergyGsLeft;
+
+  #parasEnergyGs-d21p{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+
+  #parasEnergyGs-d22p{
+    left: map-get(lineBoxPosition(1,2), 'left');
+    top: map-get(lineBoxPosition(1,2), 'top');
+  }
   
 }

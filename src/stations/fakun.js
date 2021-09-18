@@ -6,6 +6,8 @@ export var fakun = {
     lines: [
         {
             connectionRoot: true,
+            name: "k1f",
+            id: "k1f",
             connections: [
                 {
                     alignment: 'v',
@@ -17,7 +19,6 @@ export var fakun = {
                     arrowDirection: 'both'
                 },
             ],
-            name: "k1f",
             transmissionData
         }
     ]

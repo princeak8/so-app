@@ -7,4 +7,25 @@ $eketHeight: map-get(stationDimention(2,2), 'height');
   top: $eketTop;
   left: $eketLeft;
 
+  #eket-i1e{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+  }
+
+  #eket-e1m{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+    #e1m-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+
+  #eket-e2m{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+    #e2m-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+
 }

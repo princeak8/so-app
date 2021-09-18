@@ -6,11 +6,13 @@ export var alagbon = {
     lines: [
         {
             name: "j1b",
+            id: "j1b",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "b1e",
+            id: "b1e",
             connectionRoot: true,
             connections: [
                 {

@@ -6,11 +6,13 @@ export var katampe = {
     lines: [
         {
             name: "r4b",
+            id: "r4b",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "g5b",
+            id: "g5b",
             connectionRoot: true,
             connections: [
                 {

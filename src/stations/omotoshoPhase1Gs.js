@@ -3,9 +3,13 @@ import transmissionData from '../TransmissionData';
 export var omotoshoPhase1Gs = {
     name: "Omotosho Phase1",
     id: "omotoshoPhase1Gs",
+    gs: true,
+    gsId: 'omotoshoGasPs',
+    has132: false,
     lines: [
         {
             name: "b5m",
+            id: "b5m",
             connectionRoot: true,
             connections: [
                 {
@@ -22,6 +26,7 @@ export var omotoshoPhase1Gs = {
         },
         {
             name: "m5w",
+            id: "m5w",
             connectionRoot: false,
             transmissionData
         }

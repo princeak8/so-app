@@ -1,10 +1,66 @@
 $ikoroduTop: $egbinGsTop + $egbinGsHeight + getHeight(1);//Comes below egbin with one cell spacing
 $ikoroduLeft: $egbinGsLeft + map-get($cell, 'width'); //comes one cell after the left position of egbin
-$ikoroduWidth: map-get(stationDimention(1,3), 'width');
-$ikoroduHeight: map-get(stationDimention(1,3), 'height');
+$ikoroduWidth: map-get(stationDimention(3,3), 'width');
+$ikoroduHeight: map-get(stationDimention(3,3), 'height');
 #ikorodu{
-  @include station(1,3);
+  @include station(3,3);
   top: $ikoroduTop;
   left: $ikoroduLeft;
+
+  #ikorodu-n21d{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+  #ikorodu-n22d{
+    left: map-get(lineBoxPosition(1,2), 'left');
+    top: map-get(lineBoxPosition(1,2), 'top');
+  }
+
+  #ikorodu-d23s{
+    left: map-get(lineBoxPosition(1,3), 'left');
+    top: map-get(lineBoxPosition(1,3), 'top');
+
+    #d23s-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+  #ikorodu-d24s{
+    left: map-get(lineBoxPosition(2,3), 'left');
+    top: map-get(lineBoxPosition(2,3), 'top');
+
+    #d24s-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+  #ikorodu-d21p{
+    left: map-get(lineBoxPosition(3,1), 'left');
+    top: map-get(lineBoxPosition(3,1), 'top');
+
+    #d21p-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+  #ikorodu-d22p{
+    left: map-get(lineBoxPosition(3,2), 'left');
+    top: map-get(lineBoxPosition(3,2), 'top');
+
+    #d22p-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+  #ikorodu-d23y{
+    left: map-get(lineBoxPosition(3,3), 'left');
+    top: map-get(lineBoxPosition(3,3), 'top');
+
+    $d23y-h-0Width: getLength(1) + map-get($halfCell, 'width');
+    #d23y-h-0 {
+      @include hConnection(getLength(1) + map-get($halfCell, 'width'));
+    }
+    #d23y-v-1 {
+      top: map-get($halfCell, 'height');
+      left: map-get($cell, 'width') + $d23y-h-0Width;
+      height: getHeight(1) + map-get($halfCell, 'height');
+    }
+  }
 
 }

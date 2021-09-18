@@ -1,11 +1,12 @@
 import transmissionData from '../TransmissionData';
 
-export var ayadeGs = {
-    name: "AYADE GS",
-    id: "ayadeGs",
+export var ayade = {
+    name: "AYADE TS",
+    id: "ayade",
     lines: [
         {
             name: "r2a",
+            id: "r2a",
             connectionRoot: true,
             connections: [
                 {
@@ -39,6 +40,7 @@ export var ayadeGs = {
         },
         {
             name: "h2a",
+            id: "h2a",
             connectionRoot: true,
             connections: [
                 {

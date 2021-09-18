@@ -1,5 +1,5 @@
 <template>
-    <div :id="stationId+'-'+name" class="line" :class="[lineColor]" >
+    <div :id="stationId+'-'+id" class="line" :class="[lineColor]" >
         <div class="line-name">{{name.toUpperCase()}}</div>
             <div v-if="connections.length > 0">
                 <div v-for="connection in connections"  
@@ -38,7 +38,7 @@ export default {
     mounted() {
       //console.log(name.toUpperCase()+': '+ this.transmissionData.voltage);
     },
-    props: ["name", "stationId", "transmissionData", "connections"],
+    props: ["name", "id", "stationId", "transmissionData", "connections"],
     mixins: [voltageDisplayMixin],
     components: {
         LineData,

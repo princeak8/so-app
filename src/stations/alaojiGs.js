@@ -3,9 +3,13 @@ import transmissionData from '../TransmissionData';
 export var alaojiGs = {
     name: "ALAOJI GS",
     id: "alaojiGs",
+    gs: true,
+    gsId: 'alaojiPs',
+    has132: false,
     lines: [
         {
             name: "l7a",
+            id: "l7a",
             connectionRoot: true,
             connections: [
                 {
@@ -22,6 +26,7 @@ export var alaojiGs = {
         },
         {
             name: "l8a",
+            id: "l8a",
             connectionRoot: true,
             connections: [
                 {

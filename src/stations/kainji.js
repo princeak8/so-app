@@ -6,16 +6,19 @@ export var kainji = {
     lines: [
         {
             name: "k3r",
+            id: "k3r",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "k1f",
+            id: "k1f",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "k1j",
+            id: "k1j",
             connectionRoot: true,
             connections: [
                 {
@@ -32,6 +35,7 @@ export var kainji = {
         },
         {
             name: "k2j",
+            id: "k2j",
             connectionRoot: true,
             connections: [
                 {

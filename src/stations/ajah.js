@@ -6,6 +6,7 @@ export var ajah = {
     lines: [
         {
             name: "n3j",
+            id: "n3j",
             connectionRoot: true,
             connections: [
                 {
@@ -22,6 +23,7 @@ export var ajah = {
         },
         {
             name: "n4j",
+            id: "n4j",
             connectionRoot: true,
             connections: [
                 {
@@ -39,6 +41,7 @@ export var ajah = {
 
         {
             name: "j1e",
+            id: "j1e",
             connectionRoot: true,
             connections: [
                 {
@@ -64,6 +67,7 @@ export var ajah = {
         },
         {
             name: "j1b",
+            id: "j1b",
             connectionRoot: true,
             connections: [
                 {

@@ -6,11 +6,13 @@ export var asaba = {
     lines: [
         {
             name: "b3d",
+            id: "b3d",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "d3t",
+            id: "d3t",
             connectionRoot: true,
             connections: [
                 {

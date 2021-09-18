@@ -6,21 +6,25 @@ export var onitsha = {
     lines: [
         {
             name: "b1t",
+            id: "b1t",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "b2t",
+            id: "b2t",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "d3t",
+            id: "d3t",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "t4a",
+            id: "t4a",
             connectionRoot: true,
             connections: [
                 {
@@ -37,11 +41,13 @@ export var onitsha = {
         },
         {
             name: "t3h",
+            id: "t3h",
             connectionRoot: false,
             transmissionData
         },
         {
             name: "k1t",
+            id: "k1t",
             connectionRoot: true,
             connections: [
                 {
@@ -58,6 +64,7 @@ export var onitsha = {
         },
         {
             name: "k2t",
+            id: "k2t",
             connectionRoot: true,
             connections: [
                 {
