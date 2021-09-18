@@ -62,6 +62,41 @@ export var egbinGs = {
             id: "n4j",
             connectionRoot: false,
             transmissionData
-        }
+        },
+
+        {
+            name: "n21d",
+            id: "n21d",
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'n21d-v-0',
+                    start: true,
+                    end: true,
+                    position: 1,
+                    arrowDirection: 'both'
+                },
+            ],
+            transmissionData
+        },
+        {
+            name: "n22d",
+            id: "n22d",
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'n22d-v-0',
+                    start: true,
+                    end: true,
+                    position: 1,
+                    arrowDirection: 'both'
+                },
+            ],
+            transmissionData
+        },
     ]
 };

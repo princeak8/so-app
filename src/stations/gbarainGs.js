@@ -7,5 +7,53 @@ export var gbarainGs = {
     gsId: 'gbarainPs',
     has132: false,
     lines: [
+        {
+            name: "h23r",
+            id: "h23r",
+            connectionRoot: false,
+            transmissionData
+        },
+        {
+            name: "h24r",
+            id: "h24r",
+            connectionRoot: false,
+            transmissionData
+        },
+        {
+            name: "r21y",
+            id: "r21y",
+            connectionRoot: true,
+            is132Connection: true,
+            connections: [
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'r21y-h-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
+            transmissionData
+        },
+        {
+            name: "r22y",
+            id: "r22y",
+            connectionRoot: true,
+            is132Connection: true,
+            connections: [
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'r22y-h-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
+            transmissionData
+        },
     ]
 };

@@ -41,39 +41,10 @@ export var adiabor = {
 
         //Added by me
         {
-            name: "a1b",
-            id: "a1b",
-            connectionRoot: true,
+            name: "d22t",
+            id: "d22t",
+            connectionRoot: false,
             is132: true,
-            connections: [
-                {
-                    alignment: 'v',
-                    direction: 'down',
-                    name: 'a1b-v-0',
-                    start: true,
-                    end: true,
-                    position: 0,
-                    arrowDirection: 'both'
-                },
-            ],
-            transmissionData
-        },
-        {
-            name: "a2b",
-            id: "a2b",
-            connectionRoot: true,
-            is132: true,
-            connections: [
-                {
-                    alignment: 'v',
-                    direction: 'down',
-                    name: 'a2b-v-0',
-                    start: true,
-                    end: true,
-                    position: 0,
-                    arrowDirection: 'both'
-                },
-            ],
             transmissionData
         },
     ]

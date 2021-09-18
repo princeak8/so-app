@@ -245,8 +245,8 @@ export default {
         this.$router.push(RouteEnum.LOGIN);
       },
       async connect() {
-        //const data = {token: '1234'};
-        const data = await this.get_token();
+        const data = {token: '1234'};
+        //const data = await this.get_token();
         //console.log('token', data.token);
         //const ADDR = `ws://localhost:3001/token=${data.token}`;
         const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
@@ -259,8 +259,8 @@ export default {
         };
       },
       get_token: async () => {
-       //let url = "http://localhost/so_app/public/api/v1/get_connection_token";
-      let url = "http://102.89.11.82/so_app/api/v1/get_connection_token";
+       //let url = "http://localhost/so_app/api/v1/get_connection_token";
+      let url = "http://102.89.11.82/so_app/api/v1/get_connection_toke";
       var self = this;
       let formData =  {
           name : 'test',
@@ -280,7 +280,7 @@ export default {
   mounted() {
     console.log('p stations:',powerStations);
       //console.log(newData);
-    this.connect();
+    //this.connect();
   },
 };
 </script>

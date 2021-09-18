@@ -1,15 +1,14 @@
 import transmissionData from '../TransmissionData';
 
-export var biu = {
-    name: "BIU TS",
-    id: "biu",
-    is132: true,
+export var odogunyan = {
+    name: "ODOGUNYAN TS",
+    id: "odogunyan",
     lines: [
         {
-            name: "w21b",
-            id: "w21b",
+            name: "d23y",
+            id: "d23y",
             connectionRoot: false,
             transmissionData
-        }
+        },
     ]
 };

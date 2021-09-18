@@ -5,17 +5,30 @@ export var phMain = {
     id: "phMain",
     is132: true,
     lines: [
+        {
+            name: "m21p",
+            id: "m21p",
+            connectionRoot: false,
+            transmissionData
+        },
+        {
+            name: "m22p",
+            id: "m22p",
+            connectionRoot: false,
+            transmissionData
+        },
+
         //Added by me
         {
-            name: "f4p",
-            id: "f4p",
+            name: "f21p",
+            id: "f21p",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'f4p-h-0',
+                    name: 'f21p-h-0',
                     start: true,
                     end: true,
                     position: 0,
@@ -25,15 +38,15 @@ export var phMain = {
             transmissionData
         },
         {
-            name: "f5p",
-            id: "f5p",
+            name: "f22p",
+            id: "f22p",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'f5p-h-0',
+                    name: 'f22p-h-0',
                     start: true,
                     end: true,
                     position: 0,

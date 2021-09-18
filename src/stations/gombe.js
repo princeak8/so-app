@@ -11,6 +11,12 @@ export var gombe = {
             transmissionData
         },
         {
+            name: "w23e",
+            id: "w23e",
+            connectionRoot: false,
+            transmissionData
+        },
+        {
             name: "e1y",
             id: "e1y",
             connectionRoot: true,

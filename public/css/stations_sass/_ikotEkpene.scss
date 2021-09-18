@@ -1,9 +1,9 @@
 $ikotEkpeneTop: $alaojiTop;
 $ikotEkpeneLeft: map-get($col7, 'left') + getLength(1);
-$ikotEkpeneWidth: map-get(stationDimention(4,6), 'width');
-$ikotEkpeneHeight: map-get(stationDimention(4,6), 'height');
+$ikotEkpeneWidth: map-get(stationDimention(3,6), 'width');
+$ikotEkpeneHeight: map-get(stationDimention(3,6), 'height');
 #ikotEkpene{
-  @include station(4,6);
+  @include station(3,6);
   top: $ikotEkpeneTop;
   left: $ikotEkpeneLeft;
   
@@ -50,5 +50,41 @@ $ikotEkpeneHeight: map-get(stationDimention(4,6), 'height');
   #ikotEkpene-k4u{
     left: map-get(lineBoxPosition(1, 2), 'left');;
     top: map-get(lineBoxPosition(1, 2), 'top');
+  }
+
+  #ikotEkpene-s1k{
+    left: map-get(lineBoxPosition(3, 3), 'left');;
+    top: map-get(lineBoxPosition(3, 3), 'top');
+
+    #s1k-v-0 {
+      @include vConnection(getHeight(13)  + map-get($halfCell, 'height') + 2);
+    }
+  }
+
+  #ikotEkpene-s2k{
+    left: map-get(lineBoxPosition(3, 4), 'left');;
+    top: map-get(lineBoxPosition(3, 4), 'top');
+
+    #s2k-v-0 {
+      @include vConnection(getHeight(14)  + map-get($halfCell, 'height') + 2);
+    }
+  }
+
+  #ikotEkpene-f5k{
+    left: map-get(lineBoxPosition(3, 5), 'left');;
+    top: map-get(lineBoxPosition(3, 5), 'top');
+
+    #f5k-v-0 {
+      @include vConnection(getHeight(15)  + map-get($halfCell, 'height') + 2);
+    }
+  }
+
+  #ikotEkpene-f6k{
+    left: map-get(lineBoxPosition(3, 6), 'left');;
+    top: map-get(lineBoxPosition(3, 6), 'top');
+
+    #f6k-v-0 {
+      @include vConnection(getHeight(16)  + map-get($halfCell, 'height') + 2);
+    }
   }
 }

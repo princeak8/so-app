@@ -90,18 +90,16 @@ export var alaoji = {
             ],
             transmissionData
         },
-
-        //Added by me
         {
-            name: "a1b",
-            id: "a1b",
+            name: "a23b",
+            id: "a23b",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'v',
                     direction: 'down',
-                    name: 'a1b-v-0',
+                    name: 'a23b-v-0',
                     start: true,
                     end: true,
                     position: 0,
@@ -111,15 +109,15 @@ export var alaoji = {
             transmissionData
         },
         {
-            name: "a2b",
-            id: "a2b",
+            name: "a26b",
+            id: "a26b",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'v',
                     direction: 'down',
-                    name: 'a2b-v-0',
+                    name: 'a26b-v-0',
                     start: true,
                     end: true,
                     position: 0,
@@ -129,14 +127,14 @@ export var alaoji = {
             transmissionData
         },
         {
-            name: "a1o",
-            id: "a1o",
+            name: "a23w",
+            id: "a23w",
             connectionRoot: false,
             transmissionData
         },
         {
-            name: "a2o",
-            id: "a2o",
+            name: "a24w",
+            id: "a24w",
             connectionRoot: false,
             transmissionData
         },

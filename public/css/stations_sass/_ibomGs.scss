@@ -17,18 +17,18 @@ $ibomGsHeight: map-get(stationDimention(3,2), 'height');
     top: map-get(lineBoxPosition(1, 2), 'top');
   }
 
-  #ibomGs-m1o{
+  #ibomGs-m1s{
     left: map-get(lineBoxPosition(2, 2), 'left');
     top: map-get(lineBoxPosition(2, 2), 'top');
-    #m1o-h-0 {
+    #m1s-h-0 {
       @include hConnection(getLength(1));
     }
   }
 
-  #ibomGs-m2o{
+  #ibomGs-m2s{
     left: map-get(lineBoxPosition(3, 2), 'left');
     top: map-get(lineBoxPosition(3, 2), 'top');
-    #m2o-h-0 {
+    #m2s-h-0 {
       @include hConnection(getLength(1));
     }
   }

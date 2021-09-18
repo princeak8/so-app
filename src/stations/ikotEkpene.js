@@ -73,6 +73,77 @@ export var ikotEkpene = {
             id: "k4u",
             connectionRoot: false,
             transmissionData
+        },
+        {
+            name: "s1k",
+            id: "s1k",
+            connectionRoot: true,
+            commissioned: false,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 's1k-v-0',
+                    start: false,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'up'
+                },
+            ],
+            transmissionData
+        },
+        {
+            name: "s2k",
+            id: "s2k",
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 's2k-v-0',
+                    start: false,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'up'
+                },
+            ],
+            transmissionData
+        },
+        {
+            name: "f5k",
+            id: "f5k",
+            connectionRoot: true,
+            commissioned: false,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'f5k-v-0',
+                    start: false,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'up'
+                },
+            ],
+            transmissionData
+        },
+        {
+            name: "f6k",
+            id: "f6k",
+            connectionRoot: true,
+            commissioned: false,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'f6k-v-0',
+                    start: false,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'up'
+                },
+            ],
+            transmissionData
         }
     ]
 };

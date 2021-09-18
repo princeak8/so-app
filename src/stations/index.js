@@ -17,6 +17,7 @@ export * from './fakun';
 export * from './ganmo';
 export * from './ikejaWest';
 export * from './ikorodu';
+export * from './odogunyan';
 export * from './jebba';
 export * from './ayade';
 export * from './lekki';

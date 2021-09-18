@@ -1,0 +1,15 @@
+$odogunyanTop: $ikoroduTop + $ikoroduHeight;//Comes at the end of ikorodu TS
+$odogunyanLeft: map-get($col2, 'left') + getLength(1); //comes one cell after the start of col 2
+$odogunyanWidth: map-get(stationDimention(1,1), 'width');
+$odogunyanHeight: map-get(stationDimention(1,1), 'height');
+#odogunyan{
+  @include station(1,1);
+  top: $odogunyanTop;
+  left: $odogunyanLeft;
+
+  #odogunyan-d23y{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+
+}

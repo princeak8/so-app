@@ -57,31 +57,30 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
     }
   }
 
-
-  #alaoji-a1b{
+  #alaoji-a23b{
     left: map-get(lineBoxPosition(4, 4), 'left');
     top: map-get(lineBoxPosition(4, 4), 'top');
 
-    #a1b-v-0 {
+    #a23b-v-0 {
       @include vConnection(getHeight(3));
     }
   }
 
-  #alaoji-a2b{
+  #alaoji-a26b{
     left: map-get(lineBoxPosition(4, 5), 'left');
     top: map-get(lineBoxPosition(4, 5), 'top');
 
-    #a2b-v-0 {
+    #a26b-v-0 {
       @include vConnection(getHeight(3));
     }
   }
 
-  #alaoji-a1o{
+  #alaoji-a23w{
     left: map-get(lineBoxPosition(3, 1), 'left');
     top: map-get(lineBoxPosition(3, 1), 'top');
   }
 
-  #alaoji-a2o{
+  #alaoji-a24w{
     left: map-get(lineBoxPosition(4, 1), 'left');
     top: map-get(lineBoxPosition(4, 1), 'top');
   }

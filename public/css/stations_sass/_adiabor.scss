@@ -6,6 +6,11 @@ $adiaborHeight: map-get(stationDimention(2,2), 'height');
   @include station(2,2);
   top: $adiaborTop;
   left: $adiaborLeft;
+
+  #adiabor-d22t{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
   
   #adiabor-d1b{
     left: map-get(lineBoxPosition(1,2), 'left');
@@ -15,7 +20,6 @@ $adiaborHeight: map-get(stationDimention(2,2), 'height');
       @include hConnection(getLength(1));
     }
   }
-
 
   #adiabor-d2b{
     left: map-get(lineBoxPosition(2,2), 'left');

@@ -7,27 +7,27 @@ export var aba = {
     lines: [
         //Added by me
         {
-            name: "a1b",
-            id: "a1b",
+            name: "a23b",
+            id: "a23b",
             connectionRoot: false,
             transmissionData
         },
         {
-            name: "a2b",
-            id: "a2b",
+            name: "a26b",
+            id: "a26b",
             connectionRoot: false,
             transmissionData
         },
         {
-            name: "b1i",
-            id: "b1i",
+            name: "b21t",
+            id: "b21t",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'b1i-h-0',
+                    name: 'b21t-h-0',
                     start: true,
                     end: true,
                     position: 0,

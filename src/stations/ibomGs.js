@@ -22,8 +22,8 @@ export var ibomGs = {
             transmissionData
         },
         {
-            name: "m1o",
-            id: "m1o",
+            name: "m1s",
+            id: "m1s",
             connectionRoot: true,
             is132Connection: true,
             connections: [
@@ -40,8 +40,8 @@ export var ibomGs = {
             transmissionData
         },
         {
-            name: "m2o",
-            id: "m2o",
+            name: "m2s",
+            id: "m2s",
             connectionRoot: true,
             is132Connection: true,
             connections: [

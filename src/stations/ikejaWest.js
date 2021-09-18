@@ -12,7 +12,7 @@ export var ikejaWest = {
         },
         {
             name: "h1w",
-            name: "h1w",
+            id: "h1w",
             connectionRoot: false,
             transmissionData
         },

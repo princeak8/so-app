@@ -7,4 +7,32 @@ $gbarainGsHeight: map-get(stationDimention(2,2), 'height');
   top: $gbarainGsTop;
   left: $gbarainGsLeft;
 
+  #gbarainGs-h23r{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+
+  #gbarainGs-h24r{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+  }
+
+  #gbarainGs-r21y{
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+
+    #r21y-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+
+  #gbarainGs-r22y{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+
+    #r22y-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+
 }

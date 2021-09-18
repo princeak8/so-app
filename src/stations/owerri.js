@@ -7,15 +7,15 @@ export var owerri = {
     lines: [
         //Added by me
         {
-            name: "a1o",
-            id: "a1o",
+            name: "a23w",
+            id: "a23w",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'a1o-h-0',
+                    name: 'a23w-h-0',
                     start: true,
                     end: false,
                     position: 0,
@@ -24,7 +24,7 @@ export var owerri = {
                 {
                     alignment: 'v',
                     direction: 'up',
-                    name: 'a1o-v-1',
+                    name: 'a23w-v-1',
                     start: false,
                     end: false,
                     position: 1
@@ -32,7 +32,7 @@ export var owerri = {
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'a1o-h-2',
+                    name: 'a23w-h-2',
                     start: false,
                     end: true,
                     position: 2,
@@ -42,15 +42,15 @@ export var owerri = {
             transmissionData
         },
         {
-            name: "a2o",
-            id: "a2o",
+            name: "a24w",
+            id: "a24w",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'a2o-h-0',
+                    name: 'a24w-h-0',
                     start: true,
                     end: false,
                     position: 0,
@@ -59,7 +59,7 @@ export var owerri = {
                 {
                     alignment: 'v',
                     direction: 'up',
-                    name: 'a2o-v-1',
+                    name: 'a24w-v-1',
                     start: false,
                     end: false,
                     position: 1
@@ -67,7 +67,7 @@ export var owerri = {
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'a2o-h-2',
+                    name: 'a24w-h-2',
                     start: false,
                     end: true,
                     position: 2,
@@ -77,15 +77,15 @@ export var owerri = {
             transmissionData
         },
         {
-            name: "h1o",
-            id: "h1o",
+            name: "w21h",
+            id: "w21h",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'v',
                     direction: 'down',
-                    name: 'h1o-v-0',
+                    name: 'w21h-v-0',
                     start: true,
                     end: true,
                     position: 0,
@@ -95,15 +95,15 @@ export var owerri = {
             transmissionData
         },
         {
-            name: "h2o",
-            id: "h2o",
+            name: "w22h",
+            id: "w22h",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'v',
                     direction: 'down',
-                    name: 'h2o-v-0',
+                    name: 'w22h-v-0',
                     start: true,
                     end: true,
                     position: 0,

@@ -7,14 +7,32 @@ $ahaodaHeight: map-get(stationDimention(3,2), 'height');
   top: $ahaodaTop;
   left: $ahaodaLeft;
 
-  #ahaoda-h1o{
+  #ahaoda-w21h{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top: map-get(lineBoxPosition(1, 1), 'top');
   }
 
-  #ahaoda-h2o{
+  #ahaoda-w22h{
     left: map-get(lineBoxPosition(1, 2), 'left');
     top: map-get(lineBoxPosition(1, 2), 'top');
+  }
+
+  #ahaoda-h23r{
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+
+    #h23r-h-0 {
+      @include hConnection(getLength(1));
+    }
+  }
+
+  #ahaoda-h24r{
+    left: map-get(lineBoxPosition(3, 2), 'left');
+    top: map-get(lineBoxPosition(3, 2), 'top');
+
+    #h24r-h-0 {
+      @include hConnection(getLength(1));
+    }
   }
 
 }

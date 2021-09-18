@@ -50,4 +50,21 @@ $egbinGsHeight: map-get(stationDimention(4,3), 'height');
     left: map-get(lineBoxPosition(3,1), 'left');
     top: map-get(lineBoxPosition(3,1), 'top');
   }
+
+  #egbinGs-n21d{
+    left: map-get(lineBoxPosition(4,2), 'left');
+    top: map-get(lineBoxPosition(4,2), 'top');
+
+    #n21d-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
+  #egbinGs-n22d{
+    left: map-get(lineBoxPosition(4,3), 'left');
+    top: map-get(lineBoxPosition(4,3), 'top');
+
+    #n22d-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
 }
