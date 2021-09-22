@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 
 export var kebbi = {
@@ -20,7 +20,7 @@ export var kebbi = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 }

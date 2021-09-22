@@ -45,22 +45,22 @@ export default {
     },
     computed: {
       power() {
-        if(this.transmissionData.power=='') {
+        if(this.transmissionData.mw=='') {
           return 'loading..';
         }
-        return this.transmissionData.power;
+        return this.transmissionData.mw;
       },
       voltage() {
-        if(this.transmissionData.voltage=='') {
+        if(this.transmissionData.kv=='') {
           return 'loading..';
         }
-        return this.transmissionData.voltage;
+        return this.transmissionData.kv;
       },
       current() {
-        if(this.transmissionData.current=='') {
+        if(this.transmissionData.a=='') {
           return 'loading..';
         }
-        return this.transmissionData.current;
+        return this.transmissionData.a;
       },
       mvar() {
         if(this.transmissionData.mvar=='') {

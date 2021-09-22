@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var sapeleNippGs = {
     name: "SAPELE NIPP",
@@ -11,7 +11,7 @@ export var sapeleNippGs = {
             name: "s4g",
             id: "s4g",
             connectionRoot: false,
-            transmissionData
+            td
         }
     ]
 };

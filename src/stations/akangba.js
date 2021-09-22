@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var akangba = {
     name: "AKANGBA TS",
@@ -8,13 +8,13 @@ export var akangba = {
             name: "w3l",
             id: "w3l",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "w4l",
             id: "w4l",
             connectionRoot: false,
-            transmissionData
+            td
         }
     ]
 };

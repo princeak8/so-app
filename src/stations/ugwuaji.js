@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ugwuaji = {
     name: "UGWUAJI TS",
@@ -19,7 +19,7 @@ export var ugwuaji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "h2u",
@@ -36,19 +36,19 @@ export var ugwuaji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "u1a",
             id: "u1a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "u2a",
             id: "u2a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k1u",
@@ -74,7 +74,7 @@ export var ugwuaji = {
                     arrowDirection: 'down'
                 }
             ],
-            transmissionData
+            td
         },
         {
             name: "k2u",
@@ -100,7 +100,7 @@ export var ugwuaji = {
                     arrowDirection: 'down'
                 }
             ],
-            transmissionData
+            td
         },
         {
             name: "k3u",
@@ -126,7 +126,7 @@ export var ugwuaji = {
                     arrowDirection: 'down'
                 }
             ],
-            transmissionData
+            td
         },
         {
             name: "k4u",
@@ -152,7 +152,7 @@ export var ugwuaji = {
                     arrowDirection: 'down'
                 }
             ],
-            transmissionData
+            td
         }
     ]
 };

@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var afamIv_vGs = {
     name: "AFAM IV-V GS",
@@ -7,18 +7,17 @@ export var afamIv_vGs = {
     gsId: 'afamIv_vPs',
     has132: false,
     lines: [
-        //Added by me
         {
-            name: "f4p",
-            id: "f4p",
+            name: "f21p",
+            id: "f21p",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
-            name: "f5p",
-            id: "f5p",
+            name: "f22p",
+            id: "f22p",
             connectionRoot: false,
-            transmissionData
+            td
         },
     ]
 };

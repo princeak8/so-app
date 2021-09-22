@@ -1,8 +1,8 @@
-const transmissionData = {
-    power: '',
-    current: '',
-    voltage: '',
+const td = {
+    mw: '',
+    a: '',
+    kv: '',
     mvar: ''
 };
 
-export default transmissionData;
+export default td;

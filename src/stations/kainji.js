@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var kainji = {
     name: "KAINJI TS",
@@ -8,13 +8,13 @@ export var kainji = {
             name: "k3r",
             id: "k3r",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k1f",
             id: "k1f",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k1j",
@@ -31,7 +31,7 @@ export var kainji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "k2j",
@@ -48,7 +48,42 @@ export var kainji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
+        },
+
+        {
+            name: "kn1k",
+            id: "kn1k",
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'kn1k-h-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
+            td
+        },
+        {
+            name: "kn2k",
+            id: "kn2k",
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'kn2k-h-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
+            td
         }
     ]
 };

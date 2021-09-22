@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var jebba = {
     name: "JEBBA TS",
@@ -8,13 +8,13 @@ export var jebba = {
             name: "k1j",
             id: "k1j",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k2j",
             id: "k2j",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "j3r",
@@ -31,7 +31,7 @@ export var jebba = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
 
 
@@ -50,7 +50,7 @@ export var jebba = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
 
 
@@ -58,14 +58,14 @@ export var jebba = {
             name: "b8j",
             id: "b8j",
             connectionRoot: false,
-            transmissionData
+            td
         },
         
         {
             name: "b9j",
             id: "b9j",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "j1h",
@@ -82,7 +82,7 @@ export var jebba = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "j2h",
@@ -99,7 +99,7 @@ export var jebba = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "j3g",
@@ -116,7 +116,7 @@ export var jebba = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

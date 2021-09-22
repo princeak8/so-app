@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var onitsha = {
     name: "ONITSHA TS",
@@ -8,19 +8,19 @@ export var onitsha = {
             name: "b1t",
             id: "b1t",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b2t",
             id: "b2t",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "d3t",
             id: "d3t",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "t4a",
@@ -37,13 +37,13 @@ export var onitsha = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "t3h",
             id: "t3h",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k1t",
@@ -60,7 +60,7 @@ export var onitsha = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "k2t",
@@ -77,7 +77,7 @@ export var onitsha = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

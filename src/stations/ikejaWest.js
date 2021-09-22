@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ikejaWest = {
     name: "IKEJA-WEST TS",
@@ -8,13 +8,13 @@ export var ikejaWest = {
             name: "r1w",
             id: "r1w",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "h1w",
             id: "h1w",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "m5w",
@@ -31,13 +31,13 @@ export var ikejaWest = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "nw1bs",
             id: "nw1bs",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "w3l",
@@ -54,7 +54,7 @@ export var ikejaWest = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "k7w",
@@ -71,7 +71,7 @@ export var ikejaWest = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "k8w",
@@ -88,7 +88,7 @@ export var ikejaWest = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "n6w",
@@ -105,7 +105,7 @@ export var ikejaWest = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "w4l",
@@ -122,7 +122,7 @@ export var ikejaWest = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var eket = {
     name: "EKET TS",
@@ -7,46 +7,46 @@ export var eket = {
     lines: [
         //Added by me
         {
-            name: "i1e",
-            id: "i1e",
+            name: "e22t",
+            id: "e22t",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
-            name: "e1m",
-            id: "e1m",
+            name: "e21m",
+            id: "e21m",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'v',
                     direction: 'down',
-                    name: 'e1m-v-0',
+                    name: 'e21m-v-0',
                     start: true,
                     end: true,
                     position: 0,
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
-            name: "e2m",
-            id: "e2m",
+            name: "e22m",
+            id: "e22m",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'v',
                     direction: 'down',
-                    name: 'e2m-v-0',
+                    name: 'e22m-v-0',
                     start: true,
                     end: true,
                     position: 0,
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var kaduna = {
     name: "KADUNA TS",
@@ -19,7 +19,7 @@ export var kaduna = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "r2m",
@@ -36,7 +36,7 @@ export var kaduna = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "m6n",
@@ -53,7 +53,7 @@ export var kaduna = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "m2s",
@@ -79,7 +79,7 @@ export var kaduna = {
                     arrowDirection: 'right'
                 }
             ],
-            transmissionData
+            td
         }
     ]
 };

@@ -41,7 +41,7 @@
 </style>
 
 <script>
-import { SOCKET_ADDR, STORAGE_KEY } from "@/constants";
+import { SOCKET_ADDR, SOCKET_AUTH_ADDR, STORAGE_KEY } from "@/constants";
 import Decimal from "decimal.js";
 import { RouteEnum } from "@/router";
 import StationBox from "@/components/StationBox.vue";
@@ -138,7 +138,7 @@ export default {
               st.lines.forEach((ln) => {
                 data.lines.forEach((newLn) => {
                   if(ln.name==newLn.name) {
-                    ln.transmissionData = newLn.transmissionData;
+                    ln.td = newLn.td;
                   }
                 })
               })
@@ -245,11 +245,12 @@ export default {
         this.$router.push(RouteEnum.LOGIN);
       },
       async connect() {
-        const data = {token: '1234'};
-        //const data = await this.get_token();
+        //const data = {token: '1234'};
+        const data = await this.get_token();
+        const ADDR = `${SOCKET_ADDR}token=${data.token}`;
         //console.log('token', data.token);
         //const ADDR = `ws://localhost:3001/token=${data.token}`;
-        const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
+        //const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
         //const ADDR = `ws://193.148.63.148:3002/token=${data.token}`;
         this.ws = new WebSocket(ADDR);
         this.ws.onmessage = (msg) => {
@@ -259,14 +260,15 @@ export default {
         };
       },
       get_token: async () => {
+        //let url = SOCKET_AUTH_ADDR;
        //let url = "http://localhost/so_app/api/v1/get_connection_token";
-      let url = "http://102.89.11.82/so_app/api/v1/get_connection_toke";
+      //let url = "http://102.89.11.82/so_app/api/v1/get_connection_token";
       var self = this;
       let formData =  {
           name : 'test',
           password: 'test123'
       };
-      return axios.post(url, formData)
+      return axios.post(SOCKET_AUTH_ADDR, formData)
         .then((response) => {
           return response.data;
           //console.log(response);
@@ -280,7 +282,7 @@ export default {
   mounted() {
     console.log('p stations:',powerStations);
       //console.log(newData);
-    //this.connect();
+    this.connect();
   },
 };
 </script>

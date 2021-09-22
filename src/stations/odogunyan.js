@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var odogunyan = {
     name: "ODOGUNYAN TS",
@@ -8,7 +8,7 @@ export var odogunyan = {
             name: "d23y",
             id: "d23y",
             connectionRoot: false,
-            transmissionData
+            td
         },
     ]
 };

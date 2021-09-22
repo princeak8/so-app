@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var egbinGs = {
     name: "EGBIN GS",
@@ -11,19 +11,19 @@ export var egbinGs = {
             name: "n7k",
             id: "n7k",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "n8k",
             id: "n8k",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "n6w",
             id: "n6w",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b6n",
@@ -49,19 +49,19 @@ export var egbinGs = {
                     arrowDirection: 'up'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "n3j",
             id: "n3j",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "n4j",
             id: "n4j",
             connectionRoot: false,
-            transmissionData
+            td
         },
 
         {
@@ -79,7 +79,7 @@ export var egbinGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "n22d",
@@ -96,7 +96,7 @@ export var egbinGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
     ]
 };

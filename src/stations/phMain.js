@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var phMain = {
     name: "PH Main TS",
@@ -9,16 +9,32 @@ export var phMain = {
             name: "m21p",
             id: "m21p",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "m22p",
             id: "m22p",
             connectionRoot: false,
-            transmissionData
+            td
         },
-
-        //Added by me
+        {
+            name: "mk21p",
+            id: "mk21p",
+            connectionRoot: false,
+            td
+        },
+        {
+            name: "v22p",
+            id: "v22p",
+            connectionRoot: false,
+            td
+        },
+        {
+            name: "v21p",
+            id: "v21p",
+            connectionRoot: false,
+            td
+        },
         {
             name: "f21p",
             id: "f21p",
@@ -35,7 +51,7 @@ export var phMain = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "f22p",
@@ -53,7 +69,7 @@ export var phMain = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
     ]
 };

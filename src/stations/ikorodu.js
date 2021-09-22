@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ikorodu = {
     name: "IKORODU TS",
@@ -9,13 +9,13 @@ export var ikorodu = {
             name: "n21d",
             id: "n21d",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "n22d",
             id: "n22d",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "d23s",
@@ -33,7 +33,7 @@ export var ikorodu = {
                     arrowDirection: 'both'
                 }
             ],
-            transmissionData
+            td
         },
         {
             name: "d24s",
@@ -51,7 +51,7 @@ export var ikorodu = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "d21p",
@@ -69,7 +69,7 @@ export var ikorodu = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "d22p",
@@ -87,7 +87,7 @@ export var ikorodu = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "d23y",
@@ -114,7 +114,7 @@ export var ikorodu = {
                     arrowDirection: 'down'
                 }
             ],
-            transmissionData
+            td
         },
     ]
 };

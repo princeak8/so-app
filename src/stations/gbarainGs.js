@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var gbarainGs = {
     name: "GBARAIN GS",
@@ -11,13 +11,13 @@ export var gbarainGs = {
             name: "h23r",
             id: "h23r",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "h24r",
             id: "h24r",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "r21y",
@@ -35,7 +35,7 @@ export var gbarainGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "r22y",
@@ -53,7 +53,7 @@ export var gbarainGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
     ]
 };

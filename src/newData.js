@@ -4,7 +4,7 @@ let newData = [
         lines: [
             {
                 name: "r2a",
-                transmissionData:  {
+                td:  {
                         power: 200,
                         current: 380,
                         voltage: 338,
@@ -13,7 +13,7 @@ let newData = [
             },
             {
                 name: "r1w",
-                transmissionData: {
+                td: {
                         power: 200,
                         current: 380,
                         voltage: 312,
@@ -27,7 +27,7 @@ let newData = [
         lines: [
             {
                 name: "k1f",
-                transmissionData: {
+                td: {
                     power: -160,
                     current: 280,
                     voltage: 322,
@@ -41,7 +41,7 @@ let newData = [
         lines: [
             {
                 name: "k1f",
-                transmissionData: {
+                td: {
                     power: 160,
                     current: 270,
                     voltage: 328,

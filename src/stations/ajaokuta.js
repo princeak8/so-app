@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ajaokuta = {
     name: "AJAOKUTA TS",
@@ -8,25 +8,25 @@ export var ajaokuta = {
             name: "j1l",
             id: "j1l",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "j2l",
             id: "j2l",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b11j",
             id: "b11j",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b12j",
             id: "b12j",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "r1j",
@@ -43,7 +43,7 @@ export var ajaokuta = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "r2j",
@@ -60,7 +60,7 @@ export var ajaokuta = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

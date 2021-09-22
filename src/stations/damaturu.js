@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var damaturu = {
     name: "DAMATURU TS",
@@ -8,7 +8,7 @@ export var damaturu = {
             name: "e1d",
             id: "e1d",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "d1l",
@@ -25,7 +25,7 @@ export var damaturu = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

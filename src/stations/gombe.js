@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var gombe = {
     name: "GOMBE",
@@ -8,13 +8,13 @@ export var gombe = {
             name: "s1e",
             id: "s1e",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "w23e",
             id: "w23e",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "e1y",
@@ -31,7 +31,7 @@ export var gombe = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "e1d",
@@ -48,7 +48,7 @@ export var gombe = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

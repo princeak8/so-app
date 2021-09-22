@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var alaoji = {
     name: "ALAOJI TS",
@@ -8,19 +8,19 @@ export var alaoji = {
             name: "l7a",
             id: "l7a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "l8a",
             id: "l8a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "t4a",
             id: "t4a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "f1a",
@@ -37,7 +37,7 @@ export var alaoji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "f2a",
@@ -54,7 +54,7 @@ export var alaoji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "a1k",
@@ -71,7 +71,7 @@ export var alaoji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "a2k",
@@ -88,7 +88,7 @@ export var alaoji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "a23b",
@@ -106,7 +106,7 @@ export var alaoji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "a26b",
@@ -124,19 +124,19 @@ export var alaoji = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "a23w",
             id: "a23w",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "a24w",
             id: "a24w",
             connectionRoot: false,
-            transmissionData
+            td
         },
     ]
 };

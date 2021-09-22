@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var gereguGs = {
     name: "GEREGU GS",
@@ -11,13 +11,13 @@ export var gereguGs = {
             name: "r1j",
             id: "r1j",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "r2j",
             id: "r2j",
             connectionRoot: false,
-            transmissionData
+            td
         }
     ]
 };

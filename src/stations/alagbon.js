@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var alagbon = {
     name: "ALAGBON TS",
@@ -8,7 +8,7 @@ export var alagbon = {
             name: "j1b",
             id: "j1b",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b1e",
@@ -25,7 +25,7 @@ export var alagbon = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

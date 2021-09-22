@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ikotEkpene = {
     name: "IKOT EKPENE TS",
@@ -8,13 +8,13 @@ export var ikotEkpene = {
             name: "a1k",
             id: "a1k",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "a2k",
             id: "a2k",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "d1k",
@@ -31,7 +31,7 @@ export var ikotEkpene = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "d2k",
@@ -48,31 +48,31 @@ export var ikotEkpene = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "k1u",
             id: "k1u",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k2u",
             id: "k2u",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k3u",
             id: "k3u",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k4u",
             id: "k4u",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "s1k",
@@ -90,7 +90,7 @@ export var ikotEkpene = {
                     arrowDirection: 'up'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "s2k",
@@ -107,7 +107,7 @@ export var ikotEkpene = {
                     arrowDirection: 'up'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "f5k",
@@ -125,7 +125,7 @@ export var ikotEkpene = {
                     arrowDirection: 'up'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "f6k",
@@ -143,7 +143,7 @@ export var ikotEkpene = {
                     arrowDirection: 'up'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

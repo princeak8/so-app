@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var katampe = {
     name: "KATAMPE TS",
@@ -8,7 +8,7 @@ export var katampe = {
             name: "r4b",
             id: "r4b",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "g5b",
@@ -25,7 +25,7 @@ export var katampe = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

@@ -1,22 +1,21 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var aba = {
     name: "ABA TS",
     id: "aba",
     is132: true,
     lines: [
-        //Added by me
         {
             name: "a23b",
             id: "a23b",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "a26b",
             id: "a26b",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b21t",
@@ -34,7 +33,7 @@ export var aba = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

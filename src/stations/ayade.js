@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ayade = {
     name: "AYADE TS",
@@ -36,7 +36,7 @@ export var ayade = {
                     arrowDirection: 'up'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "h2a",
@@ -53,7 +53,7 @@ export var ayade = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

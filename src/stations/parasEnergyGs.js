@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var parasEnergyGs = {
     name: "PARA ENERGY GS",
@@ -11,13 +11,13 @@ export var parasEnergyGs = {
             name: "d21p",
             id: "d21p",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "d22p",
             id: "d22p",
             connectionRoot: false,
-            transmissionData
+            td
         }
     ]
 };

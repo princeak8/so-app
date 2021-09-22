@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var okpaiGs = {
     name: "OKPAI GS",
@@ -8,13 +8,13 @@ export var okpaiGs = {
             name: "k1t",
             id: "k1t",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k2t",
             id: "k2t",
             connectionRoot: false,
-            transmissionData
+            td
         }
     ]
 };

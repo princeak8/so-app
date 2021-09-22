@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var itu = {
     name: "ITU TS",
@@ -9,7 +9,7 @@ export var itu = {
             name: "b21t",
             id: "b21t",
             connectionRoot: false,
-            transmissionData
+            td
         },
 
         {
@@ -28,28 +28,25 @@ export var itu = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
-
-
-        //Added by me
         {
-            name: "i1e",
-            id: "i1e",
+            name: "e22t",
+            id: "e22t",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'v',
                     direction: 'down',
-                    name: 'i1e-v-0',
+                    name: 'e22t-v-0',
                     start: true,
                     end: true,
                     position: 0,
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

@@ -1,10 +1,34 @@
 $riversIppGsTop: $gbarainGsTop + $gbarainGsHeight + getHeight(1);
-$riversIppGsLeft: $phMainLeft + $phMainWidth;
-$riversIppGsWidth: map-get(stationDimention(1,2), 'width');
-$riversIppGsHeight: map-get(stationDimention(1,2), 'height');
+$riversIppGsLeft: $phMainLeft + getLength(1);
+$riversIppGsWidth: map-get(stationDimention(2,1), 'width');
+$riversIppGsHeight: map-get(stationDimention(2,1), 'height');
 #riversIppGs{
-  @include station(1,2);
+  @include station(2,1);
   top: $riversIppGsTop;
   left: $riversIppGsLeft;
+
+  #riversIppGs-v21p{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+
+    $v21p-h-0Width: map-get($halfCell, 'width');
+    #v21p-h-0 {
+      @include hConnection($v21p-h-0Width);
+    }
+    #v21p-v-1 {
+      top: map-get($halfCell, 'height');
+      left: map-get($cell, 'width') + $v21p-h-0Width;
+      height: getHeight(3) + map-get($halfCell, 'height');
+    }
+  }
+
+  #riversIppGs-v22p{
+    left: map-get(lineBoxPosition(2,1), 'left');
+    top: map-get(lineBoxPosition(2,1), 'top');
+
+    #v22p-v-0 {
+      @include vConnection(getHeight(2));
+    }
+  }
 
 }
