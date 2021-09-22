@@ -5,18 +5,18 @@ let newData = [
             {
                 name: "r2a",
                 td:  {
-                        power: 200,
-                        current: 380,
-                        voltage: 338,
+                        mw: 200,
+                        a: 380,
+                        v: 338,
                         mvar: 6
                 }
             },
             {
                 name: "r1w",
                 td: {
-                        power: 200,
-                        current: 380,
-                        voltage: 312,
+                        mw: 200,
+                        a: 380,
+                        v: 312,
                         mvar: 6
                 }
             }
@@ -28,9 +28,9 @@ let newData = [
             {
                 name: "k1f",
                 td: {
-                    power: -160,
-                    current: 280,
-                    voltage: 322,
+                    mw: -160,
+                    a: 280,
+                    v: 322,
                     mvar: 16
                 }
             }
@@ -42,9 +42,9 @@ let newData = [
             {
                 name: "k1f",
                 td: {
-                    power: 160,
-                    current: 270,
-                    voltage: 328,
+                    mw: 160,
+                    a: 270,
+                    v: 328,
                     mvar: -14
                 }
             }

@@ -1,7 +1,7 @@
 const td = {
     mw: '',
     a: '',
-    kv: '',
+    v: '',
     mvar: ''
 };
 
