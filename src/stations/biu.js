@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var biu = {
     name: "BIU TS",
@@ -9,7 +9,7 @@ export var biu = {
             name: "w21b",
             id: "w21b",
             connectionRoot: false,
-            transmissionData
+            td
         }
     ]
 };

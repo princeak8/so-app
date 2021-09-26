@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var asaba = {
     name: "ASABA TS",
@@ -8,7 +8,7 @@ export var asaba = {
             name: "b3d",
             id: "b3d",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "d3t",
@@ -25,7 +25,7 @@ export var asaba = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

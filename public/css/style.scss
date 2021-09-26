@@ -14,7 +14,7 @@ $col1: (left: 0px, width: getLength(7));
 $col2: (left: (map-get($col1, 'left') + map-get($col1, 'width')), width: getLength(5));
 $col3: (left: (map-get($col2, 'left') + map-get($col2, 'width')), width: getLength(7));
 $col4: (left: (map-get($col3, 'left') + map-get($col3, 'width')), width: getLength(7));
-$col5: (left: (map-get($col4, 'left') + map-get($col4, 'width')), width: getLength(7));
+$col5: (left: (map-get($col4, 'left') + map-get($col4, 'width')), width: getLength(8));
 $col6: (left: (map-get($col5, 'left') + map-get($col5, 'width')), width: getLength(6));
 $col7: (left: (map-get($col6, 'left') + map-get($col6, 'width')), width: getLength(7));
 

@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var markudi = {
     name: "MARKUDI TS",
@@ -8,13 +8,13 @@ export var markudi = {
             name: "a1s",
             id: "a1s",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "a2s",
             id: "a2s",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "u1a",
@@ -31,7 +31,7 @@ export var markudi = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "u2a",
@@ -48,7 +48,7 @@ export var markudi = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

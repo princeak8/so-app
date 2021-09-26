@@ -1,8 +1,8 @@
-const transmissionData = {
+const td = {
     mw: '',
     A: '',
     V: '',
     mvar: ''
 };
 
-export default transmissionData;
+export default td;

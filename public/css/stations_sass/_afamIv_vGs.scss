@@ -1,9 +1,19 @@
 $afamIv_vGsTop: $phMainTop;
-$afamIv_vGsLeft: map-get($col5, 'left');
+$afamIv_vGsLeft: map-get($col5, 'left') + getLength(1);
 $afamIv_vGsWidth: map-get(stationDimention(2,1), 'width');
 $afamIv_vGsHeight: map-get(stationDimention(2,1), 'height');
 #afamIv_vGs{
   @include station(2,1);
   top: $afamIv_vGsTop;
   left: $afamIv_vGsLeft;
+
+  #afamIv_vGs-f21p{
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
+  }
+
+  #afamIv_vGs-f22p{
+    left: map-get(lineBoxPosition(2,1), 'left');
+    top: map-get(lineBoxPosition(2,1), 'top');
+  }
 }

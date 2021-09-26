@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var deltaGs = {
     name: "DELTA GS",
@@ -11,7 +11,7 @@ export var deltaGs = {
             name: "g3b",
             id: "g3b",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "s4g",
@@ -28,7 +28,7 @@ export var deltaGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

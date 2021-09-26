@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var adiabor = {
     name: "ADIABOR TS",
@@ -19,7 +19,7 @@ export var adiabor = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "d2b",
@@ -36,7 +36,7 @@ export var adiabor = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
 
         //Added by me
@@ -45,7 +45,7 @@ export var adiabor = {
             id: "d22t",
             connectionRoot: false,
             is132: true,
-            transmissionData
+            td
         },
     ]
 };

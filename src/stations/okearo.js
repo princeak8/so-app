@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var okearo = {
     name: "Oke-Aro TS",
@@ -8,13 +8,13 @@ export var okearo = {
             name: "k7w",
             id: "k7w",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "k8w",
             id: "k8w",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "n7k",
@@ -31,7 +31,7 @@ export var okearo = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "n8k",
@@ -48,7 +48,7 @@ export var okearo = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var lekki = {
     name: "LEKKI TS",
@@ -8,13 +8,13 @@ export var lekki = {
             name: "j1e",
             id: "j1e",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b1e",
             id: "b1e",
             connectionRoot: false,
-            transmissionData
+            td
         }
     ]
 };

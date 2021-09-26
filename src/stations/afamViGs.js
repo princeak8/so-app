@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var afamViGs = {
     name: "AFAM VI GS",
@@ -11,13 +11,13 @@ export var afamViGs = {
             name: "f1a",
             id: "f1a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "f2a",
             id: "f2a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "f5k",
@@ -53,7 +53,7 @@ export var afamViGs = {
                     arrowDirection: 'right'
                 },
             ],
-            transmissionData
+            td
         },
 
         {
@@ -90,7 +90,7 @@ export var afamViGs = {
                     arrowDirection: 'right'
                 },
             ],
-            transmissionData
+            td
         },
 
     ]

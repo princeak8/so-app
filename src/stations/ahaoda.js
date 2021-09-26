@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ahaoda = {
     name: "AHAODA TS",
@@ -9,13 +9,13 @@ export var ahaoda = {
             name: "w21h",
             id: "w21h",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "w22h",
             id: "w22h",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "h23r",
@@ -33,7 +33,7 @@ export var ahaoda = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "h24r",
@@ -51,7 +51,7 @@ export var ahaoda = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
     ]
 };

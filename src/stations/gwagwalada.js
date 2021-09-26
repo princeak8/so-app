@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var gwagwalada = {
     name: "GWAGWALADA TS",
@@ -8,13 +8,13 @@ export var gwagwalada = {
             name: "r5g",
             id: "r5g",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "g5b",
             id: "g5b",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "l6g",
@@ -31,7 +31,7 @@ export var gwagwalada = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "l7g",
@@ -48,7 +48,7 @@ export var gwagwalada = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var sagamu = {
     name: "SAGAMU TS",
@@ -8,13 +8,13 @@ export var sagamu = {
             name: "d23s",
             id: "d23s",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "d24s",
             id: "d24s",
             connectionRoot: false,
-            transmissionData
+            td
         },
     ]
 };

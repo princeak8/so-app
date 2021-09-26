@@ -1,14 +1,38 @@
 $ihovborNippGsTop: $oshogboTop + getHeight(1);
 $ihovborNippGsLeft: map-get($col2, 'left');
-$ihovborNippGsWidth: map-get(stationDimention(1,1), 'width');
-$ihovborNippGsHeight: map-get(stationDimention(1,1), 'height');
+$ihovborNippGsWidth: map-get(stationDimention(1,2), 'width');
+$ihovborNippGsHeight: map-get(stationDimention(1,2), 'height');
 #ihovborNippGs{
-  @include station(1,1);
+  @include station(1,2);
   top: $ihovborNippGsTop;
   left: $ihovborNippGsLeft;
 
   #ihovborNippGs-h7v{
     left: map-get(lineBoxPosition(1,1), 'left');
     top: map-get(lineBoxPosition(1,1), 'top');
+  }
+
+  #ihovborNippGs-v7b{
+    left: map-get(lineBoxPosition(1,2), 'left');
+    top: map-get(lineBoxPosition(1,2), 'top');
+
+      //1st Line
+      $v7b-h-0Width: getLength(3) + map-get($halfCell, 'width');
+      $v7b-h-0Top: map-get($halfCell, 'height');
+      $v7b-h-0Left: map-get($cell, 'width');
+      #v7b-h-0 {
+        width: $v7b-h-0Width;
+        top: $v7b-h-0Top;
+        left: $v7b-h-0Left;
+      }
+      // 2nd Line
+      $v7b-v-1Height: getHeight(3) + map-get($halfCell, 'height');
+      $v7b-v-1Top: $v7b-h-0Top;
+      $v7b-v-1Left: $v7b-h-0Left + $v7b-h-0Width;
+      #v7b-v-1{
+        top: $v7b-v-1Top;
+        left: $v7b-v-1Left;
+        height: $v7b-v-1Height;
+      }
   }
 }

@@ -1,11 +1,10 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var owerri = {
     name: "OWERRI TS",
     id: "owerri",
     is132: true,
     lines: [
-        //Added by me
         {
             name: "a23w",
             id: "a23w",
@@ -39,7 +38,7 @@ export var owerri = {
                     arrowDirection: 'right'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "a24w",
@@ -74,7 +73,7 @@ export var owerri = {
                     arrowDirection: 'right'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "w21h",
@@ -92,7 +91,7 @@ export var owerri = {
                     arrowDirection: 'both'
                 }
             ],
-            transmissionData
+            td
         },
         {
             name: "w22h",
@@ -110,7 +109,7 @@ export var owerri = {
                     arrowDirection: 'both'
                 }
             ],
-            transmissionData
+            td
         },
     ]
 };

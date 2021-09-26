@@ -7,12 +7,12 @@ $ikotAbasiHeight: map-get(stationDimention(2,2), 'height');
   top: $ikotAbasiTop;
   left: $ikotAbasiLeft;
 
-  #ikotAbasi-m1s{
+  #ikotAbasi-bm23s{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top: map-get(lineBoxPosition(1, 1), 'top');
   }
 
-  #ikotAbasi-m2s{
+  #ikotAbasi-bm24s{
     left: map-get(lineBoxPosition(2, 1), 'left');
     top: map-get(lineBoxPosition(2, 1), 'top');
   }

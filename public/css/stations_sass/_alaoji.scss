@@ -1,5 +1,5 @@
 $alaojiTop: $alaojiGsTop;
-$alaojiLeft: $onitshaLeft;
+$alaojiLeft: map-get($col5, 'left') + getLength(1);
 $alaojiWidth: map-get(stationDimention(4,5), 'width');
 $alaojiHeight: map-get(stationDimention(4,5), 'height');
 #alaoji{

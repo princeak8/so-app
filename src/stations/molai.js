@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var molai = {
     name: "MOLAI TS",
@@ -8,7 +8,7 @@ export var molai = {
             name: "d1l",
             id: "d1l",
             connectionRoot: false,
-            transmissionData
+            td
         }
     ]
 };

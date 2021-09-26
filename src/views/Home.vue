@@ -26,7 +26,7 @@
 
 
 <script>
-import { SOCKET_ADDR, STORAGE_KEY } from "@/constants";
+import { SOCKET_ADDR, SOCKET_AUTH_ADDR, STORAGE_KEY } from "@/constants";
 import Decimal from "decimal.js";
 import { RouteEnum } from "@/router";
 import StationBox from "@/components/StationBox.vue";

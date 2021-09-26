@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var olorunsogoPhase1Gs = {
     name: "Olorunsogo Phase1",
@@ -11,7 +11,7 @@ export var olorunsogoPhase1Gs = {
             name: "r2a",
             id: "r2a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "r1w",
@@ -28,7 +28,7 @@ export var olorunsogoPhase1Gs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

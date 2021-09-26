@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var benin = {
     name: "BENIN TS",
@@ -8,19 +8,19 @@ export var benin = {
             name: "v7b",
             id: "v7b",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b5m",
             id: "b5m",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "b6n",
             id: "b6n",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "g3b",
@@ -37,7 +37,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "s3b",
@@ -54,7 +54,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "s4b",
@@ -71,7 +71,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "s5b",
@@ -88,7 +88,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "b11j",
@@ -105,7 +105,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "b12j",
@@ -122,7 +122,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "b1t",
@@ -139,7 +139,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "b2t",
@@ -156,7 +156,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },{
             name: "b3d",
             id: "b3d",
@@ -172,7 +172,7 @@ export var benin = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

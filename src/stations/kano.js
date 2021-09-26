@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var kano = {
     name: "KANO TS",
@@ -7,7 +7,7 @@ export var kano = {
         {
             name: "m6n",
             id: "m6n",
-            transmissionData
+            td
         }
     ]
 };

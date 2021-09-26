@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var oshogbo = {
     name: "OSOGBO TS",
@@ -8,13 +8,13 @@ export var oshogbo = {
             name: "j1h",
             id: "j1h",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "j2h",
             id: "j2h",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "h3g",
@@ -48,13 +48,13 @@ export var oshogbo = {
                     arrowDirection: 'right'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "h2a",
             id: "h2a",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "h1w",
@@ -71,7 +71,7 @@ export var oshogbo = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "h7v",
@@ -88,7 +88,7 @@ export var oshogbo = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

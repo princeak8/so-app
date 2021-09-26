@@ -11,7 +11,7 @@ $owerriHeight: map-get(stationDimention(3,2), 'height');
       left: map-get(lineBoxPosition(1, 2), 'left');
       top: map-get(lineBoxPosition(1, 2), 'top');
 
-      $a23w-h-0Width: getLength(1) + map-get($halfCell, 'width');
+      $a23w-h-0Width: getLength(2) + map-get($halfCell, 'width');
       $a23w-h-0Top: map-get($halfCell, 'height');
       $a23w-h-0Left: map-get($cell, 'width');
       #a23w-h-0 {
@@ -43,7 +43,7 @@ $owerriHeight: map-get(stationDimention(3,2), 'height');
       left: map-get(lineBoxPosition(2, 2), 'left');
       top: map-get(lineBoxPosition(2, 2), 'top');
 
-      $a24w-h-0Width: getLength(2);
+      $a24w-h-0Width: getLength(3);
       $a24w-h-0Top: map-get($halfCell, 'height');
       $a24w-h-0Left: map-get($cell, 'width');
       #a24w-h-0 {

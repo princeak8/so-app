@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var shiroroGs = {
     name: "SHIRORO GS",
@@ -11,19 +11,19 @@ export var shiroroGs = {
             name: "j3r",
             id: "j3r",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "j7r",
             id: "j7r",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "r1m",
-            name: "r1m",
+            id: "r1m",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "r4b",
@@ -40,13 +40,13 @@ export var shiroroGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "r2m",
             id: "r2m",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "r5g",
@@ -72,7 +72,7 @@ export var shiroroGs = {
                     arrowDirection: 'right'
                 }
             ],
-            transmissionData
+            td
         }
     ]
 };

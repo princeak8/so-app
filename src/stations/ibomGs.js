@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ibomGs = {
     name: "IBOM GS",
@@ -8,54 +8,53 @@ export var ibomGs = {
     has132: false,
     is132: false,
     lines: [
-        //Added by me
         {
-            name: "e1m",
-            id: "e1m",
+            name: "e21m",
+            id: "e21m",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
-            name: "e2m",
-            id: "e2m",
+            name: "e22m",
+            id: "e22m",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
-            name: "m1s",
-            id: "m1s",
+            name: "bm23s",
+            id: "bm23s",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'm1o-h-0',
+                    name: 'bm23s-h-0',
                     start: true,
                     end: true,
                     position: 0,
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
-            name: "m2s",
-            id: "m2s",
+            name: "bm24s",
+            id: "bm24s",
             connectionRoot: true,
             is132Connection: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'm2o-h-0',
+                    name: 'bm24s-h-0',
                     start: true,
                     end: true,
                     position: 0,
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

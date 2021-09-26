@@ -7,7 +7,7 @@
             <LineBox 
                 v-if="lines.length > 0" 
                 v-for="(line, i) in lines" 
-                :station="name" :id="line.id" :name="line.name" :stationId="id" :transmissionData="line.transmissionData" :connections="connections(line)" 
+                :station="name" :id="line.id" :name="line.name" :stationId="id" :transmissionData="line.td" :connections="connections(line)" 
             /> 
         </div>
         

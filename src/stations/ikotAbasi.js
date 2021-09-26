@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var ikotAbasi = {
     name: "IKOT ABASI GS",
@@ -23,7 +23,7 @@ export var ikotAbasi = {
                     arrowDirection: 'left'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "s2k",
@@ -42,21 +42,19 @@ export var ikotAbasi = {
                     arrowDirection: 'left'
                 },
             ],
-            transmissionData
-        },
-        
-        //Added by me
-        {
-            name: "m1s",
-            id: "m1s",
-            connectionRoot: false,
-            transmissionData
+            td
         },
         {
-            name: "m2s",
-            id: "m2s",
+            name: "bm23s",
+            id: "bm23s",
             connectionRoot: false,
-            transmissionData
+            td
+        },
+        {
+            name: "bm24s",
+            id: "bm24s",
+            connectionRoot: false,
+            td
         }
     ]
 };

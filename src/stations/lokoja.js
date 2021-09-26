@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var lokoja = {
     name: "LOKOJA TS",
@@ -8,13 +8,13 @@ export var lokoja = {
             name: "l6g",
             id: "l6g",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "l7g",
             id: "l7g",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "j1l",
@@ -40,7 +40,7 @@ export var lokoja = {
                     arrowDirection: 'down'
                 }
             ],
-            transmissionData
+            td
         },
         {
             name: "j2l",
@@ -74,7 +74,7 @@ export var lokoja = {
                     arrowDirection: 'right'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

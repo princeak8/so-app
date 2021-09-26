@@ -6,4 +6,14 @@ $kainjiGsHeight: map-get(stationDimention(2,1), 'height');
   @include station(2,1);
   top: $kainjiGsTop;
   left: $kainjiGsLeft;
+
+  #kainjiGs-kn1k{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+  }
+
+  #kainjiGs-kn2k{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
+  }
 }

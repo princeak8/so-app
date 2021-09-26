@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var newHaven = {
     name: "NEW HAVEN TS",
@@ -8,13 +8,13 @@ export var newHaven = {
             name: "h1u",
             id: "h1u",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "h2u",
             id: "h2u",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "t3h",
@@ -31,7 +31,7 @@ export var newHaven = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

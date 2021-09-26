@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var jos = {
     name: "JOS",
@@ -8,7 +8,7 @@ export var jos = {
             name: "m2s",
             id: "m2s",
             connectionRoot: false,
-            transmissionData
+            td
         },
         {
             name: "s1e",
@@ -25,7 +25,7 @@ export var jos = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "a1s",
@@ -42,7 +42,7 @@ export var jos = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "a2s",
@@ -59,7 +59,7 @@ export var jos = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

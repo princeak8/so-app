@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var dadinKowaGs = {
     name: "DADIN KOWA GS",
@@ -23,7 +23,7 @@ export var dadinKowaGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
 
         {
@@ -42,7 +42,7 @@ export var dadinKowaGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };

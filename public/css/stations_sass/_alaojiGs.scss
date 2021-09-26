@@ -12,7 +12,7 @@ $alaojiGsLeft:  map-get($col5, 'left') - (getLength(1) + $alaojiGsWidth); //posi
     top: map-get(lineBoxPosition(1, 1), 'top');
 
     #l7a-h-0 {
-      @include hConnection(getLength(1));
+      @include hConnection(getLength(2));
     }
   }
   #alaojiGs-l8a{
@@ -20,7 +20,7 @@ $alaojiGsLeft:  map-get($col5, 'left') - (getLength(1) + $alaojiGsWidth); //posi
     top: map-get(lineBoxPosition(2, 1), 'top');
 
     #l8a-h-0 {
-      @include hConnection(getLength(1));
+      @include hConnection(getLength(2));
     }
   }
 }

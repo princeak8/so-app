@@ -1,4 +1,4 @@
-import transmissionData from '../TransmissionData';
+import td from '../TransmissionData';
 
 export var jebbaGs = {
     name: "JEBBA GS",
@@ -22,7 +22,7 @@ export var jebbaGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         },
         {
             name: "b9j",
@@ -39,7 +39,7 @@ export var jebbaGs = {
                     arrowDirection: 'both'
                 },
             ],
-            transmissionData
+            td
         }
     ]
 };
