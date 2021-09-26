@@ -45,22 +45,22 @@ export default {
     },
     computed: {
       power() {
-        if(this.transmissionData.power=='') {
+        if(this.transmissionData.mw=='') {
           return 'loading..';
         }
-        return this.transmissionData.power;
+        return this.transmissionData.mw;
       },
       voltage() {
-        if(this.transmissionData.voltage=='') {
+        if(this.transmissionData.V=='') {
           return 'loading..';
         }
-        return this.transmissionData.voltage;
+        return this.transmissionData.V;
       },
       current() {
-        if(this.transmissionData.current=='') {
+        if(this.transmissionData.A =='') {
           return 'loading..';
         }
-        return this.transmissionData.current;
+        return this.transmissionData.A;
       },
       mvar() {
         if(this.transmissionData.mvar=='') {
@@ -70,9 +70,9 @@ export default {
       },
       lineColor() {
         const { voltage: voltageThreshold } = threshold;
-        const aboveThreshold = this.transmissionData.voltage > voltageThreshold.max;
-        const belowThreshold = this.transmissionData.voltage < voltageThreshold.min;
-        if (!this.transmissionData.voltage || this.transmissionData.voltage=='' || this.transmissionData.voltage <= 0) {
+        const aboveThreshold = this.transmissionData.V > voltageThreshold.max;
+        const belowThreshold = this.transmissionData.V < voltageThreshold.min;
+        if (!this.transmissionData.V || this.transmissionData.V =='' || this.transmissionData.V <= 0) {
           return "grey";
         }
         if (aboveThreshold || belowThreshold) {
@@ -82,14 +82,14 @@ export default {
       },
       //Checks if there is voltage on the line i.e voltage is sent and its above zero
       onPotential() {
-        if (this.transmissionData.voltage && this.transmissionData.voltage!='' && this.transmissionData.voltage > 0) return true;
+        if (this.transmissionData.V && this.transmissionData.V !='' && this.transmissionData.V > 0) return true;
       },
       //checks if the line is receiving/importing power i.e power is above zero or not negative
       importing() {
-        return (this.transmissionData.power > 0) ? true : false;
+        return (this.transmissionData.mw > 0) ? true : false;
       },
       connectionColor() {
-        return (this.transmissionData?.voltage && this.transmissionData.voltage!='' && this.transmissionData.voltage > 0) ? {connection: 'blue', arrow: 'blueColor'} : {connection: 'grey1', arrow: 'grey1Color'};
+        return (this.transmissionData?.V && this.transmissionData.V !='' && this.transmissionData.V > 0) ? {connection: 'blue', arrow: 'blueColor'} : {connection: 'grey1', arrow: 'grey1Color'};
       }
     },
     watch: {

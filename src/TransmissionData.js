@@ -1,7 +1,7 @@
 const transmissionData = {
-    power: '',
-    current: '',
-    voltage: '',
+    mw: '',
+    A: '',
+    V: '',
     mvar: ''
 };
 

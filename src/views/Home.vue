@@ -228,19 +228,46 @@ export default {
       this.$router.push(RouteEnum.LOGIN);
     },
     async connect() {
+      const data = {token: 123};
       const token = "53c297c89cc189222a23195411ec5431";
-      const data = await this.get_token();
+      //const data = await this.get_token();
       console.log("token", data.token);
-      const ADDR = `ws://localhost:3001/token=${data.token}`;
+      // const ADDR = `ws://localhost:3001/token=${data.token}`;
+      const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
       this.ws = new WebSocket(ADDR);
       this.ws.onmessage = (msg) => {
         const res = JSON.parse(msg.data);
-        console.log(res);
+        // console.log(res);
+        this.mergeData(res)
       };
+    },
+    mergeData(res) {
+      const streamedStation = res
+      const getStation = this.stations.find(x => x.id === res.id)
+      // console.log('Get Station ', getStation.lines)
+      if(getStation) {
+        const stationLines = getStation.lines
+        const streamedStationLines = streamedStation.lines
+        const updatedStationLines = stationLines.filter((item) => {
+          const foundItem = streamedStationLines.find(x => x.id === item.id)
+          if(foundItem) {
+            item.transmissionData = foundItem.td
+          }
+          return item
+        })
+        this.stations = this.stations.filter(x => {
+          if(x.name === getStation.anme) {
+            x.lines = updatedStationLines
+          }
+          return x
+        })
+        // console.log('Station line ', stationLines, 'StreamedLines ', streamedStationLines)
+        console.log('Station line ', getStation, streamedStation)
+      }
     },
     get_token: async () => {
       // let url = "http://localhost/so_app/public/api/v1/get_connection_token";
-      let url = "http://102.89.11.82/so_app/api/v1/get_connection_toke";
+      let url = "http://102.89.11.82/so_app/api/v1/get_connection_token";
       var self = this;
       let formData = {
         name: "test",
@@ -259,9 +286,9 @@ export default {
     },
   },
   mounted() {
-    console.log("p stations:", powerStations);
+    // console.log("p stations:", powerStations);
     //console.log(newData);
-    //this.connect();
+    this.connect();
   },
 };
 </script>
