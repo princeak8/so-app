@@ -51,16 +51,16 @@ export default {
         return this.transmissionData.mw;
       },
       voltage() {
-        if(this.transmissionData.v=='') {
+        if(this.transmissionData.V=='') {
           return 'loading..';
         }
-        return this.transmissionData.v;
+        return this.transmissionData.V;
       },
       current() {
-        if(this.transmissionData.a=='') {
+        if(this.transmissionData.A =='') {
           return 'loading..';
         }
-        return this.transmissionData.a;
+        return this.transmissionData.A;
       },
       mvar() {
         if(this.transmissionData.mvar=='') {
@@ -70,9 +70,9 @@ export default {
       },
       lineColor() {
         const { voltage: voltageThreshold } = threshold;
-        const aboveThreshold = this.transmissionData.v > voltageThreshold.max;
-        const belowThreshold = this.transmissionData.v < voltageThreshold.min;
-        if (!this.transmissionData.v || this.transmissionData.v=='' || this.transmissionData.v <= 0) {
+        const aboveThreshold = this.transmissionData.V > voltageThreshold.max;
+        const belowThreshold = this.transmissionData.V < voltageThreshold.min;
+        if (!this.transmissionData.V || this.transmissionData.V =='' || this.transmissionData.V <= 0) {
           return "grey";
         }
         if (aboveThreshold || belowThreshold) {
@@ -82,14 +82,14 @@ export default {
       },
       //Checks if there is voltage on the line i.e voltage is sent and its above zero
       onPotential() {
-        if (this.transmissionData.v && this.transmissionData.v!='' && this.transmissionData.v > 0) return true;
+        if (this.transmissionData.V && this.transmissionData.V !='' && this.transmissionData.V > 0) return true;
       },
       //checks if the line is receiving/importing power i.e power is above zero or not negative
       importing() {
         return (this.transmissionData.mw > 0) ? true : false;
       },
       connectionColor() {
-        return (this.transmissionData?.v && this.transmissionData.v!='' && this.transmissionData.v > 0) ? {connection: 'blue', arrow: 'blueColor'} : {connection: 'grey1', arrow: 'grey1Color'};
+        return (this.transmissionData?.V && this.transmissionData.V !='' && this.transmissionData.V > 0) ? {connection: 'blue', arrow: 'blueColor'} : {connection: 'grey1', arrow: 'grey1Color'};
       }
     },
     watch: {

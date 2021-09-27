@@ -1,56 +1,41 @@
 <template>
-    <div>
-        
-        <StationBox v-for="(station, i) in updatedStations" :name="station.name" :id="station.id" :lines="station.lines" :station="station"  />
-        <!-- <button type="button" class="btn btn-primary" @click="openModal()">click</button> -->
-        
-          <PowerStationBox v-for="(pStation, i) in powerStations" :name="pStation.name" :ids="pStation.id" :units="pStation.units" />
+  <div>
+    <StationBox
+      v-for="(station, i) in updatedStations"
+      :key="`STATION_${i}`"
+      :name="station.name"
+      :id="station.id"
+      :lines="station.lines"
+      :station="station"
+    />
+    <button type="button" class="btn btn-primary" @click="openModal()">
+      click
+    </button>
 
-
-    </div>
+    <PowerStationBox
+      v-for="(pStation, i) in powerStations"
+      :key="`POWER_${i}`"
+      :name="pStation.name"
+      :ids="pStation.id"
+      :units="pStation.units"
+    />
+  </div>
 </template>
 
-<style>
-.d-none {
-  display: none;
-}
-.v--modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2em 6em 2em 2em !important;
-}
-.blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-</style>
 
-<style scoped>
 
-</style>
 
 <script>
 import { SOCKET_ADDR, SOCKET_AUTH_ADDR, STORAGE_KEY } from "@/constants";
 import Decimal from "decimal.js";
 import { RouteEnum } from "@/router";
 import StationBox from "@/components/StationBox.vue";
-import PowerStationBox from '@/components/PowerStationBox';
+import PowerStationBox from "@/components/PowerStationBox";
 import voltageDisplayMixin from "@/mixins/voltage-display-mixin";
 import { stations } from "@/stations";
 import { powerStations } from "@/powerStations";
-import newData from '@/newData';
-import axios from 'axios';
+import newData from "@/newData";
+import axios from "axios";
 
 const ERROR_MESSAGE_INTERVAL = 30000;
 const valueDP = Object.freeze({
@@ -109,45 +94,45 @@ export default {
     },
     updatedStations() {
       let currStations = this.stations;
-        // let newData = {
-        //   name: "Olorunsogo Phase1",
-        //   lines: [
-        //       {
-        //           name: "r2a",
-        //           transmissionData:  {
-        //                   power: 200,
-        //                   current: 380,
-        //                   voltage: 338,
-        //                   mvar: 6
-        //           }
-        //       },
-        //       {
-        //           name: "r1w",
-        //           transmissionData: {
-        //                   power: 200,
-        //                   current: 380,
-        //                   voltage: 312,
-        //                   mvar: 6
-        //           }
-        //       }
-        //   ]
-        // };
-        currStations.forEach((st) => {
-          newData.forEach((data) => {
-            if(st.name.toLowerCase()==data.name.toLowerCase()) {
-              st.lines.forEach((ln) => {
-                data.lines.forEach((newLn) => {
-                  if(ln.name==newLn.name) {
-                    ln.td = newLn.td;
-                  }
-                })
-              })
+      // let newData = {
+      //   name: "Olorunsogo Phase1",
+      //   lines: [
+      //       {
+      //           name: "r2a",
+      //           transmissionData:  {
+      //                   power: 200,
+      //                   current: 380,
+      //                   voltage: 338,
+      //                   mvar: 6
+      //           }
+      //       },
+      //       {
+      //           name: "r1w",
+      //           transmissionData: {
+      //                   power: 200,
+      //                   current: 380,
+      //                   voltage: 312,
+      //                   mvar: 6
+      //           }
+      //       }
+      //   ]
+      // };
+      currStations.forEach((st) => {
+        newData.forEach((data) => {
+          if (st.name.toLowerCase() == data.name.toLowerCase()) {
+            st.lines.forEach((ln) => {
+              data.lines.forEach((newLn) => {
+                if (ln.name == newLn.name) {
+                  ln.transmissionData = newLn.transmissionData;
+                }
+              });
+            });
             //st.lines = newData.lines;
-            }
-          })
-        })
+          }
+        });
+      });
       return currStations;
-    }
+    },
   },
   watch: {
     hasEmptyTransmissionValue(newValue, oldValue) {
@@ -161,114 +146,136 @@ export default {
         this.msg.text = "";
       }
     },
-
   },
   methods: {
-      showStations() {
-          console.log('stations', powerStations);
-      },
-      openModal() {
-        //console.log('station', station);
-        //if(station.gs) {
-          $('#jebbaPs').modal('toggle');
-        //}
-      },
-      openMainModal() {
-        this.$modal.show("linebox-modal");
-      },
-      openDefaultModal() {
-        this.$modal.show("default-linebox-modal");
-      },
-      
+    showStations() {
+      console.log("stations", powerStations);
+    },
+    openModal() {
+      //console.log('station', station);
+      //if(station.gs) {
+      $("#jebbaPs").modal("toggle");
+      //}
+    },
+    openMainModal() {
+      this.$modal.show("linebox-modal");
+    },
+    openDefaultModal() {
+      this.$modal.show("default-linebox-modal");
+    },
 
-      connect2(reconnect = false) {
-        this.ws = new WebSocket(SOCKET_ADDR);
+    connect2(reconnect = false) {
+      this.ws = new WebSocket(SOCKET_ADDR);
+      timeout = setTimeout(() => {
+        timeoutFlag = true;
+        this.msg = {
+          text: "No connection",
+          type: "error",
+        };
+        console.error("connected, but no data received");
+      }, ERROR_MESSAGE_INTERVAL);
+      this.ws.onmessage = (msg) => {
+        if (timeoutFlag) {
+          this.showConnectionMessage();
+        }
+        clearTimeout(timeout);
+        this.transmissionData = processData(JSON.parse(msg.data));
         timeout = setTimeout(() => {
           timeoutFlag = true;
           this.msg = {
-            text: "No connection",
-            type: "error",
+            text: "Connection lost",
           };
-          console.error("connected, but no data received");
         }, ERROR_MESSAGE_INTERVAL);
-        this.ws.onmessage = (msg) => {
-          if (timeoutFlag) {
-            this.showConnectionMessage();
-          }
-          clearTimeout(timeout);
-          this.transmissionData = processData(JSON.parse(msg.data));
-          timeout = setTimeout(() => {
-            timeoutFlag = true;
-            this.msg = {
-              text: "Connection lost",
-            };
-          }, ERROR_MESSAGE_INTERVAL);
-        };
-        this.ws.onerror = (e) => {
-          console.log("onerror", e);
-          return;
-        };
-        this.ws.onclose = (e) => {
-          console.log("onclose", e);
-          clearInterval(reconnectInterval);
-          reconnectInterval = setInterval(() => {
-            this.connect(true);
-          }, 5000);
-          return;
-        };
-        this.ws.onopen = (e) => {
-          console.log("onopen", e);
-          clearInterval(reconnectInterval);
-          if (timeoutFlag) {
-            this.showConnectionMessage();
-          }
-          if (reconnect) {
-            return;
-          }
-        };
-      },
-      showConnectionMessage() {
-        timeoutFlag = false;
-        this.msg = {
-          text: "Connected",
-          type: "success",
-        };
-        setTimeout(() => {
-          this.msg.text = "";
-        }, 5000);
-      },
-      logOut() {
-        if (this.ws) {
-          this.ws.close();
-        }
-        localStorage.removeItem(STORAGE_KEY);
-        this.$router.push(RouteEnum.LOGIN);
-      },
-      async connect() {
-        //const data = {token: '1234'};
-        const data = await this.get_token();
-        const ADDR = `${SOCKET_ADDR}token=${data.token}`;
-        //console.log('token', data.token);
-        //const ADDR = `ws://localhost:3001/token=${data.token}`;
-        //const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
-        //const ADDR = `ws://193.148.63.148:3002/token=${data.token}`;
-        this.ws = new WebSocket(ADDR);
-        this.ws.onmessage = (msg) => {
-          const res = JSON.parse(msg.data);
-          //this.newData = res;
-          console.log(res);
-        };
-      },
-      get_token: async () => {
-        //let url = SOCKET_AUTH_ADDR;
-       //let url = "http://localhost/so_app/api/v1/get_connection_token";
-      //let url = "http://102.89.11.82/so_app/api/v1/get_connection_token";
-      var self = this;
-      let formData =  {
-          name : 'test',
-          password: 'test123'
       };
-      return axios.post(SOCKET_AUTH_ADDR, formData)
+      this.ws.onerror = (e) => {
+        console.log("onerror", e);
+        return;
+      };
+      this.ws.onclose = (e) => {
+        console.log("onclose", e);
+        clearInterval(reconnectInterval);
+        reconnectInterval = setInterval(() => {
+          this.connect(true);
+        }, 5000);
+        return;
+      };
+      this.ws.onopen = (e) => {
+        console.log("onopen", e);
+        clearInterval(reconnectInterval);
+        if (timeoutFlag) {
+          this.showConnectionMessage();
+        }
+        if (reconnect) {
+          return;
+        }
+      };
+    },
+    showConnectionMessage() {
+      timeoutFlag = false;
+      this.msg = {
+        text: "Connected",
+        type: "success",
+      };
+      setTimeout(() => {
+        this.msg.text = "";
+      }, 5000);
+    },
+    logOut() {
+      if (this.ws) {
+        this.ws.close();
+      }
+      localStorage.removeItem(STORAGE_KEY);
+      this.$router.push(RouteEnum.LOGIN);
+    },
+    async connect() {
+      const data = {token: 123};
+      const token = "53c297c89cc189222a23195411ec5431";
+      //const data = await this.get_token();
+      console.log("token", data.token);
+      // const ADDR = `ws://localhost:3001/token=${data.token}`;
+      const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
+      this.ws = new WebSocket(ADDR);
+      this.ws.onmessage = (msg) => {
+        const res = JSON.parse(msg.data);
+        // console.log(res);
+        this.mergeData(res)
+      };
+    },
+    mergeData(res) {
+      const streamedStation = res
+      const getStation = this.stations.find(x => x.id === res.id)
+      // console.log('Get Station ', getStation.lines)
+      if(getStation) {
+        const stationLines = getStation.lines
+        const streamedStationLines = streamedStation.lines
+        const updatedStationLines = stationLines.filter((item) => {
+          const foundItem = streamedStationLines.find(x => x.id === item.id)
+          if(foundItem) {
+            item.transmissionData = foundItem.td
+            item.td = foundItem.td
+          }
+          return item
+        })
+        this.stations = this.stations.filter(x => {
+          if(x.name === getStation.anme) {
+            x.lines = updatedStationLines
+          }
+          return x
+        })
+        // console.log('Station line ', stationLines, 'StreamedLines ', streamedStationLines)
+        console.log('Station line ', getStation, streamedStation)
+      }
+    },
+    get_token: async () => {
+      // let url = "http://localhost/so_app/public/api/v1/get_connection_token";
+      let url = "http://102.89.11.82/so_app/api/v1/get_connection_token";
+      var self = this;
+      let formData = {
+        name: "test",
+        password: "test123",
+      };
+      return axios
+        .post(url, formData)
         .then((response) => {
           return response.data;
           //console.log(response);
@@ -280,9 +287,35 @@ export default {
     },
   },
   mounted() {
-    console.log('p stations:',powerStations);
-      //console.log(newData);
+    // console.log("p stations:", powerStations);
+    //console.log(newData);
     this.connect();
   },
 };
 </script>
+
+<style>
+.d-none {
+  display: none;
+}
+.v--modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em 6em 2em 2em !important;
+}
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+</style>
