@@ -252,6 +252,7 @@ export default {
           const foundItem = streamedStationLines.find(x => x.id === item.id)
           if(foundItem) {
             item.transmissionData = foundItem.td
+            item.td = foundItem.td
           }
           return item
         })
