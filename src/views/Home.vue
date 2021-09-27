@@ -8,9 +8,6 @@
       :lines="station.lines"
       :station="station"
     />
-    <button type="button" class="btn btn-primary" @click="openModal()">
-      click
-    </button>
 
     <PowerStationBox
       v-for="(pStation, i) in powerStations"
@@ -117,20 +114,6 @@ export default {
       //       }
       //   ]
       // };
-      currStations.forEach((st) => {
-        newData.forEach((data) => {
-          if (st.name.toLowerCase() == data.name.toLowerCase()) {
-            st.lines.forEach((ln) => {
-              data.lines.forEach((newLn) => {
-                if (ln.name == newLn.name) {
-                  ln.transmissionData = newLn.transmissionData;
-                }
-              });
-            });
-            //st.lines = newData.lines;
-          }
-        });
-      });
       return currStations;
     },
   },
@@ -233,7 +216,7 @@ export default {
       //const data = await this.get_token();
       console.log("token", data.token);
       // const ADDR = `ws://localhost:3001/token=${data.token}`;
-      const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
+      const ADDR = `${SOCKET_ADDR}token=${data.token}`;
       this.ws = new WebSocket(ADDR);
       this.ws.onmessage = (msg) => {
         const res = JSON.parse(msg.data);
@@ -275,7 +258,7 @@ export default {
         password: "test123",
       };
       return axios
-        .post(url, formData)
+        .post(SOCKET_AUTH_ADDR, formData)
         .then((response) => {
           return response.data;
           //console.log(response);
