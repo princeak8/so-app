@@ -22,7 +22,7 @@ $ikotAbasiHeight: map-get(stationDimention(2,2), 'height');
     top: map-get(lineBoxPosition(1, 2), 'top');
 
     #s1k-h-0 {
-      @include hConnection(getLength(4) + map-get($halfCell, 'width'));
+      @include hConnection(getLength(4) + map-get($halfCell, 'width') + 1);
     }
   }
 
@@ -31,7 +31,7 @@ $ikotAbasiHeight: map-get(stationDimention(2,2), 'height');
     top: map-get(lineBoxPosition(2, 2), 'top');
 
     #s2k-h-0 {
-      @include hConnection(getLength(5) + map-get($halfCell, 'width'));
+      @include hConnection(getLength(5) + map-get($halfCell, 'width') + 1);
     }
   }
   
