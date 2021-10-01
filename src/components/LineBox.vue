@@ -1,22 +1,26 @@
 <template>
     <div :id="stationId+'-'+id" class="line" :class="[lineColor]" >
-        <div class="line-name">{{name.toUpperCase()}}</div>
-            <div v-if="connections.length > 0">
-                <div v-for="connection in connections"  
-                  :id="connection.name" class="connection" 
-                  :class="[connectionSize(connection.alignment), connectionColor.connection]" 
-                >
-                  <i v-if="onPotential && importing && connection.start" class="fas fa-lg arrow" :class="[arrowStartStyles(connection.alignment, connection.arrowDirection), connectionColor.arrow]"></i>
-                  <i v-if="onPotential && !importing && connection.end" class="fas fa-lg arrow" :class="[arrowEndStyles(connection.alignment, connection.arrowDirection), connectionColor.arrow]"></i>
-                </div>
-            </div>
-            <div class="data-group">
-                <LineData :text="power+'MW'" />
-                <LineData :text="current+'A'" />
-                <LineData :text="voltage+'KV'" />
-                <LineData :text="mvar+'MX'" />
-            </div>
-        </div>
+          <div class="line-name">{{name.toUpperCase()}}</div>
+          <div v-if="connections.length > 0">
+              <div v-for="(connection, i) in connections"  :key="`LINE_${i}`"
+                :id="connection.name" class="connection" 
+                :class="[connectionSize(connection.alignment), connectionColor.connection]" 
+              >
+                <i v-if="onPotential && importing && connection.start" class="fas fa-lg arrow" :class="[arrowStartStyles(connection.alignment, connection.arrowDirection), connectionColor.arrow]"></i>
+                <i v-if="onPotential && !importing && connection.end" class="fas fa-lg arrow" :class="[arrowEndStyles(connection.alignment, connection.arrowDirection), connectionColor.arrow]"></i>
+              </div>
+          </div>
+          <div class="data-group">
+              <div>
+                <LineData :text="power+' MW'" />
+                <LineData :text="current+' A'" />
+              </div>
+              <div>
+                <LineData :text="voltage+' KV'" />
+                <LineData :text="mvar+' MX'" />
+              </div>
+          </div>
+        
     </div>
 </template>
 
@@ -47,6 +51,7 @@ export default {
       power() {
         if(this.transmissionData.mw=='') {
           return 'loading..';
+          
         }
         return this.transmissionData.mw;
       },
@@ -79,6 +84,7 @@ export default {
           return "red";
         }
         return "green";
+        // return "#00680A";
       },
       //Checks if there is voltage on the line i.e voltage is sent and its above zero
       onPotential() {

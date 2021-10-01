@@ -1,14 +1,14 @@
 <template>
-    <div>
+    <div >
         <div :id="id">
-            <div class="station-name">
+            <div class="station-name" >
                 <p @click="openModal(station)" :class="{nameHeighlight: station.gs}">{{name}}</p>
             </div>
-            <LineBox 
-                v-if="lines.length > 0" 
-                v-for="(line, i) in lines" 
-                :station="name" :id="line.id" :name="line.name" :stationId="id" :transmissionData="line.td" :connections="connections(line)" 
-            /> 
+            <div v-if="lines.length > 0">
+                <LineBox v-for="(line, i) in lines" :key="`ST_${i}`"
+                    :station="name" :id="line.id" :name="line.name" :stationId="id" :transmissionData="line.td" :connections="connections(line)" 
+                /> 
+            </div>
         </div>
         
     </div>
@@ -33,6 +33,7 @@ export default {
         LineBox, MainBox
     },
     mounted() {
+        console.log('id ',this.id)
         //console.log('lines: ', this.lines);
     },
     props: ["name", "id", "lines", "station"],

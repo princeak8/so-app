@@ -86,9 +86,9 @@ export default {
     };
   },
   computed: {
-    hasEmptyTransmissionValue() {
-      return Object.values(this.transmissionData).includes("");
-    },
+    // hasEmptyTransmissionValue() {
+    //   return Object.values(this.transmissionData).includes("");
+    // },
     updatedStations() {
       let currStations = this.stations;
       // let newData = {
@@ -118,17 +118,17 @@ export default {
     },
   },
   watch: {
-    hasEmptyTransmissionValue(newValue, oldValue) {
-      if (newValue) {
-        this.msg = {
-          text: "Error in connection",
-        };
-        return;
-      }
-      if (!newValue && oldValue) {
-        this.msg.text = "";
-      }
-    },
+    // hasEmptyTransmissionValue(newValue, oldValue) {
+    //   if (newValue) {
+    //     this.msg = {
+    //       text: "Error in connection",
+    //     };
+    //     return;
+    //   }
+    //   if (!newValue && oldValue) {
+    //     this.msg.text = "";
+    //   }
+    // },
   },
   methods: {
     showStations() {
@@ -219,7 +219,7 @@ export default {
       const ADDR = `${SOCKET_ADDR}token=${data.token}`;
       this.ws = new WebSocket(ADDR);
       this.ws.onmessage = (msg) => {
-        console.log('msg ', msg)
+        // console.log('msg ', msg)
         const res = JSON.parse(msg.data);
         // console.log(res);
         this.mergeData(res)
@@ -250,7 +250,7 @@ export default {
           return x
         })
         // console.log('Station line ', stationLines, 'StreamedLines ', streamedStationLines)
-        console.log('Station line ', getStation, streamedStation)
+        // console.log('Station line ', getStation, streamedStation)
       }
     },
     get_token: async () => {

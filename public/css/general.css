@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+body {
+  font-family: 'Nunito';
+  background-color: #F3F2F2;
+}
 .grey {
     background: #ececec;
   }
@@ -6,11 +11,13 @@
 }
   
   .green {
-    background: #17d617;
+    /* background: #17d617; */
+    background-color: #00680A;
   }
   
 .red {
-    background: #dd0505;
+    /* background: #dd0505; */
+    background-color: #BA0000;
 }
 .black {
   background-color: black;
@@ -55,6 +62,13 @@
 }
 .height {
   height: 1.5px;
+}
+.activeText {
+  color:white;
+}
+.nonActiveText {
+  color: black;
+  font-size: 5px;
 }
 
 .connection {

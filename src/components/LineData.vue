@@ -1,5 +1,5 @@
 <template>
-    <div class="line-data mw">{{text}}</div>
+    <div class="line-data mw" :class="textColor">{{text}}</div>
 </template>
 
 <style scoped>
@@ -14,5 +14,13 @@ export default {
       required: true,
     },
   },
+  computed: {
+    textColor() {
+      if(this.text.includes('loading')) {
+        return "nonActiveText"
+      }
+      return "activeText"
+    }
+  }
 };
 </script>
