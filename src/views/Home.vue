@@ -229,17 +229,21 @@ export default {
     },
     async connect() {
       const data = {token: 123};
-      const token = "53c297c89cc189222a23195411ec5431";
+      // const token = "53c297c89cc189222a23195411ec5431";
       //const data = await this.get_token();
       console.log("token", data.token);
       // const ADDR = `ws://localhost:3001/token=${data.token}`;
       const ADDR = `ws://102.89.11.82:3001/token=${data.token}`;
       this.ws = new WebSocket(ADDR);
       this.ws.onmessage = (msg) => {
+        console.log('msg ', msg)
         const res = JSON.parse(msg.data);
         // console.log(res);
         this.mergeData(res)
       };
+      this.ws.onerror = (error) => {
+        console.log('Error ', error)
+      }
     },
     mergeData(res) {
       const streamedStation = res
