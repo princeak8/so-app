@@ -38,8 +38,6 @@ export var adiabor = {
             ],
             td
         },
-
-        //Added by me
         {
             name: "d22t",
             id: "d22t",
