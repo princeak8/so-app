@@ -57,7 +57,7 @@ $ikotEkpeneHeight: map-get(stationDimention(3,6), 'height');
     top: map-get(lineBoxPosition(3, 3), 'top');
 
     #s1k-v-0 {
-      @include vConnection(getHeight(13)  + map-get($halfCell, 'height') + 2);
+      @include vConnection(getHeight(13)  + map-get($halfCell, 'height') - 2);
     }
   }
 
@@ -66,7 +66,7 @@ $ikotEkpeneHeight: map-get(stationDimention(3,6), 'height');
     top: map-get(lineBoxPosition(3, 4), 'top');
 
     #s2k-v-0 {
-      @include vConnection(getHeight(14)  + map-get($halfCell, 'height') + 2);
+      @include vConnection(getHeight(14)  + map-get($halfCell, 'height') -2 );
     }
   }
 
@@ -75,7 +75,7 @@ $ikotEkpeneHeight: map-get(stationDimention(3,6), 'height');
     top: map-get(lineBoxPosition(3, 5), 'top');
 
     #f5k-v-0 {
-      @include vConnection(getHeight(15)  + map-get($halfCell, 'height') + 2);
+      @include vConnection(getHeight(16)  + map-get($halfCell, 'height') + 1);
     }
   }
 
@@ -84,7 +84,7 @@ $ikotEkpeneHeight: map-get(stationDimention(3,6), 'height');
     top: map-get(lineBoxPosition(3, 6), 'top');
 
     #f6k-v-0 {
-      @include vConnection(getHeight(16)  + map-get($halfCell, 'height') + 2);
+      @include vConnection(getHeight(17)  + map-get($halfCell, 'height') +1);
     }
   }
 }

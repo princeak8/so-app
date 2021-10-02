@@ -62,11 +62,19 @@ $col7: (left: (map-get($col6, 'left') + map-get($col6, 'width')), width: getLeng
       margin: 0;
     }
     .data-group {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax($lineParameterSize, 1fr));
-      justify-items: center;
+      // display: grid;
+      display: flex;
+      flex-direction: row;
+      // grid-template-columns: repeat(auto-fit, minmax($lineParameterSize, 1fr));
+      justify-items: center; align-items: center;
       margin: 0;
       padding: 0;
+      // border: 1px solid yellow;
+      div {
+        flex: 1; display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+        // border: 1px solid blue;
+      }
     }
     .line-data{
       width: $lineParameterSize;

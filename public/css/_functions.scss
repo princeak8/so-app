@@ -5,8 +5,10 @@
     $cellWidth: map-get($cell, 'width');
     $cellHeight: map-get($cell, 'height');
 
-    $width: $vLines * $cellWidth;
-    $height: ($hLines + 1) * $cellHeight;
+    // $width: $vLines * $cellWidth;
+    $width: ($vLines * $cellWidth) - 1;
+    // $height: ($hLines + 1) * $cellHeight;
+    $height: (($hLines + 1) * $cellHeight) - 1;
 
     @return (width: $width, height: $height);
 }

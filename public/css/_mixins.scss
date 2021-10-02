@@ -1,22 +1,24 @@
 @mixin station($hLines, $vLines) {
     position: absolute;
-    border: medium solid #000;
+    // border: medium solid #000;
     width:  map-get(stationDimention($hLines, $vLines), 'width');
     height: map-get(stationDimention($hLines, $vLines), 'height');
-    border: solid 2px gray;
-    border-radius: 5px;
+    // border: solid 1px gray;
+    border-radius: 4px;
     box-shadow: 0px 8px 16px #0000001F;
+    background-color: white;
+    // overflow: hidden;
 }
 @mixin line {
     position: absolute;
-    border: thin solid #000;
+    // border: thin solid #000;
     width: map-get($cell, 'width');
     height: map-get($cell, 'height');
     font-size: 6px;
     padding: 0;
     margin: 0;
-    border-radius: 3px;
-    border: solid 1px black;
+    // border-radius: 3px;
+    // border: solid 0.2px rgb(160, 160, 160);
 }
 
 @mixin units{

@@ -86,9 +86,9 @@ export default {
     };
   },
   computed: {
-    hasEmptyTransmissionValue() {
-      return Object.values(this.transmissionData).includes("");
-    },
+    // hasEmptyTransmissionValue() {
+    //   return Object.values(this.transmissionData).includes("");
+    // },
     updatedStations() {
       let currStations = this.stations;
       // let newData = {
@@ -118,17 +118,17 @@ export default {
     },
   },
   watch: {
-    hasEmptyTransmissionValue(newValue, oldValue) {
-      if (newValue) {
-        this.msg = {
-          text: "Error in connection",
-        };
-        return;
-      }
-      if (!newValue && oldValue) {
-        this.msg.text = "";
-      }
-    },
+    // hasEmptyTransmissionValue(newValue, oldValue) {
+    //   if (newValue) {
+    //     this.msg = {
+    //       text: "Error in connection",
+    //     };
+    //     return;
+    //   }
+    //   if (!newValue && oldValue) {
+    //     this.msg.text = "";
+    //   }
+    // },
   },
   methods: {
     showStations() {
@@ -212,17 +212,21 @@ export default {
     },
     async connect() {
       const data = {token: 123};
-      const token = "53c297c89cc189222a23195411ec5431";
+      // const token = "53c297c89cc189222a23195411ec5431";
       //const data = await this.get_token();
       console.log("token", data.token);
       // const ADDR = `ws://localhost:3001/token=${data.token}`;
       const ADDR = `${SOCKET_ADDR}token=${data.token}`;
       this.ws = new WebSocket(ADDR);
       this.ws.onmessage = (msg) => {
+        // console.log('msg ', msg)
         const res = JSON.parse(msg.data);
         // console.log(res);
         this.mergeData(res)
       };
+      this.ws.onerror = (error) => {
+        console.log('Error ', error)
+      }
     },
     mergeData(res) {
       const streamedStation = res
@@ -246,7 +250,7 @@ export default {
           return x
         })
         // console.log('Station line ', stationLines, 'StreamedLines ', streamedStationLines)
-        console.log('Station line ', getStation, streamedStation)
+        // console.log('Station line ', getStation, streamedStation)
       }
     },
     get_token: async () => {

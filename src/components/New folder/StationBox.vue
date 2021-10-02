@@ -4,11 +4,11 @@
             <div class="station-name">
                 <p @click="openModal(station)" :class="{nameHeighlight: station.gs}">{{name}}</p>
             </div>
-            <LineBox 
-                v-if="lines.length > 0" 
-                v-for="(line, i) in lines" 
+            <div style="border: 1px solid red; background-color: green;">
+            <LineBox v-if="lines.length > 0" v-for="(line, i) in lines" :key="`ST_${i}`"
                 :station="name" :name="line.name" :stationId="id" :transmissionData="line.transmissionData" :connections="connections(line)" 
             /> 
+            </div>
         </div>
         
     </div>
