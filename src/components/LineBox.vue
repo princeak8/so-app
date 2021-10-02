@@ -53,25 +53,29 @@ export default {
           return 'loading..';
           
         }
-        return this.transmissionData.mw;
+        const value = this.$options.filters.formatAmount(this.transmissionData.mw, 1)
+        return value;
       },
       voltage() {
         if(this.transmissionData.V=='') {
           return 'loading..';
         }
-        return this.transmissionData.V;
+        const value = this.$options.filters.formatAmount(this.transmissionData.V, 1)
+        return value;
       },
       current() {
         if(this.transmissionData.A =='') {
           return 'loading..';
         }
-        return this.transmissionData.A;
+        const value = this.$options.filters.formatAmount(this.transmissionData.A, 1)
+        return value;
       },
       mvar() {
         if(this.transmissionData.mvar=='') {
           return 'loading..';
         }
-        return this.transmissionData.mvar;
+        const value = this.$options.filters.formatAmount(this.transmissionData.mvar, 1)
+        return value;
       },
       lineColor() {
         const { voltage: voltageThreshold } = threshold;
