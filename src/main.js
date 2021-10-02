@@ -5,7 +5,7 @@ import store from './store'
 import VModal from "vue-js-modal";
 
 Vue.config.productionTip = false
-
+import '@/utils/filters';
 Vue.use(VModal);
 
 new Vue({
