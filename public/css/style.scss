@@ -19,7 +19,31 @@ $col6: (left: (map-get($col5, 'left') + map-get($col5, 'width')), width: getLeng
 $col7: (left: (map-get($col6, 'left') + map-get($col6, 'width')), width: getLength(7));
 
 @import "./mixins";
-
+.overlayContainer {
+  width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); position: fixed; top: 0; left: 0;
+  display: flex; justify-content: center; align-items: center;
+  &__content {
+    width: 30%; height: 50%; background-color: #00680A; border-radius: 10px; color: white; padding: 0px 20px;
+    &__title {
+      text-align: center;
+    }
+    .divider {
+      width: 100%; height: 1px; background-color: rgba(231, 231, 231, 0.6);
+    }
+    &__row {
+      flex-direction: row; display: flex; justify-content: space-between; padding: 10px 0px;
+    }
+  }
+}
+.makeHovarable {
+  cursor: pointer;
+}
+.colorWhite {
+  color: white;
+}
+.colorBlack {
+  color: black;
+}
 #row1 {
   top: map-get($row1, 'top');
 }
@@ -83,6 +107,7 @@ $col7: (left: (map-get($col6, 'left') + map-get($col6, 'width')), width: getLeng
       padding: 0;
     }
 }
+
 
 @import "./stations_sass/fakun";
 

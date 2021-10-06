@@ -1,5 +1,5 @@
 <template>
-    <div :id="stationId+'-'+id" class="line" :class="[lineColor]" >
+    <div :id="stationId+'-'+id" class="line" :class="[lineColor, hightlightContainer]" @click="clickedOn" >
           <div class="line-name">{{name.toUpperCase()}}</div>
           <div v-if="connections.length > 0">
               <div v-for="(connection, i) in connections"  :key="`LINE_${i}`"
@@ -20,7 +20,6 @@
                 <LineData :text="mvar+' MX'" />
               </div>
           </div>
-        
     </div>
 </template>
 
@@ -32,6 +31,7 @@
 <script>
 import LineData from "./LineData.vue";
 import voltageDisplayMixin from "@/mixins/voltage-display-mixin";
+import { mapActions } from 'vuex';
 
 const threshold = Object.freeze({
   voltage: Object.freeze({ min: 300, max: 342 }),
@@ -90,6 +90,9 @@ export default {
         return "green";
         // return "#00680A";
       },
+      hightlightContainer() {
+        return "makeHovarable"
+      },
       //Checks if there is voltage on the line i.e voltage is sent and its above zero
       onPotential() {
         if (this.transmissionData.V && this.transmissionData.V !='' && this.transmissionData.V > 0) return true;
@@ -107,6 +110,7 @@ export default {
         },
     },
     methods: {
+      ...mapActions(['setLineDetails', 'toggleModal']),
       connectionSize(alignment) {
         if(alignment=='v') {
           return 'width';
@@ -143,6 +147,18 @@ export default {
         }
         return classNames;
       },
+      clickedOn() {
+        const obj = {
+          power: this.power,
+          voltage: this.voltage,
+          current: this.current,
+          mvar: this.mvar,
+          lineColor: this.lineColor,
+          name: this.name
+        }
+        this.setLineDetails(obj)
+        this.toggleModal(true)
+      }
     },
     data() {
       return {
