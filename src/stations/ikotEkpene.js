@@ -145,5 +145,27 @@ export var ikotEkpene = {
             ],
             td
         }
+    ],
+    mappings:   [
+        {
+            stationId: 'ugwuaji',
+            lines: ['k1u', 'k2u', 'k3u', 'k4u']
+        },
+        {
+            stationId: 'alaoji',
+            lines: ['a1k', 'a2k']
+        },
+        {
+            stationId: 'odukpaniGs',
+            lines: ['d1k', 'd2k']
+        },
+        {
+            stationId: 'ikotAbasi',
+            lines: ['s1k', 's2k']
+        },
+        {
+            stationId: 'afamViGs',
+            lines: ['f5k', 'f6k']
+        }
     ]
 };

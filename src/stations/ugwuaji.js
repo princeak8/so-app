@@ -154,5 +154,19 @@ export var ugwuaji = {
             ],
             td
         }
+    ],
+    mappings:   [
+        {
+            stationId: 'ikotEkpene',
+            lines: ['k1u', 'k2u', 'k3u', 'k4u']
+        },
+        {
+            stationId: 'markudi',
+            lines: ['u1a', 'u2a']
+        },
+        {
+            stationId: 'newHaven',
+            lines: ['h1u', 'h2u']
+        }
     ]
 };

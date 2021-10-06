@@ -4,8 +4,11 @@ import router from './router'
 import store from './store'
 import VModal from "vue-js-modal";
 
-Vue.config.productionTip = false
 import '@/utils/filters';
+import '@/utils/notifications';
+
+Vue.config.productionTip = false
+
 Vue.use(VModal);
 
 new Vue({

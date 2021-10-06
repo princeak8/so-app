@@ -7,6 +7,7 @@
       :id="station.id"
       :lines="station.lines"
       :station="station"
+      :stations="updatedStations"
     />
 
     <PowerStationBox
@@ -16,6 +17,7 @@
       :ids="pStation.id"
       :units="pStation.units"
     />
+    <LineBoxModal v-if="showOverlay" />
   </div>
 </template>
 
@@ -33,6 +35,10 @@ import { stations } from "@/stations";
 import { powerStations } from "@/powerStations";
 import newData from "@/newData";
 import axios from "axios";
+import LineBoxModal from '@/components/LineBoxModal'
+
+
+import { mapState } from 'vuex';
 
 const ERROR_MESSAGE_INTERVAL = 30000;
 const valueDP = Object.freeze({
@@ -62,7 +68,7 @@ function processData(data) {
   return processed;
 }
 export default {
-  components: { StationBox, PowerStationBox },
+  components: { StationBox, PowerStationBox, LineBoxModal },
   mixins: [voltageDisplayMixin],
   data() {
     return {
@@ -77,18 +83,13 @@ export default {
         voltage: { initialValue: null, absValue: null },
         current: { initialValue: null, absValue: null },
       },
-      defaultTransmissionData: {
-        power: { initialValue: null, absValue: null },
-        mvar: { initialValue: null, absValue: null },
-        voltage: { initialValue: null, absValue: null },
-        current: { initialValue: null, absValue: null },
-      },
+      
+      connectTrials: 0,
+      connectError: ''
     };
   },
   computed: {
-    // hasEmptyTransmissionValue() {
-    //   return Object.values(this.transmissionData).includes("");
-    // },
+    ...mapState(['lineDetails', 'showOverlay']),
     updatedStations() {
       let currStations = this.stations;
       // let newData = {
@@ -220,12 +221,23 @@ export default {
       this.ws = new WebSocket(ADDR);
       this.ws.onmessage = (msg) => {
         // console.log('msg ', msg)
+        this.connectTrials = 0;
         const res = JSON.parse(msg.data);
         // console.log(res);
         this.mergeData(res)
       };
       this.ws.onerror = (error) => {
         console.log('Error ', error)
+        this.connectTrials = this.connectTrials + 1;
+        console.log('connection trials ', this.connectTrials)
+        if(this.connectTrials < 5) {
+          this.connect()
+        } else {
+          this.$alert.error('Could not connect to the server, please check connection')
+        }
+      }
+      this.ws.onclose = (event) => {
+        console.log("WebSocket is closed now.", event);
       }
     },
     mergeData(res) {
@@ -255,7 +267,7 @@ export default {
     },
     get_token: async () => {
       // let url = "http://localhost/so_app/public/api/v1/get_connection_token";
-      let url = "http://102.89.11.82/so_app/api/v1/get_connection_token";
+      let url = SOCKET_AUTH_ADDR;
       var self = this;
       let formData = {
         name: "test",
@@ -275,8 +287,9 @@ export default {
   },
   mounted() {
     // console.log("p stations:", powerStations);
-    //console.log(newData);
+    console.log(this.showOverlay);
     this.connect();
+    
   },
 };
 </script>
