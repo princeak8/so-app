@@ -45,5 +45,15 @@ export var adiabor = {
             is132: true,
             td
         },
+    ],
+    mappings:   [
+        {
+            stationId: 'odukpaniGs',
+            lines: ['d1b', 'd2b']
+        },
+        {
+            stationId: 'itu',
+            lines: ['d22t']
+        }
     ]
 };

@@ -42,12 +42,15 @@ export default {
     mounted() {
       //console.log(name.toUpperCase()+': '+ this.transmissionData.voltage);
     },
-    props: ["name", "id", "stationId", "transmissionData", "connections"],
+    props: ["name", "id", "stationId", "transmissionData", "connections", "mappedLines"],
     mixins: [voltageDisplayMixin],
     components: {
         LineData,
     },
     computed: {
+      mappedLine() {
+        return this.mappedLines.find(x => x.id === this.id);
+      },
       power() {
         if(this.transmissionData.mw=='') {
           return 'loading..';
@@ -95,14 +98,14 @@ export default {
       },
       //Checks if there is voltage on the line i.e voltage is sent and its above zero
       onPotential() {
-        if (this.transmissionData.V && this.transmissionData.V !='' && this.transmissionData.V > 0) return true;
+        if (this.connectionHasVoltage()) return true;
       },
-      //checks if the line is receiving/importing power i.e power is above zero or not negative
+      //checks if the line is receiving/importing power i.e power is above zero or not negative/ power on the corresponding line is below zero
       importing() {
-        return (this.transmissionData.mw > 0) ? true : false;
+        return this.isImporting() ? true : false;
       },
       connectionColor() {
-        return (this.transmissionData?.V && this.transmissionData.V !='' && this.transmissionData.V > 0) ? {connection: 'blue', arrow: 'blueColor'} : {connection: 'grey1', arrow: 'grey1Color'};
+        return (this.connectionHasVoltage()) ? {connection: 'blue', arrow: 'blueColor'} : {connection: 'grey1', arrow: 'grey1Color'};
       }
     },
     watch: {
@@ -111,6 +114,21 @@ export default {
     },
     methods: {
       ...mapActions(['setLineDetails', 'toggleModal']),
+
+      connectionHasVoltage() {
+          var onPotential = false;
+          if(this.transmissionData.V && this.transmissionData.V !='' && this.transmissionData.V > 0) onPotential = true;
+          if(this.mappedLine?.td.V && this.mappedLine.td.V !='' && this.mappedLine.td.V > 0) onPotential = true;
+          
+          return onPotential;
+      },
+
+      isImporting() {
+          var importing = false;
+          if(this.transmissionData.mw && this.transmissionData.mw > 0) importing = true;
+          if(this.mappedLine?.td.mw && this.mappedLine.td.mw < 0) importing = true;
+      },
+      
       connectionSize(alignment) {
         if(alignment=='v') {
           return 'width';

@@ -7,6 +7,7 @@
       :id="station.id"
       :lines="station.lines"
       :station="station"
+      :stations="updatedStations"
     />
 
     <PowerStationBox

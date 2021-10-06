@@ -74,6 +74,7 @@ body {
 
 .connection {
   position: absolute;
+  z-index: 10;
 }
 .v-connection {
   top: 26px; left: 34px;

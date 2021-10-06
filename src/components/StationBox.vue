@@ -6,7 +6,7 @@
             </div>
             <div v-if="lines.length > 0">
                 <LineBox v-for="(line, i) in lines" :key="`ST_${i}`"
-                    :station="name" :id="line.id" :name="line.name" :stationId="id" :transmissionData="line.td" :connections="connections(line)" /> 
+                    :station="name" :id="line.id" :name="line.name" :stationId="id" :transmissionData="line.td" :connections="connections(line)" :mappedLines="mappedLines" /> 
             </div>
         </div>
         
@@ -35,14 +35,30 @@ export default {
         console.log('id ',this.id)
         //console.log('lines: ', this.lines);
     },
-    props: ["name", "id", "lines", "station"],
+    props: ["name", "id", "lines", "station", "stations"],
     data() {
         return {
         //
         }
     },
     computed: {
-        
+        mappedLines() {
+            const mappedLines = [];
+            if(this.station.mappings) {
+                const lines = this.stations.filter((station) => {
+                    var mappedStation = this.station.mappings.find(x => x.stationId === station.id);
+                    if(mappedStation) {
+                        mappedStation.lines.forEach((line) => {
+                            var mappedLine = station.lines.find(y => y.id === line);
+                            mappedLines.push({id: line, td: mappedLine.td});
+                        })
+                    }
+                })
+            }
+            //console.log('m ', mappedLines);
+            //console.log('mappings: ',this.station.id+' : '+mappedLines);
+            return mappedLines;
+        }
     },
     methods: {
         connections(line) {

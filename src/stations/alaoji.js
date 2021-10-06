@@ -138,5 +138,31 @@ export var alaoji = {
             connectionRoot: false,
             td
         },
+    ],
+    mappings:   [
+        {
+            stationId: 'ikotEkpene',
+            lines: ['a1k', 'a2k']
+        },
+        {
+            stationId: 'aba',
+            lines: ['a23b', 'a26b']
+        },
+        {
+            stationId: 'afamViGs',
+            lines: ['f1a', 'f2a']
+        },
+        {
+            stationId: 'onitsha',
+            lines: ['t4a']
+        },
+        {
+            stationId: 'owerri',
+            lines: ['a23w', 'a24w']
+        },
+        {
+            stationId: 'alaojiGs',
+            lines: ['l7a', 'l8a']
+        }
     ]
 };
