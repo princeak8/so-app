@@ -66,7 +66,8 @@ export default {
     methods: {
       ...mapActions(['setLineDetails', 'toggleModal']),
       closeModal() {
-        this.toggleModal(false)
+        this.toggleModal(false),
+        this.setLineDetails(null)
       },
       connectionSize(alignment) {
         if(alignment=='v') {
