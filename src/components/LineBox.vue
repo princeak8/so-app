@@ -31,7 +31,7 @@
 <script>
 import LineData from "./LineData.vue";
 import voltageDisplayMixin from "@/mixins/voltage-display-mixin";
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 const threshold = Object.freeze({
   voltage: Object.freeze({ min: 300, max: 342 }),
@@ -48,13 +48,13 @@ export default {
         LineData,
     },
     computed: {
+      ...mapState(['lineDetails', 'showOverlay']),
       mappedLine() {
         return this.mappedLines.find(x => x.id === this.id);
       },
       power() {
         if(this.transmissionData.mw=='') {
           return 'loading..';
-          
         }
         const value = this.$options.filters.formatAmount(this.transmissionData.mw, 1)
         return value;
@@ -70,6 +70,7 @@ export default {
         if(this.transmissionData.A =='') {
           return 'loading..';
         }
+        
         const value = this.$options.filters.formatAmount(this.transmissionData.A, 1)
         return value;
       },
@@ -109,12 +110,21 @@ export default {
       }
     },
     watch: {
+      transmissionData: function(val) {
+        if(this.lineDetails) {
+          if(this.lineDetails.name === this.name) {
+            const obj = {...this.lineDetails, power: val.mw, current: val.A, voltage: val.V, mvar: val.mvar, lineColor: this.lineColor }
+            this.setLineDetails(obj)
+            // console.log('Watching transmission data ',obj)
+          }
+        }
+        
+      },
         hasEmptyTransmissionValue(newValue, oldValue) {
         },
     },
     methods: {
       ...mapActions(['setLineDetails', 'toggleModal']),
-
       connectionHasVoltage() {
           var onPotential = false;
           if(this.transmissionData.V && this.transmissionData.V !='' && this.transmissionData.V > 0) onPotential = true;
