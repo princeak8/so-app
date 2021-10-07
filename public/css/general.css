@@ -83,18 +83,18 @@ body {
   position: absolute;
 }
 .hArrowStart {
-  left: 1px;
+  left: 3px;
   top: -2px;
 }
 .hArrowEnd {
-  right: 1px;
+  right: 3px;
   top: -2px;
 }
 .vArrowStart {
-  top: 1px;
+  top: 3px;
   right: -2px;
 }
 .vArrowEnd {
-  bottom: 1px;
+  bottom: 3px;
   right: -2px;
 }
