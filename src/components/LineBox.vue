@@ -135,10 +135,11 @@ export default {
 
       isImporting() {
           var importing = false;
-          if(this.transmissionData.mw && this.transmissionData.mw > 0) importing = true;
-          if(this.mappedLine?.td.mw && this.mappedLine.td.mw < 0) importing = true;
+          if(this.transmissionData.mw && this.transmissionData.mw < 0) importing = true;
+          if(this.mappedLine?.td.mw && this.mappedLine.td.mw > 0) importing = true;
+          return importing;
       },
-      
+
       connectionSize(alignment) {
         if(alignment=='v') {
           return 'width';
