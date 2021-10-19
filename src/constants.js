@@ -2,6 +2,7 @@
 //export const SOCKET_ADDR = "ws://localhost:3001/"; //localhost
 //export const SOCKET_ADDR = "ws://102.89.11.82:3001/"; //oshogbo server
 export const SOCKET_ADDR = "ws://172.16.200.4:3001/"; //oshogbo server
+export const POWER_SOCKET_ADDR = "ws://172.16.200.4:3002/"; //oshogbo server
 
 export const SOCKET_AUTH_ADDR = "http://localhost/so_app/api/v1/get_connection_token";
 //export const SOCKET_AUTH_ADDR = "http://102.89.11.82/so_app/api/v1/get_connection_token";
