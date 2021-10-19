@@ -16,13 +16,14 @@ const routes = [
     ...RouteEnum.HOME,
     component: Home,
     beforeEnter(to, from, next) {
-      const accessToken = localStorage.getItem(STORAGE_KEY);
+      next();
+      // const accessToken = localStorage.getItem(STORAGE_KEY);
 
-      if (accessToken && accessToken !== "undefined") {
-        next();
-      } else {
-        next(RouteEnum.LOGIN);
-      }
+      // if (accessToken && accessToken !== "undefined") {
+      //   next();
+      // } else {
+      //   next(RouteEnum.LOGIN);
+      // }
     },
   },
   {
