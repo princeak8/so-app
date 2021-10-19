@@ -25,7 +25,7 @@
 
 
 <script>
-import { SOCKET_ADDR, SOCKET_AUTH_ADDR, STORAGE_KEY } from "@/constants";
+import { SOCKET_ADDR, SOCKET_AUTH_ADDR, STORAGE_KEY, POWER_SOCKET_ADDR } from "@/constants";
 import Decimal from "decimal.js";
 import { RouteEnum } from "@/router";
 import StationBox from "@/components/StationBox.vue";
@@ -215,7 +215,7 @@ export default {
       const data = {token: 123};
       // const token = "53c297c89cc189222a23195411ec5431";
       //const data = await this.get_token();
-      console.log("token", data.token);
+      // console.log("token", data.token);
       // const ADDR = `ws://localhost:3001/token=${data.token}`;
       const ADDR = `${SOCKET_ADDR}token=${data.token}`;
       this.ws = new WebSocket(ADDR);
@@ -228,13 +228,33 @@ export default {
       };
       this.ws.onerror = (error) => {
         console.log('Error ', error)
-        this.connectTrials = this.connectTrials + 1;
-        console.log('connection trials ', this.connectTrials)
-        if(this.connectTrials < 5) {
-          this.connect()
-        } else {
-          this.$alert.error('Could not connect to the server, please check connection')
-        }
+        this.connect()
+        // this.connectTrials = this.connectTrials + 1;
+        // console.log('connection trials ', this.connectTrials)
+        // if(this.connectTrials < 5) {
+        //   this.connect()
+        // } else {
+        //   this.$alert.error('Could not connect to the server, please check connection')
+        // }
+      }
+      this.ws.onclose = (event) => {
+        console.log("WebSocket is closed now.", event);
+      }
+    },
+    async connectPower() {
+      const data = {token: 123};
+      
+      const ADDR = `${POWER_SOCKET_ADDR}token=${data.token}`;
+      this.ws = new WebSocket(ADDR);
+      this.ws.onmessage = (msg) => {
+        // console.log('Power msg ', msg)
+        const res = JSON.parse(msg.data);
+        console.log('Power response ',res);
+        // this.mergeData(res)
+      };
+      this.ws.onerror = (error) => {
+        console.log('Error ', error)
+        // this.connect()
       }
       this.ws.onclose = (event) => {
         console.log("WebSocket is closed now.", event);
@@ -289,6 +309,7 @@ export default {
     // console.log("p stations:", powerStations);
     console.log(this.showOverlay);
     this.connect();
+    this.connectPower()
     
   },
 };
