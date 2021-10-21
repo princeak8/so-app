@@ -43,5 +43,11 @@ export var transamadiGs = {
             ],
             td
         }
+    ],
+    mappings:   [
+        {
+            stationId: 'phMain',
+            lines: ['m21p', 'm22p']
+        }
     ]
 };

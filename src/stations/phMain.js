@@ -71,5 +71,19 @@ export var phMain = {
             ],
             td
         },
+    ],
+    mappings:   [
+        {
+            stationId: 'transamadiGs',
+            lines: ['m21p', 'm22p']
+        },
+        {
+            stationId: 'riversIppGs',
+            lines: ['v21p', 'v22p']
+        },
+        {
+            stationId: 'afamIv_vGs',
+            lines: ['f21p', 'f22p']
+        }
     ]
 };
