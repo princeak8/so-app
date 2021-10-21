@@ -6,6 +6,7 @@ export var riversIpp = {
     units: [
         {
             name: "gt1",
+            id: "gt1",
             powerData
         }
     ]

@@ -6,7 +6,10 @@
             </div>
             <div v-if="lines.length > 0">
                 <LineBox v-for="(line, i) in lines" :key="`ST_${i}`"
-                    :station="name" :id="line.id" :name="line.name" :stationId="id" :transmissionData="line.td" :connections="connections(line)" :mappedLines="mappedLines" /> 
+                    :station="name" :id="line.id" :name="line.name" :stationId="id" 
+                    :transmissionData="line.td" :connections="connections(line)" 
+                    :line132="station.is132"
+                    :mappedLines="mappedLines" /> 
             </div>
         </div>
         
@@ -38,7 +41,10 @@ export default {
     props: ["name", "id", "lines", "station", "stations"],
     data() {
         return {
-        //
+            //
+            initialState: false,
+            connected: false,
+            connectionLostTime: 0
         }
     },
     computed: {

@@ -6,14 +6,17 @@ export var ibom = {
     units: [
         {
             name: "gt1",
+            id: "gt1",
             powerData
         },
         {
             name: "gt2",
+            id: "gt2",
             powerData
         },
         {
             name: "gt3",
+            id: "gt3",
             powerData
         }
     ]

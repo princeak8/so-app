@@ -6,18 +6,22 @@ export var shiroro = {
     units: [
         {
             name: "411g1",
+            id: "411g1",
             powerData
         },
         {
             name: "411g2",
+            id: "411g2",
             powerData
         },
         {
-            name: "411g3",
+            name: "411g2",
+            id: "411g3",
             powerData
         },
         {
             name: "411g4",
+            id: "411g4",
             powerData
         }
     ]
