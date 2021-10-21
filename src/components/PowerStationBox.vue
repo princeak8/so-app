@@ -15,7 +15,7 @@
                                 <div class="unit green col-md-2" v-for="unit in units">
                                     <div class="unit-name">UNIT {{unit.name.toUpperCase()}}</div>
                                     <div class="info-group">
-                                        <div class="unit-data watt">{{unit.powerData.power}}MW</div>
+                                        <div class="unit-data watt">{{unit.powerData.mw}}MW</div>
                                         <div class="unit-data volt">{{unit.powerData.mvar}}MX</div>
                                     </div>
                                 </div>   

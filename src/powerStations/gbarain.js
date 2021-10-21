@@ -6,6 +6,7 @@ export var gbarain = {
     units: [
         {
             name: "gt1",
+            id: "gt1",
             powerData
         }
     ]

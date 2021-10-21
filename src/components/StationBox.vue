@@ -38,7 +38,10 @@ export default {
     props: ["name", "id", "lines", "station", "stations"],
     data() {
         return {
-        //
+            //
+            initialState: false,
+            connected: false,
+            connectionLostTime: 0
         }
     },
     computed: {

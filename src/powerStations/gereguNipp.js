@@ -6,14 +6,17 @@ export var gereguNipp = {
     units: [
         {
             name: "gt21",
+            id: "gt21",
             powerData
         },
         {
             name: "gt22",
+            id: "gt22",
             powerData
         },
         {
             name: "gt23",
+            id: "gt23",
             powerData
         }
     ]

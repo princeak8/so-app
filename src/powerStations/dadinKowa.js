@@ -6,10 +6,12 @@ export var dadinKowa = {
     units: [
         {
             name: "g1",
+            id: "g1",
             powerData
         },
         {
             name: "g2",
+            id: "g2",
             powerData
         }
     ]

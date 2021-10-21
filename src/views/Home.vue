@@ -11,7 +11,7 @@
     />
 
     <PowerStationBox
-      v-for="(pStation, i) in powerStations"
+      v-for="(pStation, i) in updatedPowerStations"
       :key="`POWER_${i}`"
       :name="pStation.name"
       :ids="pStation.id"
@@ -117,6 +117,10 @@ export default {
       // };
       return currStations;
     },
+    updatedPowerStations() {
+      let powerStations = this.powerStations;
+      return powerStations;
+    }
   },
   watch: {
     // hasEmptyTransmissionValue(newValue, oldValue) {
@@ -250,7 +254,7 @@ export default {
         // console.log('Power msg ', msg)
         const res = JSON.parse(msg.data);
         console.log('Power response ',res);
-        // this.mergeData(res)
+        this.mergePowerStationData(res)
       };
       this.ws.onerror = (error) => {
         console.log('Error ', error)
@@ -276,7 +280,7 @@ export default {
           return item
         })
         this.stations = this.stations.filter(x => {
-          if(x.name === getStation.anme) {
+          if(x.name === getStation.name) {
             x.lines = updatedStationLines
           }
           return x
@@ -284,6 +288,31 @@ export default {
         // console.log('Station line ', stationLines, 'StreamedLines ', streamedStationLines)
         // console.log('Station line ', getStation, streamedStation)
       }
+    },
+    mergePowerStationData(res) {
+      const streamedPowerStation = res
+      const getPowerStation = this.powerStations.find(x => x.id === res.id)
+      if(getPowerStation) {
+        const powerStationUnits = getPowerStation.units
+        const streamedStationUnits = streamedPowerStation.units
+        
+        const updatedPowerStationUnits = powerStationUnits.filter((item) => {
+          const foundItem = streamedStationUnits.find(x => x.id === item.id)
+          if(foundItem) {
+            item.powerData = foundItem.pd;
+            item.pd = foundItem.pd
+          }
+          return item
+        })
+        this.powerStations = this.powerStations.filter(x => {
+          if(x.name === getPowerStation.name) {
+            x.units = updatedPowerStationUnits
+          }
+          return x
+        })
+        // console.log('Updated Units ', this.powerStations)
+      }
+
     },
     get_token: async () => {
       // let url = "http://localhost/so_app/public/api/v1/get_connection_token";
