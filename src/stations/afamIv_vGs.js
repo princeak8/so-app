@@ -19,5 +19,11 @@ export var afamIv_vGs = {
             connectionRoot: false,
             td
         },
+    ],
+    mappings:   [
+        {
+            stationId: 'phMain',
+            lines: ['f21p', 'f22p']
+        }
     ]
 };

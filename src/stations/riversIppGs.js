@@ -52,5 +52,11 @@ export var riversIppGs = {
             ],
             td
         },
+    ],
+    mappings:   [
+        {
+            stationId: 'phMain',
+            lines: ['v21p', 'v22p']
+        }
     ]
 };
