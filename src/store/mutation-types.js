@@ -13,3 +13,6 @@ export const UPDATE_STATISTICS = 'update_statistics';
 export const SET_LINE_DETAILS = "set_line_details";
 
 export const TOGGLE_MODAL = "toggle_modal";
+
+export const SET_POWER_STATIONS = "set_power_stations";
+export const UPDATE_POWER_STATION = "update_power_station";

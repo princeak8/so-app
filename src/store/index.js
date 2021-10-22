@@ -9,7 +9,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     showOverlay: false,
-    lineDetails: null
+    lineDetails: null,
+    pStations: [],
   },
   mutations,
   actions,

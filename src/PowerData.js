@@ -1,6 +1,8 @@
 const powerData = {
-    power: '250',
-    mvar: '50'
+    mw: '',
+    mvar: '',
+    A: '',
+    V: '',
 };
 
 export default powerData;
