@@ -35,10 +35,9 @@ import { stations } from "@/stations";
 import { powerStations } from "@/powerStations";
 import newData from "@/newData";
 import axios from "axios";
-import LineBoxModal from '@/components/LineBoxModal'
+import LineBoxModal from '@/components/LineBoxModal';
 
-
-import { mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 const ERROR_MESSAGE_INTERVAL = 30000;
 const valueDP = Object.freeze({
@@ -89,36 +88,13 @@ export default {
     };
   },
   computed: {
-    ...mapState(['lineDetails', 'showOverlay']),
+    ...mapState(['lineDetails', 'showOverlay', 'pStations']),
     updatedStations() {
       let currStations = this.stations;
-      // let newData = {
-      //   name: "Olorunsogo Phase1",
-      //   lines: [
-      //       {
-      //           name: "r2a",
-      //           transmissionData:  {
-      //                   power: 200,
-      //                   current: 380,
-      //                   voltage: 338,
-      //                   mvar: 6
-      //           }
-      //       },
-      //       {
-      //           name: "r1w",
-      //           transmissionData: {
-      //                   power: 200,
-      //                   current: 380,
-      //                   voltage: 312,
-      //                   mvar: 6
-      //           }
-      //       }
-      //   ]
-      // };
       return currStations;
     },
     updatedPowerStations() {
-      let powerStations = this.powerStations;
+      let powerStations = this.pStations;
       return powerStations;
     }
   },
@@ -136,6 +112,8 @@ export default {
     // },
   },
   methods: {
+    ...mapActions(['setPowerStations', 'updatePowerStation']),
+
     showStations() {
       console.log("stations", powerStations);
     },
@@ -245,25 +223,6 @@ export default {
         console.log("WebSocket is closed now.", event);
       }
     },
-    async connectPower() {
-      const data = {token: 123};
-      
-      const ADDR = `${POWER_SOCKET_ADDR}token=${data.token}`;
-      this.ws = new WebSocket(ADDR);
-      this.ws.onmessage = (msg) => {
-        // console.log('Power msg ', msg)
-        const res = JSON.parse(msg.data);
-        console.log('Power response ',res);
-        this.mergePowerStationData(res)
-      };
-      this.ws.onerror = (error) => {
-        console.log('Error ', error)
-        // this.connect()
-      }
-      this.ws.onclose = (event) => {
-        console.log("WebSocket is closed now.", event);
-      }
-    },
     mergeData(res) {
       const streamedStation = res
       const getStation = this.stations.find(x => x.id === res.id)
@@ -289,31 +248,6 @@ export default {
         // console.log('Station line ', getStation, streamedStation)
       }
     },
-    mergePowerStationData(res) {
-      const streamedPowerStation = res
-      const getPowerStation = this.powerStations.find(x => x.id === res.id)
-      if(getPowerStation) {
-        const powerStationUnits = getPowerStation.units
-        const streamedStationUnits = streamedPowerStation.units
-        
-        const updatedPowerStationUnits = powerStationUnits.filter((item) => {
-          const foundItem = streamedStationUnits.find(x => x.id === item.id)
-          if(foundItem) {
-            item.powerData = foundItem.pd;
-            item.pd = foundItem.pd
-          }
-          return item
-        })
-        this.powerStations = this.powerStations.filter(x => {
-          if(x.name === getPowerStation.name) {
-            x.units = updatedPowerStationUnits
-          }
-          return x
-        })
-        // console.log('Updated Units ', this.powerStations)
-      }
-
-    },
     get_token: async () => {
       // let url = "http://localhost/so_app/public/api/v1/get_connection_token";
       let url = SOCKET_AUTH_ADDR;
@@ -337,9 +271,10 @@ export default {
   mounted() {
     // console.log("p stations:", powerStations);
     console.log(this.showOverlay);
+    //this.setPowerStations(this.powerStations);
     this.connect();
-    this.connectPower()
-    
+    // this.connectPower()
+    //console.log(this.pStations);
   },
 };
 </script>

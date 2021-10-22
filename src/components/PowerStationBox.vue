@@ -12,7 +12,7 @@
                 <div class="row" style="padding-left: 4%; padding-right: 4%; width: 100%">
                         <div style="margin-top:20px;">
                             <div style="display:flex; flex-direction: row; flex-wrap: wrap ">
-                                <div class="unit green col-md-2" v-for="unit in units">
+                                <div class="unit green" v-for="unit in units">
                                     <div class="unit-name">UNIT {{unit.name.toUpperCase()}}</div>
                                     <div class="info-group">
                                         <div class="unit-data watt">{{unit.powerData.mw}}MW</div>

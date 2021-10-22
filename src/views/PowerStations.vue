@@ -1,0 +1,155 @@
+<template>
+  <div>
+        <h2 style="margin-left: 40%; margin-bottom:0px;" >Power Stations</h2>
+        <div v-for="station in pStations">
+            <h4 style="margin-bottom:0px; margin-top:0px;">{{station.name}}</h4>
+            <div style="display:flex; flex-direction: row; flex-wrap: wrap ">
+                <div class="unit col-md-2" v-for="unit in station.units" :class='[unitBgColor(unit)]'>
+                    <div class="unit-name">UNIT {{unit.name.toUpperCase()}}</div>
+                        <div class="info-group">
+                            <div class="unit-data watt">{{unit.powerData.mw}}MW</div>
+                            <div class="unit-data volt">{{unit.powerData.mvar}}MX</div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+  </div>
+</template>
+
+
+
+
+<script>
+import { SOCKET_ADDR, SOCKET_AUTH_ADDR, STORAGE_KEY, POWER_SOCKET_ADDR } from "@/constants";
+import Decimal from "decimal.js";
+import { RouteEnum } from "@/router";
+import StationBox from "@/components/StationBox.vue";
+import PowerStationBox from "@/components/PowerStationBox";
+import voltageDisplayMixin from "@/mixins/voltage-display-mixin";
+import { stations } from "@/stations";
+import newData from "@/newData";
+import axios from "axios";
+import LineBoxModal from '@/components/LineBoxModal'
+
+
+import { mapState } from 'vuex';
+
+export default {
+  data() {
+    return {
+      //powerStations: this.powerStations
+    };
+  },
+  computed: {
+    ...mapState(['pStations', 'lineDetails']),
+    
+  },
+  watch: {
+    // hasEmptyTransmissionValue(newValue, oldValue) {
+    //   if (newValue) {
+    //     this.msg = {
+    //       text: "Error in connection",
+    //     };
+    //     return;
+    //   }
+    //   if (!newValue && oldValue) {
+    //     this.msg.text = "";
+    //   }
+    // },
+  },
+  methods: {
+      unitBgColor(unit) {
+          return (unit.powerData && unit.powerData.mw && Math.abs(unit.powerData.mw) > 0) ? 'green' : 'grey';
+      },
+    logOut() {
+      if (this.ws) {
+        this.ws.close();
+      }
+      localStorage.removeItem(STORAGE_KEY);
+      this.$router.push(RouteEnum.LOGIN);
+    },
+  },
+  mounted() {
+    // console.log("p stations:", powerStations);
+    // console.log(this.showOverlay);
+    // this.connect();
+    // this.connectPower()
+    console.log(this.pStations);
+    
+  },
+};
+</script>
+
+<style scoped>
+#station-name {
+    height: 45px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.green {
+  background: #17d617;
+}
+
+.red {
+  background: #dd0505;
+}
+
+.unit {
+  width: 15%;
+  height: 80px; 
+  padding: 0;
+  /* margin-right: 1%;
+  margin-left: 1%; */
+  border-radius: 3px;
+  border: solid 1px #d8d3d3;
+}
+
+.unit .unit-name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+.unit .info-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.unit .info-group .unit-data {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+</style>
