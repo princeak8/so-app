@@ -1,8 +1,8 @@
 import td from '../TransmissionData';
 
 export var afamViGs = {
-    name: "AFAM VI GS",
-    id: "afamViGs",
+    name: "AFAM VI TS",
+    id: "afamViTs",
     gs: true,
     gsId: 'afamViPs',
     has132: false,
@@ -90,6 +90,20 @@ export var afamViGs = {
                     arrowDirection: 'right'
                 },
             ],
+            td
+        },
+        {
+            name: "ada200",
+            id: "ada200",
+            connectionRoot: false,
+            isGS: true,
+            td
+        },
+        {
+            name: "adb200",
+            id: "adb200",
+            connectionRoot: false,
+            isGS: true,
             td
         },
 

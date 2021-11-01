@@ -2835,7 +2835,7 @@
   top: 51px;
 }
 
-#afamViGs {
+#afamViTs {
   position: absolute;
   width: 203px;
   height: 77px;
@@ -2847,60 +2847,70 @@
   left: 1903px;
 }
 
-#afamViGs #afamViGs-f1a {
+#afamViTs #afamViTs-f1a {
   left: -1px;
   top: 25px;
 }
 
-#afamViGs #afamViGs-f2a {
+#afamViTs #afamViTs-f2a {
   left: 67px;
   top: 25px;
 }
 
-#afamViGs #afamViGs-f5k {
+#afamViTs #afamViTs-f5k {
   left: 135px;
   top: 25px;
 }
 
-#afamViGs #afamViGs-f5k #f5k-h-0 {
+#afamViTs #afamViTs-f5k #f5k-h-0 {
   width: 103px;
   top: 13px;
   left: 68px;
 }
 
-#afamViGs #afamViGs-f5k #f5k-v-1 {
+#afamViTs #afamViTs-f5k #f5k-v-1 {
   top: 13px;
   left: 171px;
   height: 52px;
 }
 
-#afamViGs #afamViGs-f5k #f5k-h-2 {
+#afamViTs #afamViTs-f5k #f5k-h-2 {
   width: 884px;
   top: 65px;
   left: 171px;
 }
 
-#afamViGs #afamViGs-f6k {
+#afamViTs #afamViTs-f6k {
   left: 135px;
   top: 51px;
 }
 
-#afamViGs #afamViGs-f6k #f6k-h-0 {
+#afamViTs #afamViTs-f6k #f6k-h-0 {
   width: 35px;
   top: 13px;
   left: 68px;
 }
 
-#afamViGs #afamViGs-f6k #f6k-v-1 {
+#afamViTs #afamViTs-f6k #f6k-v-1 {
   top: 13px;
   left: 103px;
   height: 52px;
 }
 
-#afamViGs #afamViGs-f6k #f6k-h-2 {
+#afamViTs #afamViTs-f6k #f6k-h-2 {
   width: 1020px;
   top: 65px;
   left: 103px;
+}
+
+#afamViTs #afamViTs-ada200 {
+  left: -1px;
+  top: 51px;
+}
+
+#afamViTs #afamViTs-adb200 {
+  left: 67px;
+  top: 51px;
 }
 
 #itu {
