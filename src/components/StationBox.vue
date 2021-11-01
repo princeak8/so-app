@@ -8,7 +8,7 @@
                 <LineBox v-for="(line, i) in lines" :key="`ST_${i}`"
                     :station="name" :id="line.id" :name="line.name" :stationId="id" 
                     :transmissionData="line.td" :connections="connections(line)" 
-                    :line132="station.is132"
+                    :line132="station.is132" :isGS="line.isGS"
                     :mappedLines="mappedLines" /> 
             </div>
         </div>

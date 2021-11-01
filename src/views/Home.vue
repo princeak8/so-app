@@ -205,7 +205,7 @@ export default {
         // console.log('msg ', msg)
         this.connectTrials = 0;
         const res = JSON.parse(msg.data);
-        // console.log(res);
+        //console.log(res);
         this.mergeData(res)
       };
       this.ws.onerror = (error) => {

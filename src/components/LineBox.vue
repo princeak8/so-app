@@ -76,6 +76,7 @@ export default {
     "connections",
     "mappedLines",
     "line132",
+    "isGS"
   ],
   mixins: [voltageDisplayMixin],
   components: {
@@ -138,6 +139,15 @@ export default {
         }
         if (aThreshold || bThreshold) {
           return "red";
+        }
+        return "green";
+      } else if (this.isGS) {
+        const aThreshold = this.transmissionData.V > max;
+        const bThreshold = this.transmissionData.V < min;
+        if (!this.transmissionData.V || this.transmissionData.V == "" || this.transmissionData.V <= 0) {
+          return "grey2";
+        }else{
+          return "green2"
         }
         return "green";
       } else {
