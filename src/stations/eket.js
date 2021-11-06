@@ -5,7 +5,6 @@ export var eket = {
     id: "eket",
     is132: true,
     lines: [
-        //Added by me
         {
             name: "e22t",
             id: "e22t",
