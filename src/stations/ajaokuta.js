@@ -62,5 +62,20 @@ export var ajaokuta = {
             ],
             td
         }
+    ],
+
+    mappings:   [
+        {
+            stationId: 'gereguGs',
+            lines: ['r1j', 'r2j']
+        },
+        {
+            stationId: 'benin',
+            lines: ['b11j', 'b12j']
+        },
+        {
+            stationId: 'lokoja',
+            lines: ['j1l', 'j2l']
+        }
     ]
 };
