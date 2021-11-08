@@ -157,7 +157,8 @@ export var benin = {
                 },
             ],
             td
-        },{
+        },
+        {
             name: "b3d",
             id: "b3d",
             connectionRoot: true,

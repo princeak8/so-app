@@ -1,22 +1,22 @@
-$afamViGsTop: $afamIv_vGsTop;
-$afamViGsLeft: $afamIv_vGsLeft + $afamIv_vGsWidth;
-$afamViGsWidth: map-get(stationDimention(2,3), 'width');
-$afamViGsHeight: map-get(stationDimention(2,3), 'height');
-#afamViGs{
+$afamViTsTop: $afamIv_vGsTop;
+$afamViTsLeft: $afamIv_vGsLeft + $afamIv_vGsWidth;
+$afamViTsWidth: map-get(stationDimention(2,3), 'width');
+$afamViTsHeight: map-get(stationDimention(2,3), 'height');
+#afamViTs{
   @include station(2,3);
-  top: $afamViGsTop;
-  left: $afamViGsLeft;
+  top: $afamViTsTop;
+  left: $afamViTsLeft;
 
-  #afamViGs-f1a{
+  #afamViTs-f1a{
     left: map-get(lineBoxPosition(1,1), 'left');
     top: map-get(lineBoxPosition(1,1), 'top');
   }
-  #afamViGs-f2a{
+  #afamViTs-f2a{
     left: map-get(lineBoxPosition(1,2), 'left');
     top: map-get(lineBoxPosition(1,2), 'top');
   }
 
-  #afamViGs-f5k{
+  #afamViTs-f5k{
     left: map-get(lineBoxPosition(1,3), 'left');
     top: map-get(lineBoxPosition(1,3), 'top');
 
@@ -50,7 +50,7 @@ $afamViGsHeight: map-get(stationDimention(2,3), 'height');
     
   }
 
-  #afamViGs-f6k{
+  #afamViTs-f6k{
     left: map-get(lineBoxPosition(2,3), 'left');
     top: map-get(lineBoxPosition(2,3), 'top');
 
@@ -82,5 +82,15 @@ $afamViGsHeight: map-get(stationDimention(2,3), 'height');
       left: $f6k-h-2Left;
     }
     
+  }
+
+  #afamViTs-ada200{
+    left: map-get(lineBoxPosition(2,1), 'left');
+    top: map-get(lineBoxPosition(2,1), 'top');
+  }
+
+  #afamViTs-adb200{
+    left: map-get(lineBoxPosition(2,2), 'left');
+    top: map-get(lineBoxPosition(2,2), 'top');
   }
 }

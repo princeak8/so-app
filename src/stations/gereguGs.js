@@ -19,5 +19,12 @@ export var gereguGs = {
             connectionRoot: false,
             td
         }
+    ],
+
+    mappings:   [
+        {
+            stationId: 'ajaokuta',
+            lines: ['r1j', 'r2j']
+        }
     ]
 };

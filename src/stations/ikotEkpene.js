@@ -164,7 +164,7 @@ export var ikotEkpene = {
             lines: ['s1k', 's2k']
         },
         {
-            stationId: 'afamViGs',
+            stationId: 'afamViTs',
             lines: ['f5k', 'f6k']
         }
     ]

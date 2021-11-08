@@ -9,11 +9,18 @@ body {
 .grey1 {
   background: grey;
 }
+.grey2 {
+  background: #373737;
+}
   
   .green {
     /* background: #17d617; */
     background-color: #00680A;
   }
+
+.green2 {
+  background-color: #708238;
+}
   
 .red {
     /* background: #dd0505; */
