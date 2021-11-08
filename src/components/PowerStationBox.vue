@@ -1,31 +1,31 @@
 <template>
-    <div class="modal fade" :id="ids" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog row" role="document" style="width: 80%;">
-            <div class="modal-content row">
-                <div class="modal-header">
-                    <button type="button" id="close-modal" class="close" data-dismiss="modal" aria-label="Close">
+  <div class="modal fade" :id="ids" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog row" role="document" style="width: 80%;">
+          <div class="modal-content row">
+              <div class="modal-header">
+                  <button type="button" id="close-modal" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h5 class="modal-title" id="station-name">{{name}}</h5>
-                </div>
-
-                <div class="row" style="padding-left: 4%; padding-right: 4%; width: 100%">
-                        <div style="margin-top:20px;">
-                            <div style="display:flex; flex-direction: row; flex-wrap: wrap ">
-                                <div class="unit green" v-for="unit in units">
-                                    <div class="unit-name">UNIT {{unit.name.toUpperCase()}}</div>
-                                    <div class="info-group">
-                                        <div class="unit-data watt">{{unit.powerData.mw}}MW</div>
-                                        <div class="unit-data volt">{{unit.powerData.mvar}}MX</div>
-                                    </div>
-                                </div>   
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
+                  </button>
+                  <h5 class="modal-title" id="station-name">{{name}}</h5>
               </div>
-            </div>
+
+              <div class="row" style="padding-left: 4%; padding-right: 4%; width: 100%">
+                  <div style="margin-top:20px;">
+                      <div style="display:flex; flex-direction: row; flex-wrap: wrap ">
+                        <div class="unit green" v-for="unit in units">
+                            <div class="unit-name">UNIT {{unit.name.toUpperCase()}}</div>
+                            <div class="info-group">
+                                <div class="unit-data watt">{{unit.powerData.mw}}MW</div>
+                                <div class="unit-data volt">{{unit.powerData.mvar}}MX</div>
+                            </div>
+                        </div>   
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+            
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

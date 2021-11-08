@@ -10,6 +10,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "decimal.js": "^10.3.1",
+    "moment": "^2.29.1",
     "noty": "^3.2.0-beta-deprecated",
     "vue": "^2.6.11",
     "vue-js-modal": "^2.0.0-rc.6",

@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div>
         <div :id="id">
             <div class="station-name" >
                 <p @click="openModal(station)" :class="{nameHeighlight: station.gs}">{{name}}</p>
@@ -11,6 +11,9 @@
                     :line132="station.is132"
                     :mappedLines="mappedLines" /> 
             </div>
+            <div class="connectedOverlay" v-if="initialState && !connected">
+                <p>Connection Lost</p>
+            </div>
         </div>
         
     </div>
@@ -21,6 +24,15 @@
     .nameHeighlight {
         color:#0099CC; cursor: pointer;
     }
+    .connectedOverlay {
+        position: absolute; top: 0px; left: 0px;
+        width: 100%; height: 100%;
+        background-color: rgba(255, 255, 255, 0.9); display: flex;
+        justify-content: center; align-items: center; 
+    }
+    .connectedOverlay p {
+        font-size: 9px; color: rgb(116, 2, 2); font-weight: bold;
+    }
 </style>
 
 
@@ -28,6 +40,7 @@
 import LineBox from "./LineBox.vue";
 import voltageDisplayMixin from "@/mixins/voltage-display-mixin";
 import MainBox from "@/components/MainBox.vue";
+import moment from 'moment';
 
 export default {
     name: "StationBox",
@@ -38,13 +51,14 @@ export default {
         console.log('id ',this.id)
         //console.log('lines: ', this.lines);
     },
-    props: ["name", "id", "lines", "station", "stations"],
+    props: ["name", "id", "lines", "station", "stations", "connectObj"],
     data() {
         return {
             //
             initialState: false,
             connected: false,
-            connectionLostTime: 0
+            connectionLostTime: 0,
+            moment
         }
     },
     computed: {
@@ -75,7 +89,22 @@ export default {
                 $('#'+station.gsId).modal('toggle');
             }
         },
+        setConnected(value) {
+            this.connected = value
+        }
     },
+    watch: {
+        connectObj: function(obj) {
+            if(obj.id && obj.id === this.id) {
+                if(obj.connected) {
+                    this.connected = obj.connected;
+                    this.initialState = obj.connected;
+                    this.connectionLostTime = this.moment().add(60, 'seconds')
+                }
+                // console.log('Obj ', obj)
+            }
+        }
+    }
 }
 </script>
 
