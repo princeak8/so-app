@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div :id="id">
+        <div :id="id" class="station">
             <div class="station-name" >
                 <p @click="openModal(station)" :class="{nameHeighlight: station.gs}">{{name}}</p>
             </div>
