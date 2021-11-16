@@ -7,35 +7,13 @@ export var adiabor = {
         {
             name: "d1b",
             id: "d1b",
-            connectionRoot: true,
-            connections: [
-                {
-                    alignment: 'h',
-                    direction: 'right',
-                    name: 'd1b-h-0',
-                    start: true,
-                    end: true,
-                    position: 0,
-                    arrowDirection: 'both'
-                },
-            ],
+            connectionRoot: false,
             td
         },
         {
             name: "d2b",
             id: "d2b",
-            connectionRoot: true,
-            connections: [
-                {
-                    alignment: 'h',
-                    direction: 'right',
-                    name: 'd2b-h-0',
-                    start: true,
-                    end: true,
-                    position: 0,
-                    arrowDirection: 'both'
-                },
-            ],
+            connectionRoot: false,
             td
         },
         {

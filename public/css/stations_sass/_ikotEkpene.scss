@@ -1,9 +1,9 @@
 $ikotEkpeneTop: $alaojiTop;
-$ikotEkpeneLeft: map-get($col7, 'left') + getLength(1);
-$ikotEkpeneWidth: map-get(stationDimention(3,6), 'width');
-$ikotEkpeneHeight: map-get(stationDimention(3,6), 'height');
+$ikotEkpeneLeft: map-get($col6, 'left');
+$ikotEkpeneWidth: map-get(stationDimention(4,6), 'width');
+$ikotEkpeneHeight: map-get(stationDimention(4,6), 'height');
 #ikotEkpene{
-  @include station(3,6);
+  @include station(4,6);
   top: $ikotEkpeneTop;
   left: $ikotEkpeneLeft;
   
@@ -17,21 +17,21 @@ $ikotEkpeneHeight: map-get(stationDimention(3,6), 'height');
   }
 
   #ikotEkpene-d1k{
-    left: map-get(lineBoxPosition(3, 1), 'left');;
-    top: map-get(lineBoxPosition(3, 1), 'top');
+    left: map-get(lineBoxPosition(4, 4), 'left');;
+    top: map-get(lineBoxPosition(4, 4), 'top');
 
     #d1k-v-0 {
-      @include vConnection(getHeight(4));
+      @include vConnection(getHeight(3));
     }
   }
 
 
   #ikotEkpene-d2k{
-    left: map-get(lineBoxPosition(3, 2), 'left');;
-    top: map-get(lineBoxPosition(3, 2), 'top');
+    left: map-get(lineBoxPosition(4, 5), 'left');;
+    top: map-get(lineBoxPosition(4, 5), 'top');
 
     #d2k-v-0 {
-      @include vConnection(getHeight(4));
+      @include vConnection(getHeight(3));
     }
   }
 
@@ -53,38 +53,83 @@ $ikotEkpeneHeight: map-get(stationDimention(3,6), 'height');
   }
 
   #ikotEkpene-s1k{
-    left: map-get(lineBoxPosition(3, 3), 'left');;
-    top: map-get(lineBoxPosition(3, 3), 'top');
+    left: map-get(lineBoxPosition(3, 6), 'left');;
+    top: map-get(lineBoxPosition(3, 6), 'top');
 
-    #s1k-v-0 {
-      @include vConnection(getHeight(13)  + map-get($halfCell, 'height') - 2);
+    //1st Line
+    $s1k-h-0Width: map-get($halfCell, 'width');
+    $s1k-h-0Top: map-get($halfCell, 'height');
+    $s1k-h-0Left: map-get($cell, 'width');
+    #s1k-h-0 {
+      width: $s1k-h-0Width;
+      top: $s1k-h-0Top;
+      left: $s1k-h-0Left;
+    }
+    // 2nd Line
+    $s1k-v-0Height: getHeight(15);
+    $s1k-v-0Top: $s1k-h-0Top;
+    $s1k-v-0Left: $s1k-h-0Left + $s1k-h-0Width;
+    #s1k-v-0{
+      top: $s1k-v-0Top;
+      left: $s1k-v-0Left;
+      height: $s1k-v-0Height;
     }
   }
 
   #ikotEkpene-s2k{
-    left: map-get(lineBoxPosition(3, 4), 'left');;
-    top: map-get(lineBoxPosition(3, 4), 'top');
+    left: map-get(lineBoxPosition(4, 6), 'left');;
+    top: map-get(lineBoxPosition(4, 6), 'top');
 
     #s2k-v-0 {
-      @include vConnection(getHeight(14)  + map-get($halfCell, 'height') -2 );
+      @include vConnection(getHeight(12)  + map-get($halfCell, 'height') -2 );
     }
   }
 
   #ikotEkpene-f5k{
-    left: map-get(lineBoxPosition(3, 5), 'left');;
-    top: map-get(lineBoxPosition(3, 5), 'top');
+    left: map-get(lineBoxPosition(1, 6), 'left');;
+    top: map-get(lineBoxPosition(1, 6), 'top');
 
-    #f5k-v-0 {
-      @include vConnection(getHeight(16)  + map-get($halfCell, 'height') + 1);
+    //1st Line
+    $f5k-h-0Width: getLength(2) + map-get($halfCell, 'width');
+    $f5k-h-0Top: map-get($halfCell, 'height');
+    $f5k-h-0Left: map-get($cell, 'width');
+    #f5k-h-0 {
+      width: $f5k-h-0Width;
+      top: $f5k-h-0Top;
+      left: $f5k-h-0Left;
+    }
+    // 2nd Line
+    $f5k-v-0Height: getHeight(20);
+    $f5k-v-0Top: $f5k-h-0Top;
+    $f5k-v-0Left: $f5k-h-0Left + $f5k-h-0Width;
+    #f5k-v-0{
+      top: $f5k-v-0Top;
+      left: $f5k-v-0Left;
+      height: $f5k-v-0Height;
     }
   }
 
   #ikotEkpene-f6k{
-    left: map-get(lineBoxPosition(3, 6), 'left');;
-    top: map-get(lineBoxPosition(3, 6), 'top');
+    left: map-get(lineBoxPosition(2, 6), 'left');;
+    top: map-get(lineBoxPosition(2, 6), 'top');
 
-    #f6k-v-0 {
-      @include vConnection(getHeight(17)  + map-get($halfCell, 'height') +1);
+    //1st Line
+    $f6k-h-0Width: getLength(1) + map-get($halfCell, 'width');
+    $f6k-h-0Top: map-get($halfCell, 'height');
+    $f6k-h-0Left: map-get($cell, 'width');
+    #f6k-h-0 {
+      width: $f6k-h-0Width;
+      top: $f6k-h-0Top;
+      left: $f6k-h-0Left;
+    }
+    // 2nd Line
+    $f6k-v-0Height: getHeight(18) + 1;
+    $f6k-v-0Top: $f6k-h-0Top;
+    $f6k-v-0Left: $f6k-h-0Left + $f6k-h-0Width;
+    #f6k-v-0{
+      top: $f6k-v-0Top;
+      left: $f6k-v-0Left;
+      height: $f6k-v-0Height;
     }
   }
 }

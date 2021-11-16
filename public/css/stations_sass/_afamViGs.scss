@@ -17,11 +17,11 @@ $afamViTsHeight: map-get(stationDimention(2,3), 'height');
   }
 
   #afamViTs-f5k{
-    left: map-get(lineBoxPosition(1,3), 'left');
-    top: map-get(lineBoxPosition(1,3), 'top');
+    left: map-get(lineBoxPosition(2,3), 'left');
+    top: map-get(lineBoxPosition(2,3), 'top');
 
     //1st Line
-    $f5k-h-0Width: getLength(1) + map-get($halfCell, 'width') + 1;
+    $f5k-h-0Width: map-get($halfCell, 'width') + 1;
     $f5k-h-0Top: map-get($halfCell, 'height');
     $f5k-h-0Left: map-get($cell, 'width');
     #f5k-h-0 {
@@ -39,7 +39,7 @@ $afamViTsHeight: map-get(stationDimention(2,3), 'height');
       height: $f5k-v-1Height;
     }
     // 3rd Line
-    $f5k-h-2Width: getLength(13);
+    $f5k-h-2Width: getLength(11);
     $f5k-h-2Top: $f5k-v-1Top + $f5k-v-1Height;
     $f5k-h-2Left: $f5k-v-1Left;
     #f5k-h-2 {
@@ -51,11 +51,11 @@ $afamViTsHeight: map-get(stationDimention(2,3), 'height');
   }
 
   #afamViTs-f6k{
-    left: map-get(lineBoxPosition(2,3), 'left');
-    top: map-get(lineBoxPosition(2,3), 'top');
+    left: map-get(lineBoxPosition(1,3), 'left');
+    top: map-get(lineBoxPosition(1,3), 'top');
 
     //1st Line
-    $f6k-h-0Width: map-get($halfCell, 'width') + 1;
+    $f6k-h-0Width: getLength(1) + map-get($halfCell, 'width');
     $f6k-h-0Top: map-get($halfCell, 'height');
     $f6k-h-0Left: map-get($cell, 'width');
     #f6k-h-0 {
@@ -73,7 +73,7 @@ $afamViTsHeight: map-get(stationDimention(2,3), 'height');
       height: $f6k-v-1Height;
     }
     // 3rd Line
-    $f6k-h-2Width: getLength(15);
+    $f6k-h-2Width: getLength(9) + 1;
     $f6k-h-2Top: $f6k-v-1Top + $f6k-v-1Height;
     $f6k-h-2Left: $f6k-v-1Left;
     #f6k-h-2 {

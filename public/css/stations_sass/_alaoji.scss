@@ -45,7 +45,7 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
     top: map-get(lineBoxPosition(1, 5), 'top');
 
     #a1k-h-0 {
-      @include hConnection(getLength(9));
+      @include hConnection(getLength(2));
     }
   }
   #alaoji-a2k{
@@ -53,7 +53,7 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
     top: map-get(lineBoxPosition(2, 5), 'top');
 
     #a2k-h-0 {
-      @include hConnection(getLength(9));
+      @include hConnection(getLength(2));
     }
   }
 
