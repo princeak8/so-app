@@ -37,12 +37,12 @@
     </div>
     <div class="data-group">
       <div>
-        <LineData :text="power + ' MW'" />
-        <LineData :text="current + ' A'" />
+        <LineData :text="power" :unit="'MW'" />
+        <LineData :text="current" :unit="'A'" />
       </div>
       <div>
-        <LineData :text="voltage + ' KV'" />
-        <LineData :text="mvar + ' MX'" />
+        <LineData :text="voltage" :unit="'KV'" />
+        <LineData :text="mvar" :unit="'MVAR'" />
       </div>
     </div>
   </div>

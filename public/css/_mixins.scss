@@ -1,8 +1,8 @@
 @mixin station($hLines, $vLines) {
     position: absolute;
     // border: medium solid #000;
-    width:  map-get(stationDimention($hLines, $vLines), 'width');
-    height: map-get(stationDimention($hLines, $vLines), 'height');
+    width:  map-get(stationDimention($hLines, $vLines), 'width') + 1;
+    height: map-get(stationDimention($hLines, $vLines), 'height') + 1;
     // border: solid 1px gray;
     border-radius: 4px;
     box-shadow: 0px 8px 16px #0000001F;

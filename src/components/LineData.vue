@@ -1,5 +1,8 @@
 <template>
-    <div class="line-data mw" :class="textColor">{{text}}</div>
+    <div class="line-data mw" :class="textColor" style="display: flex; flex-direction: row">
+        <span :class="textColor" style="margin: 0; padding:0">{{text}}</span>
+        <span :class="unitStyle" style="margin: 0; padding:0">{{unit}}</span>
+    </div>
 </template>
 
 <style scoped>
@@ -13,6 +16,10 @@ export default {
       type: String,
       required: true,
     },
+    unit: {
+      type: String,
+      required: true,
+    },
   },
   computed: {
     textColor() {
@@ -20,6 +27,12 @@ export default {
         return "nonActiveText"
       }
       return "activeText"
+    },
+    unitStyle() {
+      if(this.text.includes('loading')) {
+        return "nonActiveUnit"
+      }
+      return "activeUnit"
     }
   }
 };

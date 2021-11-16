@@ -2,6 +2,7 @@
 body {
   font-family: 'Nunito';
   background-color: rgb(199, 195, 195); /*#F3F2F2*/
+  width: 2720px;
 }
 .grey {
     background: #ececec;
@@ -73,10 +74,20 @@ body {
 }
 .activeText {
   color:white;
-  font-size: 6px;
-  font-weight: bold;
+  font-size: 8px;
+  font-weight: bolder;
+  line-height: 1em;
+}
+.activeUnit {
+  color:white;
+  font-size: 4px;
+  line-height: 1em;
 }
 .nonActiveText {
+  color: black;
+  font-size: 5px;
+}
+.nonActiveUnit {
   color: black;
   font-size: 5px;
 }

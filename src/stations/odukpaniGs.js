@@ -10,13 +10,35 @@ export var odukpaniGs = {
         {
             name: "d1b",
             id: "d1b",
-            connectionRoot: false,
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'd1b-v-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
             td
         },
         {
             name: "d2b",
             id: "d2b",
-            connectionRoot: false,
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'd2b-v-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
             td
         },
         {

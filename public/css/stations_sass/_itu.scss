@@ -15,9 +15,33 @@ $ituHeight: map-get(stationDimention(2,2), 'height');
   #itu-d22t{
     left: map-get(lineBoxPosition(1,2), 'left');
     top: map-get(lineBoxPosition(1,2), 'top');
-
+    
+    //1st Line
+    $d22t-h-0Width: map-get($halfCell, 'width');
+    $d22t-h-0Top: map-get($halfCell, 'height');
+    $d22t-h-0Left: map-get($cell, 'width');
     #d22t-h-0 {
-      @include hConnection(getLength(1));
+      width: $d22t-h-0Width;
+      top: $d22t-h-0Top;
+      left: $d22t-h-0Left;
+    }
+    // 2nd Line
+    $d22t-v-0Height: getHeight(5);
+    $d22t-v-0Top: $d22t-h-0Top;
+    $d22t-v-0Left: $d22t-h-0Left + $d22t-h-0Width;
+    #d22t-v-0{
+      top: $d22t-v-0Top;
+      left: $d22t-v-0Left;
+      height: $d22t-v-0Height;
+    }
+    //3rd Line
+    $d22t-h-1Width: map-get($halfCell, 'width');
+    $d22t-h-1Top: $d22t-v-0Top + $d22t-v-0Height;
+    $d22t-h-1Left: $d22t-v-0Left;
+    #d22t-h-1 {
+      width: $d22t-h-1Width;
+      top: $d22t-h-1Top;
+      left: $d22t-h-1Left;
     }
   }
 

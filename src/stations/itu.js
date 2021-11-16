@@ -23,9 +23,26 @@ export var itu = {
                     direction: 'right',
                     name: 'd22t-h-0',
                     start: true,
-                    end: true,
+                    end: false,
                     position: 0,
-                    arrowDirection: 'both'
+                    arrowDirection: 'left'
+                },
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'd22t-v-0',
+                    start: false,
+                    end: false,
+                    position: 1,
+                },
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'd22t-h-1',
+                    start: false,
+                    end: true,
+                    position: 2,
+                    arrowDirection: 'right'
                 },
             ],
             td

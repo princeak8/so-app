@@ -1,4 +1,4 @@
-$adiaborTop: $ituTop;
+$adiaborTop: $ituTop + $ituHeight + getHeight(1);
 $adiaborLeft: $ituLeft + $ituWidth + getLength(1);
 $adiaborWidth: map-get(stationDimention(2,2), 'width');
 $adiaborHeight: map-get(stationDimention(2,2), 'height');
@@ -8,25 +8,17 @@ $adiaborHeight: map-get(stationDimention(2,2), 'height');
   left: $adiaborLeft;
 
   #adiabor-d22t{
-    left: map-get(lineBoxPosition(1,1), 'left');
-    top: map-get(lineBoxPosition(1,1), 'top');
+    left: map-get(lineBoxPosition(2,1), 'left');
+    top: map-get(lineBoxPosition(2,1), 'top');
   }
   
   #adiabor-d1b{
-    left: map-get(lineBoxPosition(1,2), 'left');
-    top: map-get(lineBoxPosition(1,2), 'top');
-
-    #d1b-h-0 {
-      @include hConnection(getLength(1));
-    }
+    left: map-get(lineBoxPosition(1,1), 'left');
+    top: map-get(lineBoxPosition(1,1), 'top');
   }
 
   #adiabor-d2b{
-    left: map-get(lineBoxPosition(2,2), 'left');
-    top: map-get(lineBoxPosition(2,2), 'top');
-
-    #d2b-h-0 {
-      @include hConnection(getLength(1));
-    }
+    left: map-get(lineBoxPosition(1,2), 'left');
+    top: map-get(lineBoxPosition(1,2), 'top');
   }
 }

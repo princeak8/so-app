@@ -81,13 +81,21 @@ export var ikotEkpene = {
             commissioned: false,
             connections: [
                 {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 's1k-h-0',
+                    start: false,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'left'
+                },
+                {
                     alignment: 'v',
                     direction: 'down',
                     name: 's1k-v-0',
                     start: false,
-                    end: true,
-                    position: 0,
-                    arrowDirection: 'up'
+                    end: false,
+                    position: 0
                 },
             ],
             td
@@ -116,11 +124,20 @@ export var ikotEkpene = {
             commissioned: false,
             connections: [
                 {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'f5k-h-0',
+                    start: false,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'left'
+                },
+                {
                     alignment: 'v',
                     direction: 'down',
                     name: 'f5k-v-0',
                     start: false,
-                    end: true,
+                    end: false,
                     position: 0,
                     arrowDirection: 'up'
                 },
@@ -134,11 +151,20 @@ export var ikotEkpene = {
             commissioned: false,
             connections: [
                 {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'f6k-h-0',
+                    start: false,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'left'
+                },
+                {
                     alignment: 'v',
                     direction: 'down',
                     name: 'f6k-v-0',
                     start: false,
-                    end: true,
+                    end: false,
                     position: 0,
                     arrowDirection: 'up'
                 },
