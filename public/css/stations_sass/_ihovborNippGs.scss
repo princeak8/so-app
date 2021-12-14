@@ -17,7 +17,7 @@ $ihovborNippGsHeight: map-get(stationDimention(1,2), 'height');
     top: map-get(lineBoxPosition(1,2), 'top');
 
       //1st Line
-      $v7b-h-0Width: getLength(3) + map-get($halfCell, 'width');
+      $v7b-h-0Width: getLength(2) + map-get($halfCell, 'width');
       $v7b-h-0Top: map-get($halfCell, 'height');
       $v7b-h-0Left: map-get($cell, 'width');
       #v7b-h-0 {

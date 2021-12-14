@@ -1,5 +1,5 @@
 $yenegoaTop: $gbarainGsTop;
-$yenegoaLeft: map-get($col5, 'left');
+$yenegoaLeft: $gbarainGsLeft + $gbarainGsWidth + getLength(1);
 $yenegoaWidth: map-get(stationDimention(2,1), 'width');
 $yenegoaHeight: map-get(stationDimention(2,1), 'height');
 #yenegoa{

@@ -66,7 +66,7 @@ $ikotEkpeneHeight: map-get(stationDimention(4,6), 'height');
       left: $s1k-h-0Left;
     }
     // 2nd Line
-    $s1k-v-0Height: getHeight(15);
+    $s1k-v-0Height: getHeight(14);
     $s1k-v-0Top: $s1k-h-0Top;
     $s1k-v-0Left: $s1k-h-0Left + $s1k-h-0Width;
     #s1k-v-0{
@@ -81,7 +81,7 @@ $ikotEkpeneHeight: map-get(stationDimention(4,6), 'height');
     top: map-get(lineBoxPosition(4, 6), 'top');
 
     #s2k-v-0 {
-      @include vConnection(getHeight(12)  + map-get($halfCell, 'height') -2 );
+      @include vConnection(getHeight(11)  + map-get($halfCell, 'height') -2 );
     }
   }
 

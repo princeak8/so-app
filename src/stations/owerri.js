@@ -78,37 +78,15 @@ export var owerri = {
         {
             name: "w21h",
             id: "w21h",
-            connectionRoot: true,
+            connectionRoot: false,
             is132Connection: true,
-            connections: [
-                {
-                    alignment: 'v',
-                    direction: 'down',
-                    name: 'w21h-v-0',
-                    start: true,
-                    end: true,
-                    position: 0,
-                    arrowDirection: 'both'
-                }
-            ],
             td
         },
         {
             name: "w22h",
             id: "w22h",
-            connectionRoot: true,
+            connectionRoot: false,
             is132Connection: true,
-            connections: [
-                {
-                    alignment: 'v',
-                    direction: 'down',
-                    name: 'w22h-v-0',
-                    start: true,
-                    end: true,
-                    position: 0,
-                    arrowDirection: 'both'
-                }
-            ],
             td
         },
     ]

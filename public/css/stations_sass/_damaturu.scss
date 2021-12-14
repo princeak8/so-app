@@ -1,5 +1,5 @@
 $damaturuTop: map-get($row2, 'top');
-$damaturuLeft: map-get($col4, 'left');
+$damaturuLeft: map-get($col4, 'left') + getLength(1);
 $damaturuWidth: map-get(stationDimention(1,2), 'width');
 $damaturuHeight: map-get(stationDimention(1,2), 'height');
 #damaturu{

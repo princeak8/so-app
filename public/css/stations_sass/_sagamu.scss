@@ -1,5 +1,5 @@
-$sagamuTop: $ikoroduTop; //The same Top with Ikorodu
-$sagamuLeft: $ikoroduLeft + $ikoroduWidth + map-get($cell, 'width'); //Comes one cell after the end of ikorodu
+$sagamuTop: $egbinGsTop + $egbinGsHeight + getHeight(1); 
+$sagamuLeft: map-get($col1, 'left') + getLength(4); 
 $sagamuWidth: map-get(stationDimention(2,1), 'width');
 $sagamuHeight: map-get(stationDimention(2,1), 'height');
 #sagamu{
@@ -10,10 +10,18 @@ $sagamuHeight: map-get(stationDimention(2,1), 'height');
   #sagamu-d23s{
     left: map-get(lineBoxPosition(1,1), 'left');
     top: map-get(lineBoxPosition(1,1), 'top');
+
+    #d23s-h-0 {
+      @include hConnection(getLength(1));
+    }
   }
   #sagamu-d24s{
     left: map-get(lineBoxPosition(2,1), 'left');
     top: map-get(lineBoxPosition(2,1), 'top');
+
+    #d24s-h-0 {
+      @include hConnection(getLength(1));
+    }
   }
 
 }

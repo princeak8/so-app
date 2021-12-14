@@ -1,5 +1,5 @@
-$gwagwaladaTop: $markudiTop + $markudiHeight;//Starts from the end of Jos TS
-$gwagwaladaLeft: $markudiLeft + $markudiWidth;//starts from the start of col3
+$gwagwaladaTop: $markudiTop + $markudiHeight + getHeight(1);
+$gwagwaladaLeft: map-get($col3, 'left') + getLength(1);
 $gwagwaladaWidth: map-get(stationDimention(2,2), 'width');
 $gwagwaladaHeight: map-get(stationDimention(2,2), 'height');
 #gwagwalada{

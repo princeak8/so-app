@@ -1,5 +1,5 @@
-$ahaodaTop: $owerriTop + $owerriHeight + getHeight(1);
-$ahaodaLeft: $owerriLeft;
+$ahaodaTop: map-get($row5, 'top') + getHeight(3);
+$ahaodaLeft: map-get($col4, 'left');
 $ahaodaWidth: map-get(stationDimention(3,2), 'width');
 $ahaodaHeight: map-get(stationDimention(3,2), 'height');
 #ahaoda{
@@ -8,21 +8,29 @@ $ahaodaHeight: map-get(stationDimention(3,2), 'height');
   left: $ahaodaLeft;
 
   #ahaoda-w21h{
-    left: map-get(lineBoxPosition(1, 1), 'left');
-    top: map-get(lineBoxPosition(1, 1), 'top');
+    left: map-get(lineBoxPosition(1, 2), 'left');
+    top: map-get(lineBoxPosition(1, 2), 'top');
+
+    #w21h-h-0 {
+      @include hConnection(getLength(1));
+    }
   }
 
   #ahaoda-w22h{
-    left: map-get(lineBoxPosition(1, 2), 'left');
-    top: map-get(lineBoxPosition(1, 2), 'top');
+    left: map-get(lineBoxPosition(2, 2), 'left');
+    top: map-get(lineBoxPosition(2, 2), 'top');
+  
+    #w22h-h-0 {
+      @include hConnection(getLength(1));
+    }
   }
 
   #ahaoda-h23r{
-    left: map-get(lineBoxPosition(2, 2), 'left');
-    top: map-get(lineBoxPosition(2, 2), 'top');
+    left: map-get(lineBoxPosition(3, 1), 'left');
+    top: map-get(lineBoxPosition(3, 1), 'top');
 
-    #h23r-h-0 {
-      @include hConnection(getLength(1));
+    #h23r-v-0 {
+      @include vConnection(getHeight(2));
     }
   }
 
@@ -30,8 +38,8 @@ $ahaodaHeight: map-get(stationDimention(3,2), 'height');
     left: map-get(lineBoxPosition(3, 2), 'left');
     top: map-get(lineBoxPosition(3, 2), 'top');
 
-    #h24r-h-0 {
-      @include hConnection(getLength(1));
+    #h24r-v-0 {
+      @include vConnection(getHeight(2));
     }
   }
 

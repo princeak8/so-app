@@ -22,9 +22,9 @@ export var okearo = {
             connectionRoot: true,
             connections: [
                 {
-                    alignment: 'v',
-                    direction: 'down',
-                    name: 'n7k-v-0',
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'n7k-h-0',
                     start: true,
                     end: true,
                     position: 0,
@@ -39,9 +39,9 @@ export var okearo = {
             connectionRoot: true,
             connections: [
                 {
-                    alignment: 'v',
-                    direction: 'down',
-                    name: 'n8k-v-0',
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'n8k-h-0',
                     start: true,
                     end: true,
                     position: 0,

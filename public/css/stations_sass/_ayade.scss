@@ -1,18 +1,18 @@
-$ayadeTop: map-get($row3, 'top') + getHeight(8);
+$ayadeTop: map-get($row3, 'top') + getHeight(7);
 $ayadeLeft: map-get($col1, 'left');
-$ayadeWidth: map-get(stationDimention(1,2), 'width');
-$ayadeHeight: map-get(stationDimention(1,2), 'height');
+$ayadeWidth: map-get(stationDimention(2,1), 'width');
+$ayadeHeight: map-get(stationDimention(2,1), 'height');
 #ayade{
-  @include station(1,2);
+  @include station(2,1);
   top: $ayadeTop;
   left: $ayadeLeft;
 
   #ayade-r2a{
-    left: map-get(lineBoxPosition(1, 1), 'left');
-    top: map-get(lineBoxPosition(1, 1), 'top');
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
 
     // 1st Line
-    $r2a-v-0Height: getHeight(3) + map-get($halfCell, 'height');
+    $r2a-v-0Height: map-get($halfCell, 'height');
     $r2a-v-0Top: getHeight(1);
     $r2a-v-0Left: map-get($halfCell, 'width');
     #r2a-v-0{
@@ -21,34 +21,55 @@ $ayadeHeight: map-get(stationDimention(1,2), 'height');
       height: $r2a-v-0Height;
     }
     //2nd line
-    $r2a-h-1Width: getLength(2);
-    $r2a-h-1Left: $r2a-v-0Left;
-    $r2a-h-1Top: $r2a-v-0Top + $r2a-v-0Height;
+    $r2a-h-0Width: getLength(1);
+    $r2a-h-0Left: $r2a-v-0Left;
+    $r2a-h-0Top: $r2a-v-0Top + $r2a-v-0Height;
     #r2a-h-1{
-      top: $r2a-h-1Top;
-      left: $r2a-h-1Left;
-      width: $r2a-h-1Width;
+      top: $r2a-h-0Top;
+      left: $r2a-h-0Left;
+      width: $r2a-h-0Width;
     }
     //3rd Line
-    $r2a-v-2Height: map-get($halfCell, 'height');
-    $r2a-v-2Bottom: -$r2a-v-0Height;
-    $r2a-v-2Left: $r2a-h-1Left + $r2a-h-1Width;
+    $r2a-v-2Height: getHeight(1) + map-get($halfCell, 'height');
+    $r2a-v-2Top: $r2a-h-0Top;
+    $r2a-v-2Left: $r2a-h-0Left + $r2a-h-0Width;
     #r2a-v-2{
-      bottom: $r2a-v-2Bottom;
+      top: $r2a-v-2Top;
       left: $r2a-v-2Left;
       height: $r2a-v-2Height;
     }
   }
 
   #ayade-h2a{
-    left: map-get(lineBoxPosition(1, 2), 'left');
-    top: map-get(lineBoxPosition(1, 2), 'top');
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
 
-    $h2a-h-0Width: getLength(1);
-    #h2a-h-0 {
+    // 1st Line
+    $h2a-h-0Width: map-get($halfCell, 'width');
+    $h2a-h-0Top: map-get($halfCell, 'height');
+    $h2a-h-0Left: getLength(1);
+    #h2a-h-0{
+      top: $h2a-h-0Top;
+      left: $h2a-h-0Left;
       width: $h2a-h-0Width;
-      top: map-get($halfCell, 'height');
-      left: map-get($cell, 'width');
+    }
+    //2nd line
+    $h2a-v-0Height: getHeight(1);
+    $h2a-v-0Left: $h2a-h-0Left + $h2a-h-0Width;
+    $h2a-v-0Top: $h2a-h-0Top;
+    #h2a-v-0{
+      top: $h2a-v-0Top;
+      left: $h2a-v-0Left;
+      height: $h2a-v-0Height;
+    }
+    //3rd Line
+    $h2a-h-1Width: map-get($halfCell, 'width');
+    $h2a-h-1Top: $h2a-v-0Top + $h2a-v-0Height;
+    $h2a-h-1Left: $h2a-v-0Left;
+    #h2a-h-1{
+      top: $h2a-h-1Top;
+      left: $h2a-h-1Left;
+      width: $h2a-h-1Width;
     }
   }
 }

@@ -48,10 +48,27 @@ export var ayade = {
                     direction: 'right',
                     name: 'h2a-h-0',
                     start: true,
-                    end: true,
+                    end: false,
                     position: 0,
-                    arrowDirection: 'both'
+                    arrowDirection: 'left'
                 },
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'h2a-v-0',
+                    start: false,
+                    end: false,
+                    position: 1,
+                },
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'h2a-h-1',
+                    start: false,
+                    end: true,
+                    position: 2,
+                    arrowDirection: 'right'
+                }
             ],
             td
         }

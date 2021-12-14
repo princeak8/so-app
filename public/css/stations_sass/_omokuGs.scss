@@ -1,5 +1,5 @@
-$omokuGsTop: $ahaodaTop + $ahaodaHeight + getHeight(1);
-$omokuGsLeft: $phMainLeft + $phMainWidth - getLength(2);
+$omokuGsTop: $riversIppGsTop;
+$omokuGsLeft: $riversIppGsLeft + $riversIppGsWidth + getLength(1);
 $omokuGsWidth: map-get(stationDimention(1,1), 'width');
 $omokuGsHeight: map-get(stationDimention(1,1), 'height');
 #omokuGs{

@@ -1,5 +1,5 @@
 $deltaGsTop: $beninTop + $beninHeight + getHeight(2);
-$deltaGsLeft: $beninLeft + getLength(1);
+$deltaGsLeft: $beninLeft;
 $deltaGsWidth: map-get(stationDimention(2,1), 'width');
 $deltaGsHeight: map-get(stationDimention(2,1), 'height');
 #deltaGs{

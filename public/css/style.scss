@@ -10,11 +10,11 @@ $row3: (top: (map-get($row2, 'top') + map-get($row2, 'height')), height: getHeig
 $row4: (top: (map-get($row3, 'top') + map-get($row3, 'height')), height: getHeight(9));
 $row5: (top: (map-get($row4, 'top') + map-get($row4, 'height')), height: getHeight(21));
 
-$col1: (left: 0px, width: getLength(7));
-$col2: (left: (map-get($col1, 'left') + map-get($col1, 'width')), width: getLength(5));
-$col3: (left: (map-get($col2, 'left') + map-get($col2, 'width')), width: getLength(7));
+$col1: (left: 0px, width: getLength(6));
+$col2: (left: (map-get($col1, 'left') + map-get($col1, 'width')), width: getLength(4));
+$col3: (left: (map-get($col2, 'left') + map-get($col2, 'width')), width: getLength(6));
 $col4: (left: (map-get($col3, 'left') + map-get($col3, 'width')), width: getLength(7));
-$col5: (left: (map-get($col4, 'left') + map-get($col4, 'width')), width: getLength(8));
+$col5: (left: (map-get($col4, 'left') + map-get($col4, 'width')), width: getLength(6));
 $col6: (left: (map-get($col5, 'left') + map-get($col5, 'width')), width: getLength(6));
 $col7: (left: (map-get($col6, 'left') + map-get($col6, 'width')), width: getLength(7));
 
@@ -142,11 +142,11 @@ $col7: (left: (map-get($col6, 'left') + map-get($col6, 'width')), width: getLeng
 
 @import "./stations_sass/egbinGs";
 
-@import "./stations_sass/ikorodu";
+@import "./stations_sass/sagamu";
 
 @import "./stations_sass/odogunyan";
 
-@import "./stations_sass/sagamu";
+@import "./stations_sass/ikorodu";
 
 @import "./stations_sass/parasEnergyGs";
 
@@ -220,11 +220,11 @@ $col7: (left: (map-get($col6, 'left') + map-get($col6, 'width')), width: getLeng
 
 @import "./stations_sass/phMain";
 
+@import "./stations_sass/riversIppGs";
+
 @import "./stations_sass/omokuGs";
 
 @import "./stations_sass/gbarainGs";
-
-@import "./stations_sass/riversIppGs";
 
 @import "./stations_sass/ugwuaji";
 

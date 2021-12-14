@@ -147,7 +147,7 @@ export default {
             if(diff > 0) {
               item.setConnected(false)
             }
-            console.log('Diff ', diff)
+            //console.log('Diff ', diff)
           }
         }
       })
@@ -225,7 +225,7 @@ export default {
         this.connectTrials = 0;
         const res = JSON.parse(msg.data);
         this.connectObj = { id: res.id, connected: true }
-        // console.log(res);
+        //console.log(res);
         this.mergeData(res)
       };
       this.ws.onerror = (error) => {

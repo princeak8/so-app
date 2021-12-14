@@ -1,5 +1,5 @@
 $biuTop: map-get($row1, 'top');
-$biuLeft: map-get($col4, 'left');
+$biuLeft: map-get($col4, 'left') + getLength(1);
 $biuWidth: map-get(stationDimention(1,1), 'width');
 $biuHeight: map-get(stationDimention(1,1), 'height');
 #biu{

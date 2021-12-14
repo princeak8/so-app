@@ -20,7 +20,7 @@ $markudiHeight: map-get(stationDimention(3,2), 'height');
     top:  map-get(lineBoxPosition(2, 2), 'top');
 
     #u1a-h-0 {
-      @include hConnection(getLength(12));
+      @include hConnection(getLength(11));
     }
   }
   #markudi-u2a{
@@ -28,7 +28,7 @@ $markudiHeight: map-get(stationDimention(3,2), 'height');
     top:  map-get(lineBoxPosition(3, 2), 'top');
 
     #u2a-h-0 {
-      @include hConnection(getLength(12));
+      @include hConnection(getLength(11));
     }
   }
 }

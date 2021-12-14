@@ -1,4 +1,4 @@
-$riversIppGsTop: $gbarainGsTop + $gbarainGsHeight + getHeight(1);
+$riversIppGsTop: map-get($row5, 'top') + getHeight(13);
 $riversIppGsLeft: $phMainLeft + getLength(1);
 $riversIppGsWidth: map-get(stationDimention(2,1), 'width');
 $riversIppGsHeight: map-get(stationDimention(2,1), 'height');

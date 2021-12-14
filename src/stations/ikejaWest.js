@@ -100,9 +100,26 @@ export var ikejaWest = {
                     direction: 'down',
                     name: 'n6w-v-0',
                     start: true,
+                    end: false,
+                    position: 0,
+                    arrowDirection: 'up'
+                },
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'n6w-h-0',
+                    start: false,
+                    end: false,
+                    position: 1,
+                },
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'n6w-v-1',
+                    start: false,
                     end: true,
                     position: 0,
-                    arrowDirection: 'both'
+                    arrowDirection: 'down'
                 },
             ],
             td

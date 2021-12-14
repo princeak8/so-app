@@ -1,23 +1,23 @@
-$lokojaTop: $gwagwaladaTop;//Starts the same top as gwagwalada TS
-$lokojaLeft: $gwagwaladaLeft + $gwagwaladaWidth + getLength(1);//starts one cell from the end of gwagwalada TS
-$lokojaWidth: map-get(stationDimention(2,2), 'width');
-$lokojaHeight: map-get(stationDimention(2,2), 'height');
-#lokoja{
+$lokojaTsTop: $gwagwaladaTop;//Starts the same top as gwagwalada TS
+$lokojaTsLeft: $gwagwaladaLeft + $gwagwaladaWidth + getLength(1);//starts one cell from the end of gwagwalada TS
+$lokojaTsWidth: map-get(stationDimention(2,2), 'width');
+$lokojaTsHeight: map-get(stationDimention(2,2), 'height');
+#lokojaTs{
   @include station(2,2);
-  top: $lokojaTop;
-  left: $lokojaLeft;
+  top: $lokojaTsTop;
+  left: $lokojaTsLeft;
 
-  #lokoja-l6g{
+  #lokojaTs-l6g{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top:  map-get(lineBoxPosition(1, 1), 'top');
   }
-  #lokoja-l7g{
+  #lokojaTs-l7g{
     left: map-get(lineBoxPosition(2, 1), 'left');
     top:  map-get(lineBoxPosition(2, 1), 'top');
   }
 
 
-  #lokoja-j1l{
+  #lokojaTs-j1l{
     left: map-get(lineBoxPosition(1, 2), 'left');
     top:  map-get(lineBoxPosition(1, 2), 'top');
 
@@ -31,7 +31,7 @@ $lokojaHeight: map-get(stationDimention(2,2), 'height');
       left: $j1l-h-0Left;
     }
     // 2nd Line
-    $j1l-v-1Height: getHeight(5) + map-get($halfCell, 'height');
+    $j1l-v-1Height: getHeight(4) + map-get($halfCell, 'height');
     $j1l-v-1Top: $j1l-h-0Top;
     $j1l-v-1Left: $j1l-h-0Left + $j1l-h-0Width;
     #j1l-v-1{
@@ -42,7 +42,7 @@ $lokojaHeight: map-get(stationDimention(2,2), 'height');
   }
 
 
-  #lokoja-j2l{
+  #lokojaTs-j2l{
     left: map-get(lineBoxPosition(2, 2), 'left');
     top:  map-get(lineBoxPosition(2, 2), 'top');
   }
@@ -57,7 +57,7 @@ $lokojaHeight: map-get(stationDimention(2,2), 'height');
     left: $j2l-h-0Left;
   }
   // 2nd Line
-  $j2l-v-1Height: getHeight(6);
+  $j2l-v-1Height: getHeight(5);
   $j2l-v-1Top: $j2l-h-0Top;
   $j2l-v-1Left: $j2l-h-0Left + $j2l-h-0Width;
   #j2l-v-1{

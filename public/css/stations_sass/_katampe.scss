@@ -1,6 +1,6 @@
 //The top starts one cell after the end of Shiroro GS and one cell left after the start of shiroro
 $katampeTop: $shiroroGsTop + $shiroroGsHeight + getHeight(1);
-$katampeLeft: $shiroroGsLeft + getLength(1);
+$katampeLeft: $ganmoLeft + $ganmoWidth + getLength(1);
 $katampeWidth: map-get(stationDimention(2,1), 'width');
 $katampeHeight: map-get(stationDimention(2,1), 'height');
 #katampe{
@@ -17,7 +17,7 @@ $katampeHeight: map-get(stationDimention(2,1), 'height');
     top: map-get(lineBoxPosition(2,1), 'top');
 
     #g5b-h-0 {
-      @include hConnection(getLength(4));
+      @include hConnection(getLength(2));
     }
   }
 }

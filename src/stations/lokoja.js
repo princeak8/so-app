@@ -2,7 +2,7 @@ import td from '../TransmissionData';
 
 export var lokoja = {
     name: "LOKOJA TS",
-    id: "lokoja",
+    id: "lokojaTs",
     lines: [
         {
             name: "l6g",
