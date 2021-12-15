@@ -8,13 +8,35 @@ export var ahaoda = {
         {
             name: "w21h",
             id: "w21h",
-            connectionRoot: false,
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'w21h-h-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
             td
         },
         {
             name: "w22h",
             id: "w22h",
-            connectionRoot: false,
+            connectionRoot: true,
+            connections: [
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'w22h-h-0',
+                    start: true,
+                    end: true,
+                    position: 0,
+                    arrowDirection: 'both'
+                },
+            ],
             td
         },
         {
@@ -24,9 +46,9 @@ export var ahaoda = {
             is132Connection: true,
             connections: [
                 {
-                    alignment: 'h',
-                    direction: 'right',
-                    name: 'h23r-h-0',
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'h23r-v-0',
                     start: true,
                     end: true,
                     position: 0,
@@ -42,9 +64,9 @@ export var ahaoda = {
             is132Connection: true,
             connections: [
                 {
-                    alignment: 'h',
-                    direction: 'right',
-                    name: 'h24r-h-0',
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'h24r-v-0',
                     start: true,
                     end: true,
                     position: 0,

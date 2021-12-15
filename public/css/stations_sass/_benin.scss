@@ -1,9 +1,9 @@
 $beninTop: $omotoshoPhase1GsTop - getHeight(1);//Starts one cell higher than the top of Omotosho Phase 1
 $beninLeft: map-get($col3, 'left');//starts from the start of col3
-$beninWidth: map-get(stationDimention(5,7), 'width');
-$beninHeight: map-get(stationDimention(5,7), 'height');
+$beninWidth: map-get(stationDimention(5,6), 'width');
+$beninHeight: map-get(stationDimention(5,6), 'height');
 #benin{
-  @include station(5,7);
+  @include station(5,6);
   top: $beninTop;
   left: $beninLeft;
 
@@ -16,12 +16,12 @@ $beninHeight: map-get(stationDimention(5,7), 'height');
     top:  map-get(lineBoxPosition(2, 1), 'top');
   }
   #benin-b6n{
-    left: map-get(lineBoxPosition(5, 1), 'left');
-    top:  map-get(lineBoxPosition(5, 1), 'top');
+    left: map-get(lineBoxPosition(4, 1), 'left');
+    top:  map-get(lineBoxPosition(4, 1), 'top');
   }
   #benin-g3b{
-    left: map-get(lineBoxPosition(5, 2), 'left');
-    top:  map-get(lineBoxPosition(5, 2), 'top');
+    left: map-get(lineBoxPosition(5, 1), 'left');
+    top:  map-get(lineBoxPosition(5, 1), 'top');
 
     #g3b-v-0 {
       @include vConnection(getHeight(3));
@@ -30,8 +30,8 @@ $beninHeight: map-get(stationDimention(5,7), 'height');
 
 
   #benin-s3b{
-    left: map-get(lineBoxPosition(5, 4), 'left');
-    top:  map-get(lineBoxPosition(5, 4), 'top');
+    left: map-get(lineBoxPosition(5, 3), 'left');
+    top:  map-get(lineBoxPosition(5, 3), 'top');
   
     #s3b-v-0 {
       @include vConnection(getHeight(2));
@@ -40,8 +40,8 @@ $beninHeight: map-get(stationDimention(5,7), 'height');
   
   
   #benin-s4b{
-    left: map-get(lineBoxPosition(5, 5), 'left');
-    top:  map-get(lineBoxPosition(5, 5), 'top');
+    left: map-get(lineBoxPosition(5, 4), 'left');
+    top:  map-get(lineBoxPosition(5, 4), 'top');
   
     #s4b-v-0 {
       @include vConnection(getHeight(2));
@@ -50,8 +50,8 @@ $beninHeight: map-get(stationDimention(5,7), 'height');
   
   
   #benin-s5b{
-    left: map-get(lineBoxPosition(5, 6), 'left');
-    top:  map-get(lineBoxPosition(5, 6), 'top');
+    left: map-get(lineBoxPosition(5, 5), 'left');
+    top:  map-get(lineBoxPosition(5, 5), 'top');
   
     #s5b-v-0 {
       @include vConnection(getHeight(2));
@@ -60,8 +60,8 @@ $beninHeight: map-get(stationDimention(5,7), 'height');
 
 
   #benin-b3d{
-    left: map-get(lineBoxPosition(5, 7), 'left');
-    top:  map-get(lineBoxPosition(5, 7), 'top');
+    left: map-get(lineBoxPosition(5, 6), 'left');
+    top:  map-get(lineBoxPosition(5, 6), 'top');
 
     #b3d-h-0 {
       @include hConnection(getLength(4));
@@ -70,8 +70,8 @@ $beninHeight: map-get(stationDimention(5,7), 'height');
 
 
   #benin-b2t{
-    left: map-get(lineBoxPosition(4, 7), 'left');
-    top:  map-get(lineBoxPosition(4, 7), 'top');
+    left: map-get(lineBoxPosition(4, 6), 'left');
+    top:  map-get(lineBoxPosition(4, 6), 'top');
 
     #b2t-h-0 {
       @include hConnection(getLength(7));
@@ -81,8 +81,8 @@ $beninHeight: map-get(stationDimention(5,7), 'height');
 
 
   #benin-b1t{
-    left: map-get(lineBoxPosition(3, 7), 'left');
-    top:  map-get(lineBoxPosition(3, 7), 'top');
+    left: map-get(lineBoxPosition(3, 6), 'left');
+    top:  map-get(lineBoxPosition(3, 6), 'top');
 
     #b1t-h-0 {
       @include hConnection(getLength(7));
@@ -90,16 +90,16 @@ $beninHeight: map-get(stationDimention(5,7), 'height');
   }
 
   #benin-b12j{
-    left: map-get(lineBoxPosition(2, 7), 'left');
-    top:  map-get(lineBoxPosition(2, 7), 'top');
+    left: map-get(lineBoxPosition(2, 6), 'left');
+    top:  map-get(lineBoxPosition(2, 6), 'top');
     #b12j-h-0 {
       @include hConnection(getLength(1));
     }
   }
 
   #benin-b11j{
-    left: map-get(lineBoxPosition(1, 7), 'left');
-    top:  map-get(lineBoxPosition(1, 7), 'top');
+    left: map-get(lineBoxPosition(1, 6), 'left');
+    top:  map-get(lineBoxPosition(1, 6), 'top');
 
     #b11j-h-0 {
       @include hConnection(getLength(1));

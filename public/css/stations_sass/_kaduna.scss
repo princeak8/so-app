@@ -1,5 +1,5 @@
 $kadunaTop: map-get($row1, 'top');//Starts from the top of row1
-$kadunaLeft: map-get($col2, 'left') + getLength(2);//starts two cells from the left of col2
+$kadunaLeft: map-get($col2, 'left') + getLength(1);//starts one cells from the left of col2
 $kadunaWidth: map-get(stationDimention(2,3), 'width');
 $kadunaHeight: map-get(stationDimention(2,3), 'height');
 #kaduna{

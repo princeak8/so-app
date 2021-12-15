@@ -1,5 +1,5 @@
 $ituTop: $abaTop;
-$ituLeft: map-get($col6, 'left');
+$ituLeft: $abaLeft + $abaWidth + getLength(1);
 $ituWidth: map-get(stationDimention(2,2), 'width');
 $ituHeight: map-get(stationDimention(2,2), 'height');
 #itu{

@@ -39,7 +39,7 @@ $afamViTsHeight: map-get(stationDimention(2,3), 'height');
       height: $f5k-v-1Height;
     }
     // 3rd Line
-    $f5k-h-2Width: getLength(11);
+    $f5k-h-2Width: getLength(10);
     $f5k-h-2Top: $f5k-v-1Top + $f5k-v-1Height;
     $f5k-h-2Left: $f5k-v-1Left;
     #f5k-h-2 {
@@ -73,7 +73,7 @@ $afamViTsHeight: map-get(stationDimention(2,3), 'height');
       height: $f6k-v-1Height;
     }
     // 3rd Line
-    $f6k-h-2Width: getLength(9) + 1;
+    $f6k-h-2Width: getLength(8) + 1;
     $f6k-h-2Top: $f6k-v-1Top + $f6k-v-1Height;
     $f6k-h-2Left: $f6k-v-1Left;
     #f6k-h-2 {

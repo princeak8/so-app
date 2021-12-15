@@ -1,5 +1,5 @@
 $fakunTop: map-get($row1, 'top');
-$fakunLeft: map-get($col1, 'left') + getLength(4);
+$fakunLeft: map-get($col1, 'left') + getLength(3);
 $fakunWidth: map-get(stationDimention(1,1), 'width');
 $fakunHeight: map-get(stationDimention(1,1), 'height');
 #fakun{

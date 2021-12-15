@@ -1,10 +1,10 @@
 //Oke-Aro TS is tied to Ikeja-West TS by the left and one cell after the end of Ikeja-west
 $okearoTop: $ikejaWestTop + $ikejaWestHeight + getHeight(1);
 $okearoLeft: $ikejaWestLeft;
-$okearoWidth: map-get(stationDimention(2,2), 'width');
-$okearoHeight: map-get(stationDimention(2,2), 'height');
+$okearoWidth: map-get(stationDimention(2,3), 'width');
+$okearoHeight: map-get(stationDimention(2,3), 'height');
 #okearo{
-  @include station(2,2);
+  @include station(2,3);
   top: $okearoTop;
   left: $okearoLeft;
 
@@ -18,26 +18,26 @@ $okearoHeight: map-get(stationDimention(2,2), 'height');
   }
   
   #okearo-n7k{
-    left: map-get(lineBoxPosition(2, 1), 'left');
-    top: map-get(lineBoxPosition(2, 1), 'top');
+    left: map-get(lineBoxPosition(1, 3), 'left');
+    top: map-get(lineBoxPosition(1, 3), 'top');
 
-    $n7k-v-0Height: getHeight(2);
-    #n7k-v-0 {
-      top: map-get($cell, 'height');
-      left: map-get($halfCell, 'width');
-      height: $n7k-v-0Height;
+    $n7k-h-0Width: getLength(1);
+    #n7k-h-0 {
+      top: map-get($halfCell, 'height');
+      left: map-get($cell, 'width');
+      width: $n7k-h-0Width;
     }
   }
 
   #okearo-n8k{
-    left: map-get(lineBoxPosition(2, 2), 'left');
-    top: map-get(lineBoxPosition(2, 2), 'top');
+    left: map-get(lineBoxPosition(2, 3), 'left');
+    top: map-get(lineBoxPosition(2, 3), 'top');
 
-    $n8k-v-0Height: getHeight(2);
-    #n8k-v-0 {
-      top: map-get($cell, 'height');
-      left: map-get($halfCell, 'width');
-      height: $n8k-v-0Height;
+    $n8k-h-0Width: getLength(1);
+    #n8k-h-0 {
+      top: map-get($halfCell, 'height');
+      left: map-get($cell, 'width');
+      width: $n8k-h-0Width;
     }
   }
 }

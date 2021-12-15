@@ -31,7 +31,7 @@ $lokojaTsHeight: map-get(stationDimention(2,2), 'height');
       left: $j1l-h-0Left;
     }
     // 2nd Line
-    $j1l-v-1Height: getHeight(5) + map-get($halfCell, 'height');
+    $j1l-v-1Height: getHeight(4) + map-get($halfCell, 'height');
     $j1l-v-1Top: $j1l-h-0Top;
     $j1l-v-1Left: $j1l-h-0Left + $j1l-h-0Width;
     #j1l-v-1{
@@ -57,7 +57,7 @@ $lokojaTsHeight: map-get(stationDimention(2,2), 'height');
     left: $j2l-h-0Left;
   }
   // 2nd Line
-  $j2l-v-1Height: getHeight(6);
+  $j2l-v-1Height: getHeight(5);
   $j2l-v-1Top: $j2l-h-0Top;
   $j2l-v-1Left: $j2l-h-0Left + $j2l-h-0Width;
   #j2l-v-1{

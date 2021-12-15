@@ -35,9 +35,16 @@ export var shiroroGs = {
                     direction: 'down',
                     name: 'r4b-v-0',
                     start: true,
+                    end: false,
+                    position: 0
+                },
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'r4b-h-0',
+                    start: false,
                     end: true,
-                    position: 0,
-                    arrowDirection: 'both'
+                    position: 1,
                 },
             ],
             td
@@ -54,13 +61,21 @@ export var shiroroGs = {
             connectionRoot: true,
             connections: [
                 {
-                    alignment: 'v',
-                    direction: 'down',
-                    name: 'r5g-v-0',
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'r5g-h-0',
                     start: true,
                     end: false,
                     position: 0,
-                    arrowDirection: 'up'
+                    arrowDirection: 'left'
+                },
+                {
+                    alignment: 'v',
+                    direction: 'down',
+                    name: 'r5g-v-0',
+                    start: false,
+                    end: false,
+                    position: 1
                 },
                 {
                     alignment: 'h',
@@ -68,7 +83,7 @@ export var shiroroGs = {
                     name: 'r5g-h-1',
                     start: false,
                     end: true,
-                    position: 1,
+                    position: 2,
                     arrowDirection: 'right'
                 }
             ],

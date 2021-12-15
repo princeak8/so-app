@@ -44,9 +44,18 @@ export var egbinGs = {
                     direction: 'up',
                     name: 'b6n-v-1',
                     start: false,
-                    end: true,
+                    end: false,
                     position: 1,
                     arrowDirection: 'up'
+                },
+                {
+                    alignment: 'h',
+                    direction: 'right',
+                    name: 'b6n-h-1',
+                    start: false,
+                    end: true,
+                    position: 2,
+                    arrowDirection: 'right'
                 },
             ],
             td

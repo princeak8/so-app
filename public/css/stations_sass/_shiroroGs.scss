@@ -1,5 +1,5 @@
 $shiroroGsTop: $jebbaTsTop;
-$shiroroGsLeft: map-get($col2, 'left') + getLength(1);
+$shiroroGsLeft: map-get($col2, 'left');
 $shiroroGsWidth: map-get(stationDimention(2,3), 'width');
 $shiroroGsHeight: map-get(stationDimention(2,3), 'height');
 #shiroroGs{
@@ -27,8 +27,24 @@ $shiroroGsHeight: map-get(stationDimention(2,3), 'height');
     left: map-get(lineBoxPosition(2,2), 'left');
     top: map-get(lineBoxPosition(2,2), 'top');
 
-    #r4b-v-0 {
-      @include vConnection(getHeight(2));
+    // 1st Line
+    $r4b-v-0Height: getHeight(2) + map-get($halfCell, 'height');
+    $r4b-v-0Top: getHeight(1);
+    $r4b-v-0Left: map-get($halfCell, 'width');
+    #r4b-v-0{
+      top: $r4b-v-0Top;
+      left: $r4b-v-0Left;
+      height: $r4b-v-0Height;
+    }
+
+    //2nd Line
+    $r4b-h-0Width: map-get($halfCell, 'width');
+    $r4b-h-0Top: $r4b-v-0Top + $r4b-v-0Height;
+    $r4b-h-0Left: $r4b-v-0Left;
+    #r4b-h-0 {
+      width: $r4b-h-0Width;
+      top: $r4b-h-0Top;
+      left: $r4b-h-0Left;
     }
   }
 
@@ -36,18 +52,28 @@ $shiroroGsHeight: map-get(stationDimention(2,3), 'height');
     left: map-get(lineBoxPosition(2,3), 'left');
     top: map-get(lineBoxPosition(2,3), 'top');
 
-    // 1st Line
-    $r5g-v-0Height: getHeight(2) + map-get($halfCell, 'height');
-    $r5g-v-0Top: getHeight(1);
-    $r5g-v-0Left: map-get($halfCell, 'width');
+    //1st Line
+    $r5g-h-0Width: map-get($halfCell, 'width');
+    $r5g-h-0Top: map-get($halfCell, 'height');
+    $r5g-h-0Left: getLength(1);
+    #r5g-h-0 {
+      width: $r5g-h-0Width;
+      top: $r5g-h-0Top;
+      left: $r5g-h-0Left;
+    }
+
+    // 2nd Line
+    $r5g-v-0Height: getHeight(3);
+    $r5g-v-0Top: $r5g-h-0Top;
+    $r5g-v-0Left: $r5g-h-0Left + $r5g-h-0Width;
     #r5g-v-0{
       top: $r5g-v-0Top;
       left: $r5g-v-0Left;
       height: $r5g-v-0Height;
     }
 
-    //2nd Line
-    $r5g-h-1Width: getLength(3) + map-get($halfCell, 'width');
+    //3rd Line
+    $r5g-h-1Width: getLength(1) + map-get($halfCell, 'width');
     $r5g-h-1Top: $r5g-v-0Top + $r5g-v-0Height;
     $r5g-h-1Left: $r5g-v-0Left;
     #r5g-h-1 {

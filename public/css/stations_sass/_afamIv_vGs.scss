@@ -1,5 +1,5 @@
 $afamIv_vGsTop: $phMainTop;
-$afamIv_vGsLeft: map-get($col5, 'left') + getLength(1);
+$afamIv_vGsLeft: $alaojiLeft;
 $afamIv_vGsWidth: map-get(stationDimention(2,1), 'width');
 $afamIv_vGsHeight: map-get(stationDimention(2,1), 'height');
 #afamIv_vGs{

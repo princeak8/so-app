@@ -1,5 +1,5 @@
 //Oshogbo TS is tied to Ayade GS top and Jebba TS Left
-$oshogboTop: $ayadeTop - map-get($cell, 'height');
+$oshogboTop: $ayadeTop;
 $oshogboLeft: $jebbaTsLeft;
 $oshogboWidth: map-get(stationDimention(2,3), 'width');
 $oshogboHeight: map-get(stationDimention(2,3), 'height');

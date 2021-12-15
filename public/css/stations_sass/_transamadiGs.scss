@@ -1,5 +1,5 @@
 $transamadiGsTop: map-get($row5, 'top') + getHeight(17);
-$transamadiGsLeft: map-get($col4, 'left');
+$transamadiGsLeft: map-get($col3, 'left') + getLength(5);
 $transamadiGsWidth: map-get(stationDimention(2,1), 'width');
 $transamadiGsHeight: map-get(stationDimention(2,1), 'height');
 #transamadiGs{
