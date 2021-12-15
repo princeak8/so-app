@@ -37,7 +37,7 @@ export default {
 	},
 
 	[UPDATE_POWER_STATION](state, data) {
-		console.log('update power', state.pStations);
+		//console.log('update power', state.pStations);
 		const streamedPowerStation = data
 		const getPowerStation = state.pStations.find(x => x.id === data.id)
 		if(getPowerStation) {
