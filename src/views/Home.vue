@@ -225,11 +225,7 @@ export default {
         this.connectTrials = 0;
         const res = JSON.parse(msg.data);
         this.connectObj = { id: res.id, connected: true }
-<<<<<<< HEAD
-        console.log(res);
-=======
         //console.log(res);
->>>>>>> 00694b41e2708ac255e4b0932cb8196f1cf04017
         this.mergeData(res)
       };
       this.ws.onerror = (error) => {
