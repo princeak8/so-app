@@ -50,5 +50,19 @@ export var gwagwalada = {
             ],
             td
         }
+    ],
+    mappings:   [
+        {
+            stationId: 'lokojaTs',
+            lines: ['l6g', 'l7g']
+        },
+        {
+            stationId: 'katampe',
+            lines: ['g5b']
+        },
+        {
+            stationId: 'shiroroGs',
+            lines: ['r5g']
+        }
     ]
 };
