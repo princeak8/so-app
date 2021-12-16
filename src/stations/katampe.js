@@ -27,5 +27,15 @@ export var katampe = {
             ],
             td
         }
+    ],
+    mappings:   [
+        {
+            stationId: 'gwagwalada',
+            lines: ['g5b']
+        },
+        {
+            stationId: 'shiroroGs',
+            lines: ['r4b']
+        }
     ]
 };
