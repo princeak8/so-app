@@ -6,7 +6,7 @@ export var gwagwalada = {
     lines: [
         {
             name: "r5g",
-            id: "r5g",
+            id: "r3g",
             connectionRoot: false,
             td
         },

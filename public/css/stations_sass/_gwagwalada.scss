@@ -7,7 +7,7 @@ $gwagwaladaHeight: map-get(stationDimention(2,2), 'height');
   top: $gwagwaladaTop;
   left: $gwagwaladaLeft;
 
-  #gwagwalada-r5g{
+  #gwagwalada-r3g{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top:  map-get(lineBoxPosition(1, 1), 'top');
   }
