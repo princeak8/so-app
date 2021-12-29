@@ -48,38 +48,38 @@ $shiroroGsHeight: map-get(stationDimention(2,3), 'height');
     }
   }
 
-  #shiroroGs-r5g{
+  #shiroroGs-r3g{
     left: map-get(lineBoxPosition(2,3), 'left');
     top: map-get(lineBoxPosition(2,3), 'top');
 
     //1st Line
-    $r5g-h-0Width: map-get($halfCell, 'width');
-    $r5g-h-0Top: map-get($halfCell, 'height');
-    $r5g-h-0Left: getLength(1);
-    #r5g-h-0 {
-      width: $r5g-h-0Width;
-      top: $r5g-h-0Top;
-      left: $r5g-h-0Left;
+    $r3g-h-0Width: map-get($halfCell, 'width');
+    $r3g-h-0Top: map-get($halfCell, 'height');
+    $r3g-h-0Left: getLength(1);
+    #r3g-h-0 {
+      width: $r3g-h-0Width;
+      top: $r3g-h-0Top;
+      left: $r3g-h-0Left;
     }
 
     // 2nd Line
-    $r5g-v-0Height: getHeight(4);
-    $r5g-v-0Top: $r5g-h-0Top;
-    $r5g-v-0Left: $r5g-h-0Left + $r5g-h-0Width;
-    #r5g-v-0{
-      top: $r5g-v-0Top;
-      left: $r5g-v-0Left;
-      height: $r5g-v-0Height;
+    $r3g-v-0Height: getHeight(4);
+    $r3g-v-0Top: $r3g-h-0Top;
+    $r3g-v-0Left: $r3g-h-0Left + $r3g-h-0Width;
+    #r3g-v-0{
+      top: $r3g-v-0Top;
+      left: $r3g-v-0Left;
+      height: $r3g-v-0Height;
     }
 
     //3rd Line
-    $r5g-h-1Width: getLength(1) + map-get($halfCell, 'width');
-    $r5g-h-1Top: $r5g-v-0Top + $r5g-v-0Height;
-    $r5g-h-1Left: $r5g-v-0Left;
-    #r5g-h-1 {
-      width: $r5g-h-1Width;
-      top: $r5g-h-1Top;
-      left: $r5g-h-1Left;
+    $r3g-h-1Width: getLength(1) + map-get($halfCell, 'width');
+    $r3g-h-1Top: $r3g-v-0Top + $r3g-v-0Height;
+    $r3g-h-1Left: $r3g-v-0Left;
+    #r3g-h-1 {
+      width: $r3g-h-1Width;
+      top: $r3g-h-1Top;
+      left: $r3g-h-1Left;
     }
   }
 }
