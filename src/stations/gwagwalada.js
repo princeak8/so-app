@@ -62,7 +62,7 @@ export var gwagwalada = {
         },
         {
             stationId: 'shiroroGs',
-            lines: ['r5g']
+            lines: ['r3g']
         }
     ]
 };

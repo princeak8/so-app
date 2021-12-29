@@ -57,13 +57,13 @@ export var shiroroGs = {
         },
         {
             name: "r5g",
-            id: "r5g",
+            id: "r3g",
             connectionRoot: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'r5g-h-0',
+                    name: 'r3g-h-0',
                     start: true,
                     end: false,
                     position: 0,
@@ -72,7 +72,7 @@ export var shiroroGs = {
                 {
                     alignment: 'v',
                     direction: 'down',
-                    name: 'r5g-v-0',
+                    name: 'r3g-v-0',
                     start: false,
                     end: false,
                     position: 1
@@ -80,7 +80,7 @@ export var shiroroGs = {
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'r5g-h-1',
+                    name: 'r3g-h-1',
                     start: false,
                     end: true,
                     position: 2,
@@ -88,6 +88,24 @@ export var shiroroGs = {
                 }
             ],
             td
+        }
+    ],
+    mappings:   [
+        {
+            stationId: 'kaduna',
+            lines: ['r1m', 'r2m']
+        },
+        {
+            stationId: 'jebbaTs',
+            lines: ['j3r', 'j7r']
+        },
+        {
+            stationId: 'katampe',
+            lines: ['r4b']
+        },
+        {
+            stationId: 'gwagwalada',
+            lines: ['r3g']
         }
     ]
 };
