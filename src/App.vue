@@ -43,7 +43,7 @@ export default {
         this.ws.onmessage = (msg) => {
           // console.log('Power msg ', msg)
           const res = JSON.parse(msg.data);
-          // console.log('Power response ',res);
+          //console.log('Power response ',res);
           this.mergePowerStationData(res)
         };
         this.ws.onerror = (error) => {
