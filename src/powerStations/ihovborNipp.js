@@ -23,6 +23,16 @@ export var ihovborNipp = {
             name: "gt4",
             id: "gt4",
             powerData
+        },
+        {
+            name: "OHL1",
+            id: "ohl1",
+            powerData
+        },
+        {
+            name: "OHL2",
+            id: "ohl2",
+            powerData
         }
     ]
 };
