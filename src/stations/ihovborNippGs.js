@@ -1,7 +1,7 @@
 import td from '../TransmissionData';
 
 export var ihovborNippGs = {
-    name: "IHOVBOR NIPP",
+    name: "IHOVBOR TS",
     id: "ihovborNippGs",
     gs: true,
     gsId: 'ihovborNippPs',
