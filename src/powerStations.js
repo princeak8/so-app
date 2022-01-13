@@ -27,7 +27,7 @@ export var powerStations = [
     omotoshoNipp,
     parasEnergy,
     riversIpp,
-    sapeleSteam,
+    // sapeleSteam,
     sapeleNipp,
     shiroro,
     transamadi

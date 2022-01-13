@@ -49,7 +49,7 @@ export var stations = [
     deltaGs,
     sapeleGs,
     aladja,
-    sapeleNippGs,
+    // sapeleNippGs,
     biu,
     damaturu,
     molai,
