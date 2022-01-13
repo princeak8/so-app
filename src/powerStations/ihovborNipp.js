@@ -1,7 +1,7 @@
 import powerData from '../PowerData';
 
 export var ihovborNipp = {
-    name: "Ihovbor NIPP Power Station",
+    name: "Ihovbor TS",
     id: "ihovborNippPs",
     units: [
         {
@@ -30,13 +30,13 @@ export var ihovborNipp = {
         },
         {
             name: "OHL1",
-            station: "AZURRA POWER",
+            station: "AZURA POWER",
             id: "ohl1",
             powerData
         },
         {
             name: "OHL2",
-            station: "AZURRA POWER",
+            station: "AZURA POWER",
             id: "ohl2",
             powerData
         }

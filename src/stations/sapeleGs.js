@@ -1,10 +1,10 @@
 import td from '../TransmissionData';
 
 export var sapeleGs = {
-    name: "SAPELE GS",
-    id: "sapeleGs",
+    name: "SAPELE TS",
+    id: "sapele",
     gs: true,
-    gsId: 'sapeleSteamPs',
+    gsId: 'sapeleNippPs',
     has132: false,
     lines: [
         {
@@ -22,6 +22,12 @@ export var sapeleGs = {
         {
             name: "s5b",
             id: "s5b",
+            connectionRoot: false,
+            td
+        },
+        {
+            name: "s4g",
+            id: "s4g",
             connectionRoot: false,
             td
         }

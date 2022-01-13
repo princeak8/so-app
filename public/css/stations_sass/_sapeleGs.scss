@@ -1,22 +1,26 @@
-$sapeleGsTop: map-get($row5, 'top');
+$sapeleGsTop: map-get($row5, 'top') + getHeight(1);
 $sapeleGsLeft: $deltaGsLeft + $deltaGsWidth + getLength(1); 
-$sapeleGsWidth: map-get(stationDimention(1,3), 'width');
-$sapeleGsHeight: map-get(stationDimention(1,3), 'height');
-#sapeleGs{
-  @include station(1,3);
+$sapeleGsWidth: map-get(stationDimention(2,3), 'width');
+$sapeleGsHeight: map-get(stationDimention(2,3), 'height');
+#sapele{
+  @include station(2,3);
   top: $sapeleGsTop;
   left: $sapeleGsLeft;
 
-  #sapeleGs-s3b{
+  #sapele-s3b{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top: map-get(lineBoxPosition(1, 1), 'top');
   }
-  #sapeleGs-s4b{
+  #sapele-s4b{
     left: map-get(lineBoxPosition(1, 2), 'left');
     top: map-get(lineBoxPosition(1, 2), 'top');
   }
-  #sapeleGs-s5b{
+  #sapele-s5b{
     left: map-get(lineBoxPosition(1, 3), 'left');
     top: map-get(lineBoxPosition(1, 3), 'top');
+  }
+  #sapele-s4g{
+    left: map-get(lineBoxPosition(2, 1), 'left');
+    top: map-get(lineBoxPosition(2, 1), 'top');
   }
 }
