@@ -4,7 +4,7 @@ import {kebbi, jebbaGs, ayade, olorunsogoNippGs, olorunsogoPhase1Gs, ajah, alagb
         omotoshoNippGs, omotoshoPhase1Gs, akangba, kaduna, kano, dadinKowaGs, gombe, jos, markudi, gwagwalada, lokoja, benin, deltaGs,
         sapeleGs, aladja, sapeleNippGs, biu, damaturu, molai, ajaokuta, gereguGs, yola, gereguNipp, asaba, alaojiGs, owerri, ahaoda,
         transamadiGs, phMain, omokuGs, gbarainGs, riversIppGs, ugwuaji, newHaven, onitsha, alaoji, aba, yenegoa, afamIv_vGs, afamViGs,
-        itu, adiabor, eket, ibomGs, ikotAbasi, ikotEkpene, odukpaniGs, okpaiGs
+        itu, adiabor, ekim, eket, ibomGs, ikotAbasi, ikotEkpene, odukpaniGs, okpaiGs
         } from './stations/index';
 
 export var stations = [
@@ -77,6 +77,7 @@ export var stations = [
     afamViGs,
     itu,
     adiabor,
+    ekim,
     eket,
     ibomGs,
     ikotAbasi,

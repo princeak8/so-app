@@ -1,0 +1,18 @@
+$ekimTop: $ibomGsTop - getHeight(2);
+$ekimLeft: map-get($col6, 'left') - getLength(2);
+$ekimWidth: map-get(stationDimention(1,1), 'width');
+$ekimHeight: map-get(stationDimention(1,1), 'height');
+#ekim{
+  @include station(1,1);
+  top: $ekimTop;
+  left: $ekimLeft;
+
+  #ekim-ek1m{
+    left: map-get(lineBoxPosition(1, 1), 'left');
+    top: map-get(lineBoxPosition(1, 1), 'top');
+    #ek1m-h-0 {
+        @include hConnection(getLength(1) + map-get($halfCell, 'width'));
+    }
+  }
+
+}
