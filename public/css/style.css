@@ -3107,6 +3107,29 @@
   left: 68px;
 }
 
+#ekim {
+  position: absolute;
+  width: 68px;
+  height: 52px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 8px 16px #0000001F;
+          box-shadow: 0px 8px 16px #0000001F;
+  background-color: #e2dfdf;
+  top: 985px;
+  left: 1836px;
+}
+
+#ekim #ekim-ek1m {
+  left: -1px;
+  top: 25px;
+}
+
+#ekim #ekim-ek1m #ek1m-h-0 {
+  width: 102px;
+  top: 13px;
+  left: 68px;
+}
+
 #ikotAbasi {
   position: absolute;
   width: 136px;

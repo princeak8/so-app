@@ -67,6 +67,7 @@ export * from './afamIv_vGs';
 export * from './afamViGs';
 export * from './itu';
 export * from './adiabor';
+export * from './ekim';
 export * from './eket';
 export * from './ibomGs';
 export * from './ikotAbasi';
