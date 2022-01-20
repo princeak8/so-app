@@ -4,6 +4,7 @@ export var eket = {
     name: "EKET TS",
     id: "eket",
     is132: true,
+    integrated: true,
     lines: [
         {
             name: "e22t",

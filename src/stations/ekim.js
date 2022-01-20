@@ -4,6 +4,7 @@ export var ekim = {
     name: "EKIM TS",
     id: "ekim",
     is132: true,
+    integrated: false,
     lines: [
         {
             name: "ek1m",

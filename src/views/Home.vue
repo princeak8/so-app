@@ -225,7 +225,8 @@ export default {
         this.connectTrials = 0;
         const res = JSON.parse(msg.data);
         this.connectObj = { id: res.id, connected: true }
-        //console.log(res);
+        //console.log(res.id);
+        //if(res.id=='alaoji') console.log(res);
         this.mergeData(res)
       };
       this.ws.onerror = (error) => {
@@ -260,6 +261,7 @@ export default {
           return item
         })
         this.stations = this.stations.filter(x => {
+
           if(x.name === getStation.name) {
             x.lines = updatedStationLines
           }
