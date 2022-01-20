@@ -2,7 +2,7 @@ import td from '../TransmissionData';
 
 export var alaojiGs = {
     name: "ALAOJI GS",
-    id: "alaojiGs",
+    id: "alaoji",
     gs: true,
     gsId: 'alaojiPs',
     has132: false,

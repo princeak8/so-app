@@ -88,7 +88,7 @@ export default {
       return this.mappedLines.find((x) => x.id === this.id);
     },
     power() {
-      if (this.transmissionData.mw == "") {
+      if (this.transmissionData.mw === "") {
         return "loading..";
       }
       const value = this.$options.filters.formatAmount(
@@ -98,7 +98,7 @@ export default {
       return value;
     },
     voltage() {
-      if (this.transmissionData.V == "") {
+      if (this.transmissionData.V === "") {
         return "loading..";
       }
       const value = this.$options.filters.formatAmount(
@@ -108,7 +108,8 @@ export default {
       return value;
     },
     current() {
-      if (this.transmissionData.A == "") {
+      //if(this.stationId=='alaoji' && this.transmissionData.A == "") console.log('current', this.transmissionData.A);
+      if (this.transmissionData.A === "") {
         return "loading..";
       }
 
@@ -119,7 +120,7 @@ export default {
       return value;
     },
     mvar() {
-      if (this.transmissionData.mvar == "") {
+      if (this.transmissionData.mvar === "") {
         return "loading..";
       }
       const value = this.$options.filters.formatAmount(

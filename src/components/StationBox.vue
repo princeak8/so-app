@@ -70,7 +70,9 @@ export default {
                     if(mappedStation) {
                         mappedStation.lines.forEach((line) => {
                             var mappedLine = station.lines.find(y => y.id === line);
-                            mappedLines.push({id: line, td: mappedLine.td});
+                            if(mappedLine) {
+                                mappedLines.push({id: line, td: mappedLine.td});
+                            }
                         })
                     }
                 })

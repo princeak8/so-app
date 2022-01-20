@@ -2,20 +2,20 @@ $alaojiTop: $alaojiGsTop;
 $alaojiLeft: map-get($col5, 'left');
 $alaojiWidth: map-get(stationDimention(4,5), 'width');
 $alaojiHeight: map-get(stationDimention(4,5), 'height');
-#alaoji{
+#alaojiTs{
   @include station(4,5);
   top: $alaojiTop;
   left: $alaojiLeft;
   
-  #alaoji-l7a{
+  #alaojiTs-l7a{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top: map-get(lineBoxPosition(1, 1), 'top');
   }
-  #alaoji-l8a{
+  #alaojiTs-l8a{
     left: map-get(lineBoxPosition(2, 1), 'left');
     top: map-get(lineBoxPosition(2, 1), 'top');
   }
-  #alaoji-f1a{
+  #alaojiTs-f1a{
     left: map-get(lineBoxPosition(4, 2), 'left');
     top: map-get(lineBoxPosition(4, 2), 'top');
 
@@ -25,7 +25,7 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
   }
 
 
-  #alaoji-f2a{
+  #alaojiTs-f2a{
     left: map-get(lineBoxPosition(4, 3), 'left');
     top: map-get(lineBoxPosition(4, 3), 'top');
 
@@ -35,12 +35,12 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
   }
 
 
-  #alaoji-t4a{
+  #alaojiTs-t4a{
     left: map-get(lineBoxPosition(1, 2), 'left');
     top: map-get(lineBoxPosition(1, 2), 'top');
   }
 
-  #alaoji-a1k{
+  #alaojiTs-a1k{
     left: map-get(lineBoxPosition(1, 5), 'left');
     top: map-get(lineBoxPosition(1, 5), 'top');
 
@@ -48,7 +48,7 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
       @include hConnection(getLength(1));
     }
   }
-  #alaoji-a2k{
+  #alaojiTs-a2k{
     left: map-get(lineBoxPosition(2, 5), 'left');
     top: map-get(lineBoxPosition(2, 5), 'top');
 
@@ -57,7 +57,7 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
     }
   }
 
-  #alaoji-a23b{
+  #alaojiTs-a23b{
     left: map-get(lineBoxPosition(4, 4), 'left');
     top: map-get(lineBoxPosition(4, 4), 'top');
 
@@ -66,7 +66,7 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
     }
   }
 
-  #alaoji-a26b{
+  #alaojiTs-a26b{
     left: map-get(lineBoxPosition(4, 5), 'left');
     top: map-get(lineBoxPosition(4, 5), 'top');
 
@@ -75,12 +75,12 @@ $alaojiHeight: map-get(stationDimention(4,5), 'height');
     }
   }
 
-  #alaoji-a23w{
+  #alaojiTs-a23w{
     left: map-get(lineBoxPosition(3, 1), 'left');
     top: map-get(lineBoxPosition(3, 1), 'top');
   }
 
-  #alaoji-a24w{
+  #alaojiTs-a24w{
     left: map-get(lineBoxPosition(4, 1), 'left');
     top: map-get(lineBoxPosition(4, 1), 'top');
   }

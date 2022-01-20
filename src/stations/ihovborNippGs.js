@@ -6,6 +6,7 @@ export var ihovborNippGs = {
     gs: true,
     gsId: 'ihovborNippPs',
     has132: false,
+    integrated: true,
     lines: [
         {
             name: "h7v",
