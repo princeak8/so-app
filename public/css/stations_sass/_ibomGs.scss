@@ -7,12 +7,12 @@ $ibomGsHeight: map-get(stationDimention(3,2), 'height');
   top: $ibomGsTop;
   left: $ibomGsLeft;
 
-  #ibomGs-e21m{
+  #ibomGs-e22m{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top: map-get(lineBoxPosition(1, 1), 'top');
   }
 
-  #ibomGs-e22m{
+  #ibomGs-e21m{
     left: map-get(lineBoxPosition(1, 2), 'left');
     top: map-get(lineBoxPosition(1, 2), 'top');
   }
