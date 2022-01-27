@@ -64,6 +64,9 @@ function processData(data) {
 export default {
   components: { StationBox, PowerStationBox, LineBoxModal },
   mixins: [voltageDisplayMixin],
+  props: {
+    allStations: Array
+  },
   data() {
     return {
       stations: stations,
@@ -88,7 +91,8 @@ export default {
   computed: {
     ...mapState(['lineDetails', 'showOverlay', 'pStations']),
     updatedStations() {
-      let currStations = this.stations;
+      // let currStations = this.stations;
+      let currStations = this.allStations;
       return currStations;
     },
     updatedPowerStations() {
@@ -212,65 +216,65 @@ export default {
       localStorage.removeItem(STORAGE_KEY);
       this.$router.push(RouteEnum.LOGIN);
     },
-    async connect() {
-      const data = { token: 123 };
-      // const token = "53c297c89cc189222a23195411ec5431";
-      //const data = await this.get_token();
-      // console.log("token", data.token);
-      // const ADDR = `ws://localhost:3001/token=${data.token}`;
-      const ADDR = `${SOCKET_ADDR}token=${data.token}`;
-      this.ws = new WebSocket(ADDR);
-      this.ws.onmessage = (msg) => {
-        // console.log('msg ', msg)
-        this.connectTrials = 0;
-        const res = JSON.parse(msg.data);
-        this.connectObj = { id: res.id, connected: true }
-        //console.log(res.id);
-        //if(res.id=='alaoji') console.log(res);
-        this.mergeData(res)
-      };
-      this.ws.onerror = (error) => {
-        console.log('Error ', error)
-        this.connect()
-        // this.connectTrials = this.connectTrials + 1;
-        // console.log('connection trials ', this.connectTrials)
-        // if(this.connectTrials < 5) {
-        //   this.connect()
-        // } else {
-        //   this.$alert.error('Could not connect to the server, please check connection')
-        // }
-      }
-      this.ws.onclose = (event) => {
-        console.log("WebSocket is closed now.", event);
-        this.connect()
-      }
-    },
-    mergeData(res) {
-      const streamedStation = res
-      const getStation = this.stations.find(x => x.id === res.id)
-      // console.log('Get Station ', getStation.lines)
-      if(getStation) {
-        const stationLines = getStation.lines
-        const streamedStationLines = streamedStation.lines
-        const updatedStationLines = stationLines.filter((item) => {
-          const foundItem = streamedStationLines.find(x => x.id === item.id)
-          if(foundItem) {
-            item.transmissionData = foundItem.td
-            item.td = foundItem.td
-          }
-          return item
-        })
-        this.stations = this.stations.filter(x => {
+    // async connect() {
+    //   const data = { token: 123 };
+    //   // const token = "53c297c89cc189222a23195411ec5431";
+    //   //const data = await this.get_token();
+    //   // console.log("token", data.token);
+    //   // const ADDR = `ws://localhost:3001/token=${data.token}`;
+    //   const ADDR = `${SOCKET_ADDR}token=${data.token}`;
+    //   this.ws = new WebSocket(ADDR);
+    //   this.ws.onmessage = (msg) => {
+    //     // console.log('msg ', msg)
+    //     this.connectTrials = 0;
+    //     const res = JSON.parse(msg.data);
+    //     this.connectObj = { id: res.id, connected: true }
+    //     //console.log(res.id);
+    //     //if(res.id=='alaoji') console.log(res);
+    //     this.mergeData(res)
+    //   };
+    //   this.ws.onerror = (error) => {
+    //     console.log('Error ', error)
+    //     this.connect()
+    //     // this.connectTrials = this.connectTrials + 1;
+    //     // console.log('connection trials ', this.connectTrials)
+    //     // if(this.connectTrials < 5) {
+    //     //   this.connect()
+    //     // } else {
+    //     //   this.$alert.error('Could not connect to the server, please check connection')
+    //     // }
+    //   }
+    //   this.ws.onclose = (event) => {
+    //     console.log("WebSocket is closed now.", event);
+    //     this.connect()
+    //   }
+    // },
+    // mergeData(res) {
+    //   const streamedStation = res
+    //   const getStation = this.stations.find(x => x.id === res.id)
+    //   // console.log('Get Station ', getStation.lines)
+    //   if(getStation) {
+    //     const stationLines = getStation.lines
+    //     const streamedStationLines = streamedStation.lines
+    //     const updatedStationLines = stationLines.filter((item) => {
+    //       const foundItem = streamedStationLines.find(x => x.id === item.id)
+    //       if(foundItem) {
+    //         item.transmissionData = foundItem.td
+    //         item.td = foundItem.td
+    //       }
+    //       return item
+    //     })
+    //     this.stations = this.stations.filter(x => {
 
-          if(x.name === getStation.name) {
-            x.lines = updatedStationLines
-          }
-          return x
-        })
-        // console.log('Station line ', stationLines, 'StreamedLines ', streamedStationLines)
-        // console.log('Station line ', getStation, streamedStation)
-      }
-    },
+    //       if(x.name === getStation.name) {
+    //         x.lines = updatedStationLines
+    //       }
+    //       return x
+    //     })
+    //     // console.log('Station line ', stationLines, 'StreamedLines ', streamedStationLines)
+    //     // console.log('Station line ', getStation, streamedStation)
+    //   }
+    // },
     get_token: async () => {
       // let url = "http://localhost/so_app/public/api/v1/get_connection_token";
       let url = SOCKET_AUTH_ADDR;
@@ -295,12 +299,13 @@ export default {
     // console.log("p stations:", powerStations);
     console.log(this.showOverlay);
     //this.setPowerStations(this.powerStations);
-    this.connect();
-    // this.compareStationsValues()
-    // this.connectPower()
+
+    // this.connect();
+
     //console.log(this.pStations);
     this.checkTimeInterval()
   },
+  
 };
 </script>
 
