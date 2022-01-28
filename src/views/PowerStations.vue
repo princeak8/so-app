@@ -5,7 +5,7 @@
             <h4 style="margin-bottom:0px; margin-top:0px;">{{station.name}}</h4>
             <div style="display:flex; flex-direction: row; flex-wrap: wrap ">
                 <div class="unit col-md-2" v-for="unit in station.units" :class='[unitBgColor(unit)]'>
-                    <div class="unit-name">UNIT {{unit.name.toUpperCase()}}</div>
+                    <div v-if="unit.type && unit.type != 'TS'" class="unit-name">UNIT {{unit.name.toUpperCase()}}</div>
                         <div class="info-group">
                             <div class="unit-data watt">{{unit.powerData.mw}}MW</div>
                             <div class="unit-data volt">{{unit.powerData.mvar}}MX</div>
@@ -35,10 +35,17 @@ import LineBoxModal from '@/components/LineBoxModal'
 
 import { mapState } from 'vuex';
 
+const defaultData = {
+    mw: 0,
+    mx: 0,
+    status: false
+};
+
 export default {
   data() {
     return {
       //powerStations: this.powerStations
+      afamVi: defaultData
     };
   },
   computed: {
@@ -69,13 +76,30 @@ export default {
       localStorage.removeItem(STORAGE_KEY);
       this.$router.push(RouteEnum.LOGIN);
     },
+    getTotalPsLoad(station) {
+        if(station.units && (station.units.length > 0)) {
+            let mw = 0;
+            let mx = 0;
+            station.units.forEach((unit) => {
+                mw += unit.powerData.mw;
+                mx += unit.powerData.mvar;
+            })
+        }
+        return {mw, mx};
+    },
+    afamVi(station, ps=1) {
+      if(ps==1) {
+          let res = this.getTotalPsLoad(station);
+          this.afamVi = {...this.afamVi, mw:res.mw, mx:res.mx};
+      }
+    }
   },
   mounted() {
     // console.log("p stations:", powerStations);
     // console.log(this.showOverlay);
     // this.connect();
     // this.connectPower()
-    console.log(this.pStations);
+    console.log('power stations', this.pStations);
     
   },
 };
