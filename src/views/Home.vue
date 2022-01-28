@@ -93,6 +93,7 @@ export default {
     },
     updatedPowerStations() {
       let powerStations = this.pStations;
+      console.log('power stations ',powerStations);
       return powerStations;
     }
   },

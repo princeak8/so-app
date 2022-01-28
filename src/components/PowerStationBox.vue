@@ -14,7 +14,8 @@
                       <div style="display:flex; flex-direction: row; flex-wrap: wrap ">
                         <div class="unit green" v-for="unit in units">
                             <h2 v-if="unit.station" class="center">{{unit.station}}</h2>
-                            <div class="unit-name center">UNIT {{unit.name.toUpperCase()}}</div>
+                            <div v-if="((!unit.type || unit.type != 'TS') || (unit.type && unit.type != 'TS'))" class="unit-name center">UNIT {{unit.name.toUpperCase()}}</div>
+                            <div v-if="unit.type && unit.type == 'TS'" class="unit-name center">LINE {{unit.name.toUpperCase()}}</div>
                             <div class="info-group">
                                 <div class="unit-data watt">{{unit.powerData.mw}}MW</div>
                                 <div class="unit-data volt">{{unit.powerData.mvar}}MX</div>
