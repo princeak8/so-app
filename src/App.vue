@@ -52,6 +52,7 @@ export default {
         }
         this.ws.onclose = (event) => {
           console.log("WebSocket is closed now.", event);
+          this.connectPower();
         }
       },
       mergePowerStationData(res) {
