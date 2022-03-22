@@ -93,7 +93,7 @@ export default {
     },
     updatedPowerStations() {
       let powerStations = this.pStations;
-      console.log('power stations ',powerStations);
+      //console.log('power stations ',powerStations);
       return powerStations;
     }
   },
@@ -227,7 +227,7 @@ export default {
         const res = JSON.parse(msg.data);
         this.connectObj = { id: res.id, connected: true }
         //console.log(res.id);
-        //if(res.id=='alaoji') console.log(res);
+        console.log(res);
         this.mergeData(res)
       };
       this.ws.onerror = (error) => {

@@ -50,5 +50,11 @@ export var markudi = {
             ],
             td
         }
+    ],
+    mappings:   [
+        {
+            stationId: 'ugwuaji',
+            lines: ['u1a', 'u2a']
+        }
     ]
 };
