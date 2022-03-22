@@ -48,7 +48,7 @@ export default {
         LineBox, MainBox
     },
     mounted() {
-        console.log('id ',this.id)
+        //console.log('id ',this.id)
         //console.log('lines: ', this.lines);
     },
     props: ["name", "id", "lines", "station", "stations", "connectObj"],
