@@ -5,14 +5,14 @@ export var markudi = {
     id: "markudi",
     lines: [
         {
-            name: "a1s",
-            id: "a1s",
+            name: "a1f",
+            id: "a1f",
             connectionRoot: false,
             td
         },
         {
-            name: "a2s",
-            id: "a2s",
+            name: "a2f",
+            id: "a2f",
             connectionRoot: false,
             td
         },
