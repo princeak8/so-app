@@ -7,11 +7,11 @@ $markudiHeight: map-get(stationDimention(3,2), 'height');
   top: $markudiTop;
   left: $markudiLeft;
 
-  #markudi-a1s{
+  #markudi-a1f{
     left: map-get(lineBoxPosition(1, 1), 'left');
     top:  map-get(lineBoxPosition(1, 1), 'top');
   }
-  #markudi-a2s{
+  #markudi-a2f{
     left: map-get(lineBoxPosition(1, 2), 'left');
     top:  map-get(lineBoxPosition(1, 2), 'top');
   }
