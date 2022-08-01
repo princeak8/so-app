@@ -118,5 +118,28 @@ export var jebba = {
             ],
             td
         }
+    ],
+
+    mappings:   [
+        {
+            stationId: 'jebbaGs',
+            lines: ['b8j', 'b9j']
+        },
+        {
+            stationId: 'kainjiTs',
+            lines: ['k1j', 'k2j']
+        },
+        {
+            stationId: 'shiroroGs',
+            lines: ['j3r', 'j7r']
+        },
+        {
+            stationId: 'ganmo',
+            lines: ['j3g']
+        },
+        {
+            stationId: 'oshogbo',
+            lines: ['j1h', 'j2h']
+        }
     ]
 };
