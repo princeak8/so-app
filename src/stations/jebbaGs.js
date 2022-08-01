@@ -41,5 +41,12 @@ export var jebbaGs = {
             ],
             td
         }
+    ],
+
+    mappings:   [
+        {
+            stationId: 'jebbaTs',
+            lines: ['b8j', 'b9j']
+        }
     ]
 };

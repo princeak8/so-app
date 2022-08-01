@@ -214,6 +214,7 @@ export default {
       this.$router.push(RouteEnum.LOGIN);
     },
     async connect() {
+      console.log('connect');
       const data = { token: 123 };
       // const token = "53c297c89cc189222a23195411ec5431";
       //const data = await this.get_token();
@@ -227,7 +228,7 @@ export default {
         const res = JSON.parse(msg.data);
         this.connectObj = { id: res.id, connected: true }
         //console.log(res.id);
-        console.log(res);
+        console.log('res: ',res);
         this.mergeData(res)
       };
       this.ws.onerror = (error) => {
