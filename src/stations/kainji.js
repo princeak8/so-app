@@ -85,5 +85,16 @@ export var kainji = {
             ],
             td
         }
+    ],
+
+    mappings:   [
+        {
+            stationId: 'kebbi',
+            lines: ['k3r']
+        },
+        {
+            stationId: 'fakun',
+            lines: ['k1f']
+        }
     ]
 };
