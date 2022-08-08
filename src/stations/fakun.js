@@ -21,5 +21,12 @@ export var fakun = {
             ],
             td
         }
+    ],
+
+    mappings:   [
+        {
+            stationId: 'kainjiTs',
+            lines: ['k1f']
+        }
     ]
 };

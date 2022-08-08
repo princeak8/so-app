@@ -22,5 +22,12 @@ export var kebbi = {
             ],
             td
         }
+    ],
+
+    mappings:   [
+        {
+            stationId: 'kainjiTs',
+            lines: ['k3r']
+        }
     ]
 }
