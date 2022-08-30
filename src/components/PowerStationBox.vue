@@ -118,7 +118,8 @@ export default {
         UnitBox
     },
     mounted() {
-        //console.log('lines: ', this.lines);
+        // console.log('name: ', this.name);
+        // console.log('units: ', this.units);
     },
     props: ["name", "ids", "units"],
     data() {

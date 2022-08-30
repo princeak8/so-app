@@ -77,6 +77,7 @@ export default {
       this.$router.push(RouteEnum.LOGIN);
     },
     getTotalPsLoad(station) {
+        //console.log('power station', station);
         if(station.units && (station.units.length > 0)) {
             let mw = 0;
             let mx = 0;

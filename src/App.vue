@@ -68,7 +68,12 @@ export default {
             if(foundItem) {
               item.powerData = foundItem.gd;
               item.pd = foundItem.gd
+              if(foundItem.td) {
+                item.powerData = foundItem.td;
+                item.pd = foundItem.td;
+              }
             }
+            //console.log('item: ', item.pd); 
             return item
           })
           this.powerStations = this.powerStations.filter(x => {
