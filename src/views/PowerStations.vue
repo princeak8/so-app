@@ -67,6 +67,9 @@ export default {
   },
   methods: {
       unitBgColor(unit) {
+          if(!unit.powerData) {
+            console.log('unit: ', unit);
+          }
           return (unit.powerData && unit.powerData.mw && Math.abs(unit.powerData.mw) > 0) ? 'green' : 'grey';
       },
     logOut() {
