@@ -3,6 +3,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import PowerStations from "../views/PowerStations.vue";
+import PowerStationsUnits from "../views/PowerStationsUnits.vue";
 import Login from "../views/Login.vue";
 
 Vue.use(VueRouter);
@@ -11,6 +12,7 @@ export const RouteEnum = Object.freeze({
   LOGIN: { path: "/login", name: "Login" },
   HOME: { path: "/", name: "Home" },
   POWER_STATIONS: { path: "/power_stations", name: "Power_Stations" },
+  POWER_STATIONS_UNITS: { path: "/power_stations_units", name: "Power_Stations" },
 });
 
 const routes = [
@@ -40,6 +42,13 @@ const routes = [
       // } else {
       //   next(RouteEnum.LOGIN);
       // }
+    },
+  },
+  {
+    ...RouteEnum.POWER_STATIONS_UNITS,
+    component: PowerStationsUnits,
+    beforeEnter(to, from, next) {
+      next();
     },
   },
   {

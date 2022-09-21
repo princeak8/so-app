@@ -11,6 +11,9 @@ export default new Vuex.Store({
     showOverlay: false,
     lineDetails: null,
     pStations: [],
+    stations: [],
+    connected: false,
+    connectionLostWaitPeriod: 20
   },
   mutations,
   actions,

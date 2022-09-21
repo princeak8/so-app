@@ -7,7 +7,7 @@ import VModal from "vue-js-modal";
 import '@/utils/filters';
 import '@/utils/notifications';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true; //false
 
 Vue.use(VModal);
 

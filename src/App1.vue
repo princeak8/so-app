@@ -16,10 +16,6 @@ export default {
   data() {
     return {
       powerStations: powerStations,
-      addedStations:  [
-                        'odukpaniGs', 'ikotEkpene', 'afamViTs', 'omotosho1', 'omotosho2', 'delta2', 'delta3', 'omokuPs1', 'dadinKowaGs', 'phMain', 'alaoji', 
-                        'kainjiTs', 'olorunsogo1', 'olorunsogoPhase1Gs', 'parasEnergyPs', 'ekim', 'eket'
-                      ]
     };
   },
   computed: {
@@ -37,14 +33,7 @@ export default {
     // 
   },
   methods: {
-    ...mapActions(['setPowerStations', 'addPowerStation', 'updatePowerStation', 'toggleConnected']),
-
-      wait(ms) {
-          return new Promise((resolve) => {
-              console.log('waiting '+(ms/1000)+ ' Secs');
-              setTimeout(resolve, ms);
-          });
-      },
+    ...mapActions(['setPowerStations', 'updatePowerStation']),
 
       async connectPower() {
         const data = {token: 123};
@@ -61,28 +50,41 @@ export default {
           console.log('Error ', error)
           this.connectPower()
         }
-        this.ws.onclose = async (event) => {
+        this.ws.onclose = (event) => {
           console.log("WebSocket is closed now.", event);
-          await this.wait(5000);
           this.connectPower();
         }
       },
       mergePowerStationData(res) {
-        //console.log('entry',res.id);
-          let n=1;
-        //   if(res.id=='odukpaniGs') console.log('count'+n, res);
+        this.updatePowerStation(res);
+        const streamedPowerStation = res
+        const getPowerStation = this.powerStations.find(x => x.id === res.id)
+        if(getPowerStation) {
+          const powerStationUnits = getPowerStation.units
+          const streamedStationUnits = streamedPowerStation.units
           
-        //   //var streamedPowerStation = res
-          //if(res.id=='omotosho2') console.log(res);
-          //console.log(res.id);
-          const getPowerStation = this.pStations.find(x => x.id === res.id)
-          
-          if(!getPowerStation && this.addedStations.includes(res.id)) {
-              //console.log(res.id);
-              this.addPowerStation({...res});
-          }else{
-              this.updatePowerStation({...res});
-          }
+          const updatedPowerStationUnits = powerStationUnits.filter((item) => {
+            const foundItem = streamedStationUnits.find(x => x.id === item.id)
+            if(foundItem) {
+              item.powerData = foundItem.gd;
+              item.pd = foundItem.gd
+              if(foundItem.td) {
+                item.powerData = foundItem.td;
+                item.pd = foundItem.td;
+              }
+            }
+            //console.log('item: ', item.pd); 
+            return item
+          })
+          this.powerStations = this.powerStations.filter(x => {
+            if(x.name === getPowerStation.name) {
+              x.units = updatedPowerStationUnits
+            }
+            return x
+          })
+          // console.log('Updated Units ', this.powerStations)
+        }
+
       },
   },
   mounted() {

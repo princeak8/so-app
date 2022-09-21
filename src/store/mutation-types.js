@@ -15,4 +15,10 @@ export const SET_LINE_DETAILS = "set_line_details";
 export const TOGGLE_MODAL = "toggle_modal";
 
 export const SET_POWER_STATIONS = "set_power_stations";
+export const ADD_POWER_STATION = "add_power_station";
 export const UPDATE_POWER_STATION = "update_power_station";
+
+export const SET_STATIONS = "set_stations";
+export const UPDATE_STATION = "update_station";
+
+export const TOGGLE_CONNECTED = "toggle_connected";
