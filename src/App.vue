@@ -18,7 +18,7 @@ export default {
       powerStations: powerStations,
       addedStations:  [
                         'odukpaniGs', 'ikotEkpene', 'afamViTs', 'omotosho1', 'omotosho2', 'delta2', 'delta3', 'omokuPs1', 'dadinKowaGs', 'phMain', 'alaoji', 
-                        'kainjiTs', 'olorunsogo1', 'olorunsogoPhase1Gs', 'parasEnergyPs', 'ekim', 'eket'
+                        'kainjiTs', 'olorunsogo1', 'olorunsogoPhase1Gs', 'parasEnergyPs', 'ekim', 'eket', 'okpaiGs', 'deltaGs'
                       ]
     };
   },
@@ -68,7 +68,7 @@ export default {
         }
       },
       mergePowerStationData(res) {
-        //console.log('entry',res.id);
+        // console.log('entry',res.id);
           let n=1;
         //   if(res.id=='odukpaniGs') console.log('count'+n, res);
           

@@ -1,13 +1,14 @@
 <template>
     <tr>
         <td>{{sn}}</td>
-        <td>Okpai</td>
+        <td>DELTA-4</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
         <td :class="statusColor">{{statusName}}</td>
         <!-- {{station}} -->
-        <!-- {{this.connected}}
+        <!-- {{connected}}
         {{connectionLostTime}} -->
+        
     </tr>
 </template>
 
@@ -16,10 +17,10 @@
 </style>
 
 <script>
-
 import { mapActions, mapState } from 'vuex';
 
 export default {
+  
   props: ['station', 'connected', 'sn'],
   data() {
     return {
@@ -27,41 +28,32 @@ export default {
         connectionLostTime: '',
     };
   },
-
-  //  {
-  //    "id":"okpaiGs","t":"19:21:40", 
-  //    "lines":[
-  //      {
-  //        "id":"k1t","td":{"mw":143.03,"A":257.21,"V":337.37,"mvar":-46.28}},{"id":"k2t","td":{"mw":142.75,"A":256.67,"V":337.85,"mvar":-46.43}}
-  //      ]
-  //  }
-    
   computed: {
-      ...mapState(['connectionLostWaitPeriod']),
+    ...mapState(['connectionLostWaitPeriod']),
       pData() {
-          //console.log('test', this.station);
+            //console.log('test', this.station);
             this.setConnectionLostTime();
-          let mw = 0;
-          let mvar = 0;
-          let kvArr = [];
-          let kv = 0;
-          let statusCheck = '';
+            let mw = 0;
+            let mvar = 0;
+            let kvArr = [];
+            let kv = 0;
+            let statusCheck = '';
             if(this.station.lines) {
-                statusCheck = '';
                 this.station.lines.forEach((line) => {
-                    //console.log(line);
-                    mw += this.getPositiveNumber(line.td.mw);
-                    mvar += this.getPositiveNumber(line.td.mvar);
-                    if(statusCheck == '') statusCheck = line.td.V;
+                    // if(this.idArr.includes(line.id)) {
+                        mw += this.getPositiveNumber(line.gd.mw);
+                        mvar += this.getPositiveNumber(line.gd.mvar);
+                        if(statusCheck == '') statusCheck = line.gd.V;
+                    // }
                 })
             }
-            
+
             mw = Object.is(NaN, mw) ? 0 : (mw.toFixed(2) < 0) ? (mw.toFixed(2) * -1) : mw.toFixed(2);
             mvar = Object.is(NaN, mvar) ? 0 : (mvar.toFixed(2) < 0) ? (mvar.toFixed(2) * -1) : mvar.toFixed(2);
-            
+
             if(this.connected===true || statusCheck != '') this.status = 1;
             let totalData = { mw, mvar };
-            this.$emit('total', 'Okpai', totalData);
+            this.$emit('total', 'Delta4', totalData);
             return totalData;
       },
       statusName() {
@@ -88,14 +80,13 @@ export default {
           this.connectionLostTime = (dt.getTime() / 1000) + this.connectionLostWaitPeriod;
       },
       checkConnectionWaitingPeriod() {
-          //console.log('check waiting');
           var dt = new Date();
           this.status = ((dt.getTime() / 1000) < this.connectionLostTime) ? 1 : 0;
+          //console.log(this.status);
       }
   },
   mounted() {
       this.setConnectionLostTime();
-      //console.log('station: ',this.station)
   }
 };
 </script>

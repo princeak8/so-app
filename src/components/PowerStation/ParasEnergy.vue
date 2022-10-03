@@ -9,6 +9,7 @@
         <!-- {{this.connected}}
         {{connectionLostTime}} -->
     </tr>
+    <!-- {"id":"parasEnergyPs","t":"4:9:14", "lines":[{"id":"132cb","gd":{"mw":35.62,"A":168.60,"V":129.52,"mvar":12.48}}]} -->
 </template>
 
 <style scoped>

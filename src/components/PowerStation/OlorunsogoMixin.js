@@ -37,6 +37,21 @@ export default {
                     Total = R1W + R2W
                     OlorunsogoNIPP = Total - OlorunsogoGas
                 */
+            //    {"id":"olorunsogoPhase1Gs","t":"4:23:9", 
+            //         "lines":[
+            //             {"id":"tr3","gd":{"mw":33.00,"A":62.90,"V":314.65,"mvar": 9.25}},
+            //             {"id":"tr4","gd":{"mw":33.92,"A":65.60,"V":314.25,"mvar":11.20}},
+            //             {"id":"r1w","td":{"mw":164.94,"A":458.58,"V":224.74,"mvar":32.75}},
+            //             {"id":"r2a","td":{"mw":-175.59,"A":330.56,"V":314.79,"mvar":-37.84}}]
+            //     }
+
+            // {
+            //     "id":"olorunsogo1","t":"4:26:44", 
+            //     "lines":[
+            //             {"id":"tr1","gd":{"mw": 0.00,"A": 0.00,"V": 0.00,"mvar": 0.00}},
+            //             {"id":"tr2","gd":{"mw": 0.00,"A": 0.00,"V": 0.00,"mvar": 0.00}}
+            //         ]
+            // }
 
                 if(this.station.olorunsogo1.lines) {
                         this.station.olorunsogo1.lines.forEach((line) => { 

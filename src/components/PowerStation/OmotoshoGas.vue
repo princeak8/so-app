@@ -54,6 +54,7 @@ export default {
           /*
 {"id":"omotosho2","t":"15:17:53", "lines":[{"id":"tr3","gd":{"mw": 0.00,"A": 0.00,"V":329.04,"mvar": 0.00}},{"id":"tr4","gd":{"mw":30.04,"A":52.34,"V":332.94,"mvar": 2.41}}]}
           */
+// {"id":"omotosho2","t":"4:17:48", "lines":[{"id":"tr3","gd":{"mw":-30.21,"A":53.13,"V":329.06,"mvar":-1.90}},{"id":"tr4","gd":{"mw": 0.00,"A": 0.00,"V":333.02,"mvar": 0.00}}]}
             if(this.station.omotosho2.lines) {
                     this.station.omotosho2.lines.forEach((line) => {
                         omotosho2Mw += (parseFloat(line.gd.mw) > 0) ? parseFloat(line.gd.mw) : 0;
