@@ -22,7 +22,7 @@ export default {
   data() {
     return {
         status: -1,
-        connectionLostTime: '',
+        connectionLostTime: 0,
     };
   },
   computed: {
@@ -65,7 +65,7 @@ export default {
           switch(this.status) {
             case 0 : return 'Connection Lost'; break;
             case 1 : return 'Connected'; break;
-            case -1 : return 'Not Connected'; break; 
+            case -1 : return 'Awaiting Connection'; break; 
           }
       },
       statusColor() {
@@ -85,9 +85,11 @@ export default {
           this.connectionLostTime = (dt.getTime() / 1000) + this.connectionLostWaitPeriod;
       },
       checkConnectionWaitingPeriod() {
-          //console.log('waiting from azura');
-          var dt = new Date();
-          this.status = ((dt.getTime() / 1000) < this.connectionLostTime) ? 1 : 0;
+          if(this.status > -1) {
+                var dt = new Date();
+                this.status = ((dt.getTime() / 1000) < this.connectionLostTime) ? 1 : 0;
+                //console.log(this.status);
+          }
       }
   },
   mounted() {

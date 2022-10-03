@@ -24,7 +24,7 @@ export default {
   data() {
     return {
         status: -1,
-        connectionLostTime: '',
+        connectionLostTime: 0,
     };
   },
     // {"id":"afamIv_vPs","t":"15:20:24", 
@@ -74,7 +74,7 @@ export default {
           switch(this.status) {
             case 0 : name = 'Connection Lost'; break;
             case 1 : name = 'Connected'; break;
-            case -1 : name = 'Not Connected'; break; 
+            case -1 : name = 'Awaiting Connection'; break; 
           }
           // console.log('AfamIV Status Name: ', name);
           return name;
@@ -96,9 +96,11 @@ export default {
           this.connectionLostTime = (dt.getTime() / 1000) + this.connectionLostWaitPeriod;
       },
       checkConnectionWaitingPeriod() {
-          //console.log('check waiting');
-          var dt = new Date();
-          this.status = ((dt.getTime() / 1000) < this.connectionLostTime) ? 1 : 0;
+          if(this.status > -1) {
+                var dt = new Date();
+                this.status = ((dt.getTime() / 1000) < this.connectionLostTime) ? 1 : 0;
+                //console.log(this.status);
+          }
       }
   },
   mounted() {

@@ -1,13 +1,14 @@
 <template>
-    <div style="margin-right:auto; margin-left: 20%">
+    <div style="margin-right:auto; margin-left: 5%">
         <div style="height: 2em; display: flex; flex-direction: horizontal">
             <!-- <router-link to="/" class="link">Home</router-link> -->
             <router-link to="/power_stations" class="active link">Power Station Table</router-link>
             <router-link to="/power_stations_units" class="link">Power Station Units</router-link>
         </div>
         <h1>Power Stations</h1>
-            <table border="1">
+            <table border="1" style="width:50%">
                 <thead>
+                    <th>S/N</th>
                     <th>Station</th>
                     <th>Total Mw</th>
                     <th>Total Mvar</th>  
@@ -16,7 +17,7 @@
                     <component 
                         v-for="(station, i) in stations" 
                         :is="station.name" 
-                        :sn="i++" 
+                        :sn="++i" 
                         :station="station.station" 
                         :connected="connected" 
                         @total="station.totalFn" 
@@ -365,8 +366,9 @@ export default {
 
         async checkConnectionWaitingPeriod()
         {
-                await this.wait(20000);
+                //await this.wait(20000);
                 this.stations.forEach((station) => {
+                  // console.log(this.$refs);
                     this.$refs[station.name][0].checkConnectionWaitingPeriod();
                 })
                 await this.wait(5000);
