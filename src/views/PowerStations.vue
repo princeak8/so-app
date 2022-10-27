@@ -6,12 +6,14 @@
             <router-link to="/power_stations_units" class="link">Power Station Units</router-link> --
         </div> -->
         <h1 style="margin:2px; padding:0">Power Stations</h1>
-            <table border="1" style="width:30%; font-weight: bold;">
+            <table border="1" style="width:40%; font-weight: bold;">
                 <thead>
                     <th>S/N</th>
                     <th>Station</th>
-                    <th>Total Mw</th>
-                    <th>Total Mvar</th>  
+                    <th>POWER (Mw)</th>
+                    <th>REACTIVE POWER (Mvar)</th>
+                    <th>VOLTAGE (KV)</th>  
+                    <th>STATUS</th>
                 </thead>
                 <tbody>
                     <component 

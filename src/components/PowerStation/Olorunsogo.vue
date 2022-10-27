@@ -5,6 +5,7 @@
             <td>Olorunsogo Gas</td>
             <td>{{pData.olorunsogoGasMw}}Mw</td>
             <td>{{pData.olorunsogoGasMvar}}Mx</td>
+            <td>{{pData.kvGas}}KV</td>
             <td :class="statusColor">{{statusName}}</td> 
             <!-- {{connected}}
             {{connectionLostTime}} -->
@@ -90,6 +91,7 @@ export default {
                     this.station.olorunsogo1.lines.forEach((line) => { 
                         olorunsogo1Mw += (parseFloat(line.gd.mw) > 0) ? parseFloat(line.gd.mw) : (parseFloat(line.gd.mw) * -1);
                         olorunsogo1Mvar += (parseFloat(line.gd.mvar) > 0) ? parseFloat(line.gd.mvar) : (parseFloat(line.gd.mvar) * -1);
+                        if(line.gd.V > 0) kv = line.gd.V
                         if(statusCheck == '') statusCheck = line.gd.V;
                     })
                     olorunsogo1Mw = Object.is(NaN, olorunsogo1Mw) ? 0 : (olorunsogo1Mw < 0) ? (olorunsogo1Mw * -1) : olorunsogo1Mw;
@@ -103,9 +105,11 @@ export default {
                             olorunsogo12Mw += (parseFloat(line.gd.mw) > 0) ? parseFloat(line.gd.mw) : (parseFloat(line.gd.mw) * -1);
                             olorunsogo12Mvar += (parseFloat(line.gd.mvar) > 0) ? parseFloat(line.gd.mvar) : (parseFloat(line.gd.mvar) * -1);
                             if(statusCheck == '') statusCheck = line.gd.V;
+                            if(line.gd.V > 0) kv = line.gd.V
                         }else{
                             olorunsogo2Mw += (parseFloat(line.td.mw) > 0) ? parseFloat(line.td.mw) : (parseFloat(line.td.mw) * -1);
                             olorunsogo2Mvar += (parseFloat(line.td.mvar) > 0) ? parseFloat(line.td.mvar) : (parseFloat(line.td.mvar) * -1);
+                            if(line.td.V > 0) kv = line.td.V
                             if(statusCheck == '') statusCheck = line.td.V;
                         }
                     })

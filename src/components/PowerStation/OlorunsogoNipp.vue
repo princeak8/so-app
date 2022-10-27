@@ -4,6 +4,7 @@
             <td>Olorunsogo NIPP</td>
             <td>{{pData.olorunsogoNippMw}}Mw</td>
             <td>{{pData.olorunsogoNippMvar}}Mx</td>
+            <td>{{pData.kvNipp}}KV</td>
             <td :class="statusColor">{{statusName}}</td> 
             <!-- {{connected}}
             {{connectionLostTime}} -->

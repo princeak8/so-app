@@ -4,6 +4,7 @@
         <td>EGBIN (STEAM)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
+        <td>{{pData.kv}}KV</td>
         <td :class="statusColor">{{statusName}}</td>
         <!-- {{station}} -->
         <!-- {{this.connected}}
@@ -61,6 +62,7 @@ export default {
                     mw += this.getPositiveNumber(unit.powerData.mw);
                     // console.log('mwss', mw);
                     mvar += this.getPositiveNumber(unit.powerData.mvar);
+                    if(unit.powerData.V > 0) kv = unit.powerData.V
                     if(statusCheck == '') statusCheck = unit.powerData.V;
                 })
             }
@@ -72,7 +74,7 @@ export default {
             //console.log('kv',kvArr);
             //kva = Object.is(NaN, kva) ? 0 : kva.toFixed(2);
             if(this.connected===true || statusCheck != '') this.status = 1;
-            let totalData = { mw, mvar };
+            let totalData = { mw, mvar, kv };
             this.$emit('total', 'Egbin', totalData);
             return totalData;
       },

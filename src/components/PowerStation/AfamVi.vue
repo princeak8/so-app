@@ -4,6 +4,7 @@
         <td>AFAM VI (GAS)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
+        <td>{{pData.kv}}KV</td>
         <td :class="statusColor">{{statusName}}</td>
         <!-- {{station}} -->
         <!-- {{this.connected}}
@@ -43,6 +44,7 @@ export default {
                     //console.log(line);
                     mw += this.getPositiveNumber(line.td.mw);
                     mvar += this.getPositiveNumber(line.td.mw);
+                    if(line.td.V > 0) kv = line.td.V
                     if(statusCheck == '') statusCheck = line.td.V;
                 })
             }
@@ -58,7 +60,7 @@ export default {
                 this.status = 1;
                 //console.log('status changed to 1');
             }
-            let totalData = { mw, mvar };
+            let totalData = { mw, mvar, kv };
             this.$emit('total', 'AfamVI', totalData);
             return totalData;
       },

@@ -27,7 +27,8 @@ export default {
                 let olorunsogo2Mw = 0;
                 let olorunsogo2Mvar = 0;
                 let kvArr = [];
-                let kv = 0;
+                let kvGas = 0;
+                let kvNipp
                 let statusCheck = '';
 
                 /*
@@ -57,6 +58,7 @@ export default {
                         this.station.olorunsogo1.lines.forEach((line) => { 
                             olorunsogo1Mw += this.getPositiveNumber(line.gd.mw);
                             olorunsogo1Mvar += this.getPositiveNumber(line.gd.mvar);
+                            if(line.gd.V > 0) kvGas = line.gd.V
                             if(statusCheck == '') statusCheck = line.gd.V;
                         })
                         olorunsogo1Mw = Object.is(NaN, olorunsogo1Mw) ? 0 : (olorunsogo1Mw < 0) ? (olorunsogo1Mw * -1) : olorunsogo1Mw;
@@ -69,10 +71,12 @@ export default {
                             if(line.id == 'tr3' || line.id == 'tr4') {
                                 olorunsogo12Mw += this.getPositiveNumber(line.gd.mw);
                                 olorunsogo12Mvar += this.getPositiveNumber(line.gd.mvar);
+                                if(line.gd.V > 0) kvGas = line.gd.V
                                 if(statusCheck == '') statusCheck = line.gd.V;
                             }else{
                                 olorunsogo2Mw += this.getPositiveNumber(line.td.mw);
                                 olorunsogo2Mvar += this.getPositiveNumber(line.td.mvar);
+                                if(line.td.V > 0) kvNipp = line.td.V
                                 if(statusCheck == '') statusCheck = line.td.V;
                             }
                         })
@@ -112,7 +116,7 @@ export default {
                 let totalNippData = { mw: olorunsogoNippMw, mvar: olorunsogoNippMvar };
                 this.$emit('total', 'OlorunsogoGas', totalGasData);
                 this.$emit('total', 'OlorunsogoNipp', totalNippData);
-                return {olorunsogoGasMw, olorunsogoGasMvar, olorunsogoNippMw, olorunsogoNippMvar};
+                return {olorunsogoGasMw, olorunsogoGasMvar, olorunsogoNippMw, olorunsogoNippMvar, kvGas, kvNipp};
         },
         statusName() {
             switch(this.status) {

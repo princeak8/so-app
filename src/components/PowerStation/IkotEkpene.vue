@@ -36,6 +36,7 @@ export default {
                     if((line.id=='d1k') || (line.id=='d2k')) {
                         mw += parseFloat(line.td.mw);
                         mvar += parseFloat(line.td.mvar);
+                        if(line.td.V > 0) kv = line.td.V
                         if(statusCheck == '') statusCheck = line.td.V;
                     }
                 })

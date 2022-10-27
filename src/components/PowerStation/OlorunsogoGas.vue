@@ -4,6 +4,7 @@
             <td>OLORUNSOGO (GAS)</td>
             <td>{{pData.olorunsogoGasMw}}Mw</td>
             <td>{{pData.olorunsogoGasMvar}}Mx</td>
+            <td>{{pData.kvGas}}KV</td>
             <td :class="statusColor">{{statusName}}</td> 
             <!-- {{connected}}
             {{connectionLostTime}} -->

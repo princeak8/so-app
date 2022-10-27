@@ -4,6 +4,7 @@
         <td>IBOM POWER (GAS)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
+        <td>{{pData.kv}}KV</td>
         <td :class="statusColor">{{statusName}}</td>
         <!-- {{station}}  -->
         <!-- {{iStation}}  -->
@@ -50,6 +51,7 @@ export default {
                     //console.log(line);
                     eketMw += this.getPositiveNumber(line.td.mw);
                     eketMvar += this.getPositiveNumber(line.td.mvar);
+                    if(line.td.V > 0) kv = line.td.V
                     if(statusCheckEket == '') statusCheckEket = line.td.V;
                 })
                 eketMw = Object.is(NaN, eketMw) ? 0 : (eketMw < 0) ? (eketMw * -1) : eketMw;
@@ -63,6 +65,7 @@ export default {
                         //console.log('ekim: ', parseFloat(line.td.mw));
                     ekimMw += parseFloat(line.td.mw);
                     ekimMvar += parseFloat(line.td.mvar);
+                    if(line.td.V > 0) kv = line.td.V
                     if(statusCheckEkim == '') statusCheckEkim = line.td.V;
                 })
                 ekimMw = Object.is(NaN, ekimMw) ? 0 : (ekimMw < 0) ? (ekimMw * -1) : ekimMw;
@@ -72,13 +75,14 @@ export default {
           mvar = eketMvar + ekimMvar; 
           mw = mw.toFixed(2);
           mvar = mvar.toFixed(2);
+
             //kv = this.averageVoltage(kvArr);
             //console.log('kv',kvArr);
             //kva = Object.is(NaN, kva) ? 0 : kva.toFixed(2);
             if(this.connected===true || (statusCheckEket != '' || statusCheckEkim != '')) this.status = 1;
             // console.log('statusCheckEkim', statusCheckEkim);
             // console.log('status', this.status);
-            let totalData = { mw, mvar };
+            let totalData = { mw, mvar, kv };
             this.$emit('total', 'Ibom', totalData);
             return totalData;
       },

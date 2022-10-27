@@ -4,6 +4,7 @@
         <td>SAPELE NIPP (GAS)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
+        <td>{{pData.kv}}KV</td>
         <td :class="statusColor">{{statusName}}</td>
         <!-- {{station}} -->
     </tr>
@@ -44,6 +45,7 @@ export default {
                         //console.log('mw', unit.powerData.mw);
                         mw += this.getPositiveNumber(unit.powerData.mw);
                         mvar += this.getPositiveNumber(unit.powerData.mvar);
+                        if(unit.powerData.V > 0) kv = unit.powerData.V
                         if(statusCheck == '') statusCheck = unit.powerData.V;
                     }
                 })
@@ -54,7 +56,7 @@ export default {
             mvar = Object.is(NaN, mvar) ? 0 : (mvar.toFixed(2) < 0) ? (mvar.toFixed(2) * -1) : mvar.toFixed(2);
             
             if(this.connected===true || statusCheck != '') this.status = 1;
-            let totalData = { mw, mvar };
+            let totalData = { mw, mvar, kv };
             this.$emit('total', 'SapeleNipp', totalData);
             return totalData;
       },

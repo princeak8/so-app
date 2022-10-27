@@ -4,6 +4,7 @@
         <td><b>GEREGU NIPP (GAS)</b></td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
+        <td>{{pData.kv}}KV</td>
         <td :class="statusColor">{{statusName}}</td>
         <!-- {{station}} -->
     </tr>
@@ -46,6 +47,7 @@ export default {
                         //console.log('mw', unit.powerData.mw);
                         mwTs += this.getPositiveNumber(unit.powerData.mw);
                         mvarTs += this.getPositiveNumber(unit.powerData.mvar);
+                        if(unit.powerData.V > 0) kv = unit.powerData.V
                         // kv = this.getPositiveNumber(unit.powerData.V);
                     }
                     if(unit.station == 'Geregu Power Station') {
@@ -67,7 +69,7 @@ export default {
             mw = (mw.toFixed(2) < 0) ?  (mw.toFixed(2) * -1) : mw.toFixed(2);
             mvar = (mvar.toFixed(2) < 0) ? (mvar.toFixed(2) * -1) : mvar.toFixed(2);
             if(this.connected===true || statusCheck != '') this.status = 1;
-            let totalData = { mw, mvar };
+            let totalData = { mw, mvar, kv };
             this.$emit('total', 'GereguNipp', totalData);
             return totalData;
       },

@@ -4,6 +4,7 @@
         <td>DELTA-3 (GAS)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
+        <td>{{pData.kv}}KV</td>
         <td :class="statusColor">{{statusName}}</td>
         <!-- {{station}} -->
         <!-- {{connected}}
@@ -43,6 +44,7 @@ export default {
                     // if(this.idArr.includes(line.id)) {
                         mw += this.getPositiveNumber(line.gd.mw);
                         mvar += this.getPositiveNumber(line.gd.mvar);
+                        if(line.gd.V > 0) kv = line.gd.V
                         if(statusCheck == '') statusCheck = line.gd.V;
                     // }
                 })
@@ -52,7 +54,7 @@ export default {
             mvar = Object.is(NaN, mvar) ? 0 : (mvar.toFixed(2) < 0) ? (mvar.toFixed(2) * -1) : mvar.toFixed(2);
 
             if(this.connected===true || statusCheck != '') this.status = 1;
-            let totalData = { mw, mvar };
+            let totalData = { mw, mvar, kv };
             this.$emit('total', 'Delta3', totalData);
             return totalData;
       },
