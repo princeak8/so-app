@@ -73,19 +73,28 @@ export default {
         //   if(res.id=='odukpaniGs') console.log('count'+n, res);
           
         //   //var streamedPowerStation = res
-          //if(res.id=='omotosho2') console.log(res);
+          // if(res.id=='parasEnergyPs') console.log(res);
           //console.log(res.id);
           const getPowerStation = this.pStations.find(x => x.id === res.id)
           
+          //(!getPowerStation) ? console.log('not found', res.id) : console.log('found', getPowerStation.id);
+          if(getPowerStation) {
+            //console.log('found', getPowerStation.id);
+          }
           if(!getPowerStation && this.addedStations.includes(res.id)) {
-              //console.log(res.id);
+              // console.log(res.id);
               this.addPowerStation({...res});
           }else{
               this.updatePowerStation({...res});
           }
+          // this.pStations.forEach((st) => {
+          //     if(st.id=='parasEnergyPs') console.log(st)
+          //   });
+          
       },
   },
   mounted() {
+    console.log('power stations', this.powerStations);
     this.setPowerStations(this.powerStations);
     // this.connect();
     this.connectPower()

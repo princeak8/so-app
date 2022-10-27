@@ -194,6 +194,7 @@ export default {
      //console.log('changed');
       //console.log(this.pStations);
         this.pStations.forEach((station) => {
+            // if(station.id='parasEnergyPs') console.log('paras:',station);
             // console.log(`${station.id}`)
             // console.log(station);
             switch(station.id) {

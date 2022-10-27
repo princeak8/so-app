@@ -38,6 +38,7 @@ export default {
 	},
 
 	[SET_POWER_STATIONS](state, data) {
+		// console.log('setting pStations: ', data);
 		state.pStations = [...data];
 	},
 

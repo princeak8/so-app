@@ -1,7 +1,7 @@
 <template>
     <tr>
         <td>{{sn}}</td>
-        <td>Paras Energy</td>
+        <td>Afam V</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
         <td :class="statusColor">{{statusName}}</td>
@@ -9,9 +9,6 @@
         <!-- {{this.connected}}
         {{connectionLostTime}} -->
     </tr>
-    <!-- {"id":"parasEnergyPs","t":"4:9:14", "lines":[{"id":"132cb","gd":{"mw":35.62,"A":168.60,"V":129.52,"mvar":12.48}}]} 
-          {"id":"parasEnergyPs","t":"22:52:10", "lines":[{"id":"132cb","gd":{"mw":49.59,"A":228.95,"V":128.11,"mvar":10.72}}]}
-    -->
 </template>
 
 <style scoped>
@@ -30,40 +27,55 @@ export default {
         connectionLostTime: 0,
     };
   },
+    //  {"id":"afamVPs","t":"19:22:1", "units":[{"id":"gt20","gd":{"mw": 0.00,"A": 0.00,"V":332.02,"mvar": 0.00}}]}
+    
   computed: {
       ...mapState(['connectionLostWaitPeriod']),
       pData() {
           //console.log('test', this.station);
-          this.setConnectionLostTime();
-          let mw = 0;
-          let mvar = 0;
-          let kvArr = [];
-          let kv = 0;
-          let statusCheck = '';
-            if(this.station.lines) {
+            this.setConnectionLostTime();
+            let mw = 0;
+            let mvar = 0;
+            let kvArr = [];
+            let kv = 0;
+            let statusCheck = '';
+            if(this.station.units) {
+                let unitData = '';
                 statusCheck = '';
-                this.station.lines.forEach((line) => {
-                    //console.log(line);
-                    mw += this.getPositiveNumber(line.gd.mw);
-                    mvar += this.getPositiveNumber(line.gd.mvar);
-                    if(statusCheck == '') statusCheck = line.gd.V;
+                this.station.units.forEach((unit) => {
+                    unitData = unit;
+                        // console.log('mw', unit.powerData.mw);
+                    //(typeof myVar === 'string' || myVar instanceof String)
+                    // let mwVal = parseFloat(unit.powerData.mw);
+                    //console.log(unit.id+' mw: '+mwVal);
+                    mw += this.getPositiveNumber(unit.powerData.mw);
+                    // console.log('mwss', mw);
+                    mvar += this.getPositiveNumber(unit.powerData.mvar);
+                    if(statusCheck == '') statusCheck = unit.powerData.V;
                 })
             }
-            
+            // console.log('mws', mw);
             mw = Object.is(NaN, mw) ? 0 : (mw.toFixed(2) < 0) ? (mw.toFixed(2) * -1) : mw.toFixed(2);
             mvar = Object.is(NaN, mvar) ? 0 : (mvar.toFixed(2) < 0) ? (mvar.toFixed(2) * -1) : mvar.toFixed(2);
             
+            //kv = this.averageVoltage(kvArr);
+            //console.log('kv',kvArr);
+            //kva = Object.is(NaN, kva) ? 0 : kva.toFixed(2);
             if(this.connected===true || statusCheck != '') this.status = 1;
             let totalData = { mw, mvar };
-            this.$emit('total', 'ParasEnergy', totalData);
+            this.$emit('total', 'AfamIV', totalData);
             return totalData;
       },
       statusName() {
+          // console.log('AfamIV Status: ', this.status);
+          let name = '';
           switch(this.status) {
-            case 0 : return 'Connection Lost'; break;
-            case 1 : return 'Connected'; break;
-            case -1 : return 'Awaiting Connection'; break; 
+            case 0 : name = 'Connection Lost'; break;
+            case 1 : name = 'Connected'; break;
+            case -1 : name = 'Awaiting Connection'; break; 
           }
+          // console.log('AfamIV Status Name: ', name);
+          return name;
       },
     statusColor() {
       if(this.status == 1) {
