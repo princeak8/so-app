@@ -1,5 +1,6 @@
 export * from './jebba';
 export * from './afamIv_v';
+export * from './afamV';
 export * from './afamVi';
 export * from './alaoji';
 export * from './azuraIpp';

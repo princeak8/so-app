@@ -1,7 +1,7 @@
 <template>
     <tr>
         <td>{{sn}}</td>
-        <td>Odukpani</td>
+        <td>ODUKPANI NIPP (GAS)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
         <td :class="statusColor">{{statusName}}</td>
@@ -36,48 +36,25 @@ export default {
           this.setConnectionLostTime();
           let mw = 0;
           let mvar = 0;
-          let odukpaniMw = 0;
-          let odukpaniMvar = 0;
-          let ikotMw = 0;
-          let ikotMvar = 0;
           let kvArr = [];
           let kv = 0;
           let statusCheck = '';
-          if(this.station.odukpani.lines) {
-                // statusCheck = '';
-                this.station.odukpani.lines.forEach((line) => {
-                    //console.log(line);
-                    if((line.id=='d1b') || (line.id=='d2b')) {
-                        odukpaniMw += this.getPositiveNumber(line.td.mw);
-                        odukpaniMvar += this.getPositiveNumber(line.td.mvar);
-                        if(statusCheck == '') statusCheck = line.td.V;
-                    }
+            if(this.station.units) {
+                let unitData = '';
+                statusCheck = '';
+                this.station.units.forEach((unit) => {
+                    unitData = unit;
+                    //console.log('mw', unit.powerData.mw);
+                    mw += this.getPositiveNumber(unit.powerData.mw);
+                    mvar += this.getPositiveNumber(unit.powerData.mvar);
+                    if(statusCheck == '') statusCheck = unit.powerData.V;
                 })
-                odukpaniMw = Object.is(NaN, odukpaniMw) ? 0 : (odukpaniMw < 0) ? (odukpaniMw * -1) : odukpaniMw;
-                odukpaniMvar = Object.is(NaN, odukpaniMvar) ? 0 : (odukpaniMvar < 0) ? (odukpaniMvar * -1) : odukpaniMvar;
-          }
-          if(this.station.ikot.lines) {
-                // statusCheck = '';
-                this.station.ikot.lines.forEach((line) => {
-                    //console.log(line);
-                    if((line.id=='d1k') || (line.id=='d2k')) {
-                        //console.log('ikot: ', parseFloat(line.td.mw));
-                        ikotMw += parseFloat(line.td.mw);
-                        ikotMvar += parseFloat(line.td.mvar);
-                        if(statusCheck == '') statusCheck = line.td.V;
-                    }
-                })
-                ikotMw = Object.is(NaN, ikotMw) ? 0 : (ikotMw < 0) ? (ikotMw * -1) : ikotMw;
-                ikotMvar = Object.is(NaN, ikotMvar) ? 0 : (ikotMvar < 0) ? (ikotMvar * -1) : ikotMvar;
-          }
-          //console.log(odukpaniMw);
-          mw = odukpaniMw + ikotMw;
-          mvar = odukpaniMvar + ikotMvar; 
-          mw = mw.toFixed(2);
-          mvar = mvar.toFixed(2);
-            //kv = this.averageVoltage(kvArr);
-            //console.log('kv',kvArr);
-            //kva = Object.is(NaN, kva) ? 0 : kva.toFixed(2);
+                // console.log('statusCheck1', statusCheck);
+            }
+            
+            mw = Object.is(NaN, mw) ? 0 : (mw.toFixed(2) < 0) ? (mw.toFixed(2) * -1) : mw.toFixed(2);
+            mvar = Object.is(NaN, mvar) ? 0 : (mvar.toFixed(2) < 0) ? (mvar.toFixed(2) * -1) : mvar.toFixed(2);
+            
             if(this.connected===true || statusCheck != '') this.status = 1;
             let totalData = { mw, mvar };
             this.$emit('total', 'Odukpani', totalData);
@@ -92,7 +69,7 @@ export default {
       },
     statusColor() {
       if(this.status == 1) {
-        return "greenColor"
+        return "darkGreenColor"
       }
       return "redColor"
     },

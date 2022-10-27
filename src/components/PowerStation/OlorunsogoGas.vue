@@ -1,7 +1,7 @@
 <template>
         <tr>
             <td>{{sn}}</td>
-            <td>Olorunsogo Gas</td>
+            <td>OLORUNSOGO (GAS)</td>
             <td>{{pData.olorunsogoGasMw}}Mw</td>
             <td>{{pData.olorunsogoGasMvar}}Mx</td>
             <td :class="statusColor">{{statusName}}</td> 

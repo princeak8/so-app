@@ -1,12 +1,12 @@
 <template>
-    <div style="margin-right:auto; margin-left: 5%">
-        <div style="height: 2em; display: flex; flex-direction: horizontal">
+    <div style="margin-right:auto; margin-left: 10%">
+        <!-- <div style="height: 2em; display: flex; flex-direction: horizontal">
             <!-- <router-link to="/" class="link">Home</router-link> -->
-            <router-link to="/power_stations" class="active link">Power Station Table</router-link>
-            <router-link to="/power_stations_units" class="link">Power Station Units</router-link>
-        </div>
-        <h1>Power Stations</h1>
-            <table border="1" style="width:50%">
+            <!-- <router-link to="/power_stations" class="active link">Power Station Table</router-link>
+            <router-link to="/power_stations_units" class="link">Power Station Units</router-link> --
+        </div> -->
+        <h1 style="margin:2px; padding:0">Power Stations</h1>
+            <table border="1" style="width:30%; font-weight: bold;">
                 <thead>
                     <th>S/N</th>
                     <th>Station</th>
@@ -56,10 +56,12 @@ import GereguNipp from '@/components/PowerStation/GereguNipp';
 import Ihovbor from '@/components/PowerStation/Ihovbor';
 import Azura from '@/components/PowerStation/Azura';
 import AfamIV from '@/components/PowerStation/AfamIV';
+import AfamV from '@/components/PowerStation/AfamV';
 import AfamVi from '@/components/PowerStation/AfamVi';
 import Dadinkowa from '@/components/PowerStation/Dadinkowa';
 import Odukpani from '@/components/PowerStation/Odukpani';
 import IkotEkpene from '@/components/PowerStation/IkotEkpene';
+import Jebba from '@/components/PowerStation/Jebba';
 import OmotoshoNipp from '@/components/PowerStation/OmotoshoNipp';
 import OmotoshoGas from '@/components/PowerStation/OmotoshoGas';
 import Omoku from '@/components/PowerStation/Omoku';
@@ -92,13 +94,13 @@ const defaultData = {
 export default {
     name: "PowerStations",
   components: {
-        Geregu, GereguNipp, Ihovbor, Azura, AfamIV, AfamVi, Odukpani, IkotEkpene, OmotoshoNipp, OmotoshoGas, Gbarain, Delta2, Delta3, Delta4, Omoku, Dadinkowa, RiversIpp, 
-        SapeleNipp, SapeleSteam, Transamadi, Egbin, Okpai, Shiroro, Alaoji, Kainji, OlorunsogoGas, OlorunsogoNipp, ParasEnergy, Ibom
+        Geregu, GereguNipp, Ihovbor, Azura, AfamIV, AfamV, AfamVi, Odukpani, IkotEkpene, OmotoshoNipp, OmotoshoGas, Gbarain, Delta2, Delta3, Delta4, Omoku, Dadinkowa, RiversIpp, 
+        SapeleNipp, SapeleSteam, Transamadi, Egbin, Okpai, Shiroro, Alaoji, Kainji, OlorunsogoGas, OlorunsogoNipp, ParasEnergy, Ibom, Jebba
     },
   data() {
     return {
       //powerStations: this.powerStations
-        geregu: '', gereguNipp: '', ihovbor: '', azura: '', afamIV: '', afamVi: '', dadinkowa: '', odukpani: '', ikot: '', omotoshoNipp: '', omotosho1: '',
+        geregu: '', gereguNipp: '', ihovbor: '', azura: '', afamIV: '', afamV: '', afamVi: '', dadinkowa: '', odukpani: '', ikot: '', jebba: '', omotoshoNipp: '', omotosho1: '',
         omotosho2: '', gbarain: '', delta2: '', delta3: '', delta4: '', riversIpp: '', sapeleNipp: '', sapeleSteam: '', omoku: '', phMain: '', egbin: '', okpai: '',
         shiroro: '', alaoji: '', kainji: '', olorunsogo1: '', olorunsogo2: '', parasEnergy: '', eket: '', ekim: '',
 
@@ -116,6 +118,7 @@ export default {
           //console.log('connected: ', this.connected);
           return [
               {name: "AfamIV", station: this.afamIV, totalFn: this.getStationTotal, ref: "AfamIV"},
+              {name: "AfamV", station: this.afamV, totalFn: this.getStationTotal, ref: "AfamV"},
               {name: "AfamVi", station: this.afamVi, totalFn: this.getStationTotal, ref: "AfamVi"},
               {name: "Alaoji", station: this.alaoji, totalFn: this.getStationTotal, ref: "Alaoji"},
               {name: "Azura", station: this.azura, totalFn: this.getStationTotal, ref: "Azura"},
@@ -128,9 +131,10 @@ export default {
               {name: "Geregu", station: this.geregu, totalFn: this.getStationTotal, ref: "Geregu"},
               {name: "GereguNipp", station: this.gereguNipp, totalFn: this.getStationTotal, ref: "GereguNipp"},
               {name: "Ibom", station: this.ibom, totalFn: this.getStationTotal, ref: "Ibom"},
+              {name: "Jebba", station: this.jebba, totalFn: this.getStationTotal, ref: "Jebba"},
               {name: "Ihovbor", station: this.ihovbor, totalFn: this.getStationTotal, ref: "Ihovbor"},
               {name: "Kainji", station: this.kainji, totalFn: this.getStationTotal, ref: "Kainji"},
-              {name: "Odukpani", station: this.odukpaniStation, totalFn: this.getStationTotal, ref: "Odukpani"},
+              {name: "Odukpani", station: this.odukpani, totalFn: this.getStationTotal, ref: "Odukpani"},
               {name: "Okpai", station: this.okpai, totalFn: this.getStationTotal, ref: "Okpai"},
               {name: "OlorunsogoGas", station: this.olorunsogo, totalFn: this.getStationTotal, ref: "OlorunsogoGas"},
               {name: "OlorunsogoNipp", station: this.olorunsogo, totalFn: this.getStationTotal, ref: "OlorunsogoNipp"},
@@ -192,7 +196,7 @@ export default {
 
     pStations() {
      //console.log('changed');
-      //console.log(this.pStations);
+    //   console.log('p stations',this.pStations);
         this.pStations.forEach((station) => {
             // if(station.id='parasEnergyPs') console.log('paras:',station);
             // console.log(`${station.id}`)
@@ -201,6 +205,7 @@ export default {
                 case 'gereguPs' : this.geregu = station; this.gereguNipp = station; break;
                 case 'ihovborNippPs' : this.ihovbor = station; this.azura = station; break;
                 case 'afamIv_vPs' : this.afamIV = station; break;
+                case 'afamVPs' : this.afamV = station; console.log('afamV', station); break;
                 case 'afamViTs' : this.afamVi = station; break;
                 case 'alaoji' : this.alaoji = station; break;
                 case 'dadinKowaGs' : this.dadinkowa = station; break;
@@ -208,8 +213,9 @@ export default {
                 case 'eket' : this.eket = station; break;
                 case 'ekim' : this.ekim = station; break;
                 case 'kainjiTs' : this.kainji = station; break;
-                case 'ikotEkpene' : this.ikot = station; break;
-                case 'odukpaniGs' : this.odukpani = station; break;
+                case 'jebbaTs' : this.jebba = station; break;
+                // case 'ikotEkpene' : this.ikot = station; break;
+                case 'odukpaniNippPs' : this.odukpani = station; break;
                 case 'okpaiGs' : this.okpai = station; break;
                 case 'olorunsogo1' : this.olorunsogo1 = station; break;
                 case 'olorunsogoPhase1Gs' : this.olorunsogo2 = station; break;
@@ -220,7 +226,7 @@ export default {
                 case 'gbarain' : this.gbarain = station; break;
                 case 'delta2' : this.delta2 = station; break;
                 case 'delta3' : this.delta3 = station; break;
-                case 'deltaGs' : this.delta4 = station; break;
+                case 'deltaGs' : this.delta4 = station; console.log('deltaGS', station); break;
                 case 'omokuPs1' : this.omoku = station; break;
                 case 'riversIppPs' : this.riversIpp = station; break;
                 case 'sapeleNippPs' : this.sapeleNipp = station; this.sapeleSteam = station; break;
@@ -276,6 +282,9 @@ export default {
                     case 'AfamIV' : 
                         this.$set(this.mwTotal, 'AfamIV', value.mw); this.$set(this.mxTotal, 'AfamIV', value.mvar);
                         break; 
+                    case 'AfamV' : 
+                        this.$set(this.mwTotal, 'AfamV', value.mw); this.$set(this.mxTotal, 'AfamV', value.mvar);
+                        break; 
                     case 'AfamVi' : 
                         this.$set(this.mwTotal, 'AfamVi', value.mw); this.$set(this.mxTotal, 'AfamVi', value.mvar);
                         break; 
@@ -311,6 +320,9 @@ export default {
                         break; 
                     case 'Ihovbor' : 
                         this.$set(this.mwTotal, 'Ihovbor', value.mw); this.$set(this.mxTotal, 'Ihovbor', value.mvar); 
+                        break; 
+                    case 'Jebba' : 
+                        this.$set(this.mwTotal, 'Jebba', value.mw); this.$set(this.mxTotal, 'Jebba', value.mvar); 
                         break; 
                     case 'Kainji' : 
                         this.$set(this.mwTotal, 'Kainji', value.mw); this.$set(this.mxTotal, 'Kainji', value.mvar); 

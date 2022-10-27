@@ -60,7 +60,7 @@ export default {
       },
     statusColor() {
       if(this.status == 1) {
-        return "greenColor"
+        return "darkGreenColor"
       }
       return "redColor"
     },

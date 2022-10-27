@@ -1,7 +1,7 @@
 <template>
     <tr>
         <td>{{sn}}</td>
-        <td>DELTA-4</td>
+        <td>DELTA-4 (GAS)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
         <td :class="statusColor">{{statusName}}</td>
@@ -41,9 +41,9 @@ export default {
             if(this.station.lines) {
                 this.station.lines.forEach((line) => {
                     // if(this.idArr.includes(line.id)) {
-                        mw += this.getPositiveNumber(line.gd.mw);
-                        mvar += this.getPositiveNumber(line.gd.mvar);
-                        if(statusCheck == '') statusCheck = line.gd.V;
+                        mw += this.getPositiveNumber(line.td.mw);
+                        mvar += this.getPositiveNumber(line.td.mvar);
+                        if(statusCheck == '') statusCheck = line.td.V;
                     // }
                 })
             }
@@ -65,7 +65,7 @@ export default {
       },
     statusColor() {
       if(this.status == 1) {
-        return "greenColor"
+        return "darkGreenColor"
       }
       return "redColor"
     },

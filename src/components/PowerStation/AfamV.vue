@@ -1,7 +1,7 @@
 <template>
     <tr>
         <td>{{sn}}</td>
-        <td>Afam V</td>
+        <td>AFAM V (GAS)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
         <td :class="statusColor">{{statusName}}</td>
@@ -44,12 +44,7 @@ export default {
                 statusCheck = '';
                 this.station.units.forEach((unit) => {
                     unitData = unit;
-                        // console.log('mw', unit.powerData.mw);
-                    //(typeof myVar === 'string' || myVar instanceof String)
-                    // let mwVal = parseFloat(unit.powerData.mw);
-                    //console.log(unit.id+' mw: '+mwVal);
                     mw += this.getPositiveNumber(unit.powerData.mw);
-                    // console.log('mwss', mw);
                     mvar += this.getPositiveNumber(unit.powerData.mvar);
                     if(statusCheck == '') statusCheck = unit.powerData.V;
                 })
@@ -63,7 +58,7 @@ export default {
             //kva = Object.is(NaN, kva) ? 0 : kva.toFixed(2);
             if(this.connected===true || statusCheck != '') this.status = 1;
             let totalData = { mw, mvar };
-            this.$emit('total', 'AfamIV', totalData);
+            this.$emit('total', 'AfamV', totalData);
             return totalData;
       },
       statusName() {
@@ -79,7 +74,7 @@ export default {
       },
     statusColor() {
       if(this.status == 1) {
-        return "greenColor"
+        return "darkGreenColor"
       }
       return "redColor"
     },

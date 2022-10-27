@@ -18,7 +18,7 @@ export default {
       powerStations: powerStations,
       addedStations:  [
                         'odukpaniGs', 'ikotEkpene', 'afamViTs', 'omotosho1', 'omotosho2', 'delta2', 'delta3', 'omokuPs1', 'dadinKowaGs', 'phMain', 'alaoji', 
-                        'kainjiTs', 'olorunsogo1', 'olorunsogoPhase1Gs', 'parasEnergyPs', 'ekim', 'eket', 'okpaiGs', 'deltaGs'
+                        'kainjiTs', 'olorunsogo1', 'olorunsogoPhase1Gs', 'parasEnergyPs', 'ekim', 'eket', 'okpaiGs', 'deltaGs', 'jebbaTs'
                       ]
     };
   },
@@ -54,7 +54,7 @@ export default {
         this.ws.onmessage = (msg) => {
           // console.log('Power msg ', msg)
           const res = JSON.parse(msg.data);
-          //console.log('Power response ',res);
+          // console.log('Power response ',res);
           this.mergePowerStationData(res)
         };
         this.ws.onerror = (error) => {
@@ -74,7 +74,7 @@ export default {
           
         //   //var streamedPowerStation = res
           // if(res.id=='parasEnergyPs') console.log(res);
-          //console.log(res.id);
+          // console.log(res.id);
           const getPowerStation = this.pStations.find(x => x.id === res.id)
           
           //(!getPowerStation) ? console.log('not found', res.id) : console.log('found', getPowerStation.id);

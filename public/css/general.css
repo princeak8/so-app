@@ -47,8 +47,12 @@ body {
   color: grey;
 }
   
-.greenColor {
+.darkGreenColor {
     color: #17d617;
+}
+
+.darkGreenColor {
+    color: #023020;
 }
   
 .redColor {

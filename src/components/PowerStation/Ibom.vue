@@ -1,7 +1,7 @@
 <template>
     <tr>
         <td>{{sn}}</td>
-        <td>Ibom</td>
+        <td>IBOM POWER (GAS)</td>
         <td>{{pData.mw}}Mw</td>
         <td>{{pData.mvar}}Mx</td>
         <td :class="statusColor">{{statusName}}</td>
@@ -91,7 +91,7 @@ export default {
       },
     statusColor() {
       if(this.status == 1) {
-        return "greenColor"
+        return "darkGreenColor"
       }
       return "redColor"
     },
