@@ -28,7 +28,7 @@
                     <!-- <Olorunsogo :sn="22" :station="olorunsogo" :connected="connected" @total="getStationTotal" ref="Olorunsogo" /> -->
 
                     <tr>
-                        <td>TOTAL</td>
+                        <td>TOTAL:</td>
                         <td></td>
                         <td>{{totalMw}}</td>
                         <td>{{totalMvar}}</td>
