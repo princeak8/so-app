@@ -213,6 +213,14 @@ export default {
       localStorage.removeItem(STORAGE_KEY);
       this.$router.push(RouteEnum.LOGIN);
     },
+
+    wait(ms) {
+        return new Promise((resolve) => {
+            console.log('tx waiting '+(ms/1000)+ ' Secs');
+            setTimeout(resolve, ms);
+        });
+    },
+
     async connect() {
       console.log('connect');
       const data = { token: 123 };
@@ -231,8 +239,9 @@ export default {
         //console.log('res: ',res);
         this.mergeData(res)
       };
-      this.ws.onerror = (error) => {
-        console.log('Error ', error)
+      this.ws.onerror = async (error) => {
+        console.log('Error ', error);
+        await this.wait(5000);
         this.connect()
         // this.connectTrials = this.connectTrials + 1;
         // console.log('connection trials ', this.connectTrials)
@@ -242,8 +251,9 @@ export default {
         //   this.$alert.error('Could not connect to the server, please check connection')
         // }
       }
-      this.ws.onclose = (event) => {
+      this.ws.onclose = async (event) => {
         console.log("WebSocket is closed now.", event);
+        await this.wait(5000);
         this.connect()
       }
     },
