@@ -74,8 +74,15 @@ export default {
                                 if(line.gd.V > 0) kvGas = line.gd.V
                                 if(statusCheck == '') statusCheck = line.gd.V;
                             }else{
-                                olorunsogo2Mw += this.getPositiveNumber(line.td.mw);
-                                olorunsogo2Mvar += this.getPositiveNumber(line.td.mvar);
+                                if(line.id == 'r1w') {
+                                    let A = line.td.A;
+                                    let P = A/1.76;
+                                    olorunsogo2Mw += P; //this.getPositiveNumber(P);
+                                    olorunsogo2Mvar += line.td.mvar; //this.getPositiveNumber(line.td.mvar);
+                                }else{
+                                    olorunsogo2Mw += line.td.mw; //this.getPositiveNumber(line.td.mw);
+                                    olorunsogo2Mvar += line.td.mvar; //this.getPositiveNumber(line.td.mvar);
+                                }
                                 if(line.td.V > 0) kvNipp = line.td.V
                                 if(statusCheck == '') statusCheck = line.td.V;
                             }
@@ -92,8 +99,8 @@ export default {
 
             olorunsogoNippMw = olorunsogo2Mw - olorunsogoGasMw;
             olorunsogoNippMvar = olorunsogo2Mvar - olorunsogoGasMvar;
-            olorunsogoNippMw = (olorunsogoNippMw > 0) ? olorunsogoNippMw : (olorunsogoNippMw * -1);
-            olorunsogoNippMvar = (olorunsogoNippMvar > 0) ? olorunsogoNippMvar : (olorunsogoNippMvar * -1);
+            olorunsogoNippMw = (olorunsogoNippMw > 0) ? olorunsogoNippMw : 0;
+            olorunsogoNippMvar = (olorunsogoNippMvar > 0) ? olorunsogoNippMvar : 0;
 
             olorunsogoGasMw = olorunsogoGasMw.toFixed(2);
             olorunsogoGasMvar = olorunsogoGasMvar.toFixed(2);

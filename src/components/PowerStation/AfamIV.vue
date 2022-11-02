@@ -55,7 +55,8 @@ export default {
                     // console.log('mwss', mw);
                     mvar += this.getPositiveNumber(unit.powerData.mvar);
                     if(unit.powerData.V > 0) kv = unit.powerData.V
-                    if(statusCheck == '') statusCheck = unit.powerData.V;
+                    if(statusCheck == '') statusCheck = 1; //unit.powerData.V;
+                      
                 })
             }
             // console.log('mws', mw);

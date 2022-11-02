@@ -42,16 +42,16 @@ export default {
             if(this.station.lines) {
                 this.station.lines.forEach((line) => {
                     // if(this.idArr.includes(line.id)) {
-                        mw += this.getPositiveNumber(line.td.mw);
-                        mvar += this.getPositiveNumber(line.td.mvar);
+                        mw += line.td.mw; //this.getPositiveNumber(line.td.mw);
+                        mvar += line.td.mvar; //this.getPositiveNumber(line.td.mvar);
                         if(line.td.V > 0) kv = line.td.V
                         if(statusCheck == '') statusCheck = line.td.V;
                     // }
                 })
             }
 
-            mw = Object.is(NaN, mw) ? 0 : (mw.toFixed(2) < 0) ? (mw.toFixed(2) * -1) : mw.toFixed(2);
-            mvar = Object.is(NaN, mvar) ? 0 : (mvar.toFixed(2) < 0) ? (mvar.toFixed(2) * -1) : mvar.toFixed(2);
+            mw = Object.is(NaN, mw) ? 0 : (mw.toFixed(2) < 0) ? 0 : mw.toFixed(2);
+            mvar = Object.is(NaN, mvar) ? 0 : (mvar.toFixed(2) < 0) ? 0 : mvar.toFixed(2);
 
             if(this.connected===true || statusCheck != '') this.status = 1;
             let totalData = { mw, mvar, kv };

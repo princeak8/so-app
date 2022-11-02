@@ -49,8 +49,8 @@ export default {
                         delta3Mvar += parseFloat(line.gd.mvar);
                         if(statusCheck == '') statusCheck = line.gd.V;
                     })
-                    delta3Mw = Object.is(NaN, delta3Mw) ? 0 : (delta3Mw < 0) ? (delta3Mw * -1) : delta3Mw;
-                    delta3Mvar = Object.is(NaN, delta3Mvar) ? 0 : (delta3Mvar < 0) ? (delta3Mvar * -1) : delta3Mvar;
+                    delta3Mw = Object.is(NaN, delta3Mw) ? 0 : delta3Mw; //(delta3Mw < 0) ? (delta3Mw * -1) : delta3Mw;
+                    delta3Mvar = Object.is(NaN, delta3Mvar) ? 0 : delta3Mvar; //(delta3Mvar < 0) ? (delta3Mvar * -1) : delta3Mvar;
             }
           /*
 {"id":"delta2","t":"15:17:53", "lines":[{"id":"tr3","gd":{"mw": 0.00,"A": 0.00,"V":329.04,"mvar": 0.00}},{"id":"tr4","gd":{"mw":30.04,"A":52.34,"V":332.94,"mvar": 2.41}}]}
@@ -62,8 +62,8 @@ export default {
                         if(line.gd.V > 0) kv = line.gd.V
                         if(statusCheck == '') statusCheck = line.gd.V;
                     })
-                    delta2Mw = Object.is(NaN, delta2Mw) ? 0 : (delta2Mw < 0) ? (delta2Mw * -1) : delta2Mw;
-                    delta2Mvar = Object.is(NaN, delta2Mvar) ? 0 : (delta2Mvar < 0) ? (delta2Mvar * -1) : delta2Mvar;
+                    delta2Mw = Object.is(NaN, delta2Mw) ? 0 : delta2Mw; //(delta2Mw < 0) ? (delta2Mw * -1) : delta2Mw;
+                    delta2Mvar = Object.is(NaN, delta2Mvar) ? 0 : delta2Mvar; //(delta2Mvar < 0) ? (delta2Mvar * -1) : delta2Mvar;
             }
           //console.log(odukpaniMw);
           mw = delta2Mw + delta3Mw;
