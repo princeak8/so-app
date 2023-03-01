@@ -84,7 +84,7 @@ export default {
             if (line.id == "r1w") {
               let A = line.td.A;
               let P = A / 1.62344817;
-              olorunsogo2Mw += P; //this.getPositiveNumber(P);
+              olorunsogo2Mw += line.td.mw; //P; //this.getPositiveNumber(P);
               olorunsogo2Mvar += line.td.mvar; //this.getPositiveNumber(line.td.mvar);
             } else {
               olorunsogo2Mw += line.td.mw; //this.getPositiveNumber(line.td.mw);
