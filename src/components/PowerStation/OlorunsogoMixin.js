@@ -77,7 +77,7 @@ export default {
         this.station.olorunsogo2.lines.forEach((line) => {
           if (line.id == "tr3" || line.id == "tr4") {
             olorunsogo12Mw += this.getPositiveNumber(line.gd.mw);
-            olorunsogo12Mvar += this.getPositiveNumber(line.gd.mvar);
+            olorunsogo12Mvar += this.getPositiveNumber(line.gd.mvar);gi
             if (line.gd.V > 0) kvGas = line.gd.V;
             if (statusCheck == "") statusCheck = line.gd.V;
           } else {

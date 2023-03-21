@@ -230,12 +230,14 @@ export default {
       // const ADDR = `ws://localhost:3001/token=${data.token}`;
       const ADDR = `${SOCKET_ADDR}token=${data.token}`;
       this.ws = new WebSocket(ADDR);
+      const receivedStations = [];
       this.ws.onmessage = (msg) => {
         // console.log('msg ', msg)
         this.connectTrials = 0;
         const res = JSON.parse(msg.data);
         this.connectObj = { id: res.id, connected: true }
-        //console.log(res.id);
+        if(!receivedStations.includes(res.id)) receivedStations.push(res.id);
+        // console.log("Stations ID: "+receivedStations);
         //console.log('res: ',res);
         this.mergeData(res)
       };
