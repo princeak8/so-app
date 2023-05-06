@@ -6,7 +6,7 @@
         <td>{{pData.mvar}}Mx</td>
         <td>{{pData.kv}}KV</td>
         <td :class="statusColor">{{statusName}}</td>
-        <!-- {{station}} -->
+        {{station}}
         <!-- {{this.connected}} -->
         <!-- {{connectionLostTime}}  -->
     </tr>

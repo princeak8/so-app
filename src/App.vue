@@ -42,6 +42,8 @@ export default {
         "okpaiGs",
         "deltaGs",
         "jebbaTs",
+        "transamadiGs",
+        "zungeru",
       ],
     };
   },
