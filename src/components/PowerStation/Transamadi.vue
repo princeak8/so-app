@@ -6,7 +6,7 @@
         <td>{{pData.mvar}}Mx</td>
         <td>{{pData.kv}}KV</td>
         <td :class="statusColor">{{statusName}}</td>
-        {{station}}
+        <!-- {{station}} -->
         <!-- {{this.connected}} -->
         <!-- {{connectionLostTime}}  -->
     </tr>
@@ -55,7 +55,7 @@ export default {
             //kv = this.averageVoltage(kvArr);
             //console.log('kv',kvArr);
             //kva = Object.is(NaN, kva) ? 0 : kva.toFixed(2);
-            if(this.connected===true || statusCheck != '') this.status = 1;
+            if(this.connected===true || statusCheck >= 0) this.status = 1;
             let totalData = { mw, mvar, kv };
             this.$emit('total', 'Transamadi', totalData);
             return totalData;

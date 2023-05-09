@@ -53,6 +53,8 @@ export default {
       //         ]
       // }
 
+    //   console.log("olorunsogo", this.station);
+
       if (this.station.olorunsogo1.lines) {
         this.station.olorunsogo1.lines.forEach((line) => {
           olorunsogo1Mw += this.getPositiveNumber(line.gd.mw);
@@ -77,7 +79,7 @@ export default {
         this.station.olorunsogo2.lines.forEach((line) => {
           if (line.id == "tr3" || line.id == "tr4") {
             olorunsogo12Mw += this.getPositiveNumber(line.gd.mw);
-            olorunsogo12Mvar += this.getPositiveNumber(line.gd.mvar);gi
+            olorunsogo12Mvar += this.getPositiveNumber(line.gd.mvar);
             if (line.gd.V > 0) kvGas = line.gd.V;
             if (statusCheck == "") statusCheck = line.gd.V;
           } else {

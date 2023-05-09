@@ -46,6 +46,7 @@ export default {
 		//console.log(data);
 		var newData = {...data};
 		newData.lines = [...data.lines];
+        // console.log("adding station", newData);
 		state.pStations = [...state.pStations, {...newData}];
 		//console.log(data);
 	},
@@ -63,12 +64,16 @@ export default {
 		//if(getPowerStation.id=='omotosho2') console.log(getPowerStation);
 		if(getPowerStation) {
 			//if(getPowerStation.id=='odukpaniGs') console.log('stream'+n+'b', streamedPowerStation.lines);
+            var today = new Date();
+            const time = (getPowerStation.t) ? getPowerStation.t : today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 			const powerStationUnits = (getPowerStation.units) ? getPowerStation.units : getPowerStation.lines;
 			const streamedStationUnits = (streamedPowerStation.units) ? streamedPowerStation.units : streamedPowerStation.lines
+            // if(getPowerStation.id == 'phMain') console.log("phMain power station", powerStationUnits);
 			
 			const updatedPowerStationUnits = powerStationUnits.filter((item) => {
 				const foundItem = streamedStationUnits.find(x => x.id === item.id)
 				if(foundItem) {
+                    // item.t = time;
 					if(item.powerData) item.powerData = (foundItem.gd) ? foundItem.gd : (foundItem.pd) ? foundItem.pd : foundItem.td;
 					if(item.gd) item.gd = (foundItem.gd) ? foundItem.gd : foundItem.pd;
 					if(item.td) item.td = (foundItem.td) ? foundItem.td : '';

@@ -2,11 +2,16 @@ import powerData from '../PowerData';
 
 export var gbarain = {
     name: "Gbarain Power Station",
-    id: "gbarainPs",
+    id: "gbarain",
     units: [
         {
-            name: "gt1",
-            id: "gt1",
+            name: "st1",
+            id: "st1",
+            powerData
+        },
+        {
+            name: "st2",
+            id: "st2",
             powerData
         }
     ]

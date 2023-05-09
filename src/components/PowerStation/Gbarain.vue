@@ -49,7 +49,9 @@ export default {
             mw = Object.is(NaN, mw) ? 0 : (mw.toFixed(2) < 0) ?  (mw.toFixed(2) * -1) : mw.toFixed(2);
             mvar = Object.is(NaN, mvar) ? 0 : (mvar.toFixed(2) < 0) ? (mvar.toFixed(2) * -1) : mvar.toFixed(2);
             // kv = Object.is(NaN, kv) ? 0 : kv.toFixed(2);
-            if(this.connected===true || statusCheck != '') this.status = 1;
+            // console.log("status check:", statusCheck);
+            if(this.connected===true || statusCheck >= 0) this.status = 1;
+            // console.log("status:", this.status);
             let totalData = { mw, mvar, kv };
             this.$emit('total', 'Gbarain', totalData);
             return totalData;

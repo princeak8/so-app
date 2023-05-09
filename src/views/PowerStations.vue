@@ -340,7 +340,7 @@ export default {
       this.pStations.forEach((station) => {
         if(!stationss.includes(station.id)) stationss.push(station.id);
         // if(station.id='parasEnergyPs') console.log('paras:',station);
-        console.log(`${stationss}`)
+        // console.log(`${stationss}`)
         // console.log(station);
         switch (station.id) {
           case "gereguPs":
@@ -356,7 +356,7 @@ export default {
             break;
           case "afamVPs":
             this.afamV = station;
-            console.log("afamV", station);
+            // console.log("afamV", station);
             break;
           case "afamViTs":
             this.afamVi = station;
@@ -408,6 +408,7 @@ export default {
             this.parasEnergy = station;
             break;
           case "gbarain":
+            // console.log("gbarain:", station);
             this.gbarain = station;
             break;
           case "delta2":
@@ -418,7 +419,7 @@ export default {
             break;
           case "deltaGs":
             this.delta4 = station;
-            console.log("deltaGS", station);
+            // console.log("deltaGS", station);
             break;
           case "omokuPs1":
             this.omoku = station;
@@ -430,13 +431,17 @@ export default {
             this.sapeleNipp = station;
             this.sapeleSteam = station;
             break;
-          case "phMain":
-            this.phMain = station;
-            break;
+        //   case "phMain":
+        //     this.phMain = station;
+        //     break;
           case "shiroroPs":
             this.shiroro = station;
             break;
-          case "transamadiGs":
+        //   case "transamadiGs":
+        //     this.transamadi = station;
+        //     break;
+          case "phMain":
+            // console.log("phmain", station);
             this.transamadi = station;
             break;
           case "zungeru":
