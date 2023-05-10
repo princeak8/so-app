@@ -27,6 +27,7 @@ export default {
         "afamViTs",
         "omotosho1",
         "omotosho2",
+        
         "delta2",
         "delta3",
         "omokuPs1",

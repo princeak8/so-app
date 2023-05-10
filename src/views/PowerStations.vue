@@ -335,7 +335,7 @@ export default {
 
     pStations() {
       //console.log('changed');
-      //   console.log('p stations',this.pStations);
+        // console.log('p stations',this.pStations);
       const stationss = [];
       this.pStations.forEach((station) => {
         if(!stationss.includes(station.id)) stationss.push(station.id);
@@ -396,6 +396,7 @@ export default {
             this.olorunsogo2 = station;
             break;
           case "omotoshoNippPs":
+            // console.log("omotosho:", station);
             this.omotoshoNipp = station;
             break;
           case "omotosho1":
