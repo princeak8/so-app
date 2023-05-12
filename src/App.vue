@@ -45,6 +45,7 @@ export default {
         "jebbaTs",
         "transamadiGs",
         "zungeru",
+        "taopex"
       ],
     };
   },

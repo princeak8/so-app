@@ -88,6 +88,7 @@ import OlorunsogoNipp from "@/components/PowerStation/OlorunsogoNipp";
 import ParasEnergy from "@/components/PowerStation/ParasEnergy";
 import Ibom from "@/components/PowerStation/Ibom";
 import Zungeru from '@/components/PowerStation/Zungeru';
+import Taopex from '@/components/PowerStation/Taopex';
 
 import { mapState } from "vuex";
 
@@ -101,7 +102,7 @@ export default {
   name: "PowerStations",
   components: { 
     Geregu, GereguNipp, Ihovbor, Azura, AfamIV, AfamV, AfamVi, Odukpani, IkotEkpene, OmotoshoNipp, OmotoshoGas, Gbarain, Delta2, Delta3, Delta4, Omoku, Dadinkowa,
-    RiversIpp, SapeleNipp, SapeleSteam, Transamadi, Egbin, Okpai, Shiroro, Alaoji, Kainji, OlorunsogoGas, OlorunsogoNipp, ParasEnergy, Ibom, Jebba, Zungeru
+    RiversIpp, SapeleNipp, SapeleSteam, Transamadi, Egbin, Okpai, Shiroro, Alaoji, Kainji, OlorunsogoGas, OlorunsogoNipp, ParasEnergy, Ibom, Jebba, Zungeru, Taopex
   },
 
   data() {
@@ -109,7 +110,7 @@ export default {
         geregu: "", gereguNipp: "", ihovbor: "", azura: "", afamIV: "", afamV: "", afamVi: "", dadinkowa: "", odukpani: "", ikot: "", jebba: "", omotoshoNipp: "", 
         omotosho1: "", omotosho2: "", gbarain: "", delta2: "", delta3: "", delta4: "", riversIpp: "", sapeleNipp: "", sapeleSteam: "", omoku: "", phMain: "", 
         egbin: "", okpai: "", shiroro: "", alaoji: "", kainji: "", olorunsogo1: "", olorunsogo2: "", parasEnergy: "", eket: "", ekim: "", transamadi: "",
-        zungeru: "",
+        zungeru: "", taopex: "",
         mwTotal: {}, mxTotal: {}, totalMw: 0, totalMvar: 0, changed: false,
       //powerStations: this.powerStations
     };
@@ -286,6 +287,9 @@ export default {
             name: "Shiroro",    station: this.shiroro,      totalFn: this.getStationTotal, ref: "Shiroro",
         },
         {
+            name: "Taopex", station: this.taopex,   totalFn: this.getStationTotal, ref: "Taopex",
+        },
+        {
             name: "Transamadi", station: this.transamadi,   totalFn: this.getStationTotal, ref: "Transamadi",
         },
         {
@@ -437,6 +441,9 @@ export default {
         //     break;
           case "shiroroPs":
             this.shiroro = station;
+            break;
+          case "taopex":
+            this.taopex = station;
             break;
         //   case "transamadiGs":
         //     this.transamadi = station;
@@ -615,6 +622,10 @@ export default {
         case "Shiroro":
           this.$set(this.mwTotal, "Shiroro", value.mw);
           this.$set(this.mxTotal, "Shiroro", value.mvar);
+          break;
+        case "Taopex":
+          this.$set(this.mwTotal, "Taopex", value.mw);
+          this.$set(this.mxTotal, "Taopex", value.mvar);
           break;
         case "Transamadi":
           this.$set(this.mwTotal, "Transamadi", value.mw);

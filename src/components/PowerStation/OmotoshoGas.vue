@@ -43,6 +43,7 @@ export default {
 				this.station.omotosho1.lines.forEach((line) => {
 					omotosho1Mw += this.getPositiveNumber(line.gd.mw);
 					omotosho1Mvar += this.getPositiveNumber(line.gd.mvar);
+                    if (line.gd.V > 0) kv = line.gd.V;
 					if (statusCheck == "") statusCheck = line.gd.V;
 				});
 				omotosho1Mw = Object.is(NaN, omotosho1Mw)
@@ -62,13 +63,15 @@ export default {
 			// {"id":"omotosho2","t":"4:17:48", "lines":[{"id":"tr3","gd":{"mw":-30.21,"A":53.13,"V":329.06,"mvar":-1.90}},{"id":"tr4","gd":{"mw": 0.00,"A": 0.00,"V":333.02,"mvar": 0.00}}]}
 			if (this.station.omotosho2.lines) {
 				this.station.omotosho2.lines.forEach((line) => {
-					omotosho2Mw +=
-						parseFloat(line.gd.mw) > 0 ? parseFloat(line.gd.mw) : 0;
-					omotosho2Mvar +=
-						parseFloat(line.gd.mvar) > 0
-							? parseFloat(line.gd.mvar)
-							: 0;
-					if (line.gd.V > 0) kv = line.gd.V;
+					// omotosho2Mw +=
+					// 	parseFloat(line.gd.mw) > 0 ? parseFloat(line.gd.mw) : 0;
+					// omotosho2Mvar +=
+					// 	parseFloat(line.gd.mvar) > 0
+					// 		? parseFloat(line.gd.mvar)
+					// 		: 0;
+                    omotosho2Mw += this.getPositiveNumber(line.gd.mw);
+                    omotosho2Mvar += this.getPositiveNumber(line.gd.mvar);
+                    if (line.gd.V > 0) kv = line.gd.V;
 					if (statusCheck == "") statusCheck = line.gd.V;
 				});
 				omotosho2Mw = Object.is(NaN, omotosho2Mw)
