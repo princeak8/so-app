@@ -125,10 +125,10 @@ export default {
     },
   },
   mounted() {
-    console.log("power stations", this.powerStations);
-    this.setPowerStations(this.powerStations);
+    // console.log("power stations", this.powerStations);
+    // this.setPowerStations(this.powerStations);
     // this.connect();
-    this.connectPower();
+    // this.connectPower();
     //console.log(this.pStations);
   },
 };

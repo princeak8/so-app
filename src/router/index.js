@@ -28,7 +28,7 @@ const routes = [
       // if (accessToken && accessToken !== "undefined") {
       //   next();
       // } else {
-      //   next(RouteEnum.LOGIN);
+      //   next(RouteEnum.LOGIN)
       // }
     },
   },
