@@ -18,13 +18,13 @@ export var gwagwalada = {
         },
         {
             name: "l6g",
-            id: "l6g",
+            id: "l7g",
             connectionRoot: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'l6g-h-0',
+                    name: 'l7g-h-0',
                     start: true,
                     end: true,
                     position: 0,
@@ -35,13 +35,13 @@ export var gwagwalada = {
         },
         {
             name: "l7g",
-            id: "l7g",
+            id: "l6g",
             connectionRoot: true,
             connections: [
                 {
                     alignment: 'h',
                     direction: 'right',
-                    name: 'l7g-h-0',
+                    name: 'l6g-h-0',
                     start: true,
                     end: true,
                     position: 0,

@@ -6,13 +6,13 @@ export var ajaokuta = {
     lines: [
         {
             name: "j1l",
-            id: "j1l",
+            id: "j2l",
             connectionRoot: false,
             td
         },
         {
             name: "j2l",
-            id: "j2l",
+            id: "j1l",
             connectionRoot: false,
             td
         },
